@@ -15,6 +15,8 @@
 		03B694F418E774AD00CEF855 /* RCOperationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B694F318E774AD00CEF855 /* RCOperationTests.m */; };
 		03B694F718E774BD00CEF855 /* RCOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B694F618E774BD00CEF855 /* RCOperation.m */; };
 		03B694FB18E774D400CEF855 /* RCOperationErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B694FA18E774D400CEF855 /* RCOperationErrors.m */; };
+		03B694FE18E77B1D00CEF855 /* RCAPIOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B694FD18E77B1D00CEF855 /* RCAPIOperation.m */; };
+		03B6950018E77B3500CEF855 /* RCAPIOperationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B694FF18E77B3500CEF855 /* RCAPIOperationTests.m */; };
 		03DEC84018E736730098CCE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC83F18E736730098CCE1 /* Foundation.framework */; };
 		03DEC84518E736740098CCE1 /* Marvelous.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03DEC84418E736740098CCE1 /* Marvelous.h */; };
 		03DEC84E18E736740098CCE1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC84D18E736740098CCE1 /* XCTest.framework */; };
@@ -63,6 +65,9 @@
 		03B694F818E774C800CEF855 /* RCOperationErrorCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCOperationErrorCodes.h; sourceTree = "<group>"; };
 		03B694F918E774D300CEF855 /* RCOperationErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCOperationErrors.h; path = Marvelous/RCOperationErrors.h; sourceTree = "<group>"; };
 		03B694FA18E774D400CEF855 /* RCOperationErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCOperationErrors.m; path = Marvelous/RCOperationErrors.m; sourceTree = "<group>"; };
+		03B694FC18E77B1D00CEF855 /* RCAPIOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCAPIOperation.h; sourceTree = "<group>"; };
+		03B694FD18E77B1D00CEF855 /* RCAPIOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCAPIOperation.m; sourceTree = "<group>"; };
+		03B694FF18E77B3500CEF855 /* RCAPIOperationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCAPIOperationTests.m; sourceTree = "<group>"; };
 		03DEC83C18E736730098CCE1 /* libMarvelous.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMarvelous.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		03DEC83F18E736730098CCE1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		03DEC84318E736740098CCE1 /* Marvelous-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Marvelous-Prefix.pch"; sourceTree = "<group>"; };
@@ -142,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				03B694F318E774AD00CEF855 /* RCOperationTests.m */,
+				03B694FF18E77B3500CEF855 /* RCAPIOperationTests.m */,
 			);
 			name = Operations;
 			sourceTree = "<group>";
@@ -151,6 +157,8 @@
 			children = (
 				03B694F518E774BD00CEF855 /* RCOperation.h */,
 				03B694F618E774BD00CEF855 /* RCOperation.m */,
+				03B694FC18E77B1D00CEF855 /* RCAPIOperation.h */,
+				03B694FD18E77B1D00CEF855 /* RCAPIOperation.m */,
 			);
 			name = Operations;
 			sourceTree = "<group>";
@@ -306,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03B694E518E75B0D00CEF855 /* RCResponseKeys.m in Sources */,
+				03B694FE18E77B1D00CEF855 /* RCAPIOperation.m in Sources */,
 				03B694D818E73E3A00CEF855 /* RCMarvelAPI.m in Sources */,
 				03B694F718E774BD00CEF855 /* RCOperation.m in Sources */,
 				03B694E018E74D6300CEF855 /* RCRequestKeys.m in Sources */,
@@ -317,6 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03B6950018E77B3500CEF855 /* RCAPIOperationTests.m in Sources */,
 				03B694F418E774AD00CEF855 /* RCOperationTests.m in Sources */,
 				03B694DB18E73E5E00CEF855 /* RCMarvelAPITests.m in Sources */,
 			);
