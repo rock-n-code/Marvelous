@@ -51,6 +51,7 @@
 		03B694DA18E73E5E00CEF855 /* RCMarvelAPITests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCMarvelAPITests.m; sourceTree = "<group>"; };
 		03B694DE18E74D6300CEF855 /* RCOptionKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCOptionKeys.h; path = Marvelous/RCOptionKeys.h; sourceTree = "<group>"; };
 		03B694DF18E74D6300CEF855 /* RCOptionKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCOptionKeys.m; path = Marvelous/RCOptionKeys.m; sourceTree = "<group>"; };
+		03B694E218E7583600CEF855 /* RCStatusCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCStatusCodes.h; sourceTree = "<group>"; };
 		03DEC83C18E736730098CCE1 /* libMarvelous.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMarvelous.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		03DEC83F18E736730098CCE1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		03DEC84318E736740098CCE1 /* Marvelous-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Marvelous-Prefix.pch"; sourceTree = "<group>"; };
@@ -114,6 +115,14 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		03B694E118E757C500CEF855 /* Enumerations */ = {
+			isa = PBXGroup;
+			children = (
+				03B694E218E7583600CEF855 /* RCStatusCodes.h */,
+			);
+			name = Enumerations;
+			sourceTree = "<group>";
+		};
 		03DEC83318E736730098CCE1 = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +157,7 @@
 			children = (
 				03DEC84418E736740098CCE1 /* Marvelous.h */,
 				03B694D518E73DEC00CEF855 /* APIs */,
+				03B694E118E757C500CEF855 /* Enumerations */,
 				03B694DD18E74D3800CEF855 /* Constants */,
 				03DEC84218E736740098CCE1 /* Supporting Files */,
 			);
