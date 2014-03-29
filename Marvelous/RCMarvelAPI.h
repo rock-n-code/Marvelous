@@ -10,4 +10,6 @@
 
 @interface RCMarvelAPI : NSObject
 
++ (RCMarvelAPI *)api;
+
 @end
