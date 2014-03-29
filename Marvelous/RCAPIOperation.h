@@ -11,6 +11,8 @@
 
 @interface RCAPIOperation : RCOperation
 
+@property (nonatomic, strong, readonly) NSURL *url;
+@property (nonatomic, strong, readonly) NSDictionary *filter;
 @property (nonatomic, readonly) RCAPIOperationTypes type;
 
 @end

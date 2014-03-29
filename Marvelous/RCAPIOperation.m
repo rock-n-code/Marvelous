@@ -10,6 +10,9 @@
 
 @interface RCAPIOperation ()
 
+@property (nonatomic, strong) NSURL *url;
+@property (nonatomic, strong) NSURLSession *session;
+@property (nonatomic, strong) NSDictionary *filter;
 @property (nonatomic) RCAPIOperationTypes type;
 
 @end
