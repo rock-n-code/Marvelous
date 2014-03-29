@@ -12,6 +12,8 @@
 
 @property (nonatomic, strong) NSString *publicKey;
 
+@property (nonatomic, strong, readonly) NSString *version;
+
 + (RCMarvelAPI *)api;
 
 @end

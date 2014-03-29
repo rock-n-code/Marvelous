@@ -11,6 +11,7 @@
 #import "RCMarvelAPI.h"
 
 static NSString * const RCMarvelAPITestPublicKey = @"This is a test public key.";
+static NSString * const RCMarvelAPITestVersion = @"Cable";
 
 @interface RCMarvelAPITests : XCTestCase
 
@@ -39,6 +40,7 @@ static NSString * const RCMarvelAPITestPublicKey = @"This is a test public key."
 	RCMarvelAPI *api = [[RCMarvelAPI alloc] init];
 
 	XCTAssertNil(api.publicKey, @"\"%s\" is expecting the property 'publicKey' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertEqualObjects(api.version, RCMarvelAPITestVersion, @"\"%s\" is expecting the property 'version' to have the '%@' string value.", __PRETTY_FUNCTION__, RCMarvelAPITestVersion);
 }
 
 - (void)testPublicKeyWithNil
@@ -53,6 +55,11 @@ static NSString * const RCMarvelAPITestPublicKey = @"This is a test public key."
 	self.api.publicKey = RCMarvelAPITestPublicKey;
 
 	XCTAssertEqualObjects(self.api.publicKey, RCMarvelAPITestPublicKey, @"\"%s\" is expecting the property 'publicKey' to have the '%@' string value.", __PRETTY_FUNCTION__, RCMarvelAPITestPublicKey);
+}
+
+- (void)testVersion
+{
+	XCTAssertEqualObjects(self.api.version, RCMarvelAPITestVersion, @"\"%s\" is expecting the property 'version' to have the '%@' string value.", __PRETTY_FUNCTION__, RCMarvelAPITestVersion);
 }
 
 @end

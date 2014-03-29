@@ -8,6 +8,8 @@
 
 #import "RCMarvelAPI.h"
 
+static NSString * const RCMarvelAPIVersionName = @"Cable";
+
 @interface RCMarvelAPI ()
 
 @end
@@ -39,6 +41,13 @@
 	});
 
 	return instance;
+}
+
+#pragma mark - Properties
+
+- (NSString *)version
+{
+	return RCMarvelAPIVersionName;
 }
 
 @end
