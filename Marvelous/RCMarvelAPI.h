@@ -10,6 +10,8 @@
 
 @interface RCMarvelAPI : NSObject
 
+@property (nonatomic, strong) NSString *publicKey;
+
 + (RCMarvelAPI *)api;
 
 @end

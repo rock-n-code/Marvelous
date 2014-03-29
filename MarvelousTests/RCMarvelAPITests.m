@@ -10,7 +10,11 @@
 
 #import "RCMarvelAPI.h"
 
+static NSString * const RCMarvelAPITestPublicKey = @"This is a test public key.";
+
 @interface RCMarvelAPITests : XCTestCase
+
+@property (nonatomic, strong) RCMarvelAPI *api;
 
 @end
 
@@ -20,19 +24,35 @@
 {
     [super setUp];
 
-	// Put setup code here. This method is called before the invocation of each test method in the class.
+	self.api = [RCMarvelAPI api];
 }
 
 - (void)tearDown
 {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
+    self.api = nil;
 
 	[super tearDown];
 }
 
-- (void)testExample
+- (void)testInit
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+	RCMarvelAPI *api = [[RCMarvelAPI alloc] init];
+
+	XCTAssertNil(api.publicKey, @"\"%s\" is expecting the property 'publicKey' to be NULL.", __PRETTY_FUNCTION__);
+}
+
+- (void)testPublicKeyWithNil
+{
+	self.api.publicKey = nil;
+
+	XCTAssertNil(self.api.publicKey, @"\"%s\" is expecting the property 'publicKey' to be NULL.", __PRETTY_FUNCTION__);
+}
+
+- (void)testPublicKeyWithString
+{
+	self.api.publicKey = RCMarvelAPITestPublicKey;
+
+	XCTAssertEqualObjects(self.api.publicKey, RCMarvelAPITestPublicKey, @"\"%s\" is expecting the property 'publicKey' to have the '%@' string value.", __PRETTY_FUNCTION__, RCMarvelAPITestPublicKey);
 }
 
 @end
