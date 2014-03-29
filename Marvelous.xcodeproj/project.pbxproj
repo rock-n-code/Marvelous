@@ -19,7 +19,6 @@
 		03DEC85118E736740098CCE1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC85018E736740098CCE1 /* UIKit.framework */; };
 		03DEC85418E736740098CCE1 /* libMarvelous.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC83C18E736730098CCE1 /* libMarvelous.a */; };
 		03DEC85A18E736740098CCE1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03DEC85818E736740098CCE1 /* InfoPlist.strings */; };
-		03DEC85C18E736740098CCE1 /* MarvelousTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DEC85B18E736740098CCE1 /* MarvelousTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +63,6 @@
 		03DEC85018E736740098CCE1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		03DEC85718E736740098CCE1 /* MarvelousTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MarvelousTests-Info.plist"; sourceTree = "<group>"; };
 		03DEC85918E736740098CCE1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		03DEC85B18E736740098CCE1 /* MarvelousTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarvelousTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,7 +179,6 @@
 			isa = PBXGroup;
 			children = (
 				03B694D918E73E4600CEF855 /* APIs */,
-				03DEC85B18E736740098CCE1 /* MarvelousTests.m */,
 				03DEC85618E736740098CCE1 /* Supporting Files */,
 			);
 			path = MarvelousTests;
@@ -288,7 +285,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				03B694DB18E73E5E00CEF855 /* RCMarvelAPITests.m in Sources */,
-				03DEC85C18E736740098CCE1 /* MarvelousTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
