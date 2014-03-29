@@ -7,7 +7,10 @@
 //
 
 #import "RCOperation.h"
+#import "RCAPIOperationTypes.h"
 
 @interface RCAPIOperation : RCOperation
+
+@property (nonatomic, readonly) RCAPIOperationTypes type;
 
 @end

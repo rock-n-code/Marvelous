@@ -10,6 +10,8 @@
 
 @interface RCAPIOperation ()
 
+@property (nonatomic) RCAPIOperationTypes type;
+
 @end
 
 @implementation RCAPIOperation
