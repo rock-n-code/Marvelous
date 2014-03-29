@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03DEC84018E736730098CCE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC83F18E736730098CCE1 /* Foundation.framework */; };
+		03DEC84518E736740098CCE1 /* Marvelous.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03DEC84418E736740098CCE1 /* Marvelous.h */; };
+		03DEC84718E736740098CCE1 /* Marvelous.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DEC84618E736740098CCE1 /* Marvelous.m */; };
+		03DEC84E18E736740098CCE1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC84D18E736740098CCE1 /* XCTest.framework */; };
+		03DEC84F18E736740098CCE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC83F18E736730098CCE1 /* Foundation.framework */; };
+		03DEC85118E736740098CCE1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC85018E736740098CCE1 /* UIKit.framework */; };
+		03DEC85418E736740098CCE1 /* libMarvelous.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC83C18E736730098CCE1 /* libMarvelous.a */; };
+		03DEC85A18E736740098CCE1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03DEC85818E736740098CCE1 /* InfoPlist.strings */; };
+		03DEC85C18E736740098CCE1 /* MarvelousTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DEC85B18E736740098CCE1 /* MarvelousTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		03DEC85218E736740098CCE1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03DEC83418E736730098CCE1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03DEC83B18E736730098CCE1;
+			remoteInfo = Marvelous;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		03DEC83A18E736730098CCE1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				03DEC84518E736740098CCE1 /* Marvelous.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		03DEC83C18E736730098CCE1 /* libMarvelous.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMarvelous.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		03DEC83F18E736730098CCE1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		03DEC84318E736740098CCE1 /* Marvelous-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Marvelous-Prefix.pch"; sourceTree = "<group>"; };
+		03DEC84418E736740098CCE1 /* Marvelous.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Marvelous.h; sourceTree = "<group>"; };
+		03DEC84618E736740098CCE1 /* Marvelous.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Marvelous.m; sourceTree = "<group>"; };
+		03DEC84C18E736740098CCE1 /* MarvelousTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelousTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		03DEC84D18E736740098CCE1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		03DEC85018E736740098CCE1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		03DEC85718E736740098CCE1 /* MarvelousTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MarvelousTests-Info.plist"; sourceTree = "<group>"; };
+		03DEC85918E736740098CCE1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		03DEC85B18E736740098CCE1 /* MarvelousTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarvelousTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		03DEC83918E736730098CCE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03DEC84018E736730098CCE1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03DEC84918E736740098CCE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03DEC84E18E736740098CCE1 /* XCTest.framework in Frameworks */,
+				03DEC85118E736740098CCE1 /* UIKit.framework in Frameworks */,
+				03DEC85418E736740098CCE1 /* libMarvelous.a in Frameworks */,
+				03DEC84F18E736740098CCE1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03DEC83318E736730098CCE1 = {
+			isa = PBXGroup;
+			children = (
+				03DEC84118E736730098CCE1 /* Marvelous */,
+				03DEC85518E736740098CCE1 /* MarvelousTests */,
+				03DEC83E18E736730098CCE1 /* Frameworks */,
+				03DEC83D18E736730098CCE1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		03DEC83D18E736730098CCE1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				03DEC83C18E736730098CCE1 /* libMarvelous.a */,
+				03DEC84C18E736740098CCE1 /* MarvelousTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		03DEC83E18E736730098CCE1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03DEC83F18E736730098CCE1 /* Foundation.framework */,
+				03DEC84D18E736740098CCE1 /* XCTest.framework */,
+				03DEC85018E736740098CCE1 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		03DEC84118E736730098CCE1 /* Marvelous */ = {
+			isa = PBXGroup;
+			children = (
+				03DEC84418E736740098CCE1 /* Marvelous.h */,
+				03DEC84618E736740098CCE1 /* Marvelous.m */,
+				03DEC84218E736740098CCE1 /* Supporting Files */,
+			);
+			path = Marvelous;
+			sourceTree = "<group>";
+		};
+		03DEC84218E736740098CCE1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				03DEC84318E736740098CCE1 /* Marvelous-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		03DEC85518E736740098CCE1 /* MarvelousTests */ = {
+			isa = PBXGroup;
+			children = (
+				03DEC85B18E736740098CCE1 /* MarvelousTests.m */,
+				03DEC85618E736740098CCE1 /* Supporting Files */,
+			);
+			path = MarvelousTests;
+			sourceTree = "<group>";
+		};
+		03DEC85618E736740098CCE1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				03DEC85718E736740098CCE1 /* MarvelousTests-Info.plist */,
+				03DEC85818E736740098CCE1 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		03DEC83B18E736730098CCE1 /* Marvelous */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03DEC85F18E736740098CCE1 /* Build configuration list for PBXNativeTarget "Marvelous" */;
+			buildPhases = (
+				03DEC83818E736730098CCE1 /* Sources */,
+				03DEC83918E736730098CCE1 /* Frameworks */,
+				03DEC83A18E736730098CCE1 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Marvelous;
+			productName = Marvelous;
+			productReference = 03DEC83C18E736730098CCE1 /* libMarvelous.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		03DEC84B18E736740098CCE1 /* MarvelousTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03DEC86218E736740098CCE1 /* Build configuration list for PBXNativeTarget "MarvelousTests" */;
+			buildPhases = (
+				03DEC84818E736740098CCE1 /* Sources */,
+				03DEC84918E736740098CCE1 /* Frameworks */,
+				03DEC84A18E736740098CCE1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03DEC85318E736740098CCE1 /* PBXTargetDependency */,
+			);
+			name = MarvelousTests;
+			productName = MarvelousTests;
+			productReference = 03DEC84C18E736740098CCE1 /* MarvelousTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		03DEC83418E736730098CCE1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Rock & Code";
+			};
+			buildConfigurationList = 03DEC83718E736730098CCE1 /* Build configuration list for PBXProject "Marvelous" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 03DEC83318E736730098CCE1;
+			productRefGroup = 03DEC83D18E736730098CCE1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				03DEC83B18E736730098CCE1 /* Marvelous */,
+				03DEC84B18E736740098CCE1 /* MarvelousTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		03DEC84A18E736740098CCE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03DEC85A18E736740098CCE1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		03DEC83818E736730098CCE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03DEC84718E736740098CCE1 /* Marvelous.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03DEC84818E736740098CCE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03DEC85C18E736740098CCE1 /* MarvelousTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		03DEC85318E736740098CCE1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03DEC83B18E736730098CCE1 /* Marvelous */;
+			targetProxy = 03DEC85218E736740098CCE1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		03DEC85818E736740098CCE1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				03DEC85918E736740098CCE1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		03DEC85D18E736740098CCE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		03DEC85E18E736740098CCE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		03DEC86018E736740098CCE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/Marvelous.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Marvelous/Marvelous-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		03DEC86118E736740098CCE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/Marvelous.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Marvelous/Marvelous-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		03DEC86318E736740098CCE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Marvelous/Marvelous-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MarvelousTests/MarvelousTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		03DEC86418E736740098CCE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Marvelous/Marvelous-Prefix.pch";
+				INFOPLIST_FILE = "MarvelousTests/MarvelousTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		03DEC83718E736730098CCE1 /* Build configuration list for PBXProject "Marvelous" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03DEC85D18E736740098CCE1 /* Debug */,
+				03DEC85E18E736740098CCE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03DEC85F18E736740098CCE1 /* Build configuration list for PBXNativeTarget "Marvelous" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03DEC86018E736740098CCE1 /* Debug */,
+				03DEC86118E736740098CCE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		03DEC86218E736740098CCE1 /* Build configuration list for PBXNativeTarget "MarvelousTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03DEC86318E736740098CCE1 /* Debug */,
+				03DEC86418E736740098CCE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 03DEC83418E736730098CCE1 /* Project object */;
+}
