@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		03DEC84018E736730098CCE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC83F18E736730098CCE1 /* Foundation.framework */; };
 		03DEC84518E736740098CCE1 /* Marvelous.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03DEC84418E736740098CCE1 /* Marvelous.h */; };
-		03DEC84718E736740098CCE1 /* Marvelous.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DEC84618E736740098CCE1 /* Marvelous.m */; };
 		03DEC84E18E736740098CCE1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC84D18E736740098CCE1 /* XCTest.framework */; };
 		03DEC84F18E736740098CCE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC83F18E736730098CCE1 /* Foundation.framework */; };
 		03DEC85118E736740098CCE1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC85018E736740098CCE1 /* UIKit.framework */; };
@@ -46,7 +45,6 @@
 		03DEC83F18E736730098CCE1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		03DEC84318E736740098CCE1 /* Marvelous-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Marvelous-Prefix.pch"; sourceTree = "<group>"; };
 		03DEC84418E736740098CCE1 /* Marvelous.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Marvelous.h; sourceTree = "<group>"; };
-		03DEC84618E736740098CCE1 /* Marvelous.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Marvelous.m; sourceTree = "<group>"; };
 		03DEC84C18E736740098CCE1 /* MarvelousTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelousTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03DEC84D18E736740098CCE1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		03DEC85018E736740098CCE1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -111,7 +109,6 @@
 			isa = PBXGroup;
 			children = (
 				03DEC84418E736740098CCE1 /* Marvelous.h */,
-				03DEC84618E736740098CCE1 /* Marvelous.m */,
 				03DEC84218E736740098CCE1 /* Supporting Files */,
 			);
 			path = Marvelous;
@@ -224,7 +221,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03DEC84718E736740098CCE1 /* Marvelous.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
