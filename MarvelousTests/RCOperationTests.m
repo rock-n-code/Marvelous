@@ -118,7 +118,7 @@
 	XCTAssertTrue(self.operation.isFinished, @"\"%s\" is expecting the property 'isFinished' to have the YES value.", __PRETTY_FUNCTION__);
 }
 
-- (void)testSetErrorWithCodeAndUserInfo
+- (void)testErrorWithCodeAndUserInfo
 {
 	NSDictionary *userInfo = @{NSLocalizedDescriptionKey: RCOperationErrorFilterIsNull};
 	NSString *domain = NSStringFromClass([RCOperation class]);

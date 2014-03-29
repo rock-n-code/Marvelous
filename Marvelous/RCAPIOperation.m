@@ -19,4 +19,20 @@
 
 @implementation RCAPIOperation
 
+#pragma mark - NSObject
+
+- (id)init
+{
+	self = [super init];
+
+	if (self) {
+		NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration ephemeralSessionConfiguration];
+
+		self.session = [NSURLSession sessionWithConfiguration:configuration];
+		self.type = RCAPIOperationTypeUndefined;
+	}
+
+	return self;
+}
+
 @end
