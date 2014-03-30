@@ -31,8 +31,8 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 @property (nonatomic, strong) NSDictionary *json;
 @property (nonatomic) RCAPIOperationTypes type;
 
-@property (nonatomic, strong, readonly) NSString *stringfiedType;
-@property (nonatomic, strong, readonly) NSString *stringfiedFilter;
+@property (nonatomic, readonly, strong) NSString *stringfiedType;
+@property (nonatomic, readonly, strong) NSString *stringfiedFilter;
 
 @end
 
@@ -40,15 +40,16 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 
 #pragma mark - NSObject
 
-- (id)initWithType:(RCAPIOperationTypes)type withPublicKey:(NSString *)publicKey andIdentifier:(NSString *)identifier
+- (id)initWithType:(RCAPIOperationTypes)type publicKey:(NSString *)publicKey andIdentifier:(NSString *)identifier
 {
 	self = [self init];
 
-	if (self) {
+	if (self && [self validateType:type publicKey:publicKey andIdentifier:identifier]) {
 		self.type = type;
 		self.publicKey = publicKey;
 		self.identifier = identifier;
 		self.filter = @{RCRequestKeyAPIKey: publicKey};
+		self.url = [self generateURL];
 	}
 
 	return self;
@@ -74,25 +75,7 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 {
 	[super start];
 
-	if (!self.url || !self.filter || self.type == RCAPIOperationTypeUndefined) {
-		NSString *description;
-		NSInteger code;
-
-		if (!self.url) {
-			description = RCOperationErrorURLIsNull;
-			code = RCOperationErrorCodeURLIsNull;
-		} else if (!self.filter) {
-			description = RCOperationErrorFilterIsNull;
-			code = RCOperationErrorCodeFilterIsNull;
-		} else {
-			description = RCOperationErrorTypeUndefined;
-			code = RCOperationErrorCodeTypeUndefined;
-		}
-
-		NSDictionary *userInfo = @{NSLocalizedDescriptionKey: description};
-
-		[self errorWithCode:code andUserInfo:userInfo];
-
+	if (self.error) {
 		if (self.jsonCompletion) {
 			self.jsonCompletion(self.json, self.error);
 		}

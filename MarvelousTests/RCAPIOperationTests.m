@@ -9,8 +9,15 @@
 #import <XCTest/XCTest.h>
 
 #import "RCAPIOperation.h"
+#import "RCRequestKeys.h"
+
+static NSString * const RCAPIOperationTestIdentifier = @"TestIdentifier";
+static NSString * const RCAPIOperationTestPublicKey = @"TestPublicKey";
+static NSInteger const RCAPIOperationTestType = RCAPIOperationTypeCharacters;
 
 @interface RCAPIOperationTests : XCTestCase
+
+@property (nonatomic, strong) RCAPIOperation *operation;
 
 @end
 
@@ -23,75 +30,77 @@
 
 - (void)tearDown
 {
+	self.operation = nil;
+	
 	[super tearDown];
 }
 
 - (void)testInit
 {
-	RCAPIOperation *operation = [[RCAPIOperation alloc] init];
+	self.operation = [[RCAPIOperation alloc] init];
 
-	XCTAssertEqual(operation.type, RCAPIOperationTypeUndefined, @"\"%s\" is expecting the property 'type' to have the '%d' integer value.", __PRETTY_FUNCTION__, RCAPIOperationTypeUndefined);
-	XCTAssertNil(operation.url, @"\"%s\" is expecting the property 'url' to be NULL.", __PRETTY_FUNCTION__);
-	XCTAssertNil(operation.filter, @"\"%s\" is expecting the property 'filter' to be NULL.", __PRETTY_FUNCTION__);
-	XCTAssertNil(operation.json, @"\"%s\" is expecting the property 'json' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertEqual(self.operation.type, RCAPIOperationTypeUndefined, @"\"%s\" is expecting the property 'type' to have the '%d' integer value.", __PRETTY_FUNCTION__, RCAPIOperationTypeUndefined);
+	XCTAssertNil(self.operation.identifier, @"\"%s\" is expecting the property 'identifier' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(self.operation.publicKey, @"\"%s\" is expecting the property 'publicKey' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(self.operation.url, @"\"%s\" is expecting the property 'url' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(self.operation.filter, @"\"%s\" is expecting the property 'filter' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(self.operation.json, @"\"%s\" is expecting the property 'json' to be NULL.", __PRETTY_FUNCTION__);
 }
 
-- (void)testInitWithURL
+- (void)testInitWithTypePublicKeyAndIdentifier
 {
-	NSURL *url = [NSURL URLWithString:@""];
-	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithURL:url andFilter:nil];
+	NSString *testURLString = [NSString stringWithFormat:@"https://gateway.marvel.com/v1/public/characters/%@?apikey=%@", RCAPIOperationTestIdentifier, RCAPIOperationTestPublicKey];
+	NSURL *testURL = [NSURL URLWithString:testURLString];
+	NSDictionary *testFilter = @{RCRequestKeyAPIKey: RCAPIOperationTestPublicKey};
 
-	XCTAssertEqual(operation.type, RCAPIOperationTypeUndefined, @"\"%s\" is expecting the property 'type' to have the '%d' integer value.", __PRETTY_FUNCTION__, RCAPIOperationTypeUndefined);
-	XCTAssertNotNil(operation.url, @"\"%s\" is expecting the property 'url' to have a URL instance.", __PRETTY_FUNCTION__);
-	XCTAssertNil(operation.filter, @"\"%s\" is expecting the property 'filter' to be NULL.", __PRETTY_FUNCTION__);
-	XCTAssertNil(operation.json, @"\"%s\" is expecting the property 'json' to be NULL.", __PRETTY_FUNCTION__);
+	self.operation = [[RCAPIOperation alloc] initWithType:RCAPIOperationTestType publicKey:RCAPIOperationTestPublicKey andIdentifier:RCAPIOperationTestIdentifier];
+
+	XCTAssertEqual(self.operation.type, RCAPIOperationTestType, @"\"%s\" is expecting the property 'type' to have the '%d' integer value.", __PRETTY_FUNCTION__, RCAPIOperationTestType);
+	XCTAssertEqualObjects(self.operation.identifier, RCAPIOperationTestIdentifier, @"\"%s\" is expecting the property 'type' to have the '%@' string value.", __PRETTY_FUNCTION__, RCAPIOperationTestIdentifier);
+	XCTAssertEqualObjects(self.operation.publicKey, RCAPIOperationTestPublicKey, @"\"%s\" is expecting the property 'publicKey' to have the '%@' string value.", __PRETTY_FUNCTION__, RCAPIOperationTestPublicKey);
+	XCTAssertEqualObjects(self.operation.url, testURL, @"\"%s\" is expecting the property 'url' to have a NSURL instance.", __PRETTY_FUNCTION__);
+	XCTAssertEqualObjects(self.operation.filter, testFilter, @"\"%s\" is expecting the property 'filter' to have a NSDictionary instance.", __PRETTY_FUNCTION__);
+	XCTAssertNil(self.operation.json, @"\"%s\" is expecting the property 'json' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(self.operation.error, @"\"%s\" is expecting the property 'error' to be NULL.", __PRETTY_FUNCTION__);
 }
 
-- (void)testInitWithFilter
+- (void)testInitWithUndefinedTypePublicKeyAndIdentifier
 {
-	NSDictionary *filter = @{};
-	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithURL:nil andFilter:filter];
+	self.operation = [[RCAPIOperation alloc] initWithType:RCAPIOperationTypeUndefined publicKey:RCAPIOperationTestPublicKey andIdentifier:RCAPIOperationTestIdentifier];
 
-	XCTAssertEqual(operation.type, RCAPIOperationTypeUndefined, @"\"%s\" is expecting the property 'type' to have the '%d' integer value.", __PRETTY_FUNCTION__, RCAPIOperationTypeUndefined);
-	XCTAssertNil(operation.url, @"\"%s\" is expecting the property 'url' to be NULL.", __PRETTY_FUNCTION__);
-	XCTAssertNotNil(operation.filter, @"\"%s\" is expecting the property 'filter' to have a NSDictionary instance.", __PRETTY_FUNCTION__);
-	XCTAssertNil(operation.json, @"\"%s\" is expecting the property 'json' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertEqual(self.operation.type, RCAPIOperationTypeUndefined, @"\"%s\" is expecting the property 'type' to have the '%d' integer value.", __PRETTY_FUNCTION__, RCAPIOperationTypeUndefined);
+	XCTAssertNil(self.operation.identifier, @"\"%s\" is expecting the property 'identifier' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(self.operation.publicKey, @"\"%s\" is expecting the property 'publicKey' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(self.operation.url, @"\"%s\" is expecting the property 'url' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(self.operation.filter, @"\"%s\" is expecting the property 'filter' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(self.operation.json, @"\"%s\" is expecting the property 'json' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(self.operation.error, @"\"%s\" is expecting the property 'error' to not be NULL.", __PRETTY_FUNCTION__);
 }
 
-- (void)testInitWithURLAndFilter
+- (void)testInitWithTypeNilPublicKeyAndIdentifier
 {
-	NSURL *url = [NSURL URLWithString:@""];
-	NSDictionary *filter = @{};
-	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithURL:url andFilter:filter];
+	self.operation = [[RCAPIOperation alloc] initWithType:RCAPIOperationTypeUndefined publicKey:nil andIdentifier:RCAPIOperationTestIdentifier];
 
-	XCTAssertEqual(operation.type, RCAPIOperationTypeUndefined, @"\"%s\" is expecting the property 'type' to have the '%d' integer value.", __PRETTY_FUNCTION__, RCAPIOperationTypeUndefined);
-	XCTAssertNotNil(operation.url, @"\"%s\" is expecting the property 'url' to have a URL instance.", __PRETTY_FUNCTION__);
-	XCTAssertNotNil(operation.filter, @"\"%s\" is expecting the property 'filter' to have a NSDictionary instance.", __PRETTY_FUNCTION__);
-	XCTAssertNil(operation.json, @"\"%s\" is expecting the property 'json' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertEqual(self.operation.type, RCAPIOperationTypeUndefined, @"\"%s\" is expecting the property 'type' to have the '%d' integer value.", __PRETTY_FUNCTION__, RCAPIOperationTypeUndefined);
+	XCTAssertNil(self.operation.identifier, @"\"%s\" is expecting the property 'identifier' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(self.operation.publicKey, @"\"%s\" is expecting the property 'publicKey' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(self.operation.url, @"\"%s\" is expecting the property 'url' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(self.operation.filter, @"\"%s\" is expecting the property 'filter' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(self.operation.json, @"\"%s\" is expecting the property 'json' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(self.operation.error, @"\"%s\" is expecting the property 'error' to not be NULL.", __PRETTY_FUNCTION__);
 }
 
-- (void)testStart
+- (void)testInitWithUndefinedTypePublicKeyAndNilIdentifier
 {
-	RCAPIOperation *operation = [[RCAPIOperation alloc] init];
+	self.operation = [[RCAPIOperation alloc] initWithType:RCAPIOperationTypeUndefined publicKey:RCAPIOperationTestPublicKey andIdentifier:RCAPIOperationTestIdentifier];
 
-	[operation start];
-
-	XCTAssertTrue(operation.isFinished, @"\"%s\" is expecting the property 'isFinished' to have the YES value.", __PRETTY_FUNCTION__);
-	XCTAssertNotNil(operation.error, @"\"%s\" is expecting the property 'error' to be not NULL.", __PRETTY_FUNCTION__);
-}
-
-- (void)testCancel
-{
-	NSURL *url = [NSURL URLWithString:@""];
-	NSDictionary *filter = @{};
-	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithURL:url andFilter:filter];
-
-	[operation start];
-	[operation cancel];
-
-	XCTAssertTrue(operation.isFinished, @"\"%s\" is expecting the property 'isFinished' to have the YES value.", __PRETTY_FUNCTION__);
-	XCTAssertTrue(operation.isCancelled, @"\"%s\" is expecting the property 'isCancelled' to have the YES value.", __PRETTY_FUNCTION__);
-	XCTAssertNotNil(operation.error, @"\"%s\" is expecting the property 'error' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertEqual(self.operation.type, RCAPIOperationTypeUndefined, @"\"%s\" is expecting the property 'type' to have the '%d' integer value.", __PRETTY_FUNCTION__, RCAPIOperationTypeUndefined);
+	XCTAssertNil(self.operation.identifier, @"\"%s\" is expecting the property 'identifier' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(self.operation.publicKey, @"\"%s\" is expecting the property 'publicKey' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(self.operation.url, @"\"%s\" is expecting the property 'url' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(self.operation.filter, @"\"%s\" is expecting the property 'filter' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(self.operation.json, @"\"%s\" is expecting the property 'json' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(self.operation.error, @"\"%s\" is expecting the property 'error' to not be NULL.", __PRETTY_FUNCTION__);
 }
 
 @end

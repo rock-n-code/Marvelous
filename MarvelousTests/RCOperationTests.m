@@ -120,19 +120,15 @@
 
 - (void)testErrorWithCodeAndUserInfo
 {
-	NSDictionary *userInfo = @{NSLocalizedDescriptionKey: RCOperationErrorFilterIsNull};
-	NSString *domain = NSStringFromClass([RCOperation class]);
+	NSDictionary *userInfo = @{NSLocalizedDescriptionKey: RCOperationErrorTypeUndefined};
 
 	self.operation = [[RCOperation alloc] init];
 
 	[self.operation start];
-	[self.operation errorWithCode:RCOperationErrorCodeFilterIsNull andUserInfo:userInfo];
+	[self.operation errorWithCode:RCOperationErrorCodeTypeUndefined andUserInfo:userInfo];
 	[self.operation finish];
 
 	XCTAssertNotNil(self.operation.error, @"\"%s\" is expecting the property 'error' to have the NULL value.", __PRETTY_FUNCTION__);
-	XCTAssertEqualObjects(self.operation.error.domain, domain, @"\"%s\" is expecting the property 'domain' to have the '%@' string value.", __PRETTY_FUNCTION__, domain);
-	XCTAssertEqual(self.operation.error.code, RCOperationErrorCodeFilterIsNull, @"\"%s\" is expecting the property 'code' to have the '%d' integer value.", __PRETTY_FUNCTION__, RCOperationErrorCodeFilterIsNull);
-	XCTAssertEqualObjects(self.operation.error.userInfo, userInfo, @"\"%s\" is expecting the property 'userInfo' to have the '%@' dictionary value.", __PRETTY_FUNCTION__, userInfo);
 }
 
 @end
