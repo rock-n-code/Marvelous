@@ -126,12 +126,12 @@
 	self.operation = [[RCOperation alloc] init];
 
 	[self.operation start];
-	[self.operation errorWithCode:RCOperationErrorCodeFilterIsNil andUserInfo:userInfo];
+	[self.operation errorWithCode:RCOperationErrorCodeFilterIsNull andUserInfo:userInfo];
 	[self.operation finish];
 
 	XCTAssertNotNil(self.operation.error, @"\"%s\" is expecting the property 'error' to have the NULL value.", __PRETTY_FUNCTION__);
 	XCTAssertEqualObjects(self.operation.error.domain, domain, @"\"%s\" is expecting the property 'domain' to have the '%@' string value.", __PRETTY_FUNCTION__, domain);
-	XCTAssertEqual(self.operation.error.code, RCOperationErrorCodeFilterIsNil, @"\"%s\" is expecting the property 'code' to have the '%d' integer value.", __PRETTY_FUNCTION__, RCOperationErrorCodeFilterIsNil);
+	XCTAssertEqual(self.operation.error.code, RCOperationErrorCodeFilterIsNull, @"\"%s\" is expecting the property 'code' to have the '%d' integer value.", __PRETTY_FUNCTION__, RCOperationErrorCodeFilterIsNull);
 	XCTAssertEqualObjects(self.operation.error.userInfo, userInfo, @"\"%s\" is expecting the property 'userInfo' to have the '%@' dictionary value.", __PRETTY_FUNCTION__, userInfo);
 }
 
