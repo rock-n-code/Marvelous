@@ -189,6 +189,33 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 
 #pragma mark - Private methods
 
+- (BOOL)validateType:(RCAPIOperationTypes)type publicKey:(NSString *)publicKey andIdentifier:(NSString *)identifier
+{
+	BOOL isValidated = type != RCAPIOperationTypeUndefined && publicKey && identifier;
+
+	if (!isValidated) {
+		NSString *description;
+		NSInteger code;
+
+		if (!identifier) {
+			description = RCOperationErrorIdentifierIsNull;
+			code = RCOperationErrorCodeIdentifierIsNull;
+		} else if (!publicKey) {
+			description = RCOperationErrorIdentifierIsNull;
+			code = RCOperationErrorCodePublicKeyIsNull;
+		} else {
+			description = RCOperationErrorTypeUndefined;
+			code = RCOperationErrorCodeTypeUndefined;
+		}
+
+		NSDictionary *userInfo = @{NSLocalizedDescriptionKey: description};
+
+		[self errorWithCode:code andUserInfo:userInfo];
+	}
+
+	return isValidated;
+}
+
 - (NSURL *)generateURL
 {
 	NSString *urlString;
