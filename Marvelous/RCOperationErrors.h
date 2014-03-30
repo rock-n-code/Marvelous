@@ -8,3 +8,4 @@
 
 extern NSString * const RCOperationErrorCancelled;
 extern NSString * const RCOperationErrorFilterIsNull;
+extern NSString * const RCOperationErrorURLIsNull;

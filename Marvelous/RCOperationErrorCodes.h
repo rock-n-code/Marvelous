@@ -8,5 +8,6 @@
 
 typedef NS_ENUM(NSInteger, RCOperationErrorCodes) {
 	RCOperationErrorCodeOperationCancelled = -1,
-	RCOperationErrorCodeFilterIsNil = -1001
+	RCOperationErrorCodeFilterIsNull = -1001,
+	RCOperationErrorCodeURLIsNull = -1002
 };
