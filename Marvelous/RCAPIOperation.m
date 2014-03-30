@@ -25,6 +25,9 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 @property (nonatomic, strong) NSDictionary *filter;
 @property (nonatomic, strong) NSDictionary *json;
 
+@property (nonatomic, strong, readonly) NSString *stringfiedType;
+@property (nonatomic, strong, readonly) NSString *stringfiedFilter;
+
 @end
 
 @implementation RCAPIOperation
@@ -140,6 +143,42 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 	}
 
 	[super cancel];
+}
+
+#pragma mark - Properties
+
+- (NSString *)stringfiedType
+{
+	switch (self.type) {
+		case RCAPIOperationTypeCharacters:
+			return RCRequestKeyCharacters;
+		case RCAPIOperationTypeComics:
+			return RCRequestKeyComics;
+		case RCAPIOperationTypeCreators:
+			return RCRequestKeyCreators;
+		case RCAPIOperationTypeEvents:
+			return RCRequestKeyEvents;
+		case RCAPIOperationTypeSeries:
+			return RCRequestKeySeries;
+		case RCAPIOperationTypeStories:
+			return RCRequestKeyStories;
+		default:
+			return [NSString string];
+	}
+}
+
+- (NSString *)stringfiedFilter
+{
+	NSMutableArray *parameters = [NSMutableArray array];
+
+	[self.filter enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *value, BOOL *stop) {
+		NSString *encodedValue = [value stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+		NSString *parameter = [NSString stringWithFormat:RCAPIOperationURLParameter, key, encodedValue];
+
+		[parameters addObject:parameter];
+	}];
+
+	return [parameters componentsJoinedByString:@"&"];
 }
 
 @end
