@@ -10,10 +10,7 @@
 
 #import "RCAPIOperation.h"
 #import "RCRequestKeys.h"
-
-static NSString * const RCAPIOperationTestIdentifier = @"TestIdentifier";
-static NSString * const RCAPIOperationTestPublicKey = @"TestPublicKey";
-static NSInteger const RCAPIOperationTestType = RCAPIOperationTypeCharacters;
+#import "RCAPIOperationTestValues.h"
 
 @interface RCAPIOperationTests : XCTestCase
 
@@ -49,15 +46,15 @@ static NSInteger const RCAPIOperationTestType = RCAPIOperationTypeCharacters;
 
 - (void)testInitWithTypePublicKeyAndIdentifier
 {
-	NSString *testURLString = [NSString stringWithFormat:@"https://gateway.marvel.com/v1/public/characters/%@?apikey=%@", RCAPIOperationTestIdentifier, RCAPIOperationTestPublicKey];
+	NSString *testURLString = [NSString stringWithFormat:@"https://gateway.marvel.com/v1/public/characters/%@?apikey=%@", RCAPIOperationTestValueIdentifier, RCAPIOperationTestValuePublicKey];
 	NSURL *testURL = [NSURL URLWithString:testURLString];
-	NSDictionary *testFilter = @{RCRequestKeyAPIKey: RCAPIOperationTestPublicKey};
+	NSDictionary *testFilter = @{RCRequestKeyAPIKey: RCAPIOperationTestValuePublicKey};
 
-	self.operation = [[RCAPIOperation alloc] initWithType:RCAPIOperationTestType publicKey:RCAPIOperationTestPublicKey andIdentifier:RCAPIOperationTestIdentifier];
+	self.operation = [[RCAPIOperation alloc] initWithType:RCAPIOperationTypeCharacters publicKey:RCAPIOperationTestValuePublicKey andIdentifier:RCAPIOperationTestValueIdentifier];
 
-	XCTAssertEqual(self.operation.type, RCAPIOperationTestType, @"\"%s\" is expecting the property 'type' to have the '%d' integer value.", __PRETTY_FUNCTION__, RCAPIOperationTestType);
-	XCTAssertEqualObjects(self.operation.identifier, RCAPIOperationTestIdentifier, @"\"%s\" is expecting the property 'type' to have the '%@' string value.", __PRETTY_FUNCTION__, RCAPIOperationTestIdentifier);
-	XCTAssertEqualObjects(self.operation.publicKey, RCAPIOperationTestPublicKey, @"\"%s\" is expecting the property 'publicKey' to have the '%@' string value.", __PRETTY_FUNCTION__, RCAPIOperationTestPublicKey);
+	XCTAssertEqual(self.operation.type, RCAPIOperationTypeCharacters, @"\"%s\" is expecting the property 'type' to have the '%d' integer value.", __PRETTY_FUNCTION__, RCAPIOperationTypeCharacters);
+	XCTAssertEqualObjects(self.operation.identifier, RCAPIOperationTestValueIdentifier, @"\"%s\" is expecting the property 'type' to have the '%@' string value.", __PRETTY_FUNCTION__, RCAPIOperationTestValueIdentifier);
+	XCTAssertEqualObjects(self.operation.publicKey, RCAPIOperationTestValuePublicKey, @"\"%s\" is expecting the property 'publicKey' to have the '%@' string value.", __PRETTY_FUNCTION__, RCAPIOperationTestValuePublicKey);
 	XCTAssertEqualObjects(self.operation.url, testURL, @"\"%s\" is expecting the property 'url' to have a NSURL instance.", __PRETTY_FUNCTION__);
 	XCTAssertEqualObjects(self.operation.filter, testFilter, @"\"%s\" is expecting the property 'filter' to have a NSDictionary instance.", __PRETTY_FUNCTION__);
 	XCTAssertNil(self.operation.json, @"\"%s\" is expecting the property 'json' to be NULL.", __PRETTY_FUNCTION__);
@@ -66,7 +63,7 @@ static NSInteger const RCAPIOperationTestType = RCAPIOperationTypeCharacters;
 
 - (void)testInitWithUndefinedTypePublicKeyAndIdentifier
 {
-	self.operation = [[RCAPIOperation alloc] initWithType:RCAPIOperationTypeUndefined publicKey:RCAPIOperationTestPublicKey andIdentifier:RCAPIOperationTestIdentifier];
+	self.operation = [[RCAPIOperation alloc] initWithType:RCAPIOperationTypeUndefined publicKey:RCAPIOperationTestValuePublicKey andIdentifier:RCAPIOperationTestValueIdentifier];
 
 	XCTAssertEqual(self.operation.type, RCAPIOperationTypeUndefined, @"\"%s\" is expecting the property 'type' to have the '%d' integer value.", __PRETTY_FUNCTION__, RCAPIOperationTypeUndefined);
 	XCTAssertNil(self.operation.identifier, @"\"%s\" is expecting the property 'identifier' to be NULL.", __PRETTY_FUNCTION__);
@@ -79,7 +76,7 @@ static NSInteger const RCAPIOperationTestType = RCAPIOperationTypeCharacters;
 
 - (void)testInitWithTypeNilPublicKeyAndIdentifier
 {
-	self.operation = [[RCAPIOperation alloc] initWithType:RCAPIOperationTypeUndefined publicKey:nil andIdentifier:RCAPIOperationTestIdentifier];
+	self.operation = [[RCAPIOperation alloc] initWithType:RCAPIOperationTypeUndefined publicKey:nil andIdentifier:RCAPIOperationTestValueIdentifier];
 
 	XCTAssertEqual(self.operation.type, RCAPIOperationTypeUndefined, @"\"%s\" is expecting the property 'type' to have the '%d' integer value.", __PRETTY_FUNCTION__, RCAPIOperationTypeUndefined);
 	XCTAssertNil(self.operation.identifier, @"\"%s\" is expecting the property 'identifier' to be NULL.", __PRETTY_FUNCTION__);
@@ -92,7 +89,7 @@ static NSInteger const RCAPIOperationTestType = RCAPIOperationTypeCharacters;
 
 - (void)testInitWithUndefinedTypePublicKeyAndNilIdentifier
 {
-	self.operation = [[RCAPIOperation alloc] initWithType:RCAPIOperationTypeUndefined publicKey:RCAPIOperationTestPublicKey andIdentifier:RCAPIOperationTestIdentifier];
+	self.operation = [[RCAPIOperation alloc] initWithType:RCAPIOperationTypeUndefined publicKey:RCAPIOperationTestValuePublicKey andIdentifier:nil];
 
 	XCTAssertEqual(self.operation.type, RCAPIOperationTypeUndefined, @"\"%s\" is expecting the property 'type' to have the '%d' integer value.", __PRETTY_FUNCTION__, RCAPIOperationTypeUndefined);
 	XCTAssertNil(self.operation.identifier, @"\"%s\" is expecting the property 'identifier' to be NULL.", __PRETTY_FUNCTION__);
