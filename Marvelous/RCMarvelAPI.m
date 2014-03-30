@@ -12,6 +12,8 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 
 @interface RCMarvelAPI ()
 
+@property (nonatomic, strong) NSOperationQueue *queue;
+
 @end
 
 @implementation RCMarvelAPI
@@ -23,7 +25,10 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 	self = [super init];
 
 	if (self) {
-		// ...
+		self.queue = [[NSOperationQueue alloc] init];
+
+		self.queue.name = @"Marvel API Operation Queue";
+		self.queue.maxConcurrentOperationCount = NSOperationQueueDefaultMaxConcurrentOperationCount;
 	}
 
 	return self;
