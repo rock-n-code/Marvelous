@@ -15,6 +15,8 @@ typedef void (^jsonCompletionBlock) (NSDictionary *dictionary, NSError *error);
 
 @property (nonatomic, copy) jsonCompletionBlock jsonCompletion;
 
+@property (nonatomic, readonly, strong) NSString *identifier;
+@property (nonatomic, readonly, strong) NSString *publicKey;
 @property (nonatomic, readonly, strong) NSURL *url;
 @property (nonatomic, readonly, strong) NSDictionary *filter;
 @property (nonatomic, readonly, strong) NSDictionary *json;
