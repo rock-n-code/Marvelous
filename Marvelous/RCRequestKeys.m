@@ -8,6 +8,7 @@
 
 #import "RCRequestKeys.h"
 
+NSString * const RCRequestKeyAPIKey = @"apikey";
 NSString * const RCRequestKeyIdentifier = @"identifier";
 NSString * const RCRequestKeyFirstName = @"firstName";
 NSString * const RCRequestKeyMiddleName = @"middleName";

@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Rock & Code. All rights reserved.
 //
 
+extern NSString * const RCRequestKeyAPIKey;
 extern NSString * const RCRequestKeyIdentifier;
 extern NSString * const RCRequestKeyFirstName;
 extern NSString * const RCRequestKeyMiddleName;
