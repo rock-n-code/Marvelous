@@ -18,7 +18,6 @@ static NSString * const RCAPIOperationJSONValue = @"application/json";
 @property (nonatomic, strong) NSURLSession *session;
 @property (nonatomic, strong) NSDictionary *filter;
 @property (nonatomic, strong) NSDictionary *json;
-@property (nonatomic, assign) RCAPIOperationTypes type;
 
 @end
 
