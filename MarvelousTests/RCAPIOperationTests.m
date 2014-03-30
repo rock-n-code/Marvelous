@@ -70,31 +70,9 @@
 	XCTAssertNil(operation.json, @"\"%s\" is expecting the property 'json' to be NULL.", __PRETTY_FUNCTION__);
 }
 
-- (void)testStartWithNilURLAndFilter
+- (void)testStart
 {
 	RCAPIOperation *operation = [[RCAPIOperation alloc] init];
-
-	[operation start];
-
-	XCTAssertTrue(operation.isFinished, @"\"%s\" is expecting the property 'isFinished' to have the YES value.", __PRETTY_FUNCTION__);
-	XCTAssertNotNil(operation.error, @"\"%s\" is expecting the property 'error' to be not NULL.", __PRETTY_FUNCTION__);
-}
-
-- (void)testStartWithNilURL
-{
-	NSDictionary *filter = @{};
-	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithURL:nil andFilter:filter];
-
-	[operation start];
-
-	XCTAssertTrue(operation.isFinished, @"\"%s\" is expecting the property 'isFinished' to have the YES value.", __PRETTY_FUNCTION__);
-	XCTAssertNotNil(operation.error, @"\"%s\" is expecting the property 'error' to be not NULL.", __PRETTY_FUNCTION__);
-}
-
-- (void)testStartWithNilFilter
-{
-	NSURL *url = [NSURL URLWithString:@""];
-	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithURL:url andFilter:nil];
 
 	[operation start];
 

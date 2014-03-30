@@ -57,16 +57,19 @@ static NSString * const RCAPIOperationJSONValue = @"application/json";
 {
 	[super start];
 
-	if (!self.url || !self.filter) {
+	if (!self.url || !self.filter || self.type == RCAPIOperationTypeUndefined) {
 		NSString *description;
 		NSInteger code;
 
 		if (!self.url) {
 			description = RCOperationErrorURLIsNull;
 			code = RCOperationErrorCodeURLIsNull;
-		} else {
+		} else if (!self.filter) {
 			description = RCOperationErrorFilterIsNull;
 			code = RCOperationErrorCodeFilterIsNull;
+		} else {
+			description = RCOperationErrorTypeUndefined;
+			code = RCOperationErrorCodeTypeUndefined;
 		}
 
 		NSDictionary *userInfo = @{NSLocalizedDescriptionKey: description};
