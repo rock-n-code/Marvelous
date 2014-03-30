@@ -22,6 +22,18 @@
 
 #pragma mark - NSObject
 
+- (id)initWithURL:(NSURL *)url andFilter:(NSDictionary *)filter
+{
+	self = [self init];
+
+	if (self) {
+		self.url = url;
+		self.filter = filter;
+	}
+
+	return self;
+}
+
 - (id)init
 {
 	self = [super init];
