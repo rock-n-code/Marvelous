@@ -13,12 +13,12 @@ typedef void (^jsonCompletionBlock) (NSDictionary *dictionary, NSError *error);
 
 @interface RCAPIOperation : RCOperation
 
-@property (nonatomic, assign) RCAPIOperationTypes type;
 @property (nonatomic, copy) jsonCompletionBlock jsonCompletion;
 
-@property (nonatomic, strong, readonly) NSURL *url;
-@property (nonatomic, strong, readonly) NSDictionary *filter;
-@property (nonatomic, strong, readonly) NSDictionary *json;
+@property (nonatomic, readonly, strong) NSURL *url;
+@property (nonatomic, readonly, strong) NSDictionary *filter;
+@property (nonatomic, readonly, strong) NSDictionary *json;
+@property (nonatomic, readonly) RCAPIOperationTypes type;
 
 - (id)initWithType:(RCAPIOperationTypes)type withPublicKey:(NSString *)publicKey andIdentifier:(NSString *)identifier;
 
