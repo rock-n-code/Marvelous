@@ -7,6 +7,11 @@
 //
 
 #import "RCAPIOperation.h"
+#import "RCRequestKeys.h"
+
+static NSString * const RCAPIOperationBaseURL = @"https://gateway.marvel.com/v1/public/%@?%@";
+static NSString * const RCAPIOperationBaseURLWithIdentifier = @"https://gateway.marvel.com/v1/public/%@/%@?%@";
+static NSString * const RCAPIOperationURLParameter = @"%@=%@";
 
 static NSString * const RCAPIOperationContentTypeKey = @"Content-Type";
 static NSString * const RCAPIOperationContentEncodingKey = @"Content-Encoding";
@@ -179,6 +184,21 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 	}];
 
 	return [parameters componentsJoinedByString:@"&"];
+}
+
+#pragma mark - Private methods
+
+- (NSURL *)generateURL
+{
+	NSString *urlString;
+
+	if (self.identifier) {
+		urlString = [NSString stringWithFormat:RCAPIOperationBaseURLWithIdentifier, self.stringfiedType, self.identifier, self.stringfiedFilter];
+	} else {
+		urlString = [NSString stringWithFormat:RCAPIOperationBaseURL, self.stringfiedType, self.stringfiedFilter];
+	}
+
+	return [NSURL URLWithString:urlString];
 }
 
 @end
