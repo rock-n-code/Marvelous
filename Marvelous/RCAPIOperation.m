@@ -7,6 +7,7 @@
 //
 
 #import "RCAPIOperation.h"
+#import "RCAPIOperationClasses.h"
 #import "RCRequestKeys.h"
 
 static NSString * const RCAPIOperationBaseURL = @"https://gateway.marvel.com/v1/public/%@?%@";
@@ -33,6 +34,7 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 
 @property (nonatomic, readonly, strong) NSString *stringfiedType;
 @property (nonatomic, readonly, strong) NSString *stringfiedFilter;
+@property (nonatomic, readonly) RCAPIOperationTypes typeForClass;
 
 @end
 
@@ -135,6 +137,27 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 }
 
 #pragma mark - Properties
+
+- (RCAPIOperationTypes)typeForClass
+{
+	NSString *className = NSStringFromClass(self.class);
+
+	if ([className isEqualToString:RCAPIOperationClassCharacters]) {
+		return RCAPIOperationTypeCharacters;
+	} else if ([className isEqualToString:RCAPIOperationClassComics]) {
+		return RCAPIOperationTypeComics;
+	} else if ([className isEqualToString:RCAPIOperationClassCreators]) {
+		return RCAPIOperationTypeCreators;
+	} else if ([className isEqualToString:RCAPIOperationClassEvents]) {
+		return RCAPIOperationTypeEvents;
+	} else if ([className isEqualToString:RCAPIOperationClassSeries]) {
+		return RCAPIOperationTypeSeries;
+	} else if ([className isEqualToString:RCAPIOperationClassStories]) {
+		return RCAPIOperationTypeStories;
+	} else {
+		return RCAPIOperationTypeUndefined;
+	}
+}
 
 - (NSString *)stringfiedType
 {
