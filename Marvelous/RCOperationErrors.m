@@ -10,4 +10,5 @@
 
 NSString * const RCOperationErrorCancelled = @"OperationCancelled";
 NSString * const RCOperationErrorTypeUndefined = @"TypeUndefined";
+NSString * const RCOperationErrorPublicKeyIsNull = @"PublicKeyIsNull";
 NSString * const RCOperationErrorIdentifierIsNull = @"IdentifierIsNull";
