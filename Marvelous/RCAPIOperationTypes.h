@@ -8,7 +8,7 @@
 
 typedef NS_ENUM(NSInteger, RCAPIOperationTypes) {
 	RCAPIOperationTypeUndefined = 0,
-	RCAPIOperationTypeCharacter,
+	RCAPIOperationTypeCharacters,
 	RCAPIOperationTypeComics,
 	RCAPIOperationTypeCreators,
 	RCAPIOperationTypeEvents,

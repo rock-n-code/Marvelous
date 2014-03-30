@@ -11,3 +11,4 @@
 NSString * const RCOperationErrorCancelled = @"OperationCancelled";
 NSString * const RCOperationErrorFilterIsNull = @"FilterIsNull";
 NSString * const RCOperationErrorURLIsNull = @"URLIsNull";
+NSString * const RCOperationErrorTypeUndefined = @"TypeUndefined";
