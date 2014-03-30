@@ -42,8 +42,10 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 
 #pragma mark - NSObject
 
-- (id)initWithType:(RCAPIOperationTypes)type publicKey:(NSString *)publicKey andIdentifier:(NSString *)identifier
+- (id)initWithIdentifier:(NSString *)identifier andPublicKey:(NSString *)publicKey
 {
+	RCAPIOperationTypes type = self.typeForClass;
+
 	self = [self init];
 
 	if (self && [self validateType:type publicKey:publicKey andIdentifier:identifier]) {

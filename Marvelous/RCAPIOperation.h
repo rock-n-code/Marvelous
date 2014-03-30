@@ -22,6 +22,6 @@ typedef void (^jsonCompletionBlock) (NSDictionary *dictionary, NSError *error);
 @property (nonatomic, readonly, strong) NSDictionary *json;
 @property (nonatomic, readonly) RCAPIOperationTypes type;
 
-- (id)initWithType:(RCAPIOperationTypes)type publicKey:(NSString *)publicKey andIdentifier:(NSString *)identifier;
+- (id)initWithIdentifier:(NSString *)identifier andPublicKey:(NSString *)publicKey;
 
 @end
