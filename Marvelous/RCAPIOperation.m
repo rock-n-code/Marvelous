@@ -18,6 +18,8 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 
 @interface RCAPIOperation ()
 
+@property (nonatomic, strong) NSString *identifier;
+@property (nonatomic, strong) NSString *publicKey;
 @property (nonatomic, strong) NSURL *url;
 @property (nonatomic, strong) NSURLSession *session;
 @property (nonatomic, strong) NSDictionary *filter;
@@ -29,13 +31,15 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 
 #pragma mark - NSObject
 
-- (id)initWithURL:(NSURL *)url andFilter:(NSDictionary *)filter
+- (id)initWithType:(RCAPIOperationTypes)type withPublicKey:(NSString *)publicKey andIdentifier:(NSString *)identifier
 {
 	self = [self init];
 
 	if (self) {
-		self.url = url;
-		self.filter = filter;
+		self.type = type;
+		self.publicKey = publicKey;
+		self.identifier = identifier;
+		self.filter = @{RCRequestKeyAPIKey: publicKey};
 	}
 
 	return self;

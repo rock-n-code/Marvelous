@@ -20,6 +20,6 @@ typedef void (^jsonCompletionBlock) (NSDictionary *dictionary, NSError *error);
 @property (nonatomic, strong, readonly) NSDictionary *filter;
 @property (nonatomic, strong, readonly) NSDictionary *json;
 
-- (id)initWithURL:(NSURL *)url andFilter:(NSDictionary *)filter;
+- (id)initWithType:(RCAPIOperationTypes)type withPublicKey:(NSString *)publicKey andIdentifier:(NSString *)identifier;
 
 @end
