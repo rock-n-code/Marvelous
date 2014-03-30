@@ -9,8 +9,12 @@
 #import "RCAPIOperation.h"
 
 static NSString * const RCAPIOperationContentTypeKey = @"Content-Type";
+static NSString * const RCAPIOperationContentEncodingKey = @"Content-Encoding";
 static NSString * const RCAPIOperationAcceptKey = @"Accept";
-static NSString * const RCAPIOperationJSONValue = @"application/json";
+
+static NSString * const RCAPIOperationContentTypeValue = @"application/json";
+static NSString * const RCAPIOperationContentEncodingValue = @"gzip";
+static NSString * const RCAPIOperationAcceptValue = @"*/*";
 
 @interface RCAPIOperation ()
 
@@ -91,8 +95,9 @@ static NSString * const RCAPIOperationJSONValue = @"application/json";
 
 	NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:self.url];
 
-	[request setValue:RCAPIOperationJSONValue forHTTPHeaderField:RCAPIOperationContentTypeKey];
-	[request setValue:RCAPIOperationJSONValue forHTTPHeaderField:RCAPIOperationAcceptKey];
+	[request setValue:RCAPIOperationContentTypeValue forHTTPHeaderField:RCAPIOperationContentTypeKey];
+	[request setValue:RCAPIOperationContentEncodingValue forHTTPHeaderField:RCAPIOperationContentEncodingKey];
+	[request setValue:RCAPIOperationAcceptValue forHTTPHeaderField:RCAPIOperationAcceptKey];
 
 	NSURLSessionDataTask *task = [self.session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
 		if (error) {
