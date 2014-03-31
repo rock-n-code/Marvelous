@@ -29,6 +29,7 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 @property (nonatomic, strong) NSURL *url;
 @property (nonatomic, strong) NSDictionary *filter;
 @property (nonatomic, strong) NSDictionary *json;
+@property (nonatomic, strong) NSArray *results;
 @property (nonatomic) RCAPIOperationTypes type;
 
 @property (nonatomic, readonly, strong) NSString *stringfiedType;
@@ -77,7 +78,7 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 
 	if (self.error) {
 		if (self.completionBlock) {
-			self.completionBlock(self.json, self.error);
+			self.completionBlock(self.results, self.error);
 		}
 
 		[super finish];
@@ -104,10 +105,13 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 			if (error) {
 				[self errorWithCode:error.code andUserInfo:error.userInfo];
 			}
+
+			// TODO: Build the results from the JSON data.
+			// self.objets = ...
 		}
 
 		if (self.completionBlock) {
-			self.completionBlock(self.json, self.error);
+			self.completionBlock(self.results, self.error);
 		}
 
 		[self finish];
@@ -128,7 +132,7 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 	[self errorWithCode:RCOperationErrorCodeOperationCancelled andUserInfo:userInfo];
 
 	if (self.completionBlock) {
-		self.completionBlock(self.json, self.error);
+		self.completionBlock(self.results, self.error);
 	}
 
 	[super cancel];
