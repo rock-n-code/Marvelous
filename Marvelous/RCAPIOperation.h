@@ -22,6 +22,6 @@ typedef void (^operationCompletionBlock) (RCDataWrapperModel *data, NSError *err
 @property (nonatomic, readonly, strong) RCDataWrapperModel *data;
 @property (nonatomic, readonly) RCAPITypes type;
 
-- (id)initWithType:(RCAPITypes)type identifier:(NSString *)identifier andPublicKey:(NSString *)publicKey;
+- (id)initWithType:(RCAPITypes)type identifier:(NSString *)identifier andAuthentication:(NSDictionary *)authentication;
 
 @end

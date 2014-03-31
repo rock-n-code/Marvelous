@@ -39,16 +39,14 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 
 #pragma mark - NSObject
 
-- (id)initWithType:(RCAPITypes)type identifier:(NSString *)identifier andPublicKey:(NSString *)publicKey;
+- (id)initWithType:(RCAPITypes)type identifier:(NSString *)identifier andAuthentication:(NSDictionary *)authentication
 {
 	self = [self init];
 
-	if (self && [self validateType:type publicKey:publicKey andIdentifier:identifier]) {
+	if (self && [self validateType:type andIdentifier:identifier]) {
 		self.type = type;
-		self.conversionType = type;
-		self.publicKey = publicKey;
 		self.identifier = identifier;
-		self.filter = @{RCRequestKeyAPIKey: publicKey};
+		self.parameters = authentication;
 		self.url = [self generateURL];
 	}
 
