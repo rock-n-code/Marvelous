@@ -41,7 +41,7 @@
 
 - (void)testInitWithTypePublicKeyAndIdentifier
 {
-	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithIdentifier:RCAPIOperationTestValueIdentifier andPublicKey:RCAPIOperationTestValuePublicKey];
+	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPIOperationTypeUndefined identifier:RCAPIOperationTestValueIdentifier andPublicKey:RCAPIOperationTestValuePublicKey];
 
 	XCTAssertEqual(operation.type, RCAPIOperationTypeUndefined, @"\"%s\" is expecting the property 'type' to have the '%d' integer value.", __PRETTY_FUNCTION__, RCAPIOperationTypeUndefined);
 	XCTAssertNil(operation.identifier, @"\"%s\" is expecting the property 'identifier' to be NULL.", __PRETTY_FUNCTION__);
