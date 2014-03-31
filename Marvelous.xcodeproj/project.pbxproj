@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03130D1218E96A4300BD315F /* RCDataWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D1118E96A4300BD315F /* RCDataWrapper.m */; };
+		03130D1518E96A6600BD315F /* RCDataWrapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D1418E96A6600BD315F /* RCDataWrapperTests.m */; };
 		03B694D818E73E3A00CEF855 /* RCMarvelAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B694D718E73E3A00CEF855 /* RCMarvelAPI.m */; };
 		03B694DB18E73E5E00CEF855 /* RCMarvelAPITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B694DA18E73E5E00CEF855 /* RCMarvelAPITests.m */; };
 		03B694DC18E73EF900CEF855 /* RCMarvelAPI.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03B694D618E73E3A00CEF855 /* RCMarvelAPI.h */; };
@@ -53,6 +55,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		03130D1018E96A4300BD315F /* RCDataWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCDataWrapper.h; sourceTree = "<group>"; };
+		03130D1118E96A4300BD315F /* RCDataWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCDataWrapper.m; sourceTree = "<group>"; };
+		03130D1418E96A6600BD315F /* RCDataWrapperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCDataWrapperTests.m; sourceTree = "<group>"; };
 		03B694D618E73E3A00CEF855 /* RCMarvelAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCMarvelAPI.h; path = Marvelous/RCMarvelAPI.h; sourceTree = "<group>"; };
 		03B694D718E73E3A00CEF855 /* RCMarvelAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCMarvelAPI.m; path = Marvelous/RCMarvelAPI.m; sourceTree = "<group>"; };
 		03B694DA18E73E5E00CEF855 /* RCMarvelAPITests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCMarvelAPITests.m; sourceTree = "<group>"; };
@@ -109,6 +114,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03130D0F18E96A2700BD315F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				03130D1018E96A4300BD315F /* RCDataWrapper.h */,
+				03130D1118E96A4300BD315F /* RCDataWrapper.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		03130D1318E96A4D00BD315F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				03130D1418E96A6600BD315F /* RCDataWrapperTests.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		03B694D518E73DEC00CEF855 /* APIs */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +237,7 @@
 				03DEC84418E736740098CCE1 /* Marvelous.h */,
 				03B694D518E73DEC00CEF855 /* APIs */,
 				03B694F218E7749D00CEF855 /* Operations */,
+				03130D0F18E96A2700BD315F /* Models */,
 				03B694E118E757C500CEF855 /* Enumerations */,
 				03B694DD18E74D3800CEF855 /* Constants */,
 				03DEC84218E736740098CCE1 /* Supporting Files */,
@@ -237,6 +260,7 @@
 				03B6951518E941EB00CEF855 /* XCTest+Async.m */,
 				03B694D918E73E4600CEF855 /* APIs */,
 				03B694F118E7748D00CEF855 /* Operations */,
+				03130D1318E96A4D00BD315F /* Models */,
 				03B6950818E864A200CEF855 /* Constants */,
 				03DEC85618E736740098CCE1 /* Supporting Files */,
 			);
@@ -334,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03B694E518E75B0D00CEF855 /* RCResponseKeys.m in Sources */,
+				03130D1218E96A4300BD315F /* RCDataWrapper.m in Sources */,
 				03B694FE18E77B1D00CEF855 /* RCAPIOperation.m in Sources */,
 				03B694D818E73E3A00CEF855 /* RCMarvelAPI.m in Sources */,
 				03B694F718E774BD00CEF855 /* RCOperation.m in Sources */,
@@ -348,6 +373,7 @@
 			files = (
 				03B6950018E77B3500CEF855 /* RCAPIOperationTests.m in Sources */,
 				03B6950B18E864C300CEF855 /* RCAPIOperationTestValues.m in Sources */,
+				03130D1518E96A6600BD315F /* RCDataWrapperTests.m in Sources */,
 				03B694F418E774AD00CEF855 /* RCOperationTests.m in Sources */,
 				03B694DB18E73E5E00CEF855 /* RCMarvelAPITests.m in Sources */,
 				03B6951618E941EB00CEF855 /* XCTest+Async.m in Sources */,
