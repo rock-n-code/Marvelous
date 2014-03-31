@@ -13,8 +13,8 @@
 		03130D1D18E96DB200BD315F /* RCDataContainerModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D1C18E96DB200BD315F /* RCDataContainerModelTests.m */; };
 		03130D2018E96F3700BD315F /* RCCharacterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D1F18E96F3700BD315F /* RCCharacterModel.m */; };
 		03130D2218E96F5300BD315F /* RCCharacterModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D2118E96F5300BD315F /* RCCharacterModelTests.m */; };
-		03130D2518E9727F00BD315F /* RCListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D2418E9727F00BD315F /* RCListModel.m */; };
-		03130D2718E972A700BD315F /* RCListModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D2618E972A700BD315F /* RCListModelTests.m */; };
+		03130D2518E9727F00BD315F /* RCListObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D2418E9727F00BD315F /* RCListObject.m */; };
+		03130D2718E972A700BD315F /* RCListObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D2618E972A700BD315F /* RCListObjectTests.m */; };
 		03130D2A18E974C300BD315F /* RCSummaryObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D2918E974C300BD315F /* RCSummaryObject.m */; };
 		03130D2C18E974EB00BD315F /* RCSummaryObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D2B18E974EB00BD315F /* RCSummaryObjectTests.m */; };
 		03130D3218E9784C00BD315F /* RCURLObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D3118E9784C00BD315F /* RCURLObjectTests.m */; };
@@ -77,9 +77,9 @@
 		03130D1E18E96F3700BD315F /* RCCharacterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCharacterModel.h; sourceTree = "<group>"; };
 		03130D1F18E96F3700BD315F /* RCCharacterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCharacterModel.m; sourceTree = "<group>"; };
 		03130D2118E96F5300BD315F /* RCCharacterModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCharacterModelTests.m; sourceTree = "<group>"; };
-		03130D2318E9727F00BD315F /* RCListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCListModel.h; sourceTree = "<group>"; };
-		03130D2418E9727F00BD315F /* RCListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCListModel.m; sourceTree = "<group>"; };
-		03130D2618E972A700BD315F /* RCListModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCListModelTests.m; sourceTree = "<group>"; };
+		03130D2318E9727F00BD315F /* RCListObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCListObject.h; sourceTree = "<group>"; };
+		03130D2418E9727F00BD315F /* RCListObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCListObject.m; sourceTree = "<group>"; };
+		03130D2618E972A700BD315F /* RCListObjectTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCListObjectTests.m; sourceTree = "<group>"; };
 		03130D2818E974C300BD315F /* RCSummaryObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCSummaryObject.h; sourceTree = "<group>"; };
 		03130D2918E974C300BD315F /* RCSummaryObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCSummaryObject.m; sourceTree = "<group>"; };
 		03130D2B18E974EB00BD315F /* RCSummaryObjectTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCSummaryObjectTests.m; sourceTree = "<group>"; };
@@ -157,14 +157,14 @@
 				03130D2918E974C300BD315F /* RCSummaryObject.m */,
 				03130D3318E9786A00BD315F /* RCURLObject.h */,
 				03130D3418E9786A00BD315F /* RCURLObject.m */,
+				03130D2318E9727F00BD315F /* RCListObject.h */,
+				03130D2418E9727F00BD315F /* RCListObject.m */,
 				03130D1618E96CBD00BD315F /* RCDataWrapperModel.h */,
 				03130D1718E96CBD00BD315F /* RCDataWrapperModel.m */,
 				03130D1918E96D9E00BD315F /* RCDataContainerModel.h */,
 				03130D1A18E96D9E00BD315F /* RCDataContainerModel.m */,
 				03130D1E18E96F3700BD315F /* RCCharacterModel.h */,
 				03130D1F18E96F3700BD315F /* RCCharacterModel.m */,
-				03130D2318E9727F00BD315F /* RCListModel.h */,
-				03130D2418E9727F00BD315F /* RCListModel.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -175,10 +175,10 @@
 				03130D3D18E9D10600BD315F /* RCObjectTests.m */,
 				03130D2B18E974EB00BD315F /* RCSummaryObjectTests.m */,
 				03130D3118E9784C00BD315F /* RCURLObjectTests.m */,
+				03130D2618E972A700BD315F /* RCListObjectTests.m */,
 				03130D1418E96A6600BD315F /* RCDataWrapperModelTests.m */,
 				03130D1C18E96DB200BD315F /* RCDataContainerModelTests.m */,
 				03130D2118E96F5300BD315F /* RCCharacterModelTests.m */,
-				03130D2618E972A700BD315F /* RCListModelTests.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -425,7 +425,7 @@
 				03B694D818E73E3A00CEF855 /* RCMarvelAPI.m in Sources */,
 				03130D2018E96F3700BD315F /* RCCharacterModel.m in Sources */,
 				03130D3518E9786A00BD315F /* RCURLObject.m in Sources */,
-				03130D2518E9727F00BD315F /* RCListModel.m in Sources */,
+				03130D2518E9727F00BD315F /* RCListObject.m in Sources */,
 				03B694F718E774BD00CEF855 /* RCOperation.m in Sources */,
 				03130D1B18E96D9E00BD315F /* RCDataContainerModel.m in Sources */,
 				03130D2A18E974C300BD315F /* RCSummaryObject.m in Sources */,
@@ -447,7 +447,7 @@
 				03B6950018E77B3500CEF855 /* RCAPIOperationTests.m in Sources */,
 				03130D2C18E974EB00BD315F /* RCSummaryObjectTests.m in Sources */,
 				03130D3E18E9D10600BD315F /* RCObjectTests.m in Sources */,
-				03130D2718E972A700BD315F /* RCListModelTests.m in Sources */,
+				03130D2718E972A700BD315F /* RCListObjectTests.m in Sources */,
 				03B6950B18E864C300CEF855 /* RCAPIOperationTestValues.m in Sources */,
 				03130D1518E96A6600BD315F /* RCDataWrapperModelTests.m in Sources */,
 				03B694F418E774AD00CEF855 /* RCOperationTests.m in Sources */,
