@@ -171,13 +171,13 @@
 		03130D1318E96A4D00BD315F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				03130D3D18E9D10600BD315F /* RCObjectTests.m */,
 				03130D1418E96A6600BD315F /* RCDataWrapperModelTests.m */,
 				03130D1C18E96DB200BD315F /* RCDataContainerModelTests.m */,
 				03130D2118E96F5300BD315F /* RCCharacterModelTests.m */,
 				03130D2618E972A700BD315F /* RCListModelTests.m */,
 				03130D2B18E974EB00BD315F /* RCSummaryModelTests.m */,
 				03130D3118E9784C00BD315F /* RCURLModelTests.m */,
-				03130D3D18E9D10600BD315F /* RCObjectTests.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";

@@ -6,8 +6,10 @@
 //  Copyright (c) 2014 Rock & Code. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "RCResponseKeys.h"
 
 @interface RCObject : NSObject
+
+- (id)initWithDictionary:(NSDictionary *)dictionary;
 
 @end

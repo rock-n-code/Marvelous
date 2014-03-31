@@ -8,6 +8,23 @@
 
 #import "RCObject.h"
 
+@interface RCObject ()
+
+@end
+
 @implementation RCObject
+
+#pragma mark - NSObject
+
+- (id)initWithDictionary:(NSDictionary *)dictionary
+{
+	self = [super init];
+
+	if (self) {
+		// ...
+	}
+
+	return self;
+}
 
 @end
