@@ -17,8 +17,8 @@
 		03130D2718E972A700BD315F /* RCListModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D2618E972A700BD315F /* RCListModelTests.m */; };
 		03130D2A18E974C300BD315F /* RCSummaryObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D2918E974C300BD315F /* RCSummaryObject.m */; };
 		03130D2C18E974EB00BD315F /* RCSummaryObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D2B18E974EB00BD315F /* RCSummaryObjectTests.m */; };
-		03130D3218E9784C00BD315F /* RCURLModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D3118E9784C00BD315F /* RCURLModelTests.m */; };
-		03130D3518E9786A00BD315F /* RCURLModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D3418E9786A00BD315F /* RCURLModel.m */; };
+		03130D3218E9784C00BD315F /* RCURLObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D3118E9784C00BD315F /* RCURLObjectTests.m */; };
+		03130D3518E9786A00BD315F /* RCURLObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D3418E9786A00BD315F /* RCURLObject.m */; };
 		03130D3918E992FA00BD315F /* RCMarvelAPITestValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D3818E992FA00BD315F /* RCMarvelAPITestValues.m */; };
 		03130D3C18E9D09800BD315F /* RCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D3B18E9D09800BD315F /* RCObject.m */; };
 		03130D3E18E9D10600BD315F /* RCObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D3D18E9D10600BD315F /* RCObjectTests.m */; };
@@ -83,9 +83,9 @@
 		03130D2818E974C300BD315F /* RCSummaryObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCSummaryObject.h; sourceTree = "<group>"; };
 		03130D2918E974C300BD315F /* RCSummaryObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCSummaryObject.m; sourceTree = "<group>"; };
 		03130D2B18E974EB00BD315F /* RCSummaryObjectTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCSummaryObjectTests.m; sourceTree = "<group>"; };
-		03130D3118E9784C00BD315F /* RCURLModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCURLModelTests.m; sourceTree = "<group>"; };
-		03130D3318E9786A00BD315F /* RCURLModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCURLModel.h; sourceTree = "<group>"; };
-		03130D3418E9786A00BD315F /* RCURLModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCURLModel.m; sourceTree = "<group>"; };
+		03130D3118E9784C00BD315F /* RCURLObjectTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCURLObjectTests.m; sourceTree = "<group>"; };
+		03130D3318E9786A00BD315F /* RCURLObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCURLObject.h; sourceTree = "<group>"; };
+		03130D3418E9786A00BD315F /* RCURLObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCURLObject.m; sourceTree = "<group>"; };
 		03130D3618E989DC00BD315F /* RCAPITypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCAPITypes.h; sourceTree = "<group>"; };
 		03130D3718E992FA00BD315F /* RCMarvelAPITestValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCMarvelAPITestValues.h; sourceTree = "<group>"; };
 		03130D3818E992FA00BD315F /* RCMarvelAPITestValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCMarvelAPITestValues.m; sourceTree = "<group>"; };
@@ -155,6 +155,8 @@
 				03130D3B18E9D09800BD315F /* RCObject.m */,
 				03130D2818E974C300BD315F /* RCSummaryObject.h */,
 				03130D2918E974C300BD315F /* RCSummaryObject.m */,
+				03130D3318E9786A00BD315F /* RCURLObject.h */,
+				03130D3418E9786A00BD315F /* RCURLObject.m */,
 				03130D1618E96CBD00BD315F /* RCDataWrapperModel.h */,
 				03130D1718E96CBD00BD315F /* RCDataWrapperModel.m */,
 				03130D1918E96D9E00BD315F /* RCDataContainerModel.h */,
@@ -163,8 +165,6 @@
 				03130D1F18E96F3700BD315F /* RCCharacterModel.m */,
 				03130D2318E9727F00BD315F /* RCListModel.h */,
 				03130D2418E9727F00BD315F /* RCListModel.m */,
-				03130D3318E9786A00BD315F /* RCURLModel.h */,
-				03130D3418E9786A00BD315F /* RCURLModel.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -174,11 +174,11 @@
 			children = (
 				03130D3D18E9D10600BD315F /* RCObjectTests.m */,
 				03130D2B18E974EB00BD315F /* RCSummaryObjectTests.m */,
+				03130D3118E9784C00BD315F /* RCURLObjectTests.m */,
 				03130D1418E96A6600BD315F /* RCDataWrapperModelTests.m */,
 				03130D1C18E96DB200BD315F /* RCDataContainerModelTests.m */,
 				03130D2118E96F5300BD315F /* RCCharacterModelTests.m */,
 				03130D2618E972A700BD315F /* RCListModelTests.m */,
-				03130D3118E9784C00BD315F /* RCURLModelTests.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -424,7 +424,7 @@
 				03B694FE18E77B1D00CEF855 /* RCAPIOperation.m in Sources */,
 				03B694D818E73E3A00CEF855 /* RCMarvelAPI.m in Sources */,
 				03130D2018E96F3700BD315F /* RCCharacterModel.m in Sources */,
-				03130D3518E9786A00BD315F /* RCURLModel.m in Sources */,
+				03130D3518E9786A00BD315F /* RCURLObject.m in Sources */,
 				03130D2518E9727F00BD315F /* RCListModel.m in Sources */,
 				03B694F718E774BD00CEF855 /* RCOperation.m in Sources */,
 				03130D1B18E96D9E00BD315F /* RCDataContainerModel.m in Sources */,
@@ -443,7 +443,7 @@
 				03130D3918E992FA00BD315F /* RCMarvelAPITestValues.m in Sources */,
 				03130D2218E96F5300BD315F /* RCCharacterModelTests.m in Sources */,
 				03130D1D18E96DB200BD315F /* RCDataContainerModelTests.m in Sources */,
-				03130D3218E9784C00BD315F /* RCURLModelTests.m in Sources */,
+				03130D3218E9784C00BD315F /* RCURLObjectTests.m in Sources */,
 				03B6950018E77B3500CEF855 /* RCAPIOperationTests.m in Sources */,
 				03130D2C18E974EB00BD315F /* RCSummaryObjectTests.m in Sources */,
 				03130D3E18E9D10600BD315F /* RCObjectTests.m in Sources */,
