@@ -25,15 +25,13 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 
 @property (nonatomic, strong) NSURLSession *session;
 @property (nonatomic, strong) NSString *identifier;
-@property (nonatomic, strong) NSString *publicKey;
 @property (nonatomic, strong) NSURL *url;
-@property (nonatomic, strong) NSDictionary *filter;
+@property (nonatomic, strong) NSDictionary *parameters;
 @property (nonatomic, strong) RCDataWrapperModel *data;
 @property (nonatomic) RCAPITypes type;
-@property (nonatomic) RCAPITypes conversionType;
 
 @property (nonatomic, readonly, strong) NSString *stringfiedType;
-@property (nonatomic, readonly, strong) NSString *stringfiedFilter;
+@property (nonatomic, readonly, strong) NSString *stringfiedParameters;
 
 @end
 
@@ -161,11 +159,11 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 	}
 }
 
-- (NSString *)stringfiedFilter
+- (NSString *)stringfiedParameters
 {
 	NSMutableArray *parameters = [NSMutableArray array];
 
-	[self.filter enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *value, BOOL *stop) {
+	[self.parameters enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *value, BOOL *stop) {
 		NSString *encodedValue = [value stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 		NSString *parameter = [NSString stringWithFormat:RCAPIOperationURLParameter, key, encodedValue];
 
@@ -177,9 +175,9 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 
 #pragma mark - Private methods
 
-- (BOOL)validateType:(RCAPITypes)type publicKey:(NSString *)publicKey andIdentifier:(NSString *)identifier
+- (BOOL)validateType:(RCAPITypes)type andIdentifier:(NSString *)identifier
 {
-	BOOL isValidated = type != RCAPITypeUndefined && publicKey && identifier;
+	BOOL isValidated = type != RCAPITypeUndefined && identifier;
 
 	if (!isValidated) {
 		NSString *description;
@@ -188,9 +186,6 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 		if (!identifier) {
 			description = RCOperationErrorIdentifierIsNull;
 			code = RCOperationErrorCodeIdentifierIsNull;
-		} else if (!publicKey) {
-			description = RCOperationErrorIdentifierIsNull;
-			code = RCOperationErrorCodePublicKeyIsNull;
 		} else {
 			description = RCOperationErrorTypeUndefined;
 			code = RCOperationErrorCodeTypeUndefined;
@@ -209,9 +204,9 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 	NSString *urlString;
 
 	if (self.identifier) {
-		urlString = [NSString stringWithFormat:RCAPIOperationBaseURLWithIdentifier, self.stringfiedType, self.identifier, self.stringfiedFilter];
+		urlString = [NSString stringWithFormat:RCAPIOperationBaseURLWithIdentifier, self.stringfiedType, self.identifier, self.stringfiedParameters];
 	} else {
-		urlString = [NSString stringWithFormat:RCAPIOperationBaseURL, self.stringfiedType, self.stringfiedFilter];
+		urlString = [NSString stringWithFormat:RCAPIOperationBaseURL, self.stringfiedType, self.stringfiedParameters];
 	}
 
 	return [NSURL URLWithString:urlString];

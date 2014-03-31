@@ -17,9 +17,8 @@ typedef void (^operationCompletionBlock) (RCDataWrapperModel *data, NSError *err
 @property (nonatomic, copy) operationCompletionBlock completionBlock;
 
 @property (nonatomic, readonly, strong) NSString *identifier;
-@property (nonatomic, readonly, strong) NSString *publicKey;
 @property (nonatomic, readonly, strong) NSURL *url;
-@property (nonatomic, readonly, strong) NSDictionary *filter;
+@property (nonatomic, readonly, strong) NSDictionary *parameters;
 @property (nonatomic, readonly, strong) RCDataWrapperModel *data;
 @property (nonatomic, readonly) RCAPITypes type;
 
