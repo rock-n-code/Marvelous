@@ -9,6 +9,7 @@
 #import "RCResponseKeys.h"
 
 NSString * const RCResponseKeyCode = @"code";
+NSString * const RCResponseKeyMessage = @"message";
 NSString * const RCResponseKeyStatus = @"status";
 NSString * const RCResponseKeyCopyright = @"copyright";
 NSString * const RCResponseKeyAttributionText = @"attributionText";

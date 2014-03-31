@@ -7,6 +7,7 @@
 //
 
 extern NSString * const RCResponseKeyCode;
+extern NSString * const RCResponseKeyMessage;
 extern NSString * const RCResponseKeyStatus;
 extern NSString * const RCResponseKeyCopyright;
 extern NSString * const RCResponseKeyAttributionText;
