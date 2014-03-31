@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Rock & Code. All rights reserved.
 //
 
+#import "RCResponseKeys.h"
+
 @protocol RCObjectProtocol <NSObject>
 
 @optional

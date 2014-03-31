@@ -14,7 +14,7 @@
 
 @implementation RCObject
 
-#pragma mark - NSObject
+#pragma mark - RCObjectProtocol
 
 - (id)initWithDictionary:(NSDictionary *)dictionary
 {
