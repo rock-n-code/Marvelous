@@ -26,9 +26,15 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testInit
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+	RCListModel *list = [[RCListModel alloc] init];
+
+	XCTAssertNil(list.available, @"\"%s\" is expecting the property 'available' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(list.returned, @"\"%s\" is expecting the property 'returned' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(list.collectionURI, @"\"%s\" is expecting the property 'collectionURI' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(list.items, @"\"%s\" is expecting the property 'items' to be NULL.", __PRETTY_FUNCTION__);
 }
+
 
 @end
