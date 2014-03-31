@@ -8,6 +8,8 @@
 
 #import "RCAPIOperation.h"
 #import "RCRequestKeys.h"
+#import "RCResponseKeys.h"
+#import "RCStatusCodes.h"
 
 static NSString * const RCAPIOperationBaseURL = @"https://gateway.marvel.com/v1/public/%@?%@";
 static NSString * const RCAPIOperationBaseURLWithIdentifier = @"https://gateway.marvel.com/v1/public/%@/%@?%@";
@@ -102,8 +104,21 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 			if (error) {
 				[self errorWithCode:error.code andUserInfo:error.userInfo];
 			} else {
-				// TODO: Check for errors on the JSON data.
-				// TODO: Build the results from the JSON data.
+				NSHTTPURLResponse *http = (NSHTTPURLResponse *)response;
+
+				if (http.statusCode != RCStatusCodeOK) {
+					NSString *message = json[RCResponseKeyMessage];
+
+					if (!message) {
+						message = json[RCResponseKeyStatus];
+					}
+
+					NSDictionary *userInfo = @{NSLocalizedDescriptionKey: message};
+
+					[self errorWithCode:http.statusCode andUserInfo:userInfo];
+				} else {
+					// TODO: Build the results from the JSON data.
+				}
 			}
 		}
 
