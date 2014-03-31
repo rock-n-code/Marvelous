@@ -8,5 +8,9 @@
 
 #import "RCAPIOperationTestValues.h"
 
-NSString * const RCAPIOperationTestValueIdentifier = @"TestIdentifier";
-NSString * const RCAPIOperationTestValuePublicKey = @"TestPublicKey";
+NSString * const RCAPIOperationTestValueValidIdentifier = @"1009718";
+NSString * const RCAPIOperationTestValueInvalidIdentifier = @"TestIdentifier";
+NSString * const RCAPIOperationTestValueEmptyIdentifier = @"";
+NSString * const RCAPIOperationTestValueValidPublicKey = @"881c39be03bfea051ce0ac8bbb059ed5";
+NSString * const RCAPIOperationTestValueInvalidPublicKey = @"TestPublicKey";
+NSString * const RCAPIOperationTestValueEmptyPublicKey = @"";

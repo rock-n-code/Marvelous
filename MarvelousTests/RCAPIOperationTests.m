@@ -36,19 +36,33 @@
 	XCTAssertNil(operation.publicKey, @"\"%s\" is expecting the property 'publicKey' to be NULL.", __PRETTY_FUNCTION__);
 	XCTAssertNil(operation.url, @"\"%s\" is expecting the property 'url' to be NULL.", __PRETTY_FUNCTION__);
 	XCTAssertNil(operation.filter, @"\"%s\" is expecting the property 'filter' to be NULL.", __PRETTY_FUNCTION__);
-	XCTAssertNil(operation.json, @"\"%s\" is expecting the property 'json' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(operation.data, @"\"%s\" is expecting the property 'json' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(operation.error, @"\"%s\" is expecting the property 'error' to be NULL.", __PRETTY_FUNCTION__);
 }
 
 - (void)testInitWithTypePublicKeyAndIdentifier
 {
-	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeUndefined identifier:RCAPIOperationTestValueIdentifier andPublicKey:RCAPIOperationTestValuePublicKey];
+	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeCharacters identifier:RCAPIOperationTestValueValidIdentifier andPublicKey:RCAPIOperationTestValueValidPublicKey];
+
+	XCTAssertEqual(operation.type, RCAPITypeCharacters, @"\"%s\" is expecting the property 'type' to have the '%d' integer value.", __PRETTY_FUNCTION__, RCAPITypeCharacters);
+	XCTAssertNotNil(operation.identifier, @"\"%s\" is expecting the property 'identifier' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(operation.publicKey, @"\"%s\" is expecting the property 'publicKey' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(operation.url, @"\"%s\" is expecting the property 'url' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(operation.filter, @"\"%s\" is expecting the property 'filter' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(operation.data, @"\"%s\" is expecting the property 'json' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(operation.error, @"\"%s\" is expecting the property 'error' to be NULL.", __PRETTY_FUNCTION__);
+}
+
+- (void)testInitWithUndefinedTypePublicKeyAndIdentifier
+{
+	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeUndefined identifier:RCAPIOperationTestValueValidIdentifier andPublicKey:RCAPIOperationTestValueValidPublicKey];
 
 	XCTAssertEqual(operation.type, RCAPITypeUndefined, @"\"%s\" is expecting the property 'type' to have the '%d' integer value.", __PRETTY_FUNCTION__, RCAPITypeUndefined);
 	XCTAssertNil(operation.identifier, @"\"%s\" is expecting the property 'identifier' to be NULL.", __PRETTY_FUNCTION__);
 	XCTAssertNil(operation.publicKey, @"\"%s\" is expecting the property 'publicKey' to be NULL.", __PRETTY_FUNCTION__);
 	XCTAssertNil(operation.url, @"\"%s\" is expecting the property 'url' to be NULL.", __PRETTY_FUNCTION__);
 	XCTAssertNil(operation.filter, @"\"%s\" is expecting the property 'filter' to be NULL.", __PRETTY_FUNCTION__);
-	XCTAssertNil(operation.json, @"\"%s\" is expecting the property 'json' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(operation.data, @"\"%s\" is expecting the property 'json' to be NULL.", __PRETTY_FUNCTION__);
 	XCTAssertNotNil(operation.error, @"\"%s\" is expecting the property 'error' to not be NULL.", __PRETTY_FUNCTION__);
 }
 
