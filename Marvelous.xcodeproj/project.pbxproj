@@ -83,6 +83,7 @@
 		03130D3118E9784C00BD315F /* RCURLModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCURLModelTests.m; sourceTree = "<group>"; };
 		03130D3318E9786A00BD315F /* RCURLModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCURLModel.h; sourceTree = "<group>"; };
 		03130D3418E9786A00BD315F /* RCURLModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCURLModel.m; sourceTree = "<group>"; };
+		03130D3618E989DC00BD315F /* RCAPITypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCAPITypes.h; sourceTree = "<group>"; };
 		03B694D618E73E3A00CEF855 /* RCMarvelAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCMarvelAPI.h; path = Marvelous/RCMarvelAPI.h; sourceTree = "<group>"; };
 		03B694D718E73E3A00CEF855 /* RCMarvelAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCMarvelAPI.m; path = Marvelous/RCMarvelAPI.m; sourceTree = "<group>"; };
 		03B694DA18E73E5E00CEF855 /* RCMarvelAPITests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCMarvelAPITests.m; sourceTree = "<group>"; };
@@ -206,6 +207,7 @@
 		03B694E118E757C500CEF855 /* Enumerations */ = {
 			isa = PBXGroup;
 			children = (
+				03130D3618E989DC00BD315F /* RCAPITypes.h */,
 				03B694F818E774C800CEF855 /* RCOperationErrorCodes.h */,
 				03B6950118E77D2400CEF855 /* RCAPIOperationTypes.h */,
 				03B694E218E7583600CEF855 /* RCStatusCodes.h */,
