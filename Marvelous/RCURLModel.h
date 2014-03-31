@@ -8,4 +8,6 @@
 
 @interface RCURLModel : NSURL
 
+@property (nonatomic, strong) NSString *type;
+
 @end

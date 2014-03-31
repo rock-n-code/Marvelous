@@ -8,6 +8,8 @@
 
 #import <XCTest/XCTest.h>
 
+#import "RCURLModel.h"
+
 @interface RCURLModelTests : XCTestCase
 
 @end
@@ -24,9 +26,13 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testInit
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+	RCURLModel *url = [[RCURLModel alloc] init];
+
+	XCTAssertNil(url.type, @"\"%s\" is expecting the property 'type' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(url.absoluteString, @"\"%s\" is expecting the property 'absoluteString' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(url.absoluteURL, @"\"%s\" is expecting the property 'absoluteURL' to be NULL.", __PRETTY_FUNCTION__);
 }
 
 @end
