@@ -7,13 +7,12 @@
 //
 
 #import "RCOperation.h"
+#import "RCAPIOperationDelegate.h"
 #import "RCAPIOperationTypes.h"
-
-typedef void (^jsonCompletionBlock) (NSDictionary *dictionary, NSError *error);
 
 @interface RCAPIOperation : RCOperation
 
-@property (nonatomic, copy) jsonCompletionBlock jsonCompletion;
+@property (nonatomic,weak) id <RCAPIOperationDelegate> delegate;
 
 @property (nonatomic, readonly, strong) NSString *identifier;
 @property (nonatomic, readonly, strong) NSString *publicKey;
