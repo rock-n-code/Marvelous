@@ -6,6 +6,11 @@
 //  Copyright (c) 2014 Rock & Code. All rights reserved.
 //
 
-extern NSString * const RCMarvelAPITestValuePublicKey;
-extern NSString * const RCMarvelAPITestValuePrivateKey;
+extern NSString * const RCMarvelAPITestValueValidPublicKey;
+extern NSString * const RCMarvelAPITestValueInvalidPublicKey;
+extern NSString * const RCMarvelAPITestValueValidPrivateKey;
+extern NSString * const RCMarvelAPITestValueInvalidPrivateKey;
 extern NSString * const RCMarvelAPITestValueVersion;
+
+extern NSInteger const RCMarvelAPITestValidValidIdentifier;
+extern NSInteger const RCMarvelAPITestValidInvalidIdentifier;
