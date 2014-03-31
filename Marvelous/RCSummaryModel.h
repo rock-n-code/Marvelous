@@ -11,5 +11,6 @@
 @property (nonatomic, strong) NSURL *resourceURI;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *type;
+@property (nonatomic, strong) NSString *role;
 
 @end
