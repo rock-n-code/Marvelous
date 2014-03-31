@@ -8,7 +8,10 @@
 
 typedef NS_ENUM(NSInteger, RCStatusCodes) {
 	RCStatusCodeOK = 200,
-	RCStatusCodeNotFound = 404,
+	RCStatusCodeInvalidParameter = 401,
+	RCStatusCodeAccessForbidden = 403,
+	RCStatusCodeDataNotFound = 404,
+	RCStatusCodeMethodNotAllowed = 405,
 	RCStatusCodeParameterError = 409
 };
 
