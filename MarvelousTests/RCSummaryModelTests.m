@@ -26,9 +26,14 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testInit
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+	RCSummaryModel *summary = [[RCSummaryModel alloc] init];
+
+	XCTAssertNil(summary.resourceURI, @"\"%s\" is expecting the property 'resourceURI' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(summary.name, @"\"%s\" is expecting the property 'name' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(summary.type, @"\"%s\" is expecting the property 'type' to be NULL.", __PRETTY_FUNCTION__);
 }
+
 
 @end

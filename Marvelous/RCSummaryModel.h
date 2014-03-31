@@ -8,4 +8,8 @@
 
 @interface RCSummaryModel : NSObject
 
+@property (nonatomic, strong) NSURL *resourceURI;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *type;
+
 @end
