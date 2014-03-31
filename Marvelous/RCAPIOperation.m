@@ -80,8 +80,8 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 	[super start];
 
 	if (self.error) {
-		if (self.jsonCompletion) {
-			self.jsonCompletion(self.json, self.error);
+		if (self.delegate) {
+			[self.delegate operation:self didReceivedError:self.error];
 		}
 
 		[super finish];
@@ -110,8 +110,12 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 			}
 		}
 
-		if (self.jsonCompletion) {
-			self.jsonCompletion(self.json, self.error);
+		if (self.delegate) {
+			if (self.error) {
+				[self.delegate operation:self didReceivedError:self.error];
+			} else {
+				[self.delegate operation:self didReceivedJSONDictionary:self.json];
+			}
 		}
 
 		[self finish];
@@ -131,8 +135,8 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 
 	[self errorWithCode:RCOperationErrorCodeOperationCancelled andUserInfo:userInfo];
 
-	if (self.jsonCompletion) {
-		self.jsonCompletion(self.json, self.error);
+	if (self.delegate) {
+		[self.delegate operation:self didReceivedError:self.error];
 	}
 
 	[super cancel];
