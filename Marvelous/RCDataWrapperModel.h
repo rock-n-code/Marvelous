@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Rock & Code. All rights reserved.
 //
 
-@class RCDataContainerModel;
+#import "RCDataContainerModel.h"
 
 @interface RCDataWrapperModel : NSObject
 

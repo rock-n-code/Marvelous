@@ -6,8 +6,12 @@
 //  Copyright (c) 2014 Rock & Code. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 @interface RCDataContainerModel : NSObject
+
+@property (nonatomic, strong) NSNumber *offset;
+@property (nonatomic, strong) NSNumber *limit;
+@property (nonatomic, strong) NSNumber *total;
+@property (nonatomic, strong) NSNumber *count;
+@property (nonatomic, strong) NSArray *results;
 
 @end
