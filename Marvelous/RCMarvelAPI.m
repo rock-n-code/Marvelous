@@ -9,12 +9,16 @@
 #import <CommonCrypto/CommonDigest.h>
 
 #import "RCMarvelAPI.h"
+#import "RCRequestKeys.h"
 
 static NSString * const RCMarvelAPIVersionName = @"Cable";
 
 @interface RCMarvelAPI ()
 
 @property (nonatomic, strong) NSOperationQueue *queue;
+
+@property (nonatomic, readonly, strong) NSString *timestamp;
+@property (nonatomic, readonly, strong) NSDictionary *authParameters;
 
 @end
 
@@ -55,6 +59,29 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 - (NSString *)version
 {
 	return RCMarvelAPIVersionName;
+}
+
+- (NSString *)timestamp
+{
+	return [NSString stringWithFormat:@"%f", [[NSDate date] timeIntervalSince1970]];
+}
+
+- (NSDictionary *)authParameters
+{
+	NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+	NSString *timestamp = self.timestamp;
+
+	parameters[RCRequestKeyTimestamp] = timestamp;
+
+	if (self.publicKey) {
+		parameters[RCRequestKeyAPIKey] = self.publicKey;
+	}
+
+	if (self.publicKey && self.privateKey) {
+		parameters[RCRequestKeyHash] = [self hashFromStrings:@[timestamp, self.privateKey, self.publicKey]];
+	}
+
+	return parameters;
 }
 
 #pragma mark - Private methods
