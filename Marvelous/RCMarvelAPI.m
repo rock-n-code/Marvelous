@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Rock & Code. All rights reserved.
 //
 
+#import <CommonCrypto/CommonDigest.h>
+
 #import "RCMarvelAPI.h"
 
 static NSString * const RCMarvelAPIVersionName = @"Cable";
@@ -53,6 +55,29 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 - (NSString *)version
 {
 	return RCMarvelAPIVersionName;
+}
+
+#pragma mark - Private methods
+
+- (NSString *)hashFromStrings:(NSArray *)strings
+{
+	NSMutableString *stringToHash = [NSMutableString string];
+	NSMutableString *hashedString = [NSMutableString string];
+
+	[strings enumerateObjectsUsingBlock:^(NSString *string, NSUInteger index, BOOL *stop) {
+		[stringToHash appendString:string];
+	}];
+
+	const char *pointer = stringToHash.UTF8String;
+	unsigned char buffer[CC_MD5_DIGEST_LENGTH];
+
+	CC_MD5(pointer, (int)strlen(pointer), buffer);
+
+	for (int index = 0; index < CC_MD5_DIGEST_LENGTH; index++) {
+		[hashedString appendFormat:@"%02x", buffer[index]];
+	}
+
+	return hashedString;
 }
 
 @end
