@@ -101,7 +101,6 @@
 		03B694FC18E77B1D00CEF855 /* RCAPIOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCAPIOperation.h; sourceTree = "<group>"; };
 		03B694FD18E77B1D00CEF855 /* RCAPIOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCAPIOperation.m; sourceTree = "<group>"; };
 		03B694FF18E77B3500CEF855 /* RCAPIOperationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCAPIOperationTests.m; sourceTree = "<group>"; };
-		03B6950118E77D2400CEF855 /* RCAPIOperationTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCAPIOperationTypes.h; sourceTree = "<group>"; };
 		03B6950918E864C300CEF855 /* RCAPIOperationTestValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCAPIOperationTestValues.h; sourceTree = "<group>"; };
 		03B6950A18E864C300CEF855 /* RCAPIOperationTestValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCAPIOperationTestValues.m; sourceTree = "<group>"; };
 		03B6951418E941EB00CEF855 /* XCTest+Async.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTest+Async.h"; sourceTree = "<group>"; };
@@ -209,7 +208,6 @@
 			children = (
 				03130D3618E989DC00BD315F /* RCAPITypes.h */,
 				03B694F818E774C800CEF855 /* RCOperationErrorCodes.h */,
-				03B6950118E77D2400CEF855 /* RCAPIOperationTypes.h */,
 				03B694E218E7583600CEF855 /* RCStatusCodes.h */,
 			);
 			name = Enumerations;

@@ -30,7 +30,7 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 @property (nonatomic, strong) NSDictionary *filter;
 @property (nonatomic, strong) NSDictionary *json;
 @property (nonatomic, strong) NSArray *results;
-@property (nonatomic) RCAPIOperationTypes type;
+@property (nonatomic) RCAPITypes type;
 
 @property (nonatomic, readonly, strong) NSString *stringfiedType;
 @property (nonatomic, readonly, strong) NSString *stringfiedFilter;
@@ -41,7 +41,7 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 
 #pragma mark - NSObject
 
-- (id)initWithType:(RCAPIOperationTypes)type identifier:(NSString *)identifier andPublicKey:(NSString *)publicKey;
+- (id)initWithType:(RCAPITypes)type identifier:(NSString *)identifier andPublicKey:(NSString *)publicKey;
 {
 	self = [self init];
 
@@ -64,7 +64,7 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 		NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration ephemeralSessionConfiguration];
 
 		self.session = [NSURLSession sessionWithConfiguration:configuration];
-		self.type = RCAPIOperationTypeUndefined;
+		self.type = RCAPITypeUndefined;
 	}
 
 	return self;
@@ -143,17 +143,17 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 - (NSString *)stringfiedType
 {
 	switch (self.type) {
-		case RCAPIOperationTypeCharacters:
+		case RCAPITypeCharacters:
 			return RCRequestKeyCharacters;
-		case RCAPIOperationTypeComics:
+		case RCAPITypeComics:
 			return RCRequestKeyComics;
-		case RCAPIOperationTypeCreators:
+		case RCAPITypeCreators:
 			return RCRequestKeyCreators;
-		case RCAPIOperationTypeEvents:
+		case RCAPITypeEvents:
 			return RCRequestKeyEvents;
-		case RCAPIOperationTypeSeries:
+		case RCAPITypeSeries:
 			return RCRequestKeySeries;
-		case RCAPIOperationTypeStories:
+		case RCAPITypeStories:
 			return RCRequestKeyStories;
 		default:
 			return [NSString string];
@@ -176,9 +176,9 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 
 #pragma mark - Private methods
 
-- (BOOL)validateType:(RCAPIOperationTypes)type publicKey:(NSString *)publicKey andIdentifier:(NSString *)identifier
+- (BOOL)validateType:(RCAPITypes)type publicKey:(NSString *)publicKey andIdentifier:(NSString *)identifier
 {
-	BOOL isValidated = type != RCAPIOperationTypeUndefined && publicKey && identifier;
+	BOOL isValidated = type != RCAPITypeUndefined && publicKey && identifier;
 
 	if (!isValidated) {
 		NSString *description;

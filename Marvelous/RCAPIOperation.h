@@ -7,7 +7,7 @@
 //
 
 #import "RCOperation.h"
-#import "RCAPIOperationTypes.h"
+#import "RCAPITypes.h"
 
 typedef void (^operationCompletionBlock) (NSArray *results, NSError *error);
 
@@ -21,8 +21,8 @@ typedef void (^operationCompletionBlock) (NSArray *results, NSError *error);
 @property (nonatomic, readonly, strong) NSDictionary *filter;
 @property (nonatomic, readonly, strong) NSDictionary *json;
 @property (nonatomic, readonly, strong) NSArray *results;
-@property (nonatomic, readonly) RCAPIOperationTypes type;
+@property (nonatomic, readonly) RCAPITypes type;
 
-- (id)initWithType:(RCAPIOperationTypes)type identifier:(NSString *)identifier andPublicKey:(NSString *)publicKey;
+- (id)initWithType:(RCAPITypes)type identifier:(NSString *)identifier andPublicKey:(NSString *)publicKey;
 
 @end
