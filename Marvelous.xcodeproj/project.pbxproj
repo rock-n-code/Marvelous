@@ -92,6 +92,7 @@
 		03130D3A18E9D09800BD315F /* RCObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCObject.h; sourceTree = "<group>"; };
 		03130D3B18E9D09800BD315F /* RCObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCObject.m; sourceTree = "<group>"; };
 		03130D3D18E9D10600BD315F /* RCObjectTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCObjectTests.m; sourceTree = "<group>"; };
+		03130D4018E9D93800BD315F /* RCObjectProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCObjectProtocol.h; sourceTree = "<group>"; };
 		03B694D618E73E3A00CEF855 /* RCMarvelAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCMarvelAPI.h; path = Marvelous/RCMarvelAPI.h; sourceTree = "<group>"; };
 		03B694D718E73E3A00CEF855 /* RCMarvelAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCMarvelAPI.m; path = Marvelous/RCMarvelAPI.m; sourceTree = "<group>"; };
 		03B694DA18E73E5E00CEF855 /* RCMarvelAPITests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCMarvelAPITests.m; sourceTree = "<group>"; };
@@ -180,6 +181,14 @@
 				03130D3118E9784C00BD315F /* RCURLModelTests.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		03130D3F18E9D91F00BD315F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				03130D4018E9D93800BD315F /* RCObjectProtocol.h */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 		03B694D518E73DEC00CEF855 /* APIs */ = {
@@ -291,6 +300,7 @@
 				03B694D518E73DEC00CEF855 /* APIs */,
 				03B694F218E7749D00CEF855 /* Operations */,
 				03130D0F18E96A2700BD315F /* Models */,
+				03130D3F18E9D91F00BD315F /* Protocols */,
 				03B694E118E757C500CEF855 /* Enumerations */,
 				03B694DD18E74D3800CEF855 /* Constants */,
 				03DEC84218E736740098CCE1 /* Supporting Files */,
