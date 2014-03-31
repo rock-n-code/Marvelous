@@ -31,6 +31,7 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 @property (nonatomic, strong) NSDictionary *json;
 @property (nonatomic, strong) NSArray *results;
 @property (nonatomic) RCAPITypes type;
+@property (nonatomic) RCAPITypes conversionType;
 
 @property (nonatomic, readonly, strong) NSString *stringfiedType;
 @property (nonatomic, readonly, strong) NSString *stringfiedFilter;
@@ -47,6 +48,7 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 
 	if (self && [self validateType:type publicKey:publicKey andIdentifier:identifier]) {
 		self.type = type;
+		self.conversionType = type;
 		self.publicKey = publicKey;
 		self.identifier = identifier;
 		self.filter = @{RCRequestKeyAPIKey: publicKey};
