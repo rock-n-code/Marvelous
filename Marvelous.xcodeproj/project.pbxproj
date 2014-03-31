@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03B6951618E941EB00CEF855 /* XCTest+Async.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B6951518E941EB00CEF855 /* XCTest+Async.m */; };
 		03DEC84018E736730098CCE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC83F18E736730098CCE1 /* Foundation.framework */; };
 		03DEC84518E736740098CCE1 /* Marvelous.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03DEC84418E736740098CCE1 /* Marvelous.h */; };
 		03DEC84E18E736740098CCE1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC84D18E736740098CCE1 /* XCTest.framework */; };
@@ -40,6 +41,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		03B6951418E941EB00CEF855 /* XCTest+Async.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTest+Async.h"; sourceTree = "<group>"; };
+		03B6951518E941EB00CEF855 /* XCTest+Async.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCTest+Async.m"; sourceTree = "<group>"; };
 		03DEC83C18E736730098CCE1 /* libMarvelous.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMarvelous.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		03DEC83F18E736730098CCE1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		03DEC84318E736740098CCE1 /* Marvelous-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Marvelous-Prefix.pch"; sourceTree = "<group>"; };
@@ -123,6 +126,8 @@
 		03DEC85518E736740098CCE1 /* MarvelousTests */ = {
 			isa = PBXGroup;
 			children = (
+				03B6951418E941EB00CEF855 /* XCTest+Async.h */,
+				03B6951518E941EB00CEF855 /* XCTest+Async.m */,
 				03DEC85618E736740098CCE1 /* Supporting Files */,
 			);
 			path = MarvelousTests;
@@ -225,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03B6951618E941EB00CEF855 /* XCTest+Async.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
