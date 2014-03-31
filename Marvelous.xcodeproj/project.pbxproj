@@ -75,6 +75,7 @@
 		03B6950A18E864C300CEF855 /* RCAPIOperationTestValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCAPIOperationTestValues.m; sourceTree = "<group>"; };
 		03B6950C18E86B8C00CEF855 /* RCAPIOperationClasses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCAPIOperationClasses.h; path = Marvelous/RCAPIOperationClasses.h; sourceTree = "<group>"; };
 		03B6950D18E86B8C00CEF855 /* RCAPIOperationClasses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCAPIOperationClasses.m; path = Marvelous/RCAPIOperationClasses.m; sourceTree = "<group>"; };
+		03B6951318E93E5E00CEF855 /* RCAPIOperationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCAPIOperationDelegate.h; sourceTree = "<group>"; };
 		03DEC83C18E736730098CCE1 /* libMarvelous.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMarvelous.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		03DEC83F18E736730098CCE1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		03DEC84318E736740098CCE1 /* Marvelous-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Marvelous-Prefix.pch"; sourceTree = "<group>"; };
@@ -182,6 +183,14 @@
 			name = Constants;
 			sourceTree = "<group>";
 		};
+		03B6951218E93E3D00CEF855 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				03B6951318E93E5E00CEF855 /* RCAPIOperationDelegate.h */,
+			);
+			name = Delegates;
+			sourceTree = "<group>";
+		};
 		03DEC83318E736730098CCE1 = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +226,7 @@
 				03DEC84418E736740098CCE1 /* Marvelous.h */,
 				03B694D518E73DEC00CEF855 /* APIs */,
 				03B694F218E7749D00CEF855 /* Operations */,
+				03B6951218E93E3D00CEF855 /* Delegates */,
 				03B694E118E757C500CEF855 /* Enumerations */,
 				03B694DD18E74D3800CEF855 /* Constants */,
 				03DEC84218E736740098CCE1 /* Supporting Files */,
