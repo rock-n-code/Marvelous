@@ -28,8 +28,7 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 @property (nonatomic, strong) NSString *publicKey;
 @property (nonatomic, strong) NSURL *url;
 @property (nonatomic, strong) NSDictionary *filter;
-@property (nonatomic, strong) NSDictionary *json;
-@property (nonatomic, strong) NSArray *results;
+@property (nonatomic, strong) RCDataWrapperModel *data;
 @property (nonatomic) RCAPITypes type;
 @property (nonatomic) RCAPITypes conversionType;
 
@@ -80,7 +79,7 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 
 	if (self.error) {
 		if (self.completionBlock) {
-			self.completionBlock(self.results, self.error);
+			self.completionBlock(self.data, self.error);
 		}
 
 		[super finish];
@@ -102,18 +101,18 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 		if (error) {
 			[self errorWithCode:error.code andUserInfo:error.userInfo];
 		} else {
-			self.json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+			NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
 
 			if (error) {
 				[self errorWithCode:error.code andUserInfo:error.userInfo];
+			} else {
+				// TODO: Check for errors on the JSON data.
+				// TODO: Build the results from the JSON data.
 			}
-
-			// TODO: Build the results from the JSON data.
-			// self.objets = ...
 		}
 
 		if (self.completionBlock) {
-			self.completionBlock(self.results, self.error);
+			self.completionBlock(self.data, self.error);
 		}
 
 		[self finish];
@@ -134,7 +133,7 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 	[self errorWithCode:RCOperationErrorCodeOperationCancelled andUserInfo:userInfo];
 
 	if (self.completionBlock) {
-		self.completionBlock(self.results, self.error);
+		self.completionBlock(self.data, self.error);
 	}
 
 	[super cancel];
