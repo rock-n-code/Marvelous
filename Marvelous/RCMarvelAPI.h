@@ -6,11 +6,10 @@
 //  Copyright (c) 2014 Rock & Code. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 @interface RCMarvelAPI : NSObject
 
 @property (nonatomic, strong) NSString *publicKey;
+@property (nonatomic, strong) NSString *privateKey;
 
 @property (nonatomic, readonly, strong) NSString *version;
 

@@ -9,9 +9,7 @@
 #import <XCTest/XCTest.h>
 
 #import "RCMarvelAPI.h"
-
-static NSString * const RCMarvelAPITestPublicKey = @"This is a test public key.";
-static NSString * const RCMarvelAPITestVersion = @"Cable";
+#import "RCMarvelAPITestValues.h"
 
 @interface RCMarvelAPITests : XCTestCase
 
@@ -40,7 +38,8 @@ static NSString * const RCMarvelAPITestVersion = @"Cable";
 	RCMarvelAPI *api = [[RCMarvelAPI alloc] init];
 
 	XCTAssertNil(api.publicKey, @"\"%s\" is expecting the property 'publicKey' to be NULL.", __PRETTY_FUNCTION__);
-	XCTAssertEqualObjects(api.version, RCMarvelAPITestVersion, @"\"%s\" is expecting the property 'version' to have the '%@' string value.", __PRETTY_FUNCTION__, RCMarvelAPITestVersion);
+	XCTAssertNil(api.privateKey, @"\"%s\" is expecting the property 'privateKey' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertEqualObjects(api.version, RCMarvelAPITestValueVersion, @"\"%s\" is expecting the property 'version' to have the '%@' string value.", __PRETTY_FUNCTION__, RCMarvelAPITestValueVersion);
 }
 
 - (void)testPublicKeyWithNil
@@ -52,14 +51,28 @@ static NSString * const RCMarvelAPITestVersion = @"Cable";
 
 - (void)testPublicKeyWithString
 {
-	self.api.publicKey = RCMarvelAPITestPublicKey;
+	self.api.publicKey = RCMarvelAPITestValuePublicKey;
 
-	XCTAssertEqualObjects(self.api.publicKey, RCMarvelAPITestPublicKey, @"\"%s\" is expecting the property 'publicKey' to have the '%@' string value.", __PRETTY_FUNCTION__, RCMarvelAPITestPublicKey);
+	XCTAssertEqualObjects(self.api.publicKey, RCMarvelAPITestValuePublicKey, @"\"%s\" is expecting the property 'publicKey' to have the '%@' string value.", __PRETTY_FUNCTION__, RCMarvelAPITestValuePublicKey);
+}
+
+- (void)testPrivateKeyWithNil
+{
+	self.api.privateKey = nil;
+
+	XCTAssertNil(self.api.privateKey, @"\"%s\" is expecting the property 'privateKey' to be NULL.", __PRETTY_FUNCTION__);
+}
+
+- (void)testPrivateKeyWithString
+{
+	self.api.privateKey = RCMarvelAPITestValuePrivateKey;
+
+	XCTAssertEqualObjects(self.api.privateKey, RCMarvelAPITestValuePrivateKey, @"\"%s\" is expecting the property 'publicKey' to have the '%@' string value.", __PRETTY_FUNCTION__, RCMarvelAPITestValuePrivateKey);
 }
 
 - (void)testVersion
 {
-	XCTAssertEqualObjects(self.api.version, RCMarvelAPITestVersion, @"\"%s\" is expecting the property 'version' to have the '%@' string value.", __PRETTY_FUNCTION__, RCMarvelAPITestVersion);
+	XCTAssertEqualObjects(self.api.version, RCMarvelAPITestValueVersion, @"\"%s\" is expecting the property 'version' to have the '%@' string value.", __PRETTY_FUNCTION__, RCMarvelAPITestValueVersion);
 }
 
 @end
