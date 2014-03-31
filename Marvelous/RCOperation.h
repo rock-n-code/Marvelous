@@ -16,7 +16,7 @@
 @property (nonatomic) BOOL isCancelled;
 @property (nonatomic) BOOL isFinished;
 
-@property (nonatomic, strong, readonly) NSError *error;
+@property (nonatomic, readonly, strong) NSError *error;
 
 - (void)main;
 - (void)start;

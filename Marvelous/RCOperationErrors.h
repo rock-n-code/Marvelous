@@ -7,5 +7,6 @@
 //
 
 extern NSString * const RCOperationErrorCancelled;
-extern NSString * const RCOperationErrorFilterIsNull;
-extern NSString * const RCOperationErrorURLIsNull;
+extern NSString * const RCOperationErrorTypeUndefined;
+extern NSString * const RCOperationErrorPublicKeyIsNull;
+extern NSString * const RCOperationErrorIdentifierIsNull;

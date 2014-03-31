@@ -7,18 +7,33 @@
 //
 
 #import "RCAPIOperation.h"
+#import "RCRequestKeys.h"
+
+static NSString * const RCAPIOperationBaseURL = @"https://gateway.marvel.com/v1/public/%@?%@";
+static NSString * const RCAPIOperationBaseURLWithIdentifier = @"https://gateway.marvel.com/v1/public/%@/%@?%@";
+static NSString * const RCAPIOperationURLParameter = @"%@=%@";
 
 static NSString * const RCAPIOperationContentTypeKey = @"Content-Type";
+static NSString * const RCAPIOperationContentEncodingKey = @"Content-Encoding";
 static NSString * const RCAPIOperationAcceptKey = @"Accept";
-static NSString * const RCAPIOperationJSONValue = @"application/json";
+
+static NSString * const RCAPIOperationContentTypeValue = @"application/json";
+static NSString * const RCAPIOperationContentEncodingValue = @"gzip";
+static NSString * const RCAPIOperationAcceptValue = @"*/*";
 
 @interface RCAPIOperation ()
 
-@property (nonatomic, strong) NSURL *url;
 @property (nonatomic, strong) NSURLSession *session;
+@property (nonatomic, strong) NSString *identifier;
+@property (nonatomic, strong) NSString *publicKey;
+@property (nonatomic, strong) NSURL *url;
 @property (nonatomic, strong) NSDictionary *filter;
 @property (nonatomic, strong) NSDictionary *json;
-@property (nonatomic, assign) RCAPIOperationTypes type;
+@property (nonatomic, strong) NSArray *results;
+@property (nonatomic) RCAPIOperationTypes type;
+
+@property (nonatomic, readonly, strong) NSString *stringfiedType;
+@property (nonatomic, readonly, strong) NSString *stringfiedFilter;
 
 @end
 
@@ -26,13 +41,16 @@ static NSString * const RCAPIOperationJSONValue = @"application/json";
 
 #pragma mark - NSObject
 
-- (id)initWithURL:(NSURL *)url andFilter:(NSDictionary *)filter
+- (id)initWithType:(RCAPIOperationTypes)type identifier:(NSString *)identifier andPublicKey:(NSString *)publicKey;
 {
 	self = [self init];
 
-	if (self) {
-		self.url = url;
-		self.filter = filter;
+	if (self && [self validateType:type publicKey:publicKey andIdentifier:identifier]) {
+		self.type = type;
+		self.publicKey = publicKey;
+		self.identifier = identifier;
+		self.filter = @{RCRequestKeyAPIKey: publicKey};
+		self.url = [self generateURL];
 	}
 
 	return self;
@@ -58,24 +76,9 @@ static NSString * const RCAPIOperationJSONValue = @"application/json";
 {
 	[super start];
 
-	if (!self.url || !self.filter) {
-		NSString *description;
-		NSInteger code;
-
-		if (!self.url) {
-			description = RCOperationErrorURLIsNull;
-			code = RCOperationErrorCodeURLIsNull;
-		} else {
-			description = RCOperationErrorFilterIsNull;
-			code = RCOperationErrorCodeFilterIsNull;
-		}
-
-		NSDictionary *userInfo = @{NSLocalizedDescriptionKey: description};
-
-		[self errorWithCode:code andUserInfo:userInfo];
-
-		if (self.jsonCompletion) {
-			self.jsonCompletion(self.json, self.error);
+	if (self.error) {
+		if (self.completionBlock) {
+			self.completionBlock(self.results, self.error);
 		}
 
 		[super finish];
@@ -89,8 +92,9 @@ static NSString * const RCAPIOperationJSONValue = @"application/json";
 
 	NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:self.url];
 
-	[request setValue:RCAPIOperationJSONValue forHTTPHeaderField:RCAPIOperationContentTypeKey];
-	[request setValue:RCAPIOperationJSONValue forHTTPHeaderField:RCAPIOperationAcceptKey];
+	[request setValue:RCAPIOperationContentTypeValue forHTTPHeaderField:RCAPIOperationContentTypeKey];
+	[request setValue:RCAPIOperationContentEncodingValue forHTTPHeaderField:RCAPIOperationContentEncodingKey];
+	[request setValue:RCAPIOperationAcceptValue forHTTPHeaderField:RCAPIOperationAcceptKey];
 
 	NSURLSessionDataTask *task = [self.session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
 		if (error) {
@@ -101,10 +105,13 @@ static NSString * const RCAPIOperationJSONValue = @"application/json";
 			if (error) {
 				[self errorWithCode:error.code andUserInfo:error.userInfo];
 			}
+
+			// TODO: Build the results from the JSON data.
+			// self.objets = ...
 		}
 
-		if (self.jsonCompletion) {
-			self.jsonCompletion(self.json, self.error);
+		if (self.completionBlock) {
+			self.completionBlock(self.results, self.error);
 		}
 
 		[self finish];
@@ -124,11 +131,89 @@ static NSString * const RCAPIOperationJSONValue = @"application/json";
 
 	[self errorWithCode:RCOperationErrorCodeOperationCancelled andUserInfo:userInfo];
 
-	if (self.jsonCompletion) {
-		self.jsonCompletion(self.json, self.error);
+	if (self.completionBlock) {
+		self.completionBlock(self.results, self.error);
 	}
 
 	[super cancel];
+}
+
+#pragma mark - Properties
+
+- (NSString *)stringfiedType
+{
+	switch (self.type) {
+		case RCAPIOperationTypeCharacters:
+			return RCRequestKeyCharacters;
+		case RCAPIOperationTypeComics:
+			return RCRequestKeyComics;
+		case RCAPIOperationTypeCreators:
+			return RCRequestKeyCreators;
+		case RCAPIOperationTypeEvents:
+			return RCRequestKeyEvents;
+		case RCAPIOperationTypeSeries:
+			return RCRequestKeySeries;
+		case RCAPIOperationTypeStories:
+			return RCRequestKeyStories;
+		default:
+			return [NSString string];
+	}
+}
+
+- (NSString *)stringfiedFilter
+{
+	NSMutableArray *parameters = [NSMutableArray array];
+
+	[self.filter enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *value, BOOL *stop) {
+		NSString *encodedValue = [value stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+		NSString *parameter = [NSString stringWithFormat:RCAPIOperationURLParameter, key, encodedValue];
+
+		[parameters addObject:parameter];
+	}];
+
+	return [parameters componentsJoinedByString:@"&"];
+}
+
+#pragma mark - Private methods
+
+- (BOOL)validateType:(RCAPIOperationTypes)type publicKey:(NSString *)publicKey andIdentifier:(NSString *)identifier
+{
+	BOOL isValidated = type != RCAPIOperationTypeUndefined && publicKey && identifier;
+
+	if (!isValidated) {
+		NSString *description;
+		NSInteger code;
+
+		if (!identifier) {
+			description = RCOperationErrorIdentifierIsNull;
+			code = RCOperationErrorCodeIdentifierIsNull;
+		} else if (!publicKey) {
+			description = RCOperationErrorIdentifierIsNull;
+			code = RCOperationErrorCodePublicKeyIsNull;
+		} else {
+			description = RCOperationErrorTypeUndefined;
+			code = RCOperationErrorCodeTypeUndefined;
+		}
+
+		NSDictionary *userInfo = @{NSLocalizedDescriptionKey: description};
+
+		[self errorWithCode:code andUserInfo:userInfo];
+	}
+
+	return isValidated;
+}
+
+- (NSURL *)generateURL
+{
+	NSString *urlString;
+
+	if (self.identifier) {
+		urlString = [NSString stringWithFormat:RCAPIOperationBaseURLWithIdentifier, self.stringfiedType, self.identifier, self.stringfiedFilter];
+	} else {
+		urlString = [NSString stringWithFormat:RCAPIOperationBaseURL, self.stringfiedType, self.stringfiedFilter];
+	}
+
+	return [NSURL URLWithString:urlString];
 }
 
 @end

@@ -9,17 +9,20 @@
 #import "RCOperation.h"
 #import "RCAPIOperationTypes.h"
 
-typedef void (^jsonCompletionBlock) (NSDictionary *dictionary, NSError *error);
+typedef void (^operationCompletionBlock) (NSArray *results, NSError *error);
 
 @interface RCAPIOperation : RCOperation
 
-@property (nonatomic, copy) jsonCompletionBlock jsonCompletion;
+@property (nonatomic, copy) operationCompletionBlock completionBlock;
 
-@property (nonatomic, strong, readonly) NSURL *url;
-@property (nonatomic, strong, readonly) NSDictionary *filter;
-@property (nonatomic, strong, readonly) NSDictionary *json;
-@property (nonatomic, assign, readonly) RCAPIOperationTypes type;
+@property (nonatomic, readonly, strong) NSString *identifier;
+@property (nonatomic, readonly, strong) NSString *publicKey;
+@property (nonatomic, readonly, strong) NSURL *url;
+@property (nonatomic, readonly, strong) NSDictionary *filter;
+@property (nonatomic, readonly, strong) NSDictionary *json;
+@property (nonatomic, readonly, strong) NSArray *results;
+@property (nonatomic, readonly) RCAPIOperationTypes type;
 
-- (id)initWithURL:(NSURL *)url andFilter:(NSDictionary *)filter;
+- (id)initWithType:(RCAPIOperationTypes)type identifier:(NSString *)identifier andPublicKey:(NSString *)publicKey;
 
 @end
