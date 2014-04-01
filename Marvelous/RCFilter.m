@@ -38,6 +38,11 @@
 	return params;
 }
 
+- (RCAPITypes)type
+{
+	return RCAPITypeUndefined;
+}
+
 - (NSString *)stringfiedOrderBy
 {
 	if (self.orderBy == RCOrderByTypeCodeNameAscending) {

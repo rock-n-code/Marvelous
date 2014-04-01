@@ -7,6 +7,7 @@
 //
 
 #import "RCOrderByTypeCodes.h"
+#import "RCAPITypes.h"
 #import "RCRequestKeys.h"
 
 @interface RCFilter : NSObject
@@ -16,5 +17,6 @@
 @property (nonatomic) RCOrderByTypeCodes orderBy;
 
 @property (nonatomic, readonly, strong) NSDictionary *parameters;
+@property (nonatomic, readonly) RCAPITypes type;
 
 @end

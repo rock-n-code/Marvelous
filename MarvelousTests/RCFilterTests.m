@@ -63,4 +63,11 @@
 	XCTAssertEqual(parameters.allKeys.count, countToTest, @"\"%s\" is expecting the property 'count' of the variable 'parameters' to be the integer value %d.", __PRETTY_FUNCTION__, countToTest);
 }
 
+- (void)testType
+{
+	RCFilter *filter = [[RCFilter alloc] init];
+
+	XCTAssertEqual(filter.type, RCAPITypeUndefined, @"\"%s\" is expecting the property 'type' to have the '%d' integer value.", __PRETTY_FUNCTION__, RCAPITypeUndefined);
+}
+
 @end
