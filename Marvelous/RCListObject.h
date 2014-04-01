@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Rock & Code. All rights reserved.
 //
 
-#import "RCObjectProtocol.h"
+#import "RCObject.h"
 
-@interface RCListObject : NSObject <RCObjectProtocol>
+@interface RCListObject : RCObject
 
 @property (nonatomic, readonly, strong) NSNumber *available;
 @property (nonatomic, readonly, strong) NSNumber *returned;

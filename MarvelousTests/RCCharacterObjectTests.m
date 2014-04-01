@@ -1,5 +1,5 @@
 //
-//  RCCharacterModelTests.m
+//  RCCharacterObjectTests.m
 //  Marvelous
 //
 //  Created by Javier Cicchelli on 31/03/14.
@@ -10,11 +10,11 @@
 
 #import "RCCharacterObject.h"
 
-@interface RCCharacterModelTests : XCTestCase
+@interface RCCharacterObjectTests : XCTestCase
 
 @end
 
-@implementation RCCharacterModelTests
+@implementation RCCharacterObjectTests
 
 - (void)setUp
 {

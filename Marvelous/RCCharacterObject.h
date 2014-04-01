@@ -6,10 +6,10 @@
 //  Copyright (c) 2014 Rock & Code. All rights reserved.
 //
 
-#import "RCObjectProtocol.h"
+#import "RCObject.h"
 #import "RCListObject.h"
 
-@interface RCCharacterObject : NSObject <RCObjectProtocol>
+@interface RCCharacterObject : RCObject
 
 @property (nonatomic, readonly, strong) NSNumber *identifier;
 @property (nonatomic, readonly, strong) NSString *name;
