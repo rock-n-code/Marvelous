@@ -32,6 +32,7 @@
 		03130D5818EB59EB00BD315F /* RCImageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D5718EB59EB00BD315F /* RCImageObject.m */; };
 		03130D5A18EB5A0700BD315F /* RCImageObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D5918EB5A0700BD315F /* RCImageObjectTests.m */; };
 		03130D6018EB7F8A00BD315F /* RCImageModes.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D5F18EB7F8A00BD315F /* RCImageModes.m */; };
+		03130D6318EB801800BD315F /* RCImageSizes.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D6218EB801800BD315F /* RCImageSizes.m */; };
 		03B694D818E73E3A00CEF855 /* RCMarvelAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B694D718E73E3A00CEF855 /* RCMarvelAPI.m */; };
 		03B694DB18E73E5E00CEF855 /* RCMarvelAPITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B694DA18E73E5E00CEF855 /* RCMarvelAPITests.m */; };
 		03B694DC18E73EF900CEF855 /* RCMarvelAPI.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03B694D618E73E3A00CEF855 /* RCMarvelAPI.h */; };
@@ -121,6 +122,8 @@
 		03130D5D18EB7E6500BD315F /* RCImageSizeCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCImageSizeCodes.h; sourceTree = "<group>"; };
 		03130D5E18EB7F8A00BD315F /* RCImageModes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCImageModes.h; path = Marvelous/RCImageModes.h; sourceTree = "<group>"; };
 		03130D5F18EB7F8A00BD315F /* RCImageModes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCImageModes.m; path = Marvelous/RCImageModes.m; sourceTree = "<group>"; };
+		03130D6118EB801800BD315F /* RCImageSizes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCImageSizes.h; path = Marvelous/RCImageSizes.h; sourceTree = "<group>"; };
+		03130D6218EB801800BD315F /* RCImageSizes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCImageSizes.m; path = Marvelous/RCImageSizes.m; sourceTree = "<group>"; };
 		03B694D618E73E3A00CEF855 /* RCMarvelAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCMarvelAPI.h; path = Marvelous/RCMarvelAPI.h; sourceTree = "<group>"; };
 		03B694D718E73E3A00CEF855 /* RCMarvelAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCMarvelAPI.m; path = Marvelous/RCMarvelAPI.m; sourceTree = "<group>"; };
 		03B694DA18E73E5E00CEF855 /* RCMarvelAPITests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCMarvelAPITests.m; sourceTree = "<group>"; };
@@ -274,6 +277,8 @@
 				03130D5418EAE7F800BD315F /* RCOrderByTypes.m */,
 				03130D5E18EB7F8A00BD315F /* RCImageModes.h */,
 				03130D5F18EB7F8A00BD315F /* RCImageModes.m */,
+				03130D6118EB801800BD315F /* RCImageSizes.h */,
+				03130D6218EB801800BD315F /* RCImageSizes.m */,
 			);
 			name = Constants;
 			path = ..;
@@ -494,6 +499,7 @@
 				03130D2A18E974C300BD315F /* RCSummaryObject.m in Sources */,
 				03B694E018E74D6300CEF855 /* RCRequestKeys.m in Sources */,
 				03130D1818E96CBD00BD315F /* RCDataWrapperObject.m in Sources */,
+				03130D6318EB801800BD315F /* RCImageSizes.m in Sources */,
 				03130D3C18E9D09800BD315F /* RCObject.m in Sources */,
 				03130D4318EAD15100BD315F /* RCQueryInfoObject.m in Sources */,
 				03B694FB18E774D400CEF855 /* RCOperationErrors.m in Sources */,
