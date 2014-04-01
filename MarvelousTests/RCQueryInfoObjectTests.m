@@ -26,9 +26,18 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testInit
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+	RCQueryInfoObject *info = [[RCQueryInfoObject alloc] init];
+
+	XCTAssertNil(info.copyright, @"\"%s\" is expecting the property 'copyright' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(info.attributionText, @"\"%s\" is expecting the property 'attributionText' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(info.attributionHTML, @"\"%s\" is expecting the property 'attributionHTML' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(info.etag, @"\"%s\" is expecting the property 'etag' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(info.offset, @"\"%s\" is expecting the property 'offset' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(info.limit, @"\"%s\" is expecting the property 'limit' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(info.total, @"\"%s\" is expecting the property 'total' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(info.count, @"\"%s\" is expecting the property 'count' to be NULL.", __PRETTY_FUNCTION__);
 }
 
 @end

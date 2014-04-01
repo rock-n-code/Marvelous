@@ -8,4 +8,13 @@
 
 @interface RCQueryInfoObject : NSObject
 
+@property (nonatomic, readonly, strong) NSString *copyright;
+@property (nonatomic, readonly, strong) NSString *attributionText;
+@property (nonatomic, readonly, strong) NSString *attributionHTML;
+@property (nonatomic, readonly, strong) NSString *etag;
+@property (nonatomic, readonly, strong) NSNumber *offset;
+@property (nonatomic, readonly, strong) NSNumber *limit;
+@property (nonatomic, readonly, strong) NSNumber *total;
+@property (nonatomic, readonly, strong) NSNumber *count;
+
 @end
