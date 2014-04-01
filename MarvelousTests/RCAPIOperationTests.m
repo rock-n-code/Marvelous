@@ -9,7 +9,7 @@
 #import <XCTest/XCTest.h>
 
 #import "RCAPIOperation.h"
-#import "RCAPIOperationTestValues.h"
+#import "RCMarvelAPITestValues.h"
 
 @interface RCAPIOperationTests : XCTestCase
 
@@ -41,7 +41,9 @@
 
 - (void)testInitWithTypeIdentifierAndAuthentication
 {
-	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeCharacters identifier:RCAPIOperationTestValueValidIdentifier andAuthentication:@{}];
+	NSString *identifier = [NSString stringWithFormat:@"%d", RCMarvelAPITestValidValidIdentifier];
+	NSDictionary *authentication = @{};
+	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeCharacters identifier:identifier andAuthentication:authentication];
 
 	XCTAssertEqual(operation.type, RCAPITypeCharacters, @"\"%s\" is expecting the property 'type' to have the '%d' integer value.", __PRETTY_FUNCTION__, RCAPITypeCharacters);
 	XCTAssertNotNil(operation.identifier, @"\"%s\" is expecting the property 'identifier' to be not NULL.", __PRETTY_FUNCTION__);
@@ -53,7 +55,9 @@
 
 - (void)testInitWithUndefinedTypeIdentifierAndAuthentication
 {
-	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeUndefined identifier:RCAPIOperationTestValueValidIdentifier andAuthentication:@{}];
+	NSString *identifier = [NSString stringWithFormat:@"%d", RCMarvelAPITestValidValidIdentifier];
+	NSDictionary *authentication = @{};
+	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeUndefined identifier:identifier andAuthentication:authentication];
 
 	XCTAssertEqual(operation.type, RCAPITypeUndefined, @"\"%s\" is expecting the property 'type' to have the '%d' integer value.", __PRETTY_FUNCTION__, RCAPITypeUndefined);
 	XCTAssertNil(operation.identifier, @"\"%s\" is expecting the property 'identifier' to be NULL.", __PRETTY_FUNCTION__);

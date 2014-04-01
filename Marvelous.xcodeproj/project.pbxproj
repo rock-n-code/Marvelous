@@ -32,7 +32,6 @@
 		03B694FB18E774D400CEF855 /* RCOperationErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B694FA18E774D400CEF855 /* RCOperationErrors.m */; };
 		03B694FE18E77B1D00CEF855 /* RCAPIOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B694FD18E77B1D00CEF855 /* RCAPIOperation.m */; };
 		03B6950018E77B3500CEF855 /* RCAPIOperationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B694FF18E77B3500CEF855 /* RCAPIOperationTests.m */; };
-		03B6950B18E864C300CEF855 /* RCAPIOperationTestValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B6950A18E864C300CEF855 /* RCAPIOperationTestValues.m */; };
 		03B6951618E941EB00CEF855 /* XCTest+Async.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B6951518E941EB00CEF855 /* XCTest+Async.m */; };
 		03DEC84018E736730098CCE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC83F18E736730098CCE1 /* Foundation.framework */; };
 		03DEC84518E736740098CCE1 /* Marvelous.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03DEC84418E736740098CCE1 /* Marvelous.h */; };
@@ -110,8 +109,6 @@
 		03B694FC18E77B1D00CEF855 /* RCAPIOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCAPIOperation.h; sourceTree = "<group>"; };
 		03B694FD18E77B1D00CEF855 /* RCAPIOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCAPIOperation.m; sourceTree = "<group>"; };
 		03B694FF18E77B3500CEF855 /* RCAPIOperationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCAPIOperationTests.m; sourceTree = "<group>"; };
-		03B6950918E864C300CEF855 /* RCAPIOperationTestValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCAPIOperationTestValues.h; sourceTree = "<group>"; };
-		03B6950A18E864C300CEF855 /* RCAPIOperationTestValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCAPIOperationTestValues.m; sourceTree = "<group>"; };
 		03B6951418E941EB00CEF855 /* XCTest+Async.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTest+Async.h"; sourceTree = "<group>"; };
 		03B6951518E941EB00CEF855 /* XCTest+Async.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCTest+Async.m"; sourceTree = "<group>"; };
 		03DEC83C18E736730098CCE1 /* libMarvelous.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMarvelous.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -258,8 +255,6 @@
 			children = (
 				03130D3718E992FA00BD315F /* RCMarvelAPITestValues.h */,
 				03130D3818E992FA00BD315F /* RCMarvelAPITestValues.m */,
-				03B6950918E864C300CEF855 /* RCAPIOperationTestValues.h */,
-				03B6950A18E864C300CEF855 /* RCAPIOperationTestValues.m */,
 			);
 			name = Constants;
 			sourceTree = "<group>";
@@ -448,7 +443,6 @@
 				03130D2C18E974EB00BD315F /* RCSummaryObjectTests.m in Sources */,
 				03130D3E18E9D10600BD315F /* RCObjectTests.m in Sources */,
 				03130D2718E972A700BD315F /* RCListObjectTests.m in Sources */,
-				03B6950B18E864C300CEF855 /* RCAPIOperationTestValues.m in Sources */,
 				03130D1518E96A6600BD315F /* RCDataWrapperObjectTests.m in Sources */,
 				03B694F418E774AD00CEF855 /* RCOperationTests.m in Sources */,
 				03B694DB18E73E5E00CEF855 /* RCMarvelAPITests.m in Sources */,
