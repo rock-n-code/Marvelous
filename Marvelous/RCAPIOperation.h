@@ -7,10 +7,10 @@
 //
 
 #import "RCOperation.h"
-#import "RCDataWrapperModel.h"
+#import "RCDataWrapperObject.h"
 #import "RCAPITypes.h"
 
-typedef void (^operationCompletionBlock) (RCDataWrapperModel *data, NSError *error);
+typedef void (^operationCompletionBlock) (RCDataWrapperObject *data, NSError *error);
 
 @interface RCAPIOperation : RCOperation
 
@@ -19,7 +19,7 @@ typedef void (^operationCompletionBlock) (RCDataWrapperModel *data, NSError *err
 @property (nonatomic, readonly, strong) NSString *identifier;
 @property (nonatomic, readonly, strong) NSURL *url;
 @property (nonatomic, readonly, strong) NSDictionary *parameters;
-@property (nonatomic, readonly, strong) RCDataWrapperModel *data;
+@property (nonatomic, readonly, strong) RCDataWrapperObject *data;
 @property (nonatomic, readonly) RCAPITypes type;
 
 - (id)initWithType:(RCAPITypes)type identifier:(NSString *)identifier andAuthentication:(NSDictionary *)authentication;

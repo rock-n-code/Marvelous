@@ -29,7 +29,7 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 @property (nonatomic, strong) NSString *identifier;
 @property (nonatomic, strong) NSURL *url;
 @property (nonatomic, strong) NSDictionary *parameters;
-@property (nonatomic, strong) RCDataWrapperModel *data;
+@property (nonatomic, strong) RCDataWrapperObject *data;
 @property (nonatomic) RCAPITypes type;
 
 @property (nonatomic, readonly, strong) NSString *stringfiedType;
