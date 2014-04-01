@@ -34,6 +34,7 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 
 @property (nonatomic, readonly, strong) NSString *stringfiedType;
 @property (nonatomic, readonly, strong) NSString *stringfiedParameters;
+@property (nonatomic, readonly) RCAPITypes typeToConvert;
 
 @end
 
@@ -184,6 +185,12 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 	}];
 
 	return [parameters componentsJoinedByString:@"&"];
+}
+
+- (RCAPITypes)typeToConvert
+{
+//	TODO: return the type for a given filter, if any.
+	return self.type;
 }
 
 #pragma mark - Private methods
