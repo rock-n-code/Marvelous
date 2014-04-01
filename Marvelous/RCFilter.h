@@ -12,6 +12,6 @@
 
 @property (nonatomic, strong) NSNumber *limit;
 @property (nonatomic, strong) NSNumber *offset;
-@property (nonatomic) RCFilterOrderByTypes *orderBy;
+@property (nonatomic) RCOrderByTypeCodes *orderBy;
 
 @end
