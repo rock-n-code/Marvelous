@@ -39,7 +39,45 @@
 	XCTAssertNil(filter.stories, @"\"%s\" is expecting the property 'stories' to be NULL.", __PRETTY_FUNCTION__);
 	XCTAssertNil(filter.limit, @"\"%s\" is expecting the property 'limit' to be NULL.", __PRETTY_FUNCTION__);
     XCTAssertNil(filter.offset, @"\"%s\" is expecting the property 'offset' to be NULL.", __PRETTY_FUNCTION__);
-	XCTAssertEqual(filter.orderBy, NULL, @"\"%s\" is expecting the property 'orderBy' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertEqual(filter.orderBy, RCOrderByTypeCodeUndefined, @"\"%s\" is expecting the property 'orderBy' to have the '%d' integer value.", __PRETTY_FUNCTION__, RCOrderByTypeCodeUndefined);
+}
+
+- (void)testParameters
+{
+	RCCharacterFilter *filter = [[RCCharacterFilter alloc] init];
+
+	filter.name = @"TestName";
+	filter.nameStartsWith = @"TestNameStartsWith";
+	filter.modifiedSince = [NSDate date];
+	filter.comics = @[@0, @1, @2];
+	filter.series = @[@"0", @"1", @"2"];
+	filter.events = @[@0, @1, @2];
+	filter.stories = @[@"0", @"1", @"2"];
+	filter.offset = @0;
+	filter.limit = @0;
+	filter.orderBy = RCOrderByTypeCodeNameAscending;
+
+	NSDictionary *parameters = filter.parameters;
+	NSInteger countToTest = 10;
+
+	XCTAssertNotNil(parameters, @"\"%s\" is expecting the variable 'parameters' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertEqual(parameters.allKeys.count, countToTest, @"\"%s\" is expecting the property 'count' of the variable 'parameters' to be the integer value %d.", __PRETTY_FUNCTION__, countToTest);
+}
+
+- (void)testPartialParameters
+{
+	RCCharacterFilter *filter = [[RCCharacterFilter alloc] init];
+
+	filter.name = @"TestName";
+	filter.limit = @0;
+	filter.series = @[@"0", @"1", @"2"];
+	filter.orderBy = RCOrderByTypeCodeNameDescending;
+
+	NSDictionary *parameters = filter.parameters;
+	NSInteger countToTest = 4;
+
+	XCTAssertNotNil(parameters, @"\"%s\" is expecting the variable 'parameters' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertEqual(parameters.allKeys.count, countToTest, @"\"%s\" is expecting the property 'count' of the variable 'parameters' to be the integer value %d.", __PRETTY_FUNCTION__, countToTest);
 }
 
 @end

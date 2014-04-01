@@ -44,9 +44,10 @@
 	filter.orderBy = RCOrderByTypeCodeNameAscending;
 
 	NSDictionary *parameters = filter.parameters;
+	NSInteger countToTest = 3;
 
 	XCTAssertNotNil(parameters, @"\"%s\" is expecting the variable 'parameters' to be not NULL.", __PRETTY_FUNCTION__);
-	XCTAssertEqual(parameters.allKeys.count, 3, @"\"%s\" is expecting the property 'count' of the variable 'parameters' to be the integer value 3.", __PRETTY_FUNCTION__);
+	XCTAssertEqual(parameters.allKeys.count, countToTest, @"\"%s\" is expecting the property 'count' of the variable 'parameters' to be the integer value %d.", __PRETTY_FUNCTION__, countToTest);
 }
 
 - (void)testPartialParameters
@@ -56,9 +57,10 @@
 	filter.limit = @0;
 
 	NSDictionary *parameters = filter.parameters;
+	NSInteger countToTest = 1;
 
 	XCTAssertNotNil(parameters, @"\"%s\" is expecting the variable 'parameters' to be not NULL.", __PRETTY_FUNCTION__);
-	XCTAssertEqual(parameters.allKeys.count, 1, @"\"%s\" is expecting the property 'count' of the variable 'parameters' to be the integer value 1.", __PRETTY_FUNCTION__);
+	XCTAssertEqual(parameters.allKeys.count, countToTest, @"\"%s\" is expecting the property 'count' of the variable 'parameters' to be the integer value %d.", __PRETTY_FUNCTION__, countToTest);
 }
 
 @end
