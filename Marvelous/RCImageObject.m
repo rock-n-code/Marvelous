@@ -8,6 +8,13 @@
 
 #import "RCImageObject.h"
 
+@interface RCImageObject ()
+
+@property (nonatomic, strong) NSString *path;
+@property (nonatomic, strong) NSString *extension;
+
+@end
+
 @implementation RCImageObject
 
 @end

@@ -10,4 +10,7 @@
 
 @interface RCImageObject : RCObject
 
+@property (nonatomic, readonly, strong) NSString *path;
+@property (nonatomic, readonly, strong) NSString *extension;
+
 @end
