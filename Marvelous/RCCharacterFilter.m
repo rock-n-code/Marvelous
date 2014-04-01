@@ -51,6 +51,11 @@
 	return params;
 }
 
+- (RCAPITypes)type
+{
+	return RCAPITypeCharacters;
+}
+
 #pragma mark - Private methods
 
 - (NSString *)stringFromDate:(NSDate *)date
