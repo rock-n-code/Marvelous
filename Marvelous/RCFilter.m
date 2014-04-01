@@ -17,6 +17,27 @@
 
 @implementation RCFilter
 
+#pragma mark - Properties
+
+- (NSDictionary *)parameters
+{
+	NSMutableDictionary *params = [NSMutableDictionary dictionary];
+
+	if (self.limit) {
+		params[RCRequestKeyLimit] = self.limit.stringValue;
+	}
+
+	if (self.offset) {
+		params[RCRequestKeyOffset] = self.offset.stringValue;
+	}
+
+	if (self.orderBy != RCOrderByTypeCodeUndefined) {
+		params[RCRequestKeyOrderBy] = self.stringfiedOrderBy;
+	}
+
+	return params;
+}
+
 - (NSString *)stringfiedOrderBy
 {
 	if (self.orderBy == RCOrderByTypeCodeNameAscending) {

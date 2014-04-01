@@ -7,7 +7,8 @@
 //
 
 typedef NS_ENUM(NSInteger, RCOrderByTypeCodes) {
-	RCOrderByTypeCodeNameAscending = 0,
+	RCOrderByTypeCodeUndefined = 0,
+	RCOrderByTypeCodeNameAscending,
 	RCOrderByTypeCodeNameDescending,
 	RCOrderByTypeCodeDateModifiedAscending,
 	RCOrderByTypeCodeDateModifiedDescending

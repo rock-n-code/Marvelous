@@ -15,4 +15,6 @@
 @property (nonatomic, strong) NSNumber *offset;
 @property (nonatomic) RCOrderByTypeCodes orderBy;
 
+@property (nonatomic, readonly, strong) NSDictionary *parameters;
+
 @end
