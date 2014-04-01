@@ -118,7 +118,7 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 
 					[self errorWithCode:http.statusCode andUserInfo:userInfo];
 				} else {
-					// TODO: Build the results from the JSON data.
+					self.data = [[RCDataWrapperObject alloc] initWithType:self.typeToConvert andDictionary:json];
 				}
 			}
 		}
