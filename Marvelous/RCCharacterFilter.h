@@ -10,4 +10,12 @@
 
 @interface RCCharacterFilter : RCFilter
 
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *nameStartsWith;
+@property (nonatomic, strong) NSDate *modifiedSince;
+@property (nonatomic, strong) NSArray *comics;
+@property (nonatomic, strong) NSArray *series;
+@property (nonatomic, strong) NSArray *events;
+@property (nonatomic, strong) NSArray *stories;
+
 @end
