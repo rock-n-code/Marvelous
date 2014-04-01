@@ -27,8 +27,8 @@
 	self = [super init];
 
 	if (self) {
-		self.available = @([dictionary[RCResponseKeyAvailable] integerValue]);
-		self.returned = @([dictionary[RCResponseKeyReturned] integerValue]);
+		self.available = dictionary[RCResponseKeyAvailable];
+		self.returned = dictionary[RCResponseKeyReturned];
 		self.collectionURI = [NSURL URLWithString:dictionary[RCResponseKeyCollectionURI]];
 		self.items = [self itemsFromArray:dictionary[RCResponseKeyItems]];
 	}

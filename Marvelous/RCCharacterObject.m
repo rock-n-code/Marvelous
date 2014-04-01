@@ -35,7 +35,7 @@
 	self = [super init];
 
 	if (self) {
-		self.identifier = @([dictionary[RCResponseKeyIdentifier] integerValue]);
+		self.identifier = dictionary[RCResponseKeyIdentifier];
 		self.name = dictionary[RCResponseKeyName];
 		self.bio = dictionary[RCResponseKeyDescription];
 		self.lastModified = [self dateFromString:dictionary[RCResponseKeyModified]];
