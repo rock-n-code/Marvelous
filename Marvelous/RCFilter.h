@@ -6,12 +6,13 @@
 //  Copyright (c) 2014 Rock & Code. All rights reserved.
 //
 
-#import "RCFilterOrderByTypes.h"
+#import "RCOrderByTypeCodes.h"
+#import "RCRequestKeys.h"
 
 @interface RCFilter : NSObject
 
 @property (nonatomic, strong) NSNumber *limit;
 @property (nonatomic, strong) NSNumber *offset;
-@property (nonatomic) RCOrderByTypeCodes *orderBy;
+@property (nonatomic) RCOrderByTypeCodes orderBy;
 
 @end

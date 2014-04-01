@@ -11,4 +11,4 @@
 NSString * const RCOrderByTypeNameAscending = @"name";
 NSString * const RCOrderByTypeNameDescending = @"-name";
 NSString * const RCOrderByTypeDateModifiedAscending = @"modified";
-NSString * const RCOrderByTypeDateModifiedDescending = @"-modified	";
+NSString * const RCOrderByTypeDateModifiedDescending = @"-modified";
