@@ -9,6 +9,7 @@
 #import <CommonCrypto/CommonDigest.h>
 
 #import "RCMarvelAPI.h"
+#import "RCAPIOperation.h"
 #import "RCRequestKeys.h"
 
 static NSString * const RCMarvelAPIVersionName = @"Cable";
@@ -82,6 +83,30 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 	}
 
 	return parameters;
+}
+
+#pragma mark - Public methods
+
+- (void)getCharacterByIdentifier:(NSNumber *)identifier andCompletionBlock:(resultCompletionBlock)completionBlock
+{
+	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeCharacters identifier:identifier.stringValue andAuthentication:self.authParameters];
+
+	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		RCCharacterObject *character = nil;
+		RCQueryInfoObject *info = nil;
+
+		if (!error) {
+			info = [[RCQueryInfoObject alloc] initWithDataWrapper:dataWrapper];
+
+			if (dataWrapper.data.results.count > 0) {
+				character = dataWrapper.data.results[0];
+			}
+		}
+
+		completionBlock(character, info, error);
+	};
+
+	[self.queue addOperation:operation];
 }
 
 #pragma mark - Private methods
