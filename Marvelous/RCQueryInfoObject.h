@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Rock & Code. All rights reserved.
 //
 
+#import "RCDataWrapperObject.h"
+
 @interface RCQueryInfoObject : NSObject
 
 @property (nonatomic, readonly, strong) NSString *copyright;
@@ -16,5 +18,7 @@
 @property (nonatomic, readonly, strong) NSNumber *limit;
 @property (nonatomic, readonly, strong) NSNumber *total;
 @property (nonatomic, readonly, strong) NSNumber *count;
+
+- (id)initWithDataWrapper:(RCDataWrapperObject *)dataWrapper;
 
 @end

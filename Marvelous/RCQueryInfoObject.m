@@ -23,4 +23,24 @@
 
 @implementation RCQueryInfoObject
 
+#pragma mark - NSObject
+
+- (id)initWithDataWrapper:(RCDataWrapperObject *)dataWrapper
+{
+	self = [super init];
+
+	if (self) {
+		self.copyright = dataWrapper.copyright;
+		self.attributionText = dataWrapper.attributionText;
+		self.attributionHTML = dataWrapper.attributionHTML;
+		self.etag = dataWrapper.etag;
+		self.offset = dataWrapper.data.offset;
+		self.limit = dataWrapper.data.limit;
+		self.total = dataWrapper.data.total;
+		self.count = dataWrapper.data.count;
+	}
+
+	return self;
+}
+
 @end
