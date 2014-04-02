@@ -28,10 +28,6 @@
 		params[RCRequestKeyNameStartsWith] = self.nameStartsWith;
 	}
 
-	if (self.modifiedSince) {
-		params[RCRequestKeyModifiedSince] = [self stringFromDate:self.modifiedSince];
-	}
-
 	if (self.comics) {
 		params[RCRequestKeyComics] = [self.comics componentsJoinedByString:@","];
 	}
@@ -54,17 +50,6 @@
 - (RCAPITypes)type
 {
 	return RCAPITypeCharacters;
-}
-
-#pragma mark - Private methods
-
-- (NSString *)stringFromDate:(NSDate *)date
-{
-	NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-
-	formatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ssZ";
-
-	return [formatter stringFromDate:date];
 }
 
 @end

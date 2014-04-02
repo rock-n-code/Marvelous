@@ -30,6 +30,7 @@
 {
 	RCFilter *filter = [[RCFilter alloc] init];
 
+	XCTAssertNil(filter.modifiedSince, @"\"%s\" is expecting the property 'modifiedSince' to be NULL.", __PRETTY_FUNCTION__);
 	XCTAssertNil(filter.limit, @"\"%s\" is expecting the property 'limit' to be NULL.", __PRETTY_FUNCTION__);
     XCTAssertNil(filter.offset, @"\"%s\" is expecting the property 'offset' to be NULL.", __PRETTY_FUNCTION__);
 	XCTAssertEqual(filter.orderBy, RCOrderByTypeCodeUndefined, @"\"%s\" is expecting the property 'orderBy' to have the '%d' integer value.", __PRETTY_FUNCTION__, RCOrderByTypeCodeUndefined);
@@ -39,12 +40,13 @@
 {
 	RCFilter *filter = [[RCFilter alloc] init];
 
+	filter.modifiedSince = [NSDate date];
 	filter.offset = @0;
 	filter.limit = @0;
 	filter.orderBy = RCOrderByTypeCodeNameAscending;
 
 	NSDictionary *parameters = filter.parameters;
-	NSInteger countToTest = 3;
+	NSInteger countToTest = 4;
 
 	XCTAssertNotNil(parameters, @"\"%s\" is expecting the variable 'parameters' to be not NULL.", __PRETTY_FUNCTION__);
 	XCTAssertEqual(parameters.allKeys.count, countToTest, @"\"%s\" is expecting the property 'count' of the variable 'parameters' to be the integer value %d.", __PRETTY_FUNCTION__, countToTest);
