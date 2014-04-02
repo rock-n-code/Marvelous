@@ -59,7 +59,7 @@
 
 - (void)testInitWithTypeIdentifierAndAuthentication
 {
-	NSString *identifier = [NSString stringWithFormat:@"%d", RCMarvelAPITestValidValidIdentifier];
+	NSString *identifier = [NSString stringWithFormat:@"%d", RCMarvelAPITestValueValidIdentifier];
 	NSDictionary *authentication = @{};
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeCharacters identifier:identifier andAuthentication:authentication];
 
@@ -74,7 +74,7 @@
 
 - (void)testInitWithUndefinedTypeIdentifierAndAuthentication
 {
-	NSString *identifier = [NSString stringWithFormat:@"%d", RCMarvelAPITestValidValidIdentifier];
+	NSString *identifier = [NSString stringWithFormat:@"%d", RCMarvelAPITestValueValidIdentifier];
 	NSDictionary *authentication = @{};
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeUndefined identifier:identifier andAuthentication:authentication];
 
@@ -103,7 +103,7 @@
 
 - (void)testInitWithTypeIdentifierFilterAndAuthentication
 {
-	NSString *identifier = [NSString stringWithFormat:@"%d", RCMarvelAPITestValidValidIdentifier];
+	NSString *identifier = [NSString stringWithFormat:@"%d", RCMarvelAPITestValueValidIdentifier];
 	RCEventFilter *filter = [[RCEventFilter alloc] init];
 	NSDictionary *authentication = @{};
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeCharacters identifier:identifier filter:filter andAuthentication:authentication];
@@ -119,7 +119,7 @@
 
 - (void)testInitWithUndefinedTypeIdentifierFilterAndAuthentication
 {
-	NSString *identifier = [NSString stringWithFormat:@"%d", RCMarvelAPITestValidValidIdentifier];
+	NSString *identifier = [NSString stringWithFormat:@"%d", RCMarvelAPITestValueValidIdentifier];
 	RCEventFilter *filter = [[RCEventFilter alloc] init];
 	NSDictionary *authentication = @{};
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeUndefined identifier:identifier filter:filter andAuthentication:authentication];
@@ -150,7 +150,7 @@
 
 - (void)testInitWithTypeIdentifierNilFilterAndAuthentication
 {
-	NSString *identifier = [NSString stringWithFormat:@"%d", RCMarvelAPITestValidValidIdentifier];
+	NSString *identifier = [NSString stringWithFormat:@"%d", RCMarvelAPITestValueValidIdentifier];
 	NSDictionary *authentication = @{};
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeCharacters identifier:identifier filter:nil andAuthentication:authentication];
 
