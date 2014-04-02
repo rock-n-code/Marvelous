@@ -8,8 +8,10 @@
 
 #import "RCCharacterObject.h"
 #import "RCQueryInfoObject.h"
+#import "RCCharacterFilter.h"
 
 typedef void (^resultCompletionBlock) (id result, RCQueryInfoObject *info, NSError *error);
+typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *info, NSError *error);
 
 @interface RCMarvelAPI : NSObject
 
@@ -20,6 +22,7 @@ typedef void (^resultCompletionBlock) (id result, RCQueryInfoObject *info, NSErr
 
 + (RCMarvelAPI *)api;
 
+- (void)getCharactersByFilter:(RCCharacterFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 - (void)getCharacterByIdentifier:(NSNumber *)identifier andCompletionBlock:(resultCompletionBlock)completionBlock;
 
 @end

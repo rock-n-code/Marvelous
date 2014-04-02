@@ -87,6 +87,28 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 
 #pragma mark - Public methods
 
+- (void)getCharactersByFilter:(RCCharacterFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
+{
+	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithFilter:filter andAuthentication:self.authParameters];
+
+	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		NSArray *results = nil;
+		RCQueryInfoObject *info = nil;
+
+		if (!error) {
+			info = [[RCQueryInfoObject alloc] initWithDataWrapper:dataWrapper];
+
+			if (dataWrapper.data.results.count > 0) {
+				results = dataWrapper.data.results;
+			}
+		}
+
+		completionBlock(results, info, error);
+	};
+
+	[self.queue addOperation:operation];
+}
+
 - (void)getCharacterByIdentifier:(NSNumber *)identifier andCompletionBlock:(resultCompletionBlock)completionBlock
 {
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeCharacters identifier:identifier.stringValue andAuthentication:self.authParameters];
