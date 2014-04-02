@@ -10,4 +10,7 @@
 
 @interface RCObject : NSObject <RCObjectProtocol>
 
+- (NSDate *)dateFromString:(NSString *)string;
+- (NSArray *)urlsFromArray:(NSArray *)array;
+
 @end
