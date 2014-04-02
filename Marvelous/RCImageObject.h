@@ -10,7 +10,9 @@
 
 @interface RCImageObject : RCObject
 
-@property (nonatomic, readonly, strong) NSString *path;
+@property (nonatomic, readonly, strong) NSString *basePath;
 @property (nonatomic, readonly, strong) NSString *extension;
+@property (nonatomic, readonly, strong) NSURL *fullSizeURL;
+@property (nonatomic, readonly, strong) NSURL *detailURL;
 
 @end
