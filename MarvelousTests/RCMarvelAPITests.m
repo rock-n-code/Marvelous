@@ -76,6 +76,26 @@
 	XCTAssertEqualObjects(self.api.version, RCMarvelAPITestValueVersion, @"\"%s\" is expecting the property 'version' to have the '%@' string value.", __PRETTY_FUNCTION__, RCMarvelAPITestValueVersion);
 }
 
+- (void)testGetCharactersWithFilterAndCompletionBlock
+{
+	[self runAsynchronousBlock:^(stopExecution stop) {
+		self.api.publicKey = RCMarvelAPITestValueValidPublicKey;
+		self.api.privateKey = RCMarvelAPITestValueValidPrivateKey;
+
+		RCCharacterFilter *filter = [[RCCharacterFilter alloc] init];
+
+		filter.nameStartsWith = @"wolverine";
+
+		[self.api getCharactersByFilter:filter andCompletionBlock:^(NSArray *results, RCQueryInfoObject *info, NSError *error) {
+			XCTAssertNotNil(results, @"\"%s\" is expecting the value 'character' to be not NULL.", __PRETTY_FUNCTION__);
+			XCTAssertNotNil(info, @"\"%s\" is expecting the value 'info' to be not NULL.", __PRETTY_FUNCTION__);
+			XCTAssertNil(error, @"\"%s\" is expecting the value 'error' to be NULL.", __PRETTY_FUNCTION__);
+
+			stop();
+		}];
+	}];
+}
+
 - (void)testGetCharacterWithIdentifierAndCompletionBlock
 {
 	[self runAsynchronousBlock:^(stopExecution stop) {

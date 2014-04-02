@@ -7,7 +7,9 @@
 //
 
 #import "RCObject.h"
+#import "RCImageObject.h"
 #import "RCListObject.h"
+#import "RCURLObject.h"
 
 @interface RCCharacterObject : RCObject
 
@@ -17,7 +19,7 @@
 @property (nonatomic, readonly, strong) NSDate *lastModified;
 @property (nonatomic, readonly, strong) NSURL *resourceURI;
 @property (nonatomic, readonly, strong) NSArray *urls;
-@property (nonatomic, readonly, strong) NSURL *thumbnail;
+@property (nonatomic, readonly, strong) RCImageObject *thumbnail;
 @property (nonatomic, readonly, strong) RCListObject *comics;
 @property (nonatomic, readonly, strong) RCListObject *stories;
 @property (nonatomic, readonly, strong) RCListObject *events;

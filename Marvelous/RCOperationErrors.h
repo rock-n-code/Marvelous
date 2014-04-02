@@ -8,5 +8,6 @@
 
 extern NSString * const RCOperationErrorCancelled;
 extern NSString * const RCOperationErrorTypeUndefined;
-extern NSString * const RCOperationErrorPublicKeyIsNull;
 extern NSString * const RCOperationErrorIdentifierIsNull;
+extern NSString * const RCOperationErrorFilterUndefined;
+extern NSString * const RCOperationErrorFilterIsNull;

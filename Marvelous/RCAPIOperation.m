@@ -29,9 +29,11 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 @property (nonatomic, strong) NSString *identifier;
 @property (nonatomic, strong) NSURL *url;
 @property (nonatomic, strong) NSDictionary *parameters;
+@property (nonatomic, strong) RCFilter *filter;
 @property (nonatomic, strong) RCDataWrapperObject *data;
 @property (nonatomic) RCAPITypes type;
 
+@property (nonatomic, readonly, strong) NSURL *requestURL;
 @property (nonatomic, readonly, strong) NSString *stringfiedType;
 @property (nonatomic, readonly, strong) NSString *stringfiedParameters;
 @property (nonatomic, readonly) RCAPITypes typeToConvert;
@@ -42,6 +44,20 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 
 #pragma mark - NSObject
 
+- (id)initWithFilter:(RCFilter *)filter andAuthentication:(NSDictionary *)authentication
+{
+	self = [self init];
+
+	if (self && [self validateFilter:filter]) {
+		self.type = filter.type;
+		self.filter = filter;
+		self.parameters = [self parametersFromFilter:filter.parameters andAuthentication:authentication];
+		self.url = self.requestURL;
+	}
+
+	return self;
+}
+
 - (id)initWithType:(RCAPITypes)type identifier:(NSString *)identifier andAuthentication:(NSDictionary *)authentication
 {
 	self = [self init];
@@ -50,7 +66,7 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 		self.type = type;
 		self.identifier = identifier;
 		self.parameters = authentication;
-		self.url = [self generateURL];
+		self.url = self.requestURL;
 	}
 
 	return self;
@@ -153,6 +169,19 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 
 #pragma mark - Properties
 
+- (NSURL *)requestURL
+{
+	NSString *urlString;
+
+	if (self.identifier) {
+		urlString = [NSString stringWithFormat:RCAPIOperationBaseURLWithIdentifier, self.stringfiedType, self.identifier, self.stringfiedParameters];
+	} else {
+		urlString = [NSString stringWithFormat:RCAPIOperationBaseURL, self.stringfiedType, self.stringfiedParameters];
+	}
+
+	return [NSURL URLWithString:urlString];
+}
+
 - (NSString *)stringfiedType
 {
 	switch (self.type) {
@@ -189,11 +218,40 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 
 - (RCAPITypes)typeToConvert
 {
-//	TODO: return the type for a given filter, if any.
-	return self.type;
+	RCAPITypes type = self.type;
+
+	if (self.filter && self.filter.type != type) {
+		type = self.filter.type;
+	}
+
+	return type;
 }
 
 #pragma mark - Private methods
+
+- (BOOL)validateFilter:(RCFilter *)filter
+{
+	BOOL isValidated = filter && filter.type != RCAPITypeUndefined;
+
+	if (!isValidated) {
+		NSString *description;
+		NSInteger code;
+
+		if (!filter) {
+			description = RCOperationErrorFilterIsNull;
+			code = RCOperationErrorCodeFilterIsNull;
+		} else {
+			description = RCOperationErrorFilterUndefined;
+			code = RCOperationErrorCodeFilterUndefined;
+		}
+
+		NSDictionary *userInfo = @{NSLocalizedDescriptionKey: description};
+
+		[self errorWithCode:code andUserInfo:userInfo];
+	}
+
+	return isValidated;
+}
 
 - (BOOL)validateType:(RCAPITypes)type andIdentifier:(NSString *)identifier
 {
@@ -219,17 +277,14 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 	return isValidated;
 }
 
-- (NSURL *)generateURL
+- (NSDictionary *)parametersFromFilter:(NSDictionary *)filterParams andAuthentication:(NSDictionary *)authParams
 {
-	NSString *urlString;
+	NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
 
-	if (self.identifier) {
-		urlString = [NSString stringWithFormat:RCAPIOperationBaseURLWithIdentifier, self.stringfiedType, self.identifier, self.stringfiedParameters];
-	} else {
-		urlString = [NSString stringWithFormat:RCAPIOperationBaseURL, self.stringfiedType, self.stringfiedParameters];
-	}
+	[parameters addEntriesFromDictionary:filterParams];
+	[parameters addEntriesFromDictionary:authParams];
 
-	return [NSURL URLWithString:urlString];
+	return parameters;
 }
 
 @end
