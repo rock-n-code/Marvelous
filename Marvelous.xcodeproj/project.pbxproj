@@ -33,6 +33,8 @@
 		03130D5A18EB5A0700BD315F /* RCImageObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D5918EB5A0700BD315F /* RCImageObjectTests.m */; };
 		03130D6018EB7F8A00BD315F /* RCImageModes.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D5F18EB7F8A00BD315F /* RCImageModes.m */; };
 		03130D6318EB801800BD315F /* RCImageSizes.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D6218EB801800BD315F /* RCImageSizes.m */; };
+		03130D6618EC127300BD315F /* RCEventFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D6518EC127300BD315F /* RCEventFilter.m */; };
+		03130D6818EC128200BD315F /* RCEventFilterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D6718EC128200BD315F /* RCEventFilterTests.m */; };
 		03B694D818E73E3A00CEF855 /* RCMarvelAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B694D718E73E3A00CEF855 /* RCMarvelAPI.m */; };
 		03B694DB18E73E5E00CEF855 /* RCMarvelAPITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B694DA18E73E5E00CEF855 /* RCMarvelAPITests.m */; };
 		03B694DC18E73EF900CEF855 /* RCMarvelAPI.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03B694D618E73E3A00CEF855 /* RCMarvelAPI.h */; };
@@ -124,6 +126,9 @@
 		03130D5F18EB7F8A00BD315F /* RCImageModes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCImageModes.m; path = Marvelous/RCImageModes.m; sourceTree = "<group>"; };
 		03130D6118EB801800BD315F /* RCImageSizes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCImageSizes.h; path = Marvelous/RCImageSizes.h; sourceTree = "<group>"; };
 		03130D6218EB801800BD315F /* RCImageSizes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCImageSizes.m; path = Marvelous/RCImageSizes.m; sourceTree = "<group>"; };
+		03130D6418EC127300BD315F /* RCEventFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCEventFilter.h; sourceTree = "<group>"; };
+		03130D6518EC127300BD315F /* RCEventFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCEventFilter.m; sourceTree = "<group>"; };
+		03130D6718EC128200BD315F /* RCEventFilterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCEventFilterTests.m; sourceTree = "<group>"; };
 		03B694D618E73E3A00CEF855 /* RCMarvelAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCMarvelAPI.h; path = Marvelous/RCMarvelAPI.h; sourceTree = "<group>"; };
 		03B694D718E73E3A00CEF855 /* RCMarvelAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCMarvelAPI.m; path = Marvelous/RCMarvelAPI.m; sourceTree = "<group>"; };
 		03B694DA18E73E5E00CEF855 /* RCMarvelAPITests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCMarvelAPITests.m; sourceTree = "<group>"; };
@@ -233,6 +238,8 @@
 				03130D4818EADF9500BD315F /* RCFilter.m */,
 				03130D4D18EAE02900BD315F /* RCCharacterFilter.h */,
 				03130D4E18EAE02900BD315F /* RCCharacterFilter.m */,
+				03130D6418EC127300BD315F /* RCEventFilter.h */,
+				03130D6518EC127300BD315F /* RCEventFilter.m */,
 			);
 			name = Filters;
 			sourceTree = "<group>";
@@ -242,6 +249,7 @@
 			children = (
 				03130D4B18EADFDB00BD315F /* RCFilterTests.m */,
 				03130D5018EAE05600BD315F /* RCCharacterFilterTests.m */,
+				03130D6718EC128200BD315F /* RCEventFilterTests.m */,
 			);
 			name = Filters;
 			sourceTree = "<group>";
@@ -485,6 +493,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03B694E518E75B0D00CEF855 /* RCResponseKeys.m in Sources */,
+				03130D6618EC127300BD315F /* RCEventFilter.m in Sources */,
 				03130D5818EB59EB00BD315F /* RCImageObject.m in Sources */,
 				03130D4918EADF9500BD315F /* RCFilter.m in Sources */,
 				03B694FE18E77B1D00CEF855 /* RCAPIOperation.m in Sources */,
@@ -518,6 +527,7 @@
 				03130D2218E96F5300BD315F /* RCCharacterObjectTests.m in Sources */,
 				03130D1D18E96DB200BD315F /* RCDataContainerObjectTests.m in Sources */,
 				03130D3218E9784C00BD315F /* RCURLObjectTests.m in Sources */,
+				03130D6818EC128200BD315F /* RCEventFilterTests.m in Sources */,
 				03B6950018E77B3500CEF855 /* RCAPIOperationTests.m in Sources */,
 				03130D2C18E974EB00BD315F /* RCSummaryObjectTests.m in Sources */,
 				03130D3E18E9D10600BD315F /* RCObjectTests.m in Sources */,
