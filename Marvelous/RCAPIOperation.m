@@ -44,6 +44,20 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 
 #pragma mark - NSObject
 
+- (id)initWithFilter:(RCFilter *)filter andAuthentication:(NSDictionary *)authentication
+{
+	self = [self init];
+
+	if (self && [self validateFilter:filter]) {
+		self.type = filter.type;
+		self.filter = filter;
+		self.parameters = [self parametersFromFilter:filter.parameters andAuthentication:authentication];
+		self.url = self.requestURL;
+	}
+
+	return self;
+}
+
 - (id)initWithType:(RCAPITypes)type identifier:(NSString *)identifier andAuthentication:(NSDictionary *)authentication
 {
 	self = [self init];
@@ -215,6 +229,30 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 
 #pragma mark - Private methods
 
+- (BOOL)validateFilter:(RCFilter *)filter
+{
+	BOOL isValidated = filter && filter.type != RCAPITypeUndefined;
+
+	if (!isValidated) {
+		NSString *description;
+		NSInteger code;
+
+		if (!filter) {
+			description = RCOperationErrorFilterIsNull;
+			code = RCOperationErrorCodeFilterIsNull;
+		} else {
+			description = RCOperationErrorFilterUndefined;
+			code = RCOperationErrorCodeFilterUndefined;
+		}
+
+		NSDictionary *userInfo = @{NSLocalizedDescriptionKey: description};
+
+		[self errorWithCode:code andUserInfo:userInfo];
+	}
+
+	return isValidated;
+}
+
 - (BOOL)validateType:(RCAPITypes)type andIdentifier:(NSString *)identifier
 {
 	BOOL isValidated = type != RCAPITypeUndefined && identifier;
@@ -239,9 +277,14 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 	return isValidated;
 }
 
+- (NSDictionary *)parametersFromFilter:(NSDictionary *)filterParams andAuthentication:(NSDictionary *)authParams
 {
+	NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
 
+	[parameters addEntriesFromDictionary:filterParams];
+	[parameters addEntriesFromDictionary:authParams];
 
+	return parameters;
 }
 
 @end

@@ -24,6 +24,7 @@ typedef void (^operationCompletionBlock) (RCDataWrapperObject *data, NSError *er
 @property (nonatomic, readonly, strong) RCDataWrapperObject *data;
 @property (nonatomic, readonly) RCAPITypes type;
 
+- (id)initWithFilter:(RCFilter *)filter andAuthentication:(NSDictionary *)authentication;
 - (id)initWithType:(RCAPITypes)type identifier:(NSString *)identifier andAuthentication:(NSDictionary *)authentication;
 
 @end
