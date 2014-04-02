@@ -10,4 +10,11 @@
 
 @interface RCEventFilter : RCFilter
 
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *nameStartsWith;
+@property (nonatomic, strong) NSArray *comics;
+@property (nonatomic, strong) NSArray *series;
+@property (nonatomic, strong) NSArray *stories;
+@property (nonatomic, strong) NSArray *creators;
+
 @end

@@ -8,6 +8,10 @@
 
 #import "RCEventFilter.h"
 
+@interface RCEventFilter ()
+
+@end
+
 @implementation RCEventFilter
 
 @end
