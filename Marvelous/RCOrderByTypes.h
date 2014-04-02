@@ -6,7 +6,6 @@
 //  Copyright (c) 2014 Rock & Code. All rights reserved.
 //
 
-extern NSString * const RCOrderByTypeNameAscending;
-extern NSString * const RCOrderByTypeNameDescending;
-extern NSString * const RCOrderByTypeDateModifiedAscending;
-extern NSString * const RCOrderByTypeDateModifiedDescending;
+extern NSString * const RCOrderByTypeName;
+extern NSString * const RCOrderByTypeDateModified;
+extern NSString * const RCOrderByTypeStartDate;
