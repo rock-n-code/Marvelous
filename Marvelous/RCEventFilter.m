@@ -46,4 +46,10 @@
 
 	return params;
 }
+
+- (RCAPITypes)type
+{
+	return RCAPITypeEvents;
+}
+
 @end
