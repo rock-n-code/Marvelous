@@ -92,18 +92,7 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeCharacters identifier:identifier.stringValue andAuthentication:self.authParameters];
 
 	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		RCCharacterObject *character = nil;
-		RCQueryInfoObject *info = nil;
-
-		if (!error) {
-			info = [[RCQueryInfoObject alloc] initWithDataWrapper:dataWrapper];
-
-			if (dataWrapper.data.results.count > 0) {
-				character = dataWrapper.data.results[0];
-			}
-		}
-
-		completionBlock(character, info, error);
+		[self sendResultToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
@@ -114,15 +103,7 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithFilter:filter andAuthentication:self.authParameters];
 
 	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		NSArray *results = nil;
-		RCQueryInfoObject *info = nil;
-
-		if (!error) {
-			info = [[RCQueryInfoObject alloc] initWithDataWrapper:dataWrapper];
-			results = dataWrapper.data.results;
-		}
-
-		completionBlock(results, info, error);
+		[self sendResultsToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
@@ -134,15 +115,7 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeCharacters identifier:identifier.stringValue filter:filter andAuthentication:self.authParameters];
 
 	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		NSArray *results = nil;
-		RCQueryInfoObject *info = nil;
-
-		if (!error) {
-			info = [[RCQueryInfoObject alloc] initWithDataWrapper:dataWrapper];
-			results = dataWrapper.data.results;
-		}
-
-		completionBlock(results, info, error);
+		[self sendResultsToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
@@ -153,15 +126,7 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeCharacters identifier:identifier.stringValue filter:filter andAuthentication:self.authParameters];
 
 	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		NSArray *results = nil;
-		RCQueryInfoObject *info = nil;
-
-		if (!error) {
-			info = [[RCQueryInfoObject alloc] initWithDataWrapper:dataWrapper];
-			results = dataWrapper.data.results;
-		}
-
-		completionBlock(results, info, error);
+		[self sendResultsToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
@@ -188,6 +153,35 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 	}
 
 	return hashedString;
+}
+
+- (void)sendResultToCompletionBlock:(resultCompletionBlock)completionBlock fromDataWrapper:(RCDataWrapperObject *)dataWrapper andError:(NSError *)error
+{
+	id result = nil;
+	RCQueryInfoObject *info = nil;
+
+	if (!error) {
+		info = [[RCQueryInfoObject alloc] initWithDataWrapper:dataWrapper];
+
+		if (dataWrapper.data.results.count > 0) {
+			result = dataWrapper.data.results[0];
+		}
+	}
+
+	completionBlock(result, info, error);
+}
+
+- (void)sendResultsToCompletionBlock:(resultsCompletionBlock)completionBlock fromDataWrapper:(RCDataWrapperObject *)dataWrapper andError:(NSError *)error
+{
+	NSArray *results = nil;
+	RCQueryInfoObject *info = nil;
+
+	if (!error) {
+		info = [[RCQueryInfoObject alloc] initWithDataWrapper:dataWrapper];
+		results = dataWrapper.data.results;
+	}
+
+	completionBlock(results, info, error);
 }
 
 @end
