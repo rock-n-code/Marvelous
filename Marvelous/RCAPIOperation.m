@@ -33,6 +33,7 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 @property (nonatomic, strong) RCDataWrapperObject *data;
 @property (nonatomic) RCAPITypes type;
 
+@property (nonatomic, readonly, strong) NSURL *requestURL;
 @property (nonatomic, readonly, strong) NSString *stringfiedType;
 @property (nonatomic, readonly, strong) NSString *stringfiedParameters;
 @property (nonatomic, readonly) RCAPITypes typeToConvert;
@@ -51,7 +52,7 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 		self.type = type;
 		self.identifier = identifier;
 		self.parameters = authentication;
-		self.url = [self generateURL];
+		self.url = self.requestURL;
 	}
 
 	return self;
@@ -154,6 +155,19 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 
 #pragma mark - Properties
 
+- (NSURL *)requestURL
+{
+	NSString *urlString;
+
+	if (self.identifier) {
+		urlString = [NSString stringWithFormat:RCAPIOperationBaseURLWithIdentifier, self.stringfiedType, self.identifier, self.stringfiedParameters];
+	} else {
+		urlString = [NSString stringWithFormat:RCAPIOperationBaseURL, self.stringfiedType, self.stringfiedParameters];
+	}
+
+	return [NSURL URLWithString:urlString];
+}
+
 - (NSString *)stringfiedType
 {
 	switch (self.type) {
@@ -220,17 +234,9 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 	return isValidated;
 }
 
-- (NSURL *)generateURL
 {
-	NSString *urlString;
 
-	if (self.identifier) {
-		urlString = [NSString stringWithFormat:RCAPIOperationBaseURLWithIdentifier, self.stringfiedType, self.identifier, self.stringfiedParameters];
-	} else {
-		urlString = [NSString stringWithFormat:RCAPIOperationBaseURL, self.stringfiedType, self.stringfiedParameters];
-	}
 
-	return [NSURL URLWithString:urlString];
 }
 
 @end
