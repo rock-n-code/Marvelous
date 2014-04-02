@@ -97,10 +97,7 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 
 		if (!error) {
 			info = [[RCQueryInfoObject alloc] initWithDataWrapper:dataWrapper];
-
-			if (dataWrapper.data.results.count > 0) {
-				results = dataWrapper.data.results;
-			}
+			results = dataWrapper.data.results;
 		}
 
 		completionBlock(results, info, error);
