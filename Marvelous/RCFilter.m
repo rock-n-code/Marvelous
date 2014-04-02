@@ -12,6 +12,7 @@
 @interface RCFilter ()
 
 @property (nonatomic, readonly, strong) NSString *stringfiedOrderBy;
+@property (nonatomic, readonly) BOOL isOrderByDescending;
 
 @end
 
@@ -60,6 +61,11 @@
 	} else {
 		return @"";
 	}
+- (BOOL)isOrderByDescending
+{
+	return self.orderBy == RCOrderByTypeCodeNameDescending ||
+		   self.orderBy == RCOrderByTypeCodeDateModifiedDescending ||
+		   self.orderBy == RCOrderByTypeCodeStartDateDescending;
 }
 
 #pragma mark - Private methods
