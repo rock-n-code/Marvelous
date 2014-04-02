@@ -48,10 +48,7 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 	self = [self init];
 
 	if (self && [self validateFilter:filter]) {
-		self.type = filter.type;
-		self.filter = filter;
-		self.parameters = [self parametersFromFilter:filter.parameters andAuthentication:authentication];
-		self.url = self.requestURL;
+		[self initType:filter.type identifier:nil filter:filter andAuthentication:authentication];
 	}
 
 	return self;
@@ -62,10 +59,18 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 	self = [self init];
 
 	if (self && [self validateType:type andIdentifier:identifier]) {
-		self.type = type;
-		self.identifier = identifier;
-		self.parameters = authentication;
-		self.url = self.requestURL;
+		[self initType:type identifier:identifier filter:nil andAuthentication:authentication];
+	}
+
+	return self;
+}
+
+- (id)initWithType:(RCAPITypes)type identifier:(NSString *)identifier filter:(RCFilter *)filter andAuthentication:(NSDictionary *)authentication
+{
+	self = [self init];
+
+	if (self && [self validateType:type andIdentifier:identifier] && [self validateFilter:filter]) {
+		[self initType:type identifier:identifier filter:filter andAuthentication:authentication];
 	}
 
 	return self;
@@ -251,6 +256,21 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 	}
 
 	return isValidated;
+}
+
+- (void)initType:(RCAPITypes)type identifier:(NSString *)identifier filter:(RCFilter *)filter andAuthentication:(NSDictionary *)authentication
+{
+	self.type = type;
+	self.identifier = identifier;
+	self.filter = filter;
+
+	if (filter) {
+		self.parameters = [self parametersFromFilter:filter.parameters andAuthentication:authentication];
+	} else {
+		self.parameters = authentication;
+	}
+
+	self.url = self.requestURL;
 }
 
 - (NSDictionary *)parametersFromFilter:(NSDictionary *)filterParams andAuthentication:(NSDictionary *)authParams
