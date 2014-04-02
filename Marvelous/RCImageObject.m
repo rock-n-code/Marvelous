@@ -19,6 +19,20 @@ static NSString * const RCImageObjectPathSeparatorFormat = @"%@/%@.%@";
 
 @implementation RCImageObject
 
+#pragma mark - RCObjectProtocol
+
+- (id)initWithDictionary:(NSDictionary *)dictionary
+{
+	self = [super init];
+
+	if (self) {
+		self.basePath = dictionary[RCResponseKeyPath];
+		self.extension = dictionary[RCResponseKeyExtension];
+	}
+
+	return self;
+}
+
 #pragma mark - Properties
 
 - (NSURL *)fullSizeURL

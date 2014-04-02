@@ -26,9 +26,28 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testInit
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+	RCImageObject *image = [[RCImageObject alloc] init];
+
+	XCTAssertNil(image.basePath, @"\"%s\" is expecting the property 'basePath' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(image.extension, @"\"%s\" is expecting the property 'extension' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(image.fullSizeURL, @"\"%s\" is expecting the property 'fullSizeURL' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(image.detailURL, @"\"%s\" is expecting the property 'detailURL' to be NULL.", __PRETTY_FUNCTION__);
+}
+
+- (void)testInitWithDictionary
+{
+	NSDictionary *dictionary = @{RCResponseKeyPath: @"http://i.annihil.us/u/prod/marvel/i/mg/3/40/4bb4680432f73",
+								 RCResponseKeyExtension: @"jpg"};
+
+	RCImageObject *image = [[RCImageObject alloc] initWithDictionary:dictionary];
+
+	XCTAssertNotNil(image.basePath, @"\"%s\" is expecting the property 'basePath' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(image.extension, @"\"%s\" is expecting the property 'extension' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(image.fullSizeURL, @"\"%s\" is expecting the property 'fullSizeURL' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(image.detailURL, @"\"%s\" is expecting the property 'detailURL' to be not NULL.", __PRETTY_FUNCTION__);
+}
 }
 
 @end
