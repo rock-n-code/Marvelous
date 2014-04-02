@@ -204,8 +204,13 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 
 - (RCAPITypes)typeToConvert
 {
-//	TODO: return the type for a given filter, if any.
-	return self.type;
+	RCAPITypes type = self.type;
+
+	if (self.filter && self.filter.type != type) {
+		type = self.filter.type;
+	}
+
+	return type;
 }
 
 #pragma mark - Private methods
