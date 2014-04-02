@@ -14,4 +14,36 @@
 
 @implementation RCEventFilter
 
+#pragma mark - Properties
+
+- (NSDictionary *)parameters
+{
+	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:super.parameters];
+
+	if (self.name) {
+		params[RCRequestKeyName] = self.name;
+	}
+
+	if (self.nameStartsWith) {
+		params[RCRequestKeyNameStartsWith] = self.nameStartsWith;
+	}
+
+	if (self.comics) {
+		params[RCRequestKeyComics] = [self.comics componentsJoinedByString:@","];
+	}
+
+	if (self.series) {
+		params[RCRequestKeySeries] = [self.series componentsJoinedByString:@","];
+	}
+
+	if (self.stories) {
+		params[RCRequestKeyStories] = [self.stories componentsJoinedByString:@","];
+	}
+
+	if (self.creators) {
+		params[RCRequestKeyCreators] = [self.creators componentsJoinedByString:@","];
+	}
+
+	return params;
+}
 @end
