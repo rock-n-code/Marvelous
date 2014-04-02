@@ -50,28 +50,4 @@
 	return self;
 }
 
-#pragma mark - Private methods
-
-- (NSDate *)dateFromString:(NSString *)string
-{
-	NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-
-	formatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ssZ";
-
-	return [formatter dateFromString:string];
-}
-
-- (NSArray *)urlsFromArray:(NSArray *)array
-{
-	NSMutableArray *urls = [NSMutableArray array];
-
-	[array enumerateObjectsUsingBlock:^(NSDictionary *dictionary, NSUInteger index, BOOL *stop) {
-		RCURLObject *url = [[RCURLObject alloc] initWithDictionary:dictionary];
-
-		[urls addObject:url];
-	}];
-
-	return urls;
-}
-
 @end

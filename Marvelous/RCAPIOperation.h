@@ -26,5 +26,6 @@ typedef void (^operationCompletionBlock) (RCDataWrapperObject *data, NSError *er
 
 - (id)initWithFilter:(RCFilter *)filter andAuthentication:(NSDictionary *)authentication;
 - (id)initWithType:(RCAPITypes)type identifier:(NSString *)identifier andAuthentication:(NSDictionary *)authentication;
+- (id)initWithType:(RCAPITypes)type identifier:(NSString *)identifier filter:(RCFilter *)filter andAuthentication:(NSDictionary *)authentication;
 
 @end

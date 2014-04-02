@@ -12,5 +12,5 @@ extern NSString * const RCMarvelAPITestValueValidPrivateKey;
 extern NSString * const RCMarvelAPITestValueInvalidPrivateKey;
 extern NSString * const RCMarvelAPITestValueVersion;
 
-extern NSInteger const RCMarvelAPITestValidValidIdentifier;
-extern NSInteger const RCMarvelAPITestValidInvalidIdentifier;
+extern NSInteger const RCMarvelAPITestValueValidIdentifier;
+extern NSInteger const RCMarvelAPITestValueInvalidIdentifier;

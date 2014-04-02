@@ -12,6 +12,7 @@
 
 @interface RCFilter : NSObject
 
+@property (nonatomic, strong) NSDate *modifiedSince;
 @property (nonatomic, strong) NSNumber *limit;
 @property (nonatomic, strong) NSNumber *offset;
 @property (nonatomic) RCOrderByTypeCodes orderBy;

@@ -14,5 +14,5 @@ NSString * const RCMarvelAPITestValueValidPrivateKey = @"cbce4cf23d71f4b509d9ea7
 NSString * const RCMarvelAPITestValueInvalidPrivateKey = @"TestPrivateKey";
 NSString * const RCMarvelAPITestValueVersion = @"Cable";
 
-NSInteger const RCMarvelAPITestValidValidIdentifier = 1009718;
-NSInteger const RCMarvelAPITestValidInvalidIdentifier = -1;
+NSInteger const RCMarvelAPITestValueValidIdentifier = 1009718;
+NSInteger const RCMarvelAPITestValueInvalidIdentifier = -1;

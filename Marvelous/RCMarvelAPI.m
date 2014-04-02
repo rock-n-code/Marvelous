@@ -87,28 +87,6 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 
 #pragma mark - Public methods
 
-- (void)getCharactersByFilter:(RCCharacterFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
-{
-	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithFilter:filter andAuthentication:self.authParameters];
-
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		NSArray *results = nil;
-		RCQueryInfoObject *info = nil;
-
-		if (!error) {
-			info = [[RCQueryInfoObject alloc] initWithDataWrapper:dataWrapper];
-
-			if (dataWrapper.data.results.count > 0) {
-				results = dataWrapper.data.results;
-			}
-		}
-
-		completionBlock(results, info, error);
-	};
-
-	[self.queue addOperation:operation];
-}
-
 - (void)getCharacterByIdentifier:(NSNumber *)identifier andCompletionBlock:(resultCompletionBlock)completionBlock
 {
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeCharacters identifier:identifier.stringValue andAuthentication:self.authParameters];
@@ -126,6 +104,64 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 		}
 
 		completionBlock(character, info, error);
+	};
+
+	[self.queue addOperation:operation];
+}
+
+- (void)getCharactersByFilter:(RCCharacterFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
+{
+	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithFilter:filter andAuthentication:self.authParameters];
+
+	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		NSArray *results = nil;
+		RCQueryInfoObject *info = nil;
+
+		if (!error) {
+			info = [[RCQueryInfoObject alloc] initWithDataWrapper:dataWrapper];
+			results = dataWrapper.data.results;
+		}
+
+		completionBlock(results, info, error);
+	};
+
+	[self.queue addOperation:operation];
+}
+
+- (void)getEventsWithCharacterIdentifier:(NSNumber *)identifier andCompletionBlock:(resultsCompletionBlock)completionBlock
+{
+	RCEventFilter *filter = [[RCEventFilter alloc] init];
+	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeCharacters identifier:identifier.stringValue filter:filter andAuthentication:self.authParameters];
+
+	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		NSArray *results = nil;
+		RCQueryInfoObject *info = nil;
+
+		if (!error) {
+			info = [[RCQueryInfoObject alloc] initWithDataWrapper:dataWrapper];
+			results = dataWrapper.data.results;
+		}
+
+		completionBlock(results, info, error);
+	};
+
+	[self.queue addOperation:operation];
+}
+
+- (void)getEventsWithFilter:(RCEventFilter *)filter characterIdentifier:(NSNumber *)identifier andCompletionBlock:(resultsCompletionBlock)completionBlock
+{
+	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeCharacters identifier:identifier.stringValue filter:filter andAuthentication:self.authParameters];
+
+	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		NSArray *results = nil;
+		RCQueryInfoObject *info = nil;
+
+		if (!error) {
+			info = [[RCQueryInfoObject alloc] initWithDataWrapper:dataWrapper];
+			results = dataWrapper.data.results;
+		}
+
+		completionBlock(results, info, error);
 	};
 
 	[self.queue addOperation:operation];

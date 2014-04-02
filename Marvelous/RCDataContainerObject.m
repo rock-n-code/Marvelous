@@ -8,6 +8,7 @@
 
 #import "RCDataContainerObject.h"
 #import "RCCharacterObject.h"
+#import "RCEventObject.h"
 #import "RCResponseKeys.h"
 
 @interface RCDataContainerObject ()
@@ -50,6 +51,8 @@
 
 		if (type == RCAPITypeCharacters) {
 			result = [[RCCharacterObject alloc] initWithDictionary:dictionary];
+		} else if (type == RCAPITypeEvents) {
+			result = [[RCEventObject alloc] initWithDictionary:dictionary];
 		}
 
 		[results addObject:result];

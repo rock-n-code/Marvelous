@@ -12,7 +12,8 @@
 #import "RCStatusCodes.h"
 
 static NSString * const RCAPIOperationBaseURL = @"https://gateway.marvel.com/v1/public/%@?%@";
-static NSString * const RCAPIOperationBaseURLWithIdentifier = @"https://gateway.marvel.com/v1/public/%@/%@?%@";
+static NSString * const RCAPIOperationBaseURLIdentifier = @"https://gateway.marvel.com/v1/public/%@/%@?%@";
+static NSString * const RCAPIOperationBaseURLIdentifierFilter = @"https://gateway.marvel.com/v1/public/%@/%@/%@?%@";
 static NSString * const RCAPIOperationURLParameter = @"%@=%@";
 
 static NSString * const RCAPIOperationContentTypeKey = @"Content-Type";
@@ -34,8 +35,6 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 @property (nonatomic) RCAPITypes type;
 
 @property (nonatomic, readonly, strong) NSURL *requestURL;
-@property (nonatomic, readonly, strong) NSString *stringfiedType;
-@property (nonatomic, readonly, strong) NSString *stringfiedParameters;
 @property (nonatomic, readonly) RCAPITypes typeToConvert;
 
 @end
@@ -49,10 +48,7 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 	self = [self init];
 
 	if (self && [self validateFilter:filter]) {
-		self.type = filter.type;
-		self.filter = filter;
-		self.parameters = [self parametersFromFilter:filter.parameters andAuthentication:authentication];
-		self.url = self.requestURL;
+		[self initType:filter.type identifier:nil filter:filter andAuthentication:authentication];
 	}
 
 	return self;
@@ -63,10 +59,18 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 	self = [self init];
 
 	if (self && [self validateType:type andIdentifier:identifier]) {
-		self.type = type;
-		self.identifier = identifier;
-		self.parameters = authentication;
-		self.url = self.requestURL;
+		[self initType:type identifier:identifier filter:nil andAuthentication:authentication];
+	}
+
+	return self;
+}
+
+- (id)initWithType:(RCAPITypes)type identifier:(NSString *)identifier filter:(RCFilter *)filter andAuthentication:(NSDictionary *)authentication
+{
+	self = [self init];
+
+	if (self && [self validateType:type andIdentifier:identifier] && [self validateFilter:filter]) {
+		[self initType:type identifier:identifier filter:filter andAuthentication:authentication];
 	}
 
 	return self;
@@ -171,49 +175,26 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 
 - (NSURL *)requestURL
 {
+	NSString *format = RCAPIOperationBaseURL;
+	NSString *type = [self stringFromType:self.type];
+	NSString *parameters = [self stringFromParameters:self.parameters];
+	NSString *filterType;
 	NSString *urlString;
 
 	if (self.identifier) {
-		urlString = [NSString stringWithFormat:RCAPIOperationBaseURLWithIdentifier, self.stringfiedType, self.identifier, self.stringfiedParameters];
+		if (self.filter) {
+			format = RCAPIOperationBaseURLIdentifierFilter;
+			filterType = [self stringFromType:self.filter.type];
+			urlString = [NSString stringWithFormat:format, type, self.identifier, filterType, parameters];
+		} else {
+			format = RCAPIOperationBaseURLIdentifier;
+			urlString = [NSString stringWithFormat:format, type, self.identifier, parameters];
+		}
 	} else {
-		urlString = [NSString stringWithFormat:RCAPIOperationBaseURL, self.stringfiedType, self.stringfiedParameters];
+		urlString = [NSString stringWithFormat:format, type, parameters];
 	}
 
 	return [NSURL URLWithString:urlString];
-}
-
-- (NSString *)stringfiedType
-{
-	switch (self.type) {
-		case RCAPITypeCharacters:
-			return RCRequestKeyCharacters;
-		case RCAPITypeComics:
-			return RCRequestKeyComics;
-		case RCAPITypeCreators:
-			return RCRequestKeyCreators;
-		case RCAPITypeEvents:
-			return RCRequestKeyEvents;
-		case RCAPITypeSeries:
-			return RCRequestKeySeries;
-		case RCAPITypeStories:
-			return RCRequestKeyStories;
-		default:
-			return [NSString string];
-	}
-}
-
-- (NSString *)stringfiedParameters
-{
-	NSMutableArray *parameters = [NSMutableArray array];
-
-	[self.parameters enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *value, BOOL *stop) {
-		NSString *encodedValue = [value stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-		NSString *parameter = [NSString stringWithFormat:RCAPIOperationURLParameter, key, encodedValue];
-
-		[parameters addObject:parameter];
-	}];
-
-	return [parameters componentsJoinedByString:@"&"];
 }
 
 - (RCAPITypes)typeToConvert
@@ -277,6 +258,21 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 	return isValidated;
 }
 
+- (void)initType:(RCAPITypes)type identifier:(NSString *)identifier filter:(RCFilter *)filter andAuthentication:(NSDictionary *)authentication
+{
+	self.type = type;
+	self.identifier = identifier;
+	self.filter = filter;
+
+	if (filter) {
+		self.parameters = [self parametersFromFilter:filter.parameters andAuthentication:authentication];
+	} else {
+		self.parameters = authentication;
+	}
+
+	self.url = self.requestURL;
+}
+
 - (NSDictionary *)parametersFromFilter:(NSDictionary *)filterParams andAuthentication:(NSDictionary *)authParams
 {
 	NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
@@ -285,6 +281,40 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 	[parameters addEntriesFromDictionary:authParams];
 
 	return parameters;
+}
+
+- (NSString *)stringFromType:(RCAPITypes)type
+{
+	switch (type) {
+		case RCAPITypeCharacters:
+			return RCRequestKeyCharacters;
+		case RCAPITypeComics:
+			return RCRequestKeyComics;
+		case RCAPITypeCreators:
+			return RCRequestKeyCreators;
+		case RCAPITypeEvents:
+			return RCRequestKeyEvents;
+		case RCAPITypeSeries:
+			return RCRequestKeySeries;
+		case RCAPITypeStories:
+			return RCRequestKeyStories;
+		default:
+			return [NSString string];
+	}
+}
+
+- (NSString *)stringFromParameters:(NSDictionary *)parameters
+{
+	NSMutableArray *params = [NSMutableArray array];
+
+	[self.parameters enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *value, BOOL *stop) {
+		NSString *encodedValue = [value stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+		NSString *parameter = [NSString stringWithFormat:RCAPIOperationURLParameter, key, encodedValue];
+
+		[params addObject:parameter];
+	}];
+
+	return [params componentsJoinedByString:@"&"];
 }
 
 @end
