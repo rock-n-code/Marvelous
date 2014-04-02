@@ -7,6 +7,8 @@
 //
 
 #import "RCObject.h"
+#import "RCImageModeCodes.h"
+#import "RCImageSizeCodes.h"
 
 @interface RCImageObject : RCObject
 
@@ -14,5 +16,7 @@
 @property (nonatomic, readonly, strong) NSString *extension;
 @property (nonatomic, readonly, strong) NSURL *fullSizeURL;
 @property (nonatomic, readonly, strong) NSURL *detailURL;
+
+- (NSURL *)urlForMode:(RCImageModeCodes)mode andSize:(RCImageSizeCodes)size;
 
 @end

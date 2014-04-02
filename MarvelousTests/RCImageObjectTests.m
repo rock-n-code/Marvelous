@@ -48,6 +48,16 @@
 	XCTAssertNotNil(image.fullSizeURL, @"\"%s\" is expecting the property 'fullSizeURL' to be not NULL.", __PRETTY_FUNCTION__);
 	XCTAssertNotNil(image.detailURL, @"\"%s\" is expecting the property 'detailURL' to be not NULL.", __PRETTY_FUNCTION__);
 }
+
+- (void)testURLForModeAndSize
+{
+	NSDictionary *dictionary = @{RCResponseKeyPath: @"http://i.annihil.us/u/prod/marvel/i/mg/3/40/4bb4680432f73",
+								 RCResponseKeyExtension: @"jpg"};
+
+	RCImageObject *image = [[RCImageObject alloc] initWithDictionary:dictionary];
+	NSURL *url = [image urlForMode:RCImageModeCodeSquare andSize:RCImageSizeCodeSmall];
+
+	XCTAssertNotNil(url, @"\"%s\" is expecting the variable 'url' to be not NULL.", __PRETTY_FUNCTION__);
 }
 
 @end
