@@ -50,17 +50,28 @@
 
 - (NSString *)stringfiedOrderBy
 {
-	if (self.orderBy == RCOrderByTypeCodeNameAscending) {
-		return RCOrderByTypeNameAscending;
-	} else if (self.orderBy == RCOrderByTypeCodeNameDescending) {
-		return RCOrderByTypeNameDescending;
-	} else if (self.orderBy == RCOrderByTypeCodeDateModifiedAscending) {
-		return RCOrderByTypeDateModifiedAscending;
-	} else if (self.orderBy == RCOrderByTypeCodeDateModifiedDescending) {
-		return RCOrderByTypeDateModifiedDescending;
+	NSString *orderBy;
+
+	if (self.orderBy == RCOrderByTypeCodeNameAscending ||
+		self.orderBy == RCOrderByTypeCodeNameDescending) {
+		orderBy = RCOrderByTypeName;
+	} else if (self.orderBy == RCOrderByTypeCodeDateModifiedAscending ||
+			   self.orderBy == RCOrderByTypeCodeDateModifiedDescending) {
+		orderBy = RCOrderByTypeDateModified;
+	} else if (self.orderBy == RCOrderByTypeCodeStartDateAscending ||
+			   self.orderBy == RCOrderByTypeCodeStartDateDescending) {
+		return RCOrderByTypeStartDate;
 	} else {
 		return @"";
 	}
+
+	if (self.isOrderByDescending) {
+		orderBy = [@"-" stringByAppendingString:orderBy];
+	}
+
+	return orderBy;
+}
+
 - (BOOL)isOrderByDescending
 {
 	return self.orderBy == RCOrderByTypeCodeNameDescending ||
