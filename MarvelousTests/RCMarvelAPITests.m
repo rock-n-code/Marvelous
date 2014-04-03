@@ -43,325 +43,159 @@
 	XCTAssertEqualObjects(api.version, RCMarvelAPITestValueVersion, @"\"%s\" is expecting the property 'version' to have the '%@' string value.", __PRETTY_FUNCTION__, RCMarvelAPITestValueVersion);
 }
 
-- (void)testPublicKeyWithNil
-{
-	self.api.publicKey = nil;
-
-	XCTAssertNil(self.api.publicKey, @"\"%s\" is expecting the property 'publicKey' to be NULL.", __PRETTY_FUNCTION__);
-}
-
-- (void)testPublicKeyWithString
-{
-	self.api.publicKey = RCMarvelAPITestValueValidPublicKey;
-
-	XCTAssertEqualObjects(self.api.publicKey, RCMarvelAPITestValueValidPublicKey, @"\"%s\" is expecting the property 'publicKey' to have the '%@' string value.", __PRETTY_FUNCTION__, RCMarvelAPITestValueValidPublicKey);
-}
-
-- (void)testPrivateKeyWithNil
-{
-	self.api.privateKey = nil;
-
-	XCTAssertNil(self.api.privateKey, @"\"%s\" is expecting the property 'privateKey' to be NULL.", __PRETTY_FUNCTION__);
-}
-
-- (void)testPrivateKeyWithString
-{
-	self.api.privateKey = RCMarvelAPITestValueValidPrivateKey;
-
-	XCTAssertEqualObjects(self.api.privateKey, RCMarvelAPITestValueValidPrivateKey, @"\"%s\" is expecting the property 'publicKey' to have the '%@' string value.", __PRETTY_FUNCTION__, RCMarvelAPITestValueValidPrivateKey);
-}
-
 - (void)testVersion
 {
 	XCTAssertEqualObjects(self.api.version, RCMarvelAPITestValueVersion, @"\"%s\" is expecting the property 'version' to have the '%@' string value.", __PRETTY_FUNCTION__, RCMarvelAPITestValueVersion);
 }
 
-- (void)testGetCharacterWithIdentifierAndCompletionBlock
+- (void)testGetWithInvalidPublicKey
 {
-	[self runAsynchronousBlock:^(stopExecution stop) {
-		self.api.publicKey = RCMarvelAPITestValueValidPublicKey;
-		self.api.privateKey = RCMarvelAPITestValueValidPrivateKey;
-		
-		[self.api getCharacterByIdentifier:@(RCMarvelAPITestValueValidIdentifier) andCompletionBlock:^(RCCharacterObject *character, RCQueryInfoObject *info, NSError *error) {
-			XCTAssertNotNil(character, @"\"%s\" is expecting the value 'character' to be not NULL.", __PRETTY_FUNCTION__);
-			XCTAssertNotNil(info, @"\"%s\" is expecting the value 'info' to be not NULL.", __PRETTY_FUNCTION__);
-			XCTAssertNil(error, @"\"%s\" is expecting the value 'error' to be NULL.", __PRETTY_FUNCTION__);
-
-			stop();
-		}];
-	}];
+	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testGetCharacterWithIdentifierInvalidCredentialsAndCompletionBlock
+- (void)testGetWithInvalidPrivateKey
 {
-	[self runAsynchronousBlock:^(stopExecution stop) {
-		self.api.publicKey = RCMarvelAPITestValueInvalidPublicKey;
-		self.api.privateKey = RCMarvelAPITestValueInvalidPrivateKey;
-
-		[self.api getCharacterByIdentifier:@(RCMarvelAPITestValueValidIdentifier) andCompletionBlock:^(RCCharacterObject *character, RCQueryInfoObject *info, NSError *error) {
-			XCTAssertNil(character, @"\"%s\" is expecting the value 'character' to be NULL.", __PRETTY_FUNCTION__);
-			XCTAssertNil(info, @"\"%s\" is expecting the value 'info' to be NULL.", __PRETTY_FUNCTION__);
-			XCTAssertNotNil(error, @"\"%s\" is expecting the value 'error' to be not NULL.", __PRETTY_FUNCTION__);
-
-			stop();
-		}];
-	}];
+	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testGetCharacterWithInvalidIdentifierAndCompletionBlock
+- (void)testGetWithInvalidCredentials
 {
-	[self runAsynchronousBlock:^(stopExecution stop) {
-		self.api.publicKey = RCMarvelAPITestValueValidPublicKey;
-		self.api.privateKey = RCMarvelAPITestValueValidPrivateKey;
-
-		[self.api getCharacterByIdentifier:@(RCMarvelAPITestValueInvalidIdentifier) andCompletionBlock:^(RCCharacterObject *character, RCQueryInfoObject *info, NSError *error) {
-			XCTAssertNil(character, @"\"%s\" is expecting the value 'character' to be NULL.", __PRETTY_FUNCTION__);
-			XCTAssertNil(info, @"\"%s\" is expecting the value 'info' to be NULL.", __PRETTY_FUNCTION__);
-			XCTAssertNotNil(error, @"\"%s\" is expecting the value 'error' to be not NULL.", __PRETTY_FUNCTION__);
-
-			stop();
-		}];
-	}];
+	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testGetCharactersWithFilterAndCompletionBlock
+- (void)testGetCharacterByIdentifierAndCompletionBlock
 {
-	[self runAsynchronousBlock:^(stopExecution stop) {
-		self.api.publicKey = RCMarvelAPITestValueValidPublicKey;
-		self.api.privateKey = RCMarvelAPITestValueValidPrivateKey;
-
-		RCCharacterFilter *filter = [[RCCharacterFilter alloc] init];
-
-		filter.name = @"wolverine";
-
-		[self.api getCharactersByFilter:filter andCompletionBlock:^(NSArray *results, RCQueryInfoObject *info, NSError *error) {
-			XCTAssertNotNil(results, @"\"%s\" is expecting the value 'results' to be not NULL.", __PRETTY_FUNCTION__);
-			XCTAssertNotNil(info, @"\"%s\" is expecting the value 'info' to be not NULL.", __PRETTY_FUNCTION__);
-			XCTAssertNil(error, @"\"%s\" is expecting the value 'error' to be NULL.", __PRETTY_FUNCTION__);
-
-			stop();
-		}];
-	}];
+	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testGetCharactersWithBadFilterAndCompletionBlock
+- (void)testGetCharacterByInvalidIdentifierAndCompletionBlock
 {
-	[self runAsynchronousBlock:^(stopExecution stop) {
-		self.api.publicKey = RCMarvelAPITestValueValidPublicKey;
-		self.api.privateKey = RCMarvelAPITestValueValidPrivateKey;
-
-		RCCharacterFilter *filter = [[RCCharacterFilter alloc] init];
-
-		filter.name = @"walverine";
-
-		[self.api getCharactersByFilter:filter andCompletionBlock:^(NSArray *results, RCQueryInfoObject *info, NSError *error) {
-			XCTAssertNotNil(results, @"\"%s\" is expecting the value 'results' to be not NULL.", __PRETTY_FUNCTION__);
-			XCTAssertNotNil(info, @"\"%s\" is expecting the value 'info' to be not NULL.", __PRETTY_FUNCTION__);
-			XCTAssertNil(error, @"\"%s\" is expecting the value 'error' to be NULL.", __PRETTY_FUNCTION__);
-
-			stop();
-		}];
-	}];
+	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testGetCharactersWithNilFilterAndCompletionBlock
+- (void)testGetCharacterByNilIdentifierAndCompletionBlock
 {
-	[self runAsynchronousBlock:^(stopExecution stop) {
-		self.api.publicKey = RCMarvelAPITestValueValidPublicKey;
-		self.api.privateKey = RCMarvelAPITestValueValidPrivateKey;
-
-		[self.api getCharactersByFilter:nil andCompletionBlock:^(NSArray *results, RCQueryInfoObject *info, NSError *error) {
-			XCTAssertNil(results, @"\"%s\" is expecting the value 'results' to be NULL.", __PRETTY_FUNCTION__);
-			XCTAssertNil(info, @"\"%s\" is expecting the value 'info' to be NULL.", __PRETTY_FUNCTION__);
-			XCTAssertNotNil(error, @"\"%s\" is expecting the value 'error' to be not NULL.", __PRETTY_FUNCTION__);
-
-			stop();
-		}];
-	}];
+	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testGetCharactersWithFilterInvalidCredentialsAndCompletionBlock
+- (void)testGetCharactersByFilterAndCompletionBlock
 {
-	[self runAsynchronousBlock:^(stopExecution stop) {
-		self.api.publicKey = RCMarvelAPITestValueInvalidPublicKey;
-		self.api.privateKey = RCMarvelAPITestValueValidPrivateKey;
+	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
+}
 
-		RCCharacterFilter *filter = [[RCCharacterFilter alloc] init];
+- (void)testGetCharactersByBadFilterAndCompletionBlock
+{
+	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
+}
 
-		filter.nameStartsWith = @"wol";
+- (void)testGetCharactersByNilFilterAndCompletionBlock
+{
+	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
+}
 
-		[self.api getCharactersByFilter:filter andCompletionBlock:^(NSArray *results, RCQueryInfoObject *info, NSError *error) {
-			XCTAssertNil(results, @"\"%s\" is expecting the value 'results' to be NULL.", __PRETTY_FUNCTION__);
-			XCTAssertNil(info, @"\"%s\" is expecting the value 'info' to be NULL.", __PRETTY_FUNCTION__);
-			XCTAssertNotNil(error, @"\"%s\" is expecting the value 'error' to be not NULL.", __PRETTY_FUNCTION__);
+- (void)testGetCharactersWithEventIdentifierAndCompletionBlock
+{
+	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
+}
 
-			stop();
-		}];
-	}];
+- (void)testGetCharactersWithInvalidEventIdentifierAndCompletionBlock
+{
+	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
+}
+
+- (void)testGetCharactersWithNilEventIdentifierAndCompletionBlock
+{
+	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
+}
+
+- (void)testGetCharactersByFilterEventIdentifierAndCompletionBlock
+{
+	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
+}
+
+- (void)testGetCharactersByBadFilterEventIdentifierAndCompletionBlock
+{
+	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
+}
+
+- (void)testGetCharactersByNilFilterEventIdentifierAndCompletionBlock
+{
+	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
+}
+
+- (void)testGetCharactersByFilterInvalidEventIdentifierAndCompletionBlock
+{
+	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
+}
+
+- (void)testGetCharactersByFilterNilEventIdentifierAndCompletionBlock
+{
+	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
+}
+
+- (void)testGetEventsByIdentifierAndCompletionBlock
+{
+	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
+}
+
+- (void)testGetEventsByInvalidIdentifierAndCompletionBlock
+{
+	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
+}
+
+- (void)testGetEventsByFilterAndCompletionBlock
+{
+	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
+}
+
+- (void)testGetEventsByBadFilterAndCompletionBlock
+{
+	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
+}
+
+- (void)testGetEventsByNilFilterAndCompletionBlock
+{
+	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
 - (void)testGetEventsWithCharacterIdentifierAndCompletionBlock
 {
-	[self runAsynchronousBlock:^(stopExecution stop) {
-		self.api.publicKey = RCMarvelAPITestValueValidPublicKey;
-		self.api.privateKey = RCMarvelAPITestValueValidPrivateKey;
-
-		[self.api getEventsWithCharacterIdentifier:@(RCMarvelAPITestValueValidIdentifier) andCompletionBlock:^(NSArray *results, RCQueryInfoObject *info, NSError *error) {
-			XCTAssertNotNil(results, @"\"%s\" is expecting the value 'results' to be not NULL.", __PRETTY_FUNCTION__);
-			XCTAssertNotNil(info, @"\"%s\" is expecting the value 'info' to be not NULL.", __PRETTY_FUNCTION__);
-			XCTAssertNil(error, @"\"%s\" is expecting the value 'error' to be NULL.", __PRETTY_FUNCTION__);
-
-			stop();
-		}];
-	}];
+	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
 - (void)testGetEventsWithInvalidCharacterIdentifierAndCompletionBlock
 {
-	[self runAsynchronousBlock:^(stopExecution stop) {
-		self.api.publicKey = RCMarvelAPITestValueValidPublicKey;
-		self.api.privateKey = RCMarvelAPITestValueValidPrivateKey;
-
-		[self.api getEventsWithCharacterIdentifier:@(RCMarvelAPITestValueInvalidIdentifier) andCompletionBlock:^(NSArray *results, RCQueryInfoObject *info, NSError *error) {
-			XCTAssertNotNil(results, @"\"%s\" is expecting the value 'results' to be not NULL.", __PRETTY_FUNCTION__);
-			XCTAssertNotNil(info, @"\"%s\" is expecting the value 'info' to be not NULL.", __PRETTY_FUNCTION__);
-			XCTAssertNil(error, @"\"%s\" is expecting the value 'error' to be NULL.", __PRETTY_FUNCTION__);
-
-			stop();
-		}];
-	}];
+	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testGetEventsWithCharacterIdentifierInvalidCredentialsAndCompletionBlock
+- (void)testGetEventsWithNilCharacterIdentifierAndCompletionBlock
 {
-	[self runAsynchronousBlock:^(stopExecution stop) {
-		self.api.publicKey = RCMarvelAPITestValueInvalidPublicKey;
-		self.api.privateKey = RCMarvelAPITestValueValidPrivateKey;
-
-		[self.api getEventsWithCharacterIdentifier:@(RCMarvelAPITestValueValidIdentifier) andCompletionBlock:^(NSArray *results, RCQueryInfoObject *info, NSError *error) {
-			XCTAssertNil(results, @"\"%s\" is expecting the value 'results' to be NULL.", __PRETTY_FUNCTION__);
-			XCTAssertNil(info, @"\"%s\" is expecting the value 'info' to be NULL.", __PRETTY_FUNCTION__);
-			XCTAssertNotNil(error, @"\"%s\" is expecting the value 'error' to be not NULL.", __PRETTY_FUNCTION__);
-
-			stop();
-		}];
-	}];
+	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testGetEventsWithFilterCharacterIdentifierAndCompletionBlock
+- (void)testGetEventsByFilterCharacterIdentifierAndCompletionBlock
 {
-	[self runAsynchronousBlock:^(stopExecution stop) {
-		self.api.publicKey = RCMarvelAPITestValueValidPublicKey;
-		self.api.privateKey = RCMarvelAPITestValueValidPrivateKey;
-
-		RCEventFilter *filter = [[RCEventFilter alloc] init];
-
-		filter.name = @"acts of vengeance";
-
-		[self.api getEventsWithFilter:filter characterIdentifier:@(RCMarvelAPITestValueValidIdentifier) andCompletionBlock:^(NSArray *results, RCQueryInfoObject *info, NSError *error) {
-			XCTAssertNotNil(results, @"\"%s\" is expecting the value 'results' to be not NULL.", __PRETTY_FUNCTION__);
-			XCTAssertNotNil(info, @"\"%s\" is expecting the value 'info' to be not NULL.", __PRETTY_FUNCTION__);
-			XCTAssertNil(error, @"\"%s\" is expecting the value 'error' to be NULL.", __PRETTY_FUNCTION__);
-
-			stop();
-		}];
-	}];
+	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testGetEventsWithBadFilterCharacterIdentifierAndCompletionBlock
+- (void)testGetEventsByBadFilterCharacterIdentifierAndCompletionBlock
 {
-	[self runAsynchronousBlock:^(stopExecution stop) {
-		self.api.publicKey = RCMarvelAPITestValueValidPublicKey;
-		self.api.privateKey = RCMarvelAPITestValueValidPrivateKey;
-
-		RCEventFilter *filter = [[RCEventFilter alloc] init];
-
-		filter.name = @"xxxxx";
-
-		[self.api getEventsWithFilter:filter characterIdentifier:@(RCMarvelAPITestValueValidIdentifier) andCompletionBlock:^(NSArray *results, RCQueryInfoObject *info, NSError *error) {
-			XCTAssertNotNil(results, @"\"%s\" is expecting the value 'results' to be not NULL.", __PRETTY_FUNCTION__);
-			XCTAssertNotNil(info, @"\"%s\" is expecting the value 'info' to be not NULL.", __PRETTY_FUNCTION__);
-			XCTAssertNil(error, @"\"%s\" is expecting the value 'error' to be NULL.", __PRETTY_FUNCTION__);
-
-			stop();
-		}];
-	}];
+	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testGetEventsWithFilterInvalidCharacterIdentifierAndCompletionBlock
+- (void)testGetEventsByNilFilterCharacterIdentifierAndCompletionBlock
 {
-	[self runAsynchronousBlock:^(stopExecution stop) {
-		self.api.publicKey = RCMarvelAPITestValueValidPublicKey;
-		self.api.privateKey = RCMarvelAPITestValueValidPrivateKey;
-
-		RCEventFilter *filter = [[RCEventFilter alloc] init];
-
-		filter.name = @"acts of vengeance";
-
-		[self.api getEventsWithFilter:filter characterIdentifier:@(RCMarvelAPITestValueInvalidIdentifier) andCompletionBlock:^(NSArray *results, RCQueryInfoObject *info, NSError *error) {
-			XCTAssertNotNil(results, @"\"%s\" is expecting the value 'results' to be not NULL.", __PRETTY_FUNCTION__);
-			XCTAssertNotNil(info, @"\"%s\" is expecting the value 'info' to be not NULL.", __PRETTY_FUNCTION__);
-			XCTAssertNil(error, @"\"%s\" is expecting the value 'error' to be NULL.", __PRETTY_FUNCTION__);
-
-			stop();
-		}];
-	}];
+	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testGetEventsWithNilFilterCharacterIdentifierAndCompletionBlock
+- (void)testGetEventsByFilterInvalidCharacterIdentifierAndCompletionBlock
 {
-	[self runAsynchronousBlock:^(stopExecution stop) {
-		self.api.publicKey = RCMarvelAPITestValueValidPublicKey;
-		self.api.privateKey = RCMarvelAPITestValueValidPrivateKey;
-
-		[self.api getEventsWithFilter:nil characterIdentifier:@(RCMarvelAPITestValueValidIdentifier) andCompletionBlock:^(NSArray *results, RCQueryInfoObject *info, NSError *error) {
-			XCTAssertNil(results, @"\"%s\" is expecting the value 'results' to be NULL.", __PRETTY_FUNCTION__);
-			XCTAssertNil(info, @"\"%s\" is expecting the value 'info' to be NULL.", __PRETTY_FUNCTION__);
-			XCTAssertNotNil(error, @"\"%s\" is expecting the value 'error' to be not NULL.", __PRETTY_FUNCTION__);
-
-			stop();
-		}];
-	}];
+	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testGetEventsWithFilterNilCharacterIdentifierAndCompletionBlock
+- (void)testGetEventsByFilterNilCharacterIdentifierAndCompletionBlock
 {
-	[self runAsynchronousBlock:^(stopExecution stop) {
-		self.api.publicKey = RCMarvelAPITestValueValidPublicKey;
-		self.api.privateKey = RCMarvelAPITestValueValidPrivateKey;
-
-		RCEventFilter *filter = [[RCEventFilter alloc] init];
-
-		filter.name = @"acts of vengeance";
-
-		[self.api getEventsWithFilter:filter characterIdentifier:nil andCompletionBlock:^(NSArray *results, RCQueryInfoObject *info, NSError *error) {
-			XCTAssertNil(results, @"\"%s\" is expecting the value 'results' to be NULL.", __PRETTY_FUNCTION__);
-			XCTAssertNil(info, @"\"%s\" is expecting the value 'info' to be NULL.", __PRETTY_FUNCTION__);
-			XCTAssertNotNil(error, @"\"%s\" is expecting the value 'error' to be not NULL.", __PRETTY_FUNCTION__);
-
-			stop();
-		}];
-	}];
-}
-
-- (void)testGetEventsWithFilterCharacterIdentifierInvalidCredentialsAndCompletionBlock
-{
-	[self runAsynchronousBlock:^(stopExecution stop) {
-		self.api.publicKey = RCMarvelAPITestValueInvalidPublicKey;
-		self.api.privateKey = RCMarvelAPITestValueValidPrivateKey;
-
-		RCEventFilter *filter = [[RCEventFilter alloc] init];
-
-		filter.name = @"acts of vengeance";
-
-		[self.api getEventsWithFilter:filter characterIdentifier:@(RCMarvelAPITestValueValidIdentifier) andCompletionBlock:^(NSArray *results, RCQueryInfoObject *info, NSError *error) {
-			XCTAssertNil(results, @"\"%s\" is expecting the value 'results' to be NULL.", __PRETTY_FUNCTION__);
-			XCTAssertNil(info, @"\"%s\" is expecting the value 'info' to be NULL.", __PRETTY_FUNCTION__);
-			XCTAssertNotNil(error, @"\"%s\" is expecting the value 'error' to be not NULL.", __PRETTY_FUNCTION__);
-
-			stop();
-		}];
-	}];
+	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
 @end
