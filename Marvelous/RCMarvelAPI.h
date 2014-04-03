@@ -24,14 +24,14 @@ typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *inf
 
 + (RCMarvelAPI *)api;
 
-- (void)getCharacterByIdentifier:(NSNumber *)identifier andCompletionBlock:(resultCompletionBlock)completionBlock;
-- (void)getCharactersByFilter:(RCCharacterFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
-- (void)getCharactersWithEventIdentifier:(NSNumber *)identifier andCompletionBlock:(resultsCompletionBlock)completionBlock;
-- (void)getCharactersByFilter:(RCCharacterFilter *)filter eventIdentifier:(NSNumber *)identifier andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)characterByIdentifier:(NSNumber *)identifier andCompletionBlock:(resultCompletionBlock)completionBlock;
+- (void)charactersByFilter:(RCCharacterFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)charactersWithEventIdentifier:(NSNumber *)identifier andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)charactersByFilter:(RCCharacterFilter *)filter eventIdentifier:(NSNumber *)identifier andCompletionBlock:(resultsCompletionBlock)completionBlock;
 
-- (void)getEventsByIdentifier:(NSNumber *)identifier andCompletionBlock:(resultCompletionBlock)completionBlock;
-- (void)getEventsByFilter:(RCEventFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
-- (void)getEventsWithCharacterIdentifier:(NSNumber *)identifier andCompletionBlock:(resultsCompletionBlock)completionBlock;
-- (void)getEventsByFilter:(RCEventFilter *)filter characterIdentifier:(NSNumber *)identifier andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)eventByIdentifier:(NSNumber *)identifier andCompletionBlock:(resultCompletionBlock)completionBlock;
+- (void)eventsByFilter:(RCEventFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)eventsWithCharacterIdentifier:(NSNumber *)identifier andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)eventsByFilter:(RCEventFilter *)filter characterIdentifier:(NSNumber *)identifier andCompletionBlock:(resultsCompletionBlock)completionBlock;
 
 @end

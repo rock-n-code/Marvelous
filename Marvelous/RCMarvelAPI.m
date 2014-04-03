@@ -87,7 +87,7 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 
 #pragma mark - Public methods
 
-- (void)getCharacterByIdentifier:(NSNumber *)identifier andCompletionBlock:(resultCompletionBlock)completionBlock
+- (void)characterByIdentifier:(NSNumber *)identifier andCompletionBlock:(resultCompletionBlock)completionBlock
 {
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeCharacters identifier:stringfiedIdentifier andAuthentication:self.authParameters];
@@ -99,7 +99,7 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 	[self.queue addOperation:operation];
 }
 
-- (void)getCharactersByFilter:(RCCharacterFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)charactersByFilter:(RCCharacterFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
 {
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithFilter:filter andAuthentication:self.authParameters];
 
@@ -110,7 +110,7 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 	[self.queue addOperation:operation];
 }
 
-- (void)getCharactersWithEventIdentifier:(NSNumber *)identifier andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)charactersWithEventIdentifier:(NSNumber *)identifier andCompletionBlock:(resultsCompletionBlock)completionBlock
 {
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCCharacterFilter *filter = [[RCCharacterFilter alloc] init];
@@ -123,7 +123,7 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 	[self.queue addOperation:operation];
 }
 
-- (void)getCharactersByFilter:(RCCharacterFilter *)filter eventIdentifier:(NSNumber *)identifier andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)charactersByFilter:(RCCharacterFilter *)filter eventIdentifier:(NSNumber *)identifier andCompletionBlock:(resultsCompletionBlock)completionBlock
 {
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeEvents identifier:stringfiedIdentifier filter:filter andAuthentication:self.authParameters];
@@ -135,7 +135,7 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 	[self.queue addOperation:operation];
 }
 
-- (void)getEventsByIdentifier:(NSNumber *)identifier andCompletionBlock:(resultCompletionBlock)completionBlock
+- (void)eventByIdentifier:(NSNumber *)identifier andCompletionBlock:(resultCompletionBlock)completionBlock
 {
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeEvents identifier:stringfiedIdentifier andAuthentication:self.authParameters];
@@ -147,7 +147,7 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 	[self.queue addOperation:operation];
 }
 
-- (void)getEventsByFilter:(RCEventFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)eventsByFilter:(RCEventFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
 {
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithFilter:filter andAuthentication:self.authParameters];
 
@@ -158,7 +158,7 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 	[self.queue addOperation:operation];
 }
 
-- (void)getEventsWithCharacterIdentifier:(NSNumber *)identifier andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)eventsWithCharacterIdentifier:(NSNumber *)identifier andCompletionBlock:(resultsCompletionBlock)completionBlock
 {
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCEventFilter *filter = [[RCEventFilter alloc] init];
@@ -171,7 +171,7 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 	[self.queue addOperation:operation];
 }
 
-- (void)getEventsByFilter:(RCEventFilter *)filter characterIdentifier:(NSNumber *)identifier andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)eventsByFilter:(RCEventFilter *)filter characterIdentifier:(NSNumber *)identifier andCompletionBlock:(resultsCompletionBlock)completionBlock
 {
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeCharacters identifier:stringfiedIdentifier filter:filter andAuthentication:self.authParameters];

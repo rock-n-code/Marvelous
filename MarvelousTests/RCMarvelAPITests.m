@@ -63,137 +63,137 @@
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testGetCharacterByIdentifierAndCompletionBlock
+- (void)testCharacterByIdentifierAndCompletionBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testGetCharacterByInvalidIdentifierAndCompletionBlock
+- (void)testCharacterByInvalidIdentifierAndCompletionBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testGetCharacterByNilIdentifierAndCompletionBlock
+- (void)testCharacterByNilIdentifierAndCompletionBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testGetCharactersByFilterAndCompletionBlock
+- (void)testCharactersByFilterAndCompletionBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testGetCharactersByBadFilterAndCompletionBlock
+- (void)testCharactersByBadFilterAndCompletionBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testGetCharactersByNilFilterAndCompletionBlock
+- (void)testCharactersByNilFilterAndCompletionBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testGetCharactersWithEventIdentifierAndCompletionBlock
+- (void)testCharactersWithEventIdentifierAndCompletionBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testGetCharactersWithInvalidEventIdentifierAndCompletionBlock
+- (void)testCharactersWithInvalidEventIdentifierAndCompletionBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testGetCharactersWithNilEventIdentifierAndCompletionBlock
+- (void)testCharactersWithNilEventIdentifierAndCompletionBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testGetCharactersByFilterEventIdentifierAndCompletionBlock
+- (void)testCharactersByFilterEventIdentifierAndCompletionBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testGetCharactersByBadFilterEventIdentifierAndCompletionBlock
+- (void)testCharactersByBadFilterEventIdentifierAndCompletionBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testGetCharactersByNilFilterEventIdentifierAndCompletionBlock
+- (void)testCharactersByNilFilterEventIdentifierAndCompletionBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testGetCharactersByFilterInvalidEventIdentifierAndCompletionBlock
+- (void)testCharactersByFilterInvalidEventIdentifierAndCompletionBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testGetCharactersByFilterNilEventIdentifierAndCompletionBlock
+- (void)testCharactersByFilterNilEventIdentifierAndCompletionBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testGetEventsByIdentifierAndCompletionBlock
+- (void)testEventsByIdentifierAndCompletionBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testGetEventsByInvalidIdentifierAndCompletionBlock
+- (void)testEventsByInvalidIdentifierAndCompletionBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testGetEventsByFilterAndCompletionBlock
+- (void)testEventsByFilterAndCompletionBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testGetEventsByBadFilterAndCompletionBlock
+- (void)testEventsByBadFilterAndCompletionBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testGetEventsByNilFilterAndCompletionBlock
+- (void)testEventsByNilFilterAndCompletionBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testGetEventsWithCharacterIdentifierAndCompletionBlock
+- (void)testEventsWithCharacterIdentifierAndCompletionBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testGetEventsWithInvalidCharacterIdentifierAndCompletionBlock
+- (void)testEventsWithInvalidCharacterIdentifierAndCompletionBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testGetEventsWithNilCharacterIdentifierAndCompletionBlock
+- (void)testEventsWithNilCharacterIdentifierAndCompletionBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testGetEventsByFilterCharacterIdentifierAndCompletionBlock
+- (void)testEventsByFilterCharacterIdentifierAndCompletionBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testGetEventsByBadFilterCharacterIdentifierAndCompletionBlock
+- (void)testEventsByBadFilterCharacterIdentifierAndCompletionBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testGetEventsByNilFilterCharacterIdentifierAndCompletionBlock
+- (void)testEventsByNilFilterCharacterIdentifierAndCompletionBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testGetEventsByFilterInvalidCharacterIdentifierAndCompletionBlock
+- (void)testEventsByFilterInvalidCharacterIdentifierAndCompletionBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testGetEventsByFilterNilCharacterIdentifierAndCompletionBlock
+- (void)testEventsByFilterNilCharacterIdentifierAndCompletionBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
