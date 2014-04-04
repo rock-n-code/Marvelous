@@ -151,6 +151,7 @@
 		03B694FC18E77B1D00CEF855 /* RCAPIOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCAPIOperation.h; sourceTree = "<group>"; };
 		03B694FD18E77B1D00CEF855 /* RCAPIOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCAPIOperation.m; sourceTree = "<group>"; };
 		03B694FF18E77B3500CEF855 /* RCAPIOperationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCAPIOperationTests.m; sourceTree = "<group>"; };
+		031B986118EE9FDE00CE30DE /* APIDocs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = APIDocs.json; sourceTree = SOURCE_ROOT; };
 		03B6951418E941EB00CEF855 /* XCTest+Async.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTest+Async.h"; sourceTree = "<group>"; };
 		03B6951518E941EB00CEF855 /* XCTest+Async.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCTest+Async.m"; sourceTree = "<group>"; };
 		03DEC83C18E736730098CCE1 /* libMarvelous.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMarvelous.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -390,6 +391,7 @@
 		03DEC84218E736740098CCE1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				031B986118EE9FDE00CE30DE /* APIDocs.json */,
 				03DEC84318E736740098CCE1 /* Marvelous-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -643,7 +645,7 @@
 		03DEC86018E736740098CCE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CURRENT_PROJECT_VERSION = 0.1.0;
+				CURRENT_PROJECT_VERSION = 0.4.0;
 				DSTROOT = /tmp/Marvelous.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Marvelous/Marvelous-Prefix.pch";
@@ -656,7 +658,7 @@
 		03DEC86118E736740098CCE1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CURRENT_PROJECT_VERSION = 0.1.0;
+				CURRENT_PROJECT_VERSION = 0.4.0;
 				DSTROOT = /tmp/Marvelous.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Marvelous/Marvelous-Prefix.pch";
