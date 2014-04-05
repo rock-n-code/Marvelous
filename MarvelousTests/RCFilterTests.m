@@ -33,36 +33,7 @@
 	XCTAssertNil(filter.modifiedSince, @"\"%s\" is expecting the property 'modifiedSince' to be NULL.", __PRETTY_FUNCTION__);
 	XCTAssertNil(filter.limit, @"\"%s\" is expecting the property 'limit' to be NULL.", __PRETTY_FUNCTION__);
     XCTAssertNil(filter.offset, @"\"%s\" is expecting the property 'offset' to be NULL.", __PRETTY_FUNCTION__);
-	XCTAssertEqual(filter.orderBy, RCOrderByTypeCodeUndefined, @"\"%s\" is expecting the property 'orderBy' to have the '%d' integer value.", __PRETTY_FUNCTION__, RCOrderByTypeCodeUndefined);
-}
-
-- (void)testParameters
-{
-	RCFilter *filter = [[RCFilter alloc] init];
-
-	filter.modifiedSince = [NSDate date];
-	filter.offset = @0;
-	filter.limit = @0;
-	filter.orderBy = RCOrderByTypeCodeNameAscending;
-
-	NSDictionary *parameters = filter.parameters;
-	NSInteger countToTest = 4;
-
-	XCTAssertNotNil(parameters, @"\"%s\" is expecting the variable 'parameters' to be not NULL.", __PRETTY_FUNCTION__);
-	XCTAssertEqual(parameters.allKeys.count, countToTest, @"\"%s\" is expecting the property 'count' of the variable 'parameters' to be the integer value %d.", __PRETTY_FUNCTION__, countToTest);
-}
-
-- (void)testPartialParameters
-{
-	RCFilter *filter = [[RCFilter alloc] init];
-
-	filter.limit = @0;
-
-	NSDictionary *parameters = filter.parameters;
-	NSInteger countToTest = 1;
-
-	XCTAssertNotNil(parameters, @"\"%s\" is expecting the variable 'parameters' to be not NULL.", __PRETTY_FUNCTION__);
-	XCTAssertEqual(parameters.allKeys.count, countToTest, @"\"%s\" is expecting the property 'count' of the variable 'parameters' to be the integer value %d.", __PRETTY_FUNCTION__, countToTest);
+	XCTAssertNil(filter.orderBy, @"\"%s\" is expecting the property 'orderBy' to be NULL.", __PRETTY_FUNCTION__);
 	XCTAssertNil(filter.validOrderTypes, @"\"%s\" is expecting the property 'validOrderTypes' to be NULL.", __PRETTY_FUNCTION__);
 }
 

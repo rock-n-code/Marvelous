@@ -39,7 +39,7 @@
 	XCTAssertNil(filter.creators, @"\"%s\" is expecting the property 'creators' to be NULL.", __PRETTY_FUNCTION__);
 	XCTAssertNil(filter.limit, @"\"%s\" is expecting the property 'limit' to be NULL.", __PRETTY_FUNCTION__);
     XCTAssertNil(filter.offset, @"\"%s\" is expecting the property 'offset' to be NULL.", __PRETTY_FUNCTION__);
-	XCTAssertEqual(filter.orderBy, RCOrderByTypeCodeUndefined, @"\"%s\" is expecting the property 'orderBy' to have the '%d' integer value.", __PRETTY_FUNCTION__, RCOrderByTypeCodeUndefined);
+	XCTAssertNil(filter.orderBy, @"\"%s\" is expecting the property 'orderBy' to be NULL.", __PRETTY_FUNCTION__);
 	XCTAssertNotNil(filter.validOrderTypes, @"\"%s\" is expecting the property 'validOrderTypes' to be not NULL.", __PRETTY_FUNCTION__);
 }
 
@@ -56,7 +56,7 @@
 	filter.creators = @[@0, @1, @2];
 	filter.offset = @0;
 	filter.limit = @0;
-	filter.orderBy = RCOrderByTypeCodeNameAscending;
+	filter.orderBy = @[@(RCOrderByTypeCodeNameAscending), @(RCOrderByTypeCodeStartDateDescending)];
 
 	NSDictionary *parameters = filter.parameters;
 	NSInteger countToTest = 10;
@@ -72,7 +72,7 @@
 	filter.name = @"TestName";
 	filter.limit = @0;
 	filter.series = @[@"0", @"1", @"2"];
-	filter.orderBy = RCOrderByTypeCodeNameDescending;
+	filter.orderBy = @[@(RCOrderByTypeCodeNameDescending), @(RCOrderByTypeCodeDateModifiedAscending)];
 
 	NSDictionary *parameters = filter.parameters;
 	NSInteger countToTest = 4;
