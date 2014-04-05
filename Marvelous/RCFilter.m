@@ -49,33 +49,34 @@
 
 - (NSString *)stringfiedOrderBy
 {
-	NSString *orderBy;
+	NSMutableArray *strings = [NSMutableArray array];
 
-	if (self.orderBy == RCOrderByTypeCodeNameAscending ||
-		self.orderBy == RCOrderByTypeCodeNameDescending) {
-		orderBy = RCOrderByTypeName;
-	} else if (self.orderBy == RCOrderByTypeCodeDateModifiedAscending ||
-			   self.orderBy == RCOrderByTypeCodeDateModifiedDescending) {
-		orderBy = RCOrderByTypeDateModified;
-	} else if (self.orderBy == RCOrderByTypeCodeStartDateAscending ||
-			   self.orderBy == RCOrderByTypeCodeStartDateDescending) {
-		return RCOrderByTypeStartDate;
-	} else {
-		return @"";
-	}
+	[self.orderBy enumerateObjectsUsingBlock:^(NSNumber *filter, NSUInteger index, BOOL *stop) {
+		if ([self.validOrderTypes containsObject:filter]) {
+			NSString *string = @"";
 
-	if (self.isOrderByDescending) {
-		orderBy = [@"-" stringByAppendingString:orderBy];
-	}
+			NSInteger orderBy = filter.integerValue;
 
-	return orderBy;
-}
+			if (orderBy == RCOrderByTypeCodeNameAscending ||
+				orderBy == RCOrderByTypeCodeNameDescending) {
+				string = RCOrderByTypeName;
+			} else if (orderBy == RCOrderByTypeCodeDateModifiedAscending ||
+					   orderBy == RCOrderByTypeCodeDateModifiedDescending) {
+				string = RCOrderByTypeDateModified;
+			} else if (orderBy == RCOrderByTypeCodeStartDateAscending ||
+					   orderBy == RCOrderByTypeCodeStartDateDescending) {
+				string = RCOrderByTypeStartDate;
+			}
 
-- (BOOL)isOrderByDescending
-{
-	return self.orderBy == RCOrderByTypeCodeNameDescending ||
-		   self.orderBy == RCOrderByTypeCodeDateModifiedDescending ||
-		   self.orderBy == RCOrderByTypeCodeStartDateDescending;
+			if ([self isDescendingOrderBy:orderBy]) {
+				string = [@"-" stringByAppendingString:string];
+			}
+
+			[strings addObject:string];
+		}
+	}];
+
+	return [strings componentsJoinedByString:@","];
 }
 
 #pragma mark - Private methods
