@@ -57,7 +57,10 @@
 
 			NSInteger orderBy = filter.integerValue;
 
-			if (orderBy == RCOrderByTypeCodeNameAscending ||
+			if (orderBy == RCOrderByTypeCodeIdentifierAscending ||
+				orderBy == RCOrderByTypeCodeIdentifierDescending) {
+				string = RCOrderByTypeIdentifier;
+			} else if (orderBy == RCOrderByTypeCodeNameAscending ||
 				orderBy == RCOrderByTypeCodeNameDescending) {
 				string = RCOrderByTypeName;
 			} else if (orderBy == RCOrderByTypeCodeDateModifiedAscending ||
@@ -92,7 +95,8 @@
 
 - (BOOL)isDescendingOrderBy:(NSInteger)orderBy
 {
-	return orderBy == RCOrderByTypeCodeNameDescending ||
+	return orderBy == RCOrderByTypeCodeIdentifierDescending ||
+		   orderBy == RCOrderByTypeCodeNameDescending ||
 		   orderBy == RCOrderByTypeCodeDateModifiedDescending ||
 		   orderBy == RCOrderByTypeCodeStartDateDescending;
 }
