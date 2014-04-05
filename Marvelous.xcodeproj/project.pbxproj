@@ -37,6 +37,8 @@
 		03130D6818EC128200BD315F /* RCEventFilterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D6718EC128200BD315F /* RCEventFilterTests.m */; };
 		03130D6B18EC1BE600BD315F /* RCEventObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D6A18EC1BE600BD315F /* RCEventObject.m */; };
 		03130D6D18EC1BFD00BD315F /* RCEventObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D6C18EC1BFD00BD315F /* RCEventObjectTests.m */; };
+		036A2F1718F0BB2000EFE3CF /* RCStoryFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 036A2F1618F0BB2000EFE3CF /* RCStoryFilter.m */; };
+		036A2F1918F0BB4000EFE3CF /* RCStoryFilterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 036A2F1818F0BB4000EFE3CF /* RCStoryFilterTests.m */; };
 		03B694D818E73E3A00CEF855 /* RCMarvelAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B694D718E73E3A00CEF855 /* RCMarvelAPI.m */; };
 		03B694DB18E73E5E00CEF855 /* RCMarvelAPITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B694DA18E73E5E00CEF855 /* RCMarvelAPITests.m */; };
 		03B694DC18E73EF900CEF855 /* RCMarvelAPI.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03B694D618E73E3A00CEF855 /* RCMarvelAPI.h */; };
@@ -134,6 +136,10 @@
 		03130D6918EC1BE600BD315F /* RCEventObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCEventObject.h; sourceTree = "<group>"; };
 		03130D6A18EC1BE600BD315F /* RCEventObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCEventObject.m; sourceTree = "<group>"; };
 		03130D6C18EC1BFD00BD315F /* RCEventObjectTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCEventObjectTests.m; sourceTree = "<group>"; };
+		031B986118EE9FDE00CE30DE /* APIDocs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = APIDocs.json; sourceTree = SOURCE_ROOT; };
+		036A2F1518F0BB2000EFE3CF /* RCStoryFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCStoryFilter.h; sourceTree = "<group>"; };
+		036A2F1618F0BB2000EFE3CF /* RCStoryFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCStoryFilter.m; sourceTree = "<group>"; };
+		036A2F1818F0BB4000EFE3CF /* RCStoryFilterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCStoryFilterTests.m; sourceTree = "<group>"; };
 		03B694D618E73E3A00CEF855 /* RCMarvelAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCMarvelAPI.h; path = Marvelous/RCMarvelAPI.h; sourceTree = "<group>"; };
 		03B694D718E73E3A00CEF855 /* RCMarvelAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCMarvelAPI.m; path = Marvelous/RCMarvelAPI.m; sourceTree = "<group>"; };
 		03B694DA18E73E5E00CEF855 /* RCMarvelAPITests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCMarvelAPITests.m; sourceTree = "<group>"; };
@@ -151,7 +157,6 @@
 		03B694FC18E77B1D00CEF855 /* RCAPIOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCAPIOperation.h; sourceTree = "<group>"; };
 		03B694FD18E77B1D00CEF855 /* RCAPIOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCAPIOperation.m; sourceTree = "<group>"; };
 		03B694FF18E77B3500CEF855 /* RCAPIOperationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCAPIOperationTests.m; sourceTree = "<group>"; };
-		031B986118EE9FDE00CE30DE /* APIDocs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = APIDocs.json; sourceTree = SOURCE_ROOT; };
 		03B6951418E941EB00CEF855 /* XCTest+Async.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTest+Async.h"; sourceTree = "<group>"; };
 		03B6951518E941EB00CEF855 /* XCTest+Async.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCTest+Async.m"; sourceTree = "<group>"; };
 		03DEC83C18E736730098CCE1 /* libMarvelous.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMarvelous.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -249,6 +254,8 @@
 				03130D4E18EAE02900BD315F /* RCCharacterFilter.m */,
 				03130D6418EC127300BD315F /* RCEventFilter.h */,
 				03130D6518EC127300BD315F /* RCEventFilter.m */,
+				036A2F1518F0BB2000EFE3CF /* RCStoryFilter.h */,
+				036A2F1618F0BB2000EFE3CF /* RCStoryFilter.m */,
 			);
 			name = Filters;
 			sourceTree = "<group>";
@@ -259,6 +266,7 @@
 				03130D4B18EADFDB00BD315F /* RCFilterTests.m */,
 				03130D5018EAE05600BD315F /* RCCharacterFilterTests.m */,
 				03130D6718EC128200BD315F /* RCEventFilterTests.m */,
+				036A2F1818F0BB4000EFE3CF /* RCStoryFilterTests.m */,
 			);
 			name = Filters;
 			sourceTree = "<group>";
@@ -521,6 +529,7 @@
 				03130D6B18EC1BE600BD315F /* RCEventObject.m in Sources */,
 				03130D6318EB801800BD315F /* RCImageSizes.m in Sources */,
 				03130D3C18E9D09800BD315F /* RCObject.m in Sources */,
+				036A2F1718F0BB2000EFE3CF /* RCStoryFilter.m in Sources */,
 				03130D4318EAD15100BD315F /* RCQueryInfoObject.m in Sources */,
 				03B694FB18E774D400CEF855 /* RCOperationErrors.m in Sources */,
 				03130D6018EB7F8A00BD315F /* RCImageModes.m in Sources */,
@@ -534,6 +543,7 @@
 				03130D4C18EADFDB00BD315F /* RCFilterTests.m in Sources */,
 				03130D5A18EB5A0700BD315F /* RCImageObjectTests.m in Sources */,
 				03130D5118EAE05600BD315F /* RCCharacterFilterTests.m in Sources */,
+				036A2F1918F0BB4000EFE3CF /* RCStoryFilterTests.m in Sources */,
 				03130D3918E992FA00BD315F /* RCMarvelAPITestValues.m in Sources */,
 				03130D2218E96F5300BD315F /* RCCharacterObjectTests.m in Sources */,
 				03130D1D18E96DB200BD315F /* RCDataContainerObjectTests.m in Sources */,
