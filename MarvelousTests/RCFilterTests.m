@@ -63,6 +63,7 @@
 
 	XCTAssertNotNil(parameters, @"\"%s\" is expecting the variable 'parameters' to be not NULL.", __PRETTY_FUNCTION__);
 	XCTAssertEqual(parameters.allKeys.count, countToTest, @"\"%s\" is expecting the property 'count' of the variable 'parameters' to be the integer value %d.", __PRETTY_FUNCTION__, countToTest);
+	XCTAssertNil(filter.validOrderTypes, @"\"%s\" is expecting the property 'validOrderTypes' to be NULL.", __PRETTY_FUNCTION__);
 }
 
 - (void)testType

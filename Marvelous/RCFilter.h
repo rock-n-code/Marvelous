@@ -18,6 +18,7 @@
 @property (nonatomic) RCOrderByTypeCodes orderBy;
 
 @property (nonatomic, readonly, strong) NSDictionary *parameters;
+@property (nonatomic, readonly, strong) NSArray *validOrderTypes;
 @property (nonatomic, readonly) RCAPITypes type;
 
 @end

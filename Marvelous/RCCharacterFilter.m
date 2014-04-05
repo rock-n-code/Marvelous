@@ -47,6 +47,14 @@
 	return params;
 }
 
+- (NSArray *)validOrderTypes
+{
+	return @[@(RCOrderByTypeCodeNameAscending),
+			 @(RCOrderByTypeCodeNameDescending),
+			 @(RCOrderByTypeCodeDateModifiedAscending),
+			 @(RCOrderByTypeCodeDateModifiedDescending)];
+}
+
 - (RCAPITypes)type
 {
 	return RCAPITypeCharacters;

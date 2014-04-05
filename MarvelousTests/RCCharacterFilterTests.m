@@ -40,6 +40,7 @@
 	XCTAssertNil(filter.limit, @"\"%s\" is expecting the property 'limit' to be NULL.", __PRETTY_FUNCTION__);
     XCTAssertNil(filter.offset, @"\"%s\" is expecting the property 'offset' to be NULL.", __PRETTY_FUNCTION__);
 	XCTAssertEqual(filter.orderBy, RCOrderByTypeCodeUndefined, @"\"%s\" is expecting the property 'orderBy' to have the '%d' integer value.", __PRETTY_FUNCTION__, RCOrderByTypeCodeUndefined);
+	XCTAssertNotNil(filter.validOrderTypes, @"\"%s\" is expecting the property 'validOrderTypes' to be not NULL.", __PRETTY_FUNCTION__);
 }
 
 - (void)testParameters
