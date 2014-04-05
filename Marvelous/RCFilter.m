@@ -12,7 +12,6 @@
 @interface RCFilter ()
 
 @property (nonatomic, readonly, strong) NSString *stringfiedOrderBy;
-@property (nonatomic, readonly) BOOL isOrderByDescending;
 
 @end
 
@@ -88,6 +87,13 @@
 	formatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ssZ";
 
 	return [formatter stringFromDate:date];
+}
+
+- (BOOL)isDescendingOrderBy:(NSInteger)orderBy
+{
+	return orderBy == RCOrderByTypeCodeNameDescending ||
+		   orderBy == RCOrderByTypeCodeDateModifiedDescending ||
+		   orderBy == RCOrderByTypeCodeStartDateDescending;
 }
 
 @end
