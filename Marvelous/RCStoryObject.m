@@ -28,4 +28,29 @@
 
 @implementation RCStoryObject
 
+#pragma mark - RCObjectProtocol
+
+- (id)initWithDictionary:(NSDictionary *)dictionary
+{
+	self = [super init];
+
+	if (self) {
+		self.identifier = dictionary[RCResponseKeyIdentifier];
+		self.title = dictionary[RCResponseKeyTitle];
+		self.summary = dictionary[RCResponseKeyDescription];
+		self.resourceURI = [NSURL URLWithString:dictionary[RCResponseKeyResourceURI]];
+		self.type = dictionary[RCResponseKeyType];
+		self.lastModified = [self dateFromString:dictionary[RCResponseKeyModified]];
+		self.thumbnail = [[RCImageObject alloc] initWithDictionary:dictionary[RCResponseKeyThumbnail]];
+		self.comics = [[RCListObject alloc] initWithDictionary:dictionary[RCResponseKeyComics]];
+		self.series = [[RCListObject alloc] initWithDictionary:dictionary[RCResponseKeySeries]];
+		self.events = [[RCListObject alloc] initWithDictionary:dictionary[RCResponseKeyEvents]];
+		self.characters = [[RCListObject alloc] initWithDictionary:dictionary[RCResponseKeyCharacters]];
+		self.creators = [[RCListObject alloc] initWithDictionary:dictionary[RCResponseKeyCreators]];
+		self.originalIssue = [[RCSummaryObject alloc] initWithDictionary:dictionary[RCResponseKeyOriginalIssue]];
+	}
+
+	return self;
+}
+
 @end
