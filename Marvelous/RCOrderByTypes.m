@@ -8,6 +8,7 @@
 
 #import "RCOrderByTypes.h"
 
+NSString * const RCOrderByTypeIdentifier = @"id";
 NSString * const RCOrderByTypeName = @"name";
 NSString * const RCOrderByTypeDateModified = @"modified";
 NSString * const RCOrderByTypeStartDate = @"startDate";
