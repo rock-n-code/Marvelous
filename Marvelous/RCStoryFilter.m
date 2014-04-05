@@ -14,4 +14,9 @@
 
 @implementation RCStoryFilter
 
+- (RCAPITypes)type
+{
+	return RCAPITypeStories;
+}
+
 @end

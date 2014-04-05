@@ -42,4 +42,11 @@
 	XCTAssertNotNil(filter.validOrderTypes, @"\"%s\" is expecting the property 'validOrderTypes' to be not NULL.", __PRETTY_FUNCTION__);
 }
 
+- (void)testType
+{
+	RCStoryFilter *filter = [[RCStoryFilter alloc] init];
+
+	XCTAssertEqual(filter.type, RCAPITypeStories, @"\"%s\" is expecting the property 'type' to have the '%d' integer value.", __PRETTY_FUNCTION__, RCAPITypeStories);
+}
+
 @end
