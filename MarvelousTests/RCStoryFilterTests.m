@@ -42,6 +42,44 @@
 	XCTAssertNotNil(filter.validOrderTypes, @"\"%s\" is expecting the property 'validOrderTypes' to be not NULL.", __PRETTY_FUNCTION__);
 }
 
+- (void)testParameters
+{
+	RCStoryFilter *filter = [[RCStoryFilter alloc] init];
+
+	filter.modifiedSince = [NSDate date];
+	filter.comics = @[@0, @1, @2];
+	filter.series = @[@"0", @"1", @"2"];
+	filter.events = @[@"0", @"1", @"2"];
+	filter.creators = @[@0, @1, @2];
+	filter.characters = @[@"0", @"2", @"4"];
+	filter.offset = @0;
+	filter.limit = @0;
+	filter.orderBy = @[@(RCOrderByTypeCodeIdentifierAscending)];
+
+	NSDictionary *parameters = filter.parameters;
+	NSInteger countToTest = 9;
+
+	XCTAssertNotNil(parameters, @"\"%s\" is expecting the variable 'parameters' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertEqual(parameters.allKeys.count, countToTest, @"\"%s\" is expecting the property 'count' of the variable 'parameters' to be the integer value %d.", __PRETTY_FUNCTION__, countToTest);
+}
+
+- (void)testPartialParameters
+{
+	RCStoryFilter *filter = [[RCStoryFilter alloc] init];
+
+	filter.comics = @[@0, @2, @4];
+	filter.events = @[@"0", @"2", @"4"];
+	filter.limit = @0;
+	filter.series = @[@"0", @"1", @"2"];
+	filter.orderBy = @[@(RCOrderByTypeCodeDateModifiedAscending)];
+
+	NSDictionary *parameters = filter.parameters;
+	NSInteger countToTest = 5;
+
+	XCTAssertNotNil(parameters, @"\"%s\" is expecting the variable 'parameters' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertEqual(parameters.allKeys.count, countToTest, @"\"%s\" is expecting the property 'count' of the variable 'parameters' to be the integer value %d.", __PRETTY_FUNCTION__, countToTest);
+}
+
 - (void)testValidOrderTypes
 {
 	RCStoryFilter *filter = [[RCStoryFilter alloc] init];

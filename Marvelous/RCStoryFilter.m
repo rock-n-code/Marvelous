@@ -14,6 +14,35 @@
 
 @implementation RCStoryFilter
 
+#pragma mark - Properties
+
+- (NSDictionary *)parameters
+{
+	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:super.parameters];
+
+	if (self.comics) {
+		params[RCRequestKeyComics] = [self.comics componentsJoinedByString:@","];
+	}
+
+	if (self.series) {
+		params[RCRequestKeySeries] = [self.series componentsJoinedByString:@","];
+	}
+
+	if (self.events) {
+		params[RCRequestKeyEvents] = [self.events componentsJoinedByString:@","];
+	}
+
+	if (self.creators) {
+		params[RCRequestKeyCreators] = [self.creators componentsJoinedByString:@","];
+	}
+
+	if (self.characters) {
+		params[RCRequestKeyCharacters] = [self.characters componentsJoinedByString:@","];
+	}
+
+	return params;
+}
+
 - (NSArray *)validOrderTypes
 {
 	return @[@(RCOrderByTypeCodeIdentifierAscending),
