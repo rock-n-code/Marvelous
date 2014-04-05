@@ -14,6 +14,14 @@
 
 @implementation RCStoryFilter
 
+- (NSArray *)validOrderTypes
+{
+	return @[@(RCOrderByTypeCodeIdentifierAscending),
+			 @(RCOrderByTypeCodeIdentifierDescending),
+			 @(RCOrderByTypeCodeDateModifiedAscending),
+			 @(RCOrderByTypeCodeDateModifiedDescending)];
+}
+
 - (RCAPITypes)type
 {
 	return RCAPITypeStories;
