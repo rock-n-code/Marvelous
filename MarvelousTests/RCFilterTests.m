@@ -37,6 +37,13 @@
 	XCTAssertNil(filter.validOrderTypes, @"\"%s\" is expecting the property 'validOrderTypes' to be NULL.", __PRETTY_FUNCTION__);
 }
 
+- (void)testValidOrderTypes
+{
+	RCFilter *filter = [[RCFilter alloc] init];
+
+	XCTAssertNil(filter.validOrderTypes, @"\"%s\" is expecting the property 'validOrderTypes' to be NULL.", __PRETTY_FUNCTION__);
+}
+
 - (void)testType
 {
 	RCFilter *filter = [[RCFilter alloc] init];

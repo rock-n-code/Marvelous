@@ -81,6 +81,14 @@
 	XCTAssertEqual(parameters.allKeys.count, countToTest, @"\"%s\" is expecting the property 'count' of the variable 'parameters' to be the integer value %d.", __PRETTY_FUNCTION__, countToTest);
 }
 
+- (void)testValidOrderTypes
+{
+	RCEventFilter *filter = [[RCEventFilter alloc] init];
+	NSInteger countToTest = 6;
+
+	XCTAssertEqual(filter.validOrderTypes.count, 4, @"\"%s\" is expecting the property 'count' of the property 'validOrderTypes' to be the integer value %d.", __PRETTY_FUNCTION__, countToTest);
+}
+
 - (void)testType
 {
 	RCEventFilter *filter = [[RCEventFilter alloc] init];
