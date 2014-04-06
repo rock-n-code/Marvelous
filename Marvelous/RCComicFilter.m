@@ -14,4 +14,23 @@
 
 @implementation RCComicFilter
 
+- (NSArray *)validOrderTypes
+{
+	return @[@(RCOrderByTypeCodeFOCDateAscending),
+			 @(RCOrderByTypeCodeFOCDateDescending),
+			 @(RCOrderByTypeCodeOnSaleDateAscending),
+			 @(RCOrderByTypeCodeOnSaleDateDescending),
+			 @(RCOrderByTypeCodeTitleAscending),
+			 @(RCOrderByTypeCodeTitleDescending),
+			 @(RCOrderByTypeCodeIssueNumberAscending),
+			 @(RCOrderByTypeCodeIssueNumberDescending),
+			 @(RCOrderByTypeCodeDateModifiedAscending),
+			 @(RCOrderByTypeCodeDateModifiedDescending),];
+}
+
+- (RCAPITypes)type
+{
+	return RCAPITypeComics;
+}
+
 @end
