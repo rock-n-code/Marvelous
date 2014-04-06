@@ -87,9 +87,9 @@
 			} else if (orderBy == RCOrderByTypeCodeStartYearAscending ||
 					   orderBy == RCOrderByTypeCodeStartYearDescending) {
 				string = RCOrderByTypeStartYear;
-			} else if (orderBy == RCOrderByTypeCodeFOCDateAscending ||
-					   orderBy == RCOrderByTypeCodeFOCDateDescending) {
-				string = RCOrderByTypeFOCDate;
+			} else if (orderBy == RCOrderByTypeCodeFinalOrderCutoffDateAscending ||
+					   orderBy == RCOrderByTypeCodeFinalOrderCutoffDateDescending) {
+				string = RCOrderByTypeFinalOrderCutoffDate;
 			} else if (orderBy == RCOrderByTypeCodeOnSaleDateAscending ||
 					   orderBy == RCOrderByTypeCodeOnSaleDateDescending) {
 				string = RCOrderByTypeOnSaleDate;
@@ -132,7 +132,7 @@
 		   orderBy == RCOrderByTypeCodeDateModifiedDescending ||
 		   orderBy == RCOrderByTypeCodeStartDateDescending ||
 		   orderBy == RCOrderByTypeCodeStartYearDescending ||
-		   orderBy == RCOrderByTypeCodeFOCDateDescending ||
+		   orderBy == RCOrderByTypeCodeFinalOrderCutoffDateDescending ||
 		   orderBy == RCOrderByTypeCodeOnSaleDateDescending ||
 		   orderBy == RCOrderByTypeCodeIssueNumberDescending;
 }

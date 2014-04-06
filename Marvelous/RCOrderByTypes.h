@@ -16,6 +16,6 @@ extern NSString * const RCOrderByTypeTitle;
 extern NSString * const RCOrderByTypeDateModified;
 extern NSString * const RCOrderByTypeStartDate;
 extern NSString * const RCOrderByTypeStartYear;
-extern NSString * const RCOrderByTypeFOCDate;
+extern NSString * const RCOrderByTypeFinalOrderCutoffDate;
 extern NSString * const RCOrderByTypeOnSaleDate;
 extern NSString * const RCOrderByTypeIssueNumber;
