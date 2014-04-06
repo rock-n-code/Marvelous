@@ -10,7 +10,9 @@
 
 #import "RCAPIOperation.h"
 #import "RCCharacterFilter.h"
+#import "RCCreatorFilter.h"
 #import "RCEventFilter.h"
+#import "RCStoryFilter.h"
 #import "RCMarvelAPITestValues.h"
 
 @interface RCAPIOperationTests : XCTestCase
@@ -57,6 +59,21 @@
 	XCTAssertNil(operation.error, @"\"%s\" is expecting the property 'error' to be NULL.", __PRETTY_FUNCTION__);
 }
 
+- (void)testInitWithCreatorFilterAndAuthentication
+{
+	RCCreatorFilter *filter = [[RCCreatorFilter alloc] init];
+	NSDictionary *authentication = @{};
+	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithFilter:filter andAuthentication:authentication];
+
+	XCTAssertEqual(operation.type, RCAPITypeCreators, @"\"%s\" is expecting the property 'type' to have the '%d' integer value.", __PRETTY_FUNCTION__, RCAPITypeCreators);
+	XCTAssertNil(operation.identifier, @"\"%s\" is expecting the property 'identifier' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(operation.url, @"\"%s\" is expecting the property 'url' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(operation.filter, @"\"%s\" is expecting the property 'filter' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(operation.parameters, @"\"%s\" is expecting the property 'parameters' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(operation.data, @"\"%s\" is expecting the property 'json' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(operation.error, @"\"%s\" is expecting the property 'error' to be NULL.", __PRETTY_FUNCTION__);
+}
+
 - (void)testInitWithEventFilterAndAuthentication
 {
 	RCEventFilter *filter = [[RCEventFilter alloc] init];
@@ -64,6 +81,21 @@
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithFilter:filter andAuthentication:authentication];
 
 	XCTAssertEqual(operation.type, RCAPITypeEvents, @"\"%s\" is expecting the property 'type' to have the '%d' integer value.", __PRETTY_FUNCTION__, RCAPITypeEvents);
+	XCTAssertNil(operation.identifier, @"\"%s\" is expecting the property 'identifier' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(operation.url, @"\"%s\" is expecting the property 'url' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(operation.filter, @"\"%s\" is expecting the property 'filter' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(operation.parameters, @"\"%s\" is expecting the property 'parameters' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(operation.data, @"\"%s\" is expecting the property 'json' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(operation.error, @"\"%s\" is expecting the property 'error' to be NULL.", __PRETTY_FUNCTION__);
+}
+
+- (void)testInitWithStoryFilterAndAuthentication
+{
+	RCStoryFilter *filter = [[RCStoryFilter alloc] init];
+	NSDictionary *authentication = @{};
+	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithFilter:filter andAuthentication:authentication];
+
+	XCTAssertEqual(operation.type, RCAPITypeStories, @"\"%s\" is expecting the property 'type' to have the '%d' integer value.", __PRETTY_FUNCTION__, RCAPITypeStories);
 	XCTAssertNil(operation.identifier, @"\"%s\" is expecting the property 'identifier' to be NULL.", __PRETTY_FUNCTION__);
 	XCTAssertNotNil(operation.url, @"\"%s\" is expecting the property 'url' to be not NULL.", __PRETTY_FUNCTION__);
 	XCTAssertNotNil(operation.filter, @"\"%s\" is expecting the property 'filter' to be not NULL.", __PRETTY_FUNCTION__);
