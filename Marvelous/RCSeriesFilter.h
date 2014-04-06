@@ -7,6 +7,7 @@
 //
 
 #import "RCFilter.h"
+#import "RCFormatTypeCodes.h"
 #import "RCSeriesTypeCodes.h"
 
 @interface RCSeriesFilter : RCFilter

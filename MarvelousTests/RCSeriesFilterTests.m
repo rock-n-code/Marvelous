@@ -47,6 +47,51 @@
 	XCTAssertNotNil(filter.validOrderTypes, @"\"%s\" is expecting the property 'validOrderTypes' to be not NULL.", __PRETTY_FUNCTION__);
 }
 
+- (void)testParameters
+{
+	RCSeriesFilter *filter = [[RCSeriesFilter alloc] init];
+
+	filter.title = @"TestTitle";
+	filter.titleStartsWith = @"TestTitleStartsWith";
+	filter.startYear = @2014;
+	filter.modifiedSince = [NSDate date];
+	filter.comics = @[@0, @1, @2];
+	filter.stories = @[@"0", @"1", @"2"];
+	filter.events = @[@"0", @"1", @"2"];
+	filter.creators = @[@0, @1, @2];
+	filter.characters = @[@"0", @"2", @"4"];
+	filter.seriesType = RCSeriesTypeCodeOneShot;
+	filter.contains = @[@(RCFormatTypeCodeComic), @(RCFormatTypeCodeTradePaperback)];
+	filter.orderBy = @[@(RCOrderByTypeCodeTitleDescending), @(RCOrderByTypeCodeStartYearAscending)];
+	filter.offset = @0;
+	filter.limit = @0;
+
+	NSDictionary *parameters = filter.parameters;
+	NSInteger countToTest = 14;
+
+	XCTAssertNotNil(parameters, @"\"%s\" is expecting the variable 'parameters' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertEqual(parameters.allKeys.count, countToTest, @"\"%s\" is expecting the property 'count' of the variable 'parameters' to be the integer value %d.", __PRETTY_FUNCTION__, countToTest);
+}
+
+- (void)testPartialParameters
+{
+	RCSeriesFilter *filter = [[RCSeriesFilter alloc] init];
+
+	filter.title = @"TestTitle";
+	filter.startYear = @2013;
+	filter.comics = @[@0, @2, @4];
+	filter.stories = @[@"0", @"1", @"2"];
+	filter.events = @[@"0", @"2", @"4"];
+	filter.limit = @0;
+	filter.orderBy = @[@(RCOrderByTypeCodeDateModifiedAscending)];
+
+	NSDictionary *parameters = filter.parameters;
+	NSInteger countToTest = 7;
+
+	XCTAssertNotNil(parameters, @"\"%s\" is expecting the variable 'parameters' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertEqual(parameters.allKeys.count, countToTest, @"\"%s\" is expecting the property 'count' of the variable 'parameters' to be the integer value %d.", __PRETTY_FUNCTION__, countToTest);
+}
+
 - (void)testValidOrderTypes
 {
 	RCSeriesFilter *filter = [[RCSeriesFilter alloc] init];

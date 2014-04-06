@@ -19,6 +19,55 @@
 
 @implementation RCSeriesFilter
 
+#pragma mark - Properties
+
+- (NSDictionary *)parameters
+{
+	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:super.parameters];
+
+	if (self.title) {
+		params[RCRequestKeyTitle] = self.title;
+	}
+
+	if (self.titleStartsWith) {
+		params[RCRequestKeyTitleStartsWith] = self.titleStartsWith;
+	}
+
+	if (self.startYear) {
+		params[RCRequestKeyStartYear] = self.startYear;
+	}
+
+	if (self.comics) {
+		params[RCRequestKeyComics] = [self.comics componentsJoinedByString:@","];
+	}
+
+	if (self.stories) {
+		params[RCRequestKeyStories] = [self.stories componentsJoinedByString:@","];
+	}
+
+	if (self.events) {
+		params[RCRequestKeyEvents] = [self.events componentsJoinedByString:@","];
+	}
+
+	if (self.creators) {
+		params[RCRequestKeyCreators] = [self.creators componentsJoinedByString:@","];
+	}
+
+	if (self.characters) {
+		params[RCRequestKeyCharacters] = [self.characters componentsJoinedByString:@","];
+	}
+
+	if (self.contains) {
+		params[RCRequestKeyContains] = self.stringfiedContains;
+	}
+
+	if (self.seriesType != RCSeriesTypeCodeUndefined) {
+		params[RCRequestKeySeriesType] = self.stringfiedSeriesType;
+	}
+
+	return params;
+}
+
 - (NSArray *)validOrderTypes
 {
 	return @[@(RCOrderByTypeCodeTitleAscending),
