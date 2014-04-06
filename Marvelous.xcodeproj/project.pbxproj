@@ -43,6 +43,7 @@
 		036341D318F16882008FA7F0 /* RCCreatorObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341D218F16882008FA7F0 /* RCCreatorObjectTests.m */; };
 		036341D618F17367008FA7F0 /* RCSeriesFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341D518F17367008FA7F0 /* RCSeriesFilter.m */; };
 		036341D818F17389008FA7F0 /* RCSeriesFilterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341D718F17389008FA7F0 /* RCSeriesFilterTests.m */; };
+		036341DC18F174B8008FA7F0 /* RCSeriesTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341DB18F174B8008FA7F0 /* RCSeriesTypes.m */; };
 		036A2F1718F0BB2000EFE3CF /* RCStoryFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 036A2F1618F0BB2000EFE3CF /* RCStoryFilter.m */; };
 		036A2F1918F0BB4000EFE3CF /* RCStoryFilterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 036A2F1818F0BB4000EFE3CF /* RCStoryFilterTests.m */; };
 		036A2F1C18F0C18A00EFE3CF /* RCStoryObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 036A2F1B18F0C18A00EFE3CF /* RCStoryObject.m */; };
@@ -154,6 +155,9 @@
 		036341D418F17367008FA7F0 /* RCSeriesFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCSeriesFilter.h; sourceTree = "<group>"; };
 		036341D518F17367008FA7F0 /* RCSeriesFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCSeriesFilter.m; sourceTree = "<group>"; };
 		036341D718F17389008FA7F0 /* RCSeriesFilterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCSeriesFilterTests.m; sourceTree = "<group>"; };
+		036341D918F17431008FA7F0 /* RCSeriesTypeCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCSeriesTypeCodes.h; sourceTree = "<group>"; };
+		036341DA18F174B8008FA7F0 /* RCSeriesTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCSeriesTypes.h; path = Marvelous/RCSeriesTypes.h; sourceTree = "<group>"; };
+		036341DB18F174B8008FA7F0 /* RCSeriesTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCSeriesTypes.m; path = Marvelous/RCSeriesTypes.m; sourceTree = "<group>"; };
 		036A2F1518F0BB2000EFE3CF /* RCStoryFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCStoryFilter.h; sourceTree = "<group>"; };
 		036A2F1618F0BB2000EFE3CF /* RCStoryFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCStoryFilter.m; sourceTree = "<group>"; };
 		036A2F1818F0BB4000EFE3CF /* RCStoryFilterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCStoryFilterTests.m; sourceTree = "<group>"; };
@@ -336,6 +340,8 @@
 				03130D5F18EB7F8A00BD315F /* RCImageModes.m */,
 				03130D6118EB801800BD315F /* RCImageSizes.h */,
 				03130D6218EB801800BD315F /* RCImageSizes.m */,
+				036341DA18F174B8008FA7F0 /* RCSeriesTypes.h */,
+				036341DB18F174B8008FA7F0 /* RCSeriesTypes.m */,
 			);
 			name = Constants;
 			path = ..;
@@ -350,6 +356,7 @@
 				03130D5218EAE1D500BD315F /* RCOrderByTypeCodes.h */,
 				03130D5C18EB7DDB00BD315F /* RCImageModeCodes.h */,
 				03130D5D18EB7E6500BD315F /* RCImageSizeCodes.h */,
+				036341D918F17431008FA7F0 /* RCSeriesTypeCodes.h */,
 			);
 			name = Enumerations;
 			sourceTree = "<group>";
@@ -569,6 +576,7 @@
 				03130D4318EAD15100BD315F /* RCQueryInfoObject.m in Sources */,
 				03B694FB18E774D400CEF855 /* RCOperationErrors.m in Sources */,
 				03130D6018EB7F8A00BD315F /* RCImageModes.m in Sources */,
+				036341DC18F174B8008FA7F0 /* RCSeriesTypes.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
