@@ -60,8 +60,20 @@
 			if (orderBy == RCOrderByTypeCodeIdentifierAscending ||
 				orderBy == RCOrderByTypeCodeIdentifierDescending) {
 				string = RCOrderByTypeIdentifier;
+			} else if (orderBy == RCOrderByTypeCodeFirstNameAscending ||
+					   orderBy == RCOrderByTypeCodeFirstNameDescending) {
+				string = RCOrderByTypeFirstName;
+			} else if (orderBy == RCOrderByTypeCodeMiddleNameAscending ||
+						 orderBy == RCOrderByTypeCodeMiddleNameDescending) {
+				string = RCOrderByTypeMiddleName;
+			} else if (orderBy == RCOrderByTypeCodeLastNameAscending ||
+					   orderBy == RCOrderByTypeCodeLastNameDescending) {
+				string = RCOrderByTypeLastName;
+			} else if (orderBy == RCOrderByTypeCodeSuffixAscending ||
+					   orderBy == RCOrderByTypeCodeSuffixDescending) {
+				string = RCOrderByTypeSuffix;
 			} else if (orderBy == RCOrderByTypeCodeNameAscending ||
-				orderBy == RCOrderByTypeCodeNameDescending) {
+					   orderBy == RCOrderByTypeCodeNameDescending) {
 				string = RCOrderByTypeName;
 			} else if (orderBy == RCOrderByTypeCodeDateModifiedAscending ||
 					   orderBy == RCOrderByTypeCodeDateModifiedDescending) {
@@ -96,6 +108,10 @@
 - (BOOL)isDescendingOrderBy:(NSInteger)orderBy
 {
 	return orderBy == RCOrderByTypeCodeIdentifierDescending ||
+		   orderBy == RCOrderByTypeCodeFirstNameDescending ||
+		   orderBy == RCOrderByTypeCodeMiddleNameDescending ||
+		   orderBy == RCOrderByTypeCodeLastNameDescending ||
+		   orderBy == RCOrderByTypeCodeSuffixDescending ||
 		   orderBy == RCOrderByTypeCodeNameDescending ||
 		   orderBy == RCOrderByTypeCodeDateModifiedDescending ||
 		   orderBy == RCOrderByTypeCodeStartDateDescending;
