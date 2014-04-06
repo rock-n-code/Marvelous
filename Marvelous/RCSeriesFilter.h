@@ -7,7 +7,19 @@
 //
 
 #import "RCFilter.h"
+#import "RCSeriesTypeCodes.h"
 
 @interface RCSeriesFilter : RCFilter
+
+@property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSString *titleStartsWith;
+@property (nonatomic, strong) NSNumber *startYear;
+@property (nonatomic, strong) NSArray *comics;
+@property (nonatomic, strong) NSArray *stories;
+@property (nonatomic, strong) NSArray *events;
+@property (nonatomic, strong) NSArray *creators;
+@property (nonatomic, strong) NSArray *characters;
+@property (nonatomic, strong) NSArray *contains;
+@property (nonatomic) RCSeriesTypeCodes seriesType;
 
 @end
