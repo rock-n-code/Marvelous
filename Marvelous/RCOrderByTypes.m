@@ -18,3 +18,6 @@ NSString * const RCOrderByTypeTitle = @"title";
 NSString * const RCOrderByTypeDateModified = @"modified";
 NSString * const RCOrderByTypeStartDate = @"startDate";
 NSString * const RCOrderByTypeStartYear = @"startYear";
+NSString * const RCOrderByTypeFOCDate = @"focDate";
+NSString * const RCOrderByTypeOnSaleDate = @"onsaleDate";
+NSString * const RCOrderByTypeIssueNumber = @"issueNumber";
