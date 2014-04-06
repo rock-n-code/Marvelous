@@ -7,6 +7,10 @@
 //
 
 extern NSString * const RCOrderByTypeIdentifier;
+extern NSString * const RCOrderByTypeFirstName;
+extern NSString * const RCOrderByTypeMiddleName;
+extern NSString * const RCOrderByTypeLastName;
+extern NSString * const RCOrderByTypeSuffix;
 extern NSString * const RCOrderByTypeName;
 extern NSString * const RCOrderByTypeDateModified;
 extern NSString * const RCOrderByTypeStartDate;
