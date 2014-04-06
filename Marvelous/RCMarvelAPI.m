@@ -112,9 +112,7 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 
 - (void)charactersByEventIdentifier:(NSNumber *)identifier filter:(RCCharacterFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
 {
-	if (!filter) {
-		filter = [[RCCharacterFilter alloc] init];
-	}
+	[self validateFilter:filter ofType:RCAPITypeCharacters];
 
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeEvents identifier:stringfiedIdentifier filter:filter andAuthentication:self.authParameters];
@@ -151,9 +149,7 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 
 - (void)eventsByCharacterIdentifier:(NSNumber *)identifier filter:(RCEventFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
 {
-	if (!filter) {
-		filter = [[RCEventFilter alloc] init];
-	}
+	[self validateFilter:filter ofType:RCAPITypeEvents];
 
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeCharacters identifier:stringfiedIdentifier filter:filter andAuthentication:self.authParameters];
@@ -222,6 +218,22 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 - (NSString *)stringFromIdentifier:(NSNumber *)identifier
 {
 	return identifier ? identifier.stringValue : nil;
+}
+
+- (void)validateFilter:(RCFilter *)filter ofType:(RCAPITypes)type
+{
+	if (filter) {
+		return;
+	}
+
+	switch (type) {
+		case RCAPITypeCharacters:
+			filter = [[RCCharacterFilter alloc] init];
+		case RCAPITypeEvents:
+			filter = [[RCEventFilter alloc] init];
+		default:
+			filter = nil;
+	}
 }
 
 @end
