@@ -18,4 +18,19 @@
 
 @implementation RCTextObject
 
+#pragma mark - RCObjectProtocol
+
+- (id)initWithDictionary:(NSDictionary *)dictionary
+{
+	self = [super init];
+
+	if (self) {
+		self.type = dictionary[RCResponseKeyType];
+		self.language = dictionary[RCResponseKeyLanguage];
+		self.text = dictionary[RCResponseKeyText];
+	}
+
+	return self;
+}
+
 @end
