@@ -408,6 +408,21 @@
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
+- (void)testSeriesByFilterAndCompletionBlock
+{
+	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
+}
+
+- (void)testSeriesByBadFilterAndCompletionBlock
+{
+	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
+}
+
+- (void)testSeriesByNilFilterAndCompletionBlock
+{
+	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
+}
+
 - (void)testStoriesByIdentifierAndCompletionBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
