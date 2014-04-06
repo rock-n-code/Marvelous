@@ -9,11 +9,13 @@
 #import "RCCharacterObject.h"
 #import "RCCreatorObject.h"
 #import "RCEventObject.h"
+#import "RCSeriesObject.h"
 #import "RCStoryObject.h"
 #import "RCQueryInfoObject.h"
 #import "RCCharacterFilter.h"
 #import "RCCreatorFilter.h"
 #import "RCEventFilter.h"
+#import "RCSeriesFilter.h"
 #import "RCStoryFilter.h"
 
 typedef void (^resultCompletionBlock) (id result, RCQueryInfoObject *info, NSError *error);
@@ -31,6 +33,7 @@ typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *inf
 - (void)characterByIdentifier:(NSNumber *)identifier andCompletionBlock:(resultCompletionBlock)completionBlock;
 - (void)charactersByFilter:(RCCharacterFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 - (void)charactersByEventIdentifier:(NSNumber *)identifier filter:(RCCharacterFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)charactersBySeriesIdentifier:(NSNumber *)identifier filter:(RCCharacterFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 - (void)charactersByStoryIdentifier:(NSNumber *)identifier filter:(RCCharacterFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 
 - (void)creatorByIdentifier:(NSNumber *)identifier andCompletionBlock:(resultCompletionBlock)completionBlock;
