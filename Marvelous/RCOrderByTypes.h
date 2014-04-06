@@ -12,5 +12,7 @@ extern NSString * const RCOrderByTypeMiddleName;
 extern NSString * const RCOrderByTypeLastName;
 extern NSString * const RCOrderByTypeSuffix;
 extern NSString * const RCOrderByTypeName;
+extern NSString * const RCOrderByTypeTitle;
 extern NSString * const RCOrderByTypeDateModified;
 extern NSString * const RCOrderByTypeStartDate;
+extern NSString * const RCOrderByTypeStartYear;

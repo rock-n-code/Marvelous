@@ -20,8 +20,12 @@ typedef NS_ENUM(NSInteger, RCOrderByTypeCodes) {
 	RCOrderByTypeCodeSuffixDescending,
 	RCOrderByTypeCodeNameAscending,
 	RCOrderByTypeCodeNameDescending,
+	RCOrderByTypeCodeTitleAscending,
+	RCOrderByTypeCodeTitleDescending,
 	RCOrderByTypeCodeDateModifiedAscending,
 	RCOrderByTypeCodeDateModifiedDescending,
 	RCOrderByTypeCodeStartDateAscending,
-	RCOrderByTypeCodeStartDateDescending
+	RCOrderByTypeCodeStartDateDescending,
+	RCOrderByTypeCodeStartYearAscending,
+	RCOrderByTypeCodeStartYearDescending
 };

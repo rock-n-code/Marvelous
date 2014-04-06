@@ -14,5 +14,7 @@ NSString * const RCOrderByTypeMiddleName = @"middleName";
 NSString * const RCOrderByTypeLastName = @"lastName";
 NSString * const RCOrderByTypeSuffix = @"suffix";
 NSString * const RCOrderByTypeName = @"name";
+NSString * const RCOrderByTypeTitle = @"title";
 NSString * const RCOrderByTypeDateModified = @"modified";
 NSString * const RCOrderByTypeStartDate = @"startDate";
+NSString * const RCOrderByTypeStartYear = @"startYear";
