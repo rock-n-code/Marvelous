@@ -41,6 +41,8 @@
 		036341CE18F15B81008FA7F0 /* RCCreatorFilterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341CD18F15B81008FA7F0 /* RCCreatorFilterTests.m */; };
 		036341D118F16851008FA7F0 /* RCCreatorObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341D018F16851008FA7F0 /* RCCreatorObject.m */; };
 		036341D318F16882008FA7F0 /* RCCreatorObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341D218F16882008FA7F0 /* RCCreatorObjectTests.m */; };
+		036341D618F17367008FA7F0 /* RCSeriesFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341D518F17367008FA7F0 /* RCSeriesFilter.m */; };
+		036341D818F17389008FA7F0 /* RCSeriesFilterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341D718F17389008FA7F0 /* RCSeriesFilterTests.m */; };
 		036A2F1718F0BB2000EFE3CF /* RCStoryFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 036A2F1618F0BB2000EFE3CF /* RCStoryFilter.m */; };
 		036A2F1918F0BB4000EFE3CF /* RCStoryFilterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 036A2F1818F0BB4000EFE3CF /* RCStoryFilterTests.m */; };
 		036A2F1C18F0C18A00EFE3CF /* RCStoryObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 036A2F1B18F0C18A00EFE3CF /* RCStoryObject.m */; };
@@ -149,6 +151,9 @@
 		036341CF18F16851008FA7F0 /* RCCreatorObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCreatorObject.h; sourceTree = "<group>"; };
 		036341D018F16851008FA7F0 /* RCCreatorObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCreatorObject.m; sourceTree = "<group>"; };
 		036341D218F16882008FA7F0 /* RCCreatorObjectTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCreatorObjectTests.m; sourceTree = "<group>"; };
+		036341D418F17367008FA7F0 /* RCSeriesFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCSeriesFilter.h; sourceTree = "<group>"; };
+		036341D518F17367008FA7F0 /* RCSeriesFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCSeriesFilter.m; sourceTree = "<group>"; };
+		036341D718F17389008FA7F0 /* RCSeriesFilterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCSeriesFilterTests.m; sourceTree = "<group>"; };
 		036A2F1518F0BB2000EFE3CF /* RCStoryFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCStoryFilter.h; sourceTree = "<group>"; };
 		036A2F1618F0BB2000EFE3CF /* RCStoryFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCStoryFilter.m; sourceTree = "<group>"; };
 		036A2F1818F0BB4000EFE3CF /* RCStoryFilterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCStoryFilterTests.m; sourceTree = "<group>"; };
@@ -277,6 +282,8 @@
 				036341CB18F15B5E008FA7F0 /* RCCreatorFilter.m */,
 				03130D6418EC127300BD315F /* RCEventFilter.h */,
 				03130D6518EC127300BD315F /* RCEventFilter.m */,
+				036341D418F17367008FA7F0 /* RCSeriesFilter.h */,
+				036341D518F17367008FA7F0 /* RCSeriesFilter.m */,
 				036A2F1518F0BB2000EFE3CF /* RCStoryFilter.h */,
 				036A2F1618F0BB2000EFE3CF /* RCStoryFilter.m */,
 			);
@@ -290,6 +297,7 @@
 				03130D5018EAE05600BD315F /* RCCharacterFilterTests.m */,
 				036341CD18F15B81008FA7F0 /* RCCreatorFilterTests.m */,
 				03130D6718EC128200BD315F /* RCEventFilterTests.m */,
+				036341D718F17389008FA7F0 /* RCSeriesFilterTests.m */,
 				036A2F1818F0BB4000EFE3CF /* RCStoryFilterTests.m */,
 			);
 			name = Filters;
@@ -542,6 +550,7 @@
 				03B694D818E73E3A00CEF855 /* RCMarvelAPI.m in Sources */,
 				03130D2018E96F3700BD315F /* RCCharacterObject.m in Sources */,
 				036A2F1C18F0C18A00EFE3CF /* RCStoryObject.m in Sources */,
+				036341D618F17367008FA7F0 /* RCSeriesFilter.m in Sources */,
 				03130D5518EAE7F800BD315F /* RCOrderByTypes.m in Sources */,
 				036341CC18F15B5E008FA7F0 /* RCCreatorFilter.m in Sources */,
 				03130D3518E9786A00BD315F /* RCURLObject.m in Sources */,
@@ -574,6 +583,7 @@
 				03130D3918E992FA00BD315F /* RCMarvelAPITestValues.m in Sources */,
 				03130D2218E96F5300BD315F /* RCCharacterObjectTests.m in Sources */,
 				03130D1D18E96DB200BD315F /* RCDataContainerObjectTests.m in Sources */,
+				036341D818F17389008FA7F0 /* RCSeriesFilterTests.m in Sources */,
 				03130D6D18EC1BFD00BD315F /* RCEventObjectTests.m in Sources */,
 				03130D3218E9784C00BD315F /* RCURLObjectTests.m in Sources */,
 				03130D6818EC128200BD315F /* RCEventFilterTests.m in Sources */,
