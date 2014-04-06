@@ -70,6 +70,21 @@
 
 	return params;
 }
+
+- (NSArray *)validOrderTypes
+{
+	return @[@(RCOrderByTypeCodeFirstNameAscending),
+			 @(RCOrderByTypeCodeFirstNameDescending),
+			 @(RCOrderByTypeCodeMiddleNameAscending),
+			 @(RCOrderByTypeCodeMiddleNameDescending),
+			 @(RCOrderByTypeCodeLastNameAscending),
+			 @(RCOrderByTypeCodeLastNameDescending),
+			 @(RCOrderByTypeCodeSuffixAscending),
+			 @(RCOrderByTypeCodeSuffixDescending),
+			 @(RCOrderByTypeCodeDateModifiedAscending),
+			 @(RCOrderByTypeCodeDateModifiedDescending)];
+}
+
 - (RCAPITypes)type
 {
 	return RCAPITypeCreators;
