@@ -7,6 +7,9 @@
 //
 
 #import "RCComicsObject.h"
+#import "RCTextObject.h"
+#import "RCComicDateObject.h"
+#import "RCComicPriceObject.h"
 
 @interface RCComicsObject ()
 
@@ -43,5 +46,73 @@
 @end
 
 @implementation RCComicsObject
+
+#pragma mark - RCObjectProtocol
+
+- (id)initWithDictionary:(NSDictionary *)dictionary
+{
+	self = [super init];
+
+	if (self) {
+		self.identifier = dictionary[RCResponseKeyIdentifier];
+		self.digitalIdentifier = dictionary[RCResponseKeyDigitalIdentifier];
+		self.title = dictionary[RCResponseKeyTitle];
+		self.issueNumber = dictionary[RCResponseKeyIssueNumber];
+		self.summary = dictionary[RCResponseKeyDescription];
+		self.variantDescription = dictionary[RCResponseKeyVariantDescription];
+		self.lastModified = [self dateFromString:dictionary[RCResponseKeyModified]];
+		self.isbn = dictionary[RCResponseKeyISBN];
+		self.upc = dictionary[RCResponseKeyUPC];
+		self.diamondCode = dictionary[RCResponseKeyDiamondCode];
+		self.ean = dictionary[RCResponseKeyEAN];
+		self.issn = dictionary[RCResponseKeyISSN];
+		self.format = dictionary[RCResponseKeyFormat];
+		self.pageCount = dictionary[RCResponseKeyPageCount];
+		self.textObjects = [self objectsFromArray:dictionary[RCResponseKeyTextObjects] ofClass:[RCTextObject class]];
+		self.resourceURI = [NSURL URLWithString:dictionary[RCResponseKeyResourceURI]];
+		self.urls = [self urlsFromArray:dictionary[RCResponseKeyURLs]];
+		self.series = [[RCSummaryObject alloc] initWithDictionary:dictionary[RCResponseKeySeries]];
+		self.variants = [self objectsFromArray:dictionary[RCResponseKeyVariants] ofClass:[RCSummaryObject class]];
+		self.collections = [self objectsFromArray:dictionary[RCResponseKeyCollections] ofClass:[RCSummaryObject class]];
+		self.collectedIssues = [self objectsFromArray:dictionary[RCResponseKeyCollectedIssues] ofClass:[RCSummaryObject class]];
+		self.dates = [self objectsFromArray:dictionary[RCResponseKeyDates] ofClass:[RCComicDateObject class]];
+		self.prices = [self objectsFromArray:dictionary[RCResponseKeyPrices] ofClass:[RCComicPriceObject class]];
+		self.thumbnail = [[RCImageObject alloc] initWithDictionary:dictionary[RCResponseKeyThumbnail]];
+		self.images = [self objectsFromArray:dictionary[RCResponseKeyImages] ofClass:[RCImageObject class]];
+		self.creators = [[RCListObject alloc] initWithDictionary:dictionary[RCResponseKeyCreators]];
+		self.characters = [[RCListObject alloc] initWithDictionary:dictionary[RCResponseKeyCharacters]];
+		self.stories = [[RCListObject alloc] initWithDictionary:dictionary[RCResponseKeyStories]];
+		self.events = [[RCListObject alloc] initWithDictionary:dictionary[RCResponseKeyEvents]];
+	}
+
+	return self;
+}
+
+#pragma mark - Private methods
+
+- (NSArray *)objectsFromArray:(NSArray *)array ofClass:(Class)klass
+{
+	NSMutableArray *objects = [NSMutableArray array];
+
+	[array enumerateObjectsUsingBlock:^(NSDictionary *dictionary, NSUInteger index, BOOL *stop) {
+		id object = nil;
+
+		if ([klass isSubclassOfClass:[RCTextObject class]]) {
+			object = [[RCTextObject alloc] initWithDictionary:dictionary];
+		} else if ([klass isSubclassOfClass:[RCSummaryObject class]]) {
+			object = [[RCSummaryObject alloc] initWithDictionary:dictionary];
+		} else if ([klass isSubclassOfClass:[RCComicDateObject class]]) {
+			object = [[RCComicDateObject alloc] initWithDictionary:dictionary];
+		} else if ([klass isSubclassOfClass:[RCComicPriceObject class]]) {
+			object = [[RCComicPriceObject alloc] initWithDictionary:dictionary];
+		} else if ([klass isSubclassOfClass:[RCImageObject class]]) {
+			object = [[RCImageObject alloc] initWithDictionary:dictionary];
+		}
+
+		[objects addObject:object];
+	}];
+
+	return objects;
+}
 
 @end
