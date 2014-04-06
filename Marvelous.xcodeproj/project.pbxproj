@@ -51,6 +51,7 @@
 		036341EA18F1C103008FA7F0 /* RCComicFilterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341E918F1C103008FA7F0 /* RCComicFilterTests.m */; };
 		036341EE18F1C5BE008FA7F0 /* RCIssueTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341ED18F1C5BE008FA7F0 /* RCIssueTypes.m */; };
 		036341F218F1C72E008FA7F0 /* RCBooleanValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341F118F1C72E008FA7F0 /* RCBooleanValues.m */; };
+		036341F618F1C83F008FA7F0 /* RCDateDescriptors.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341F518F1C83F008FA7F0 /* RCDateDescriptors.m */; };
 		036A2F1718F0BB2000EFE3CF /* RCStoryFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 036A2F1618F0BB2000EFE3CF /* RCStoryFilter.m */; };
 		036A2F1918F0BB4000EFE3CF /* RCStoryFilterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 036A2F1818F0BB4000EFE3CF /* RCStoryFilterTests.m */; };
 		036A2F1C18F0C18A00EFE3CF /* RCStoryObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 036A2F1B18F0C18A00EFE3CF /* RCStoryObject.m */; };
@@ -180,6 +181,9 @@
 		036341EF18F1C6B2008FA7F0 /* RCBooleanValueCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCBooleanValueCodes.h; sourceTree = "<group>"; };
 		036341F018F1C72E008FA7F0 /* RCBooleanValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCBooleanValues.h; path = Marvelous/RCBooleanValues.h; sourceTree = "<group>"; };
 		036341F118F1C72E008FA7F0 /* RCBooleanValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCBooleanValues.m; path = Marvelous/RCBooleanValues.m; sourceTree = "<group>"; };
+		036341F318F1C7F6008FA7F0 /* RCDateDescriptorCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCDateDescriptorCodes.h; sourceTree = "<group>"; };
+		036341F418F1C83F008FA7F0 /* RCDateDescriptors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCDateDescriptors.h; path = Marvelous/RCDateDescriptors.h; sourceTree = "<group>"; };
+		036341F518F1C83F008FA7F0 /* RCDateDescriptors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCDateDescriptors.m; path = Marvelous/RCDateDescriptors.m; sourceTree = "<group>"; };
 		036A2F1518F0BB2000EFE3CF /* RCStoryFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCStoryFilter.h; sourceTree = "<group>"; };
 		036A2F1618F0BB2000EFE3CF /* RCStoryFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCStoryFilter.m; sourceTree = "<group>"; };
 		036A2F1818F0BB4000EFE3CF /* RCStoryFilterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCStoryFilterTests.m; sourceTree = "<group>"; };
@@ -374,6 +378,8 @@
 				036341ED18F1C5BE008FA7F0 /* RCIssueTypes.m */,
 				036341F018F1C72E008FA7F0 /* RCBooleanValues.h */,
 				036341F118F1C72E008FA7F0 /* RCBooleanValues.m */,
+				036341F418F1C83F008FA7F0 /* RCDateDescriptors.h */,
+				036341F518F1C83F008FA7F0 /* RCDateDescriptors.m */,
 				036341DA18F174B8008FA7F0 /* RCSeriesTypes.h */,
 				036341DB18F174B8008FA7F0 /* RCSeriesTypes.m */,
 			);
@@ -393,6 +399,7 @@
 				036341DD18F17653008FA7F0 /* RCFormatTypeCodes.h */,
 				036341EB18F1C55A008FA7F0 /* RCIssueTypeCodes.h */,
 				036341EF18F1C6B2008FA7F0 /* RCBooleanValueCodes.h */,
+				036341F318F1C7F6008FA7F0 /* RCDateDescriptorCodes.h */,
 				036341D918F17431008FA7F0 /* RCSeriesTypeCodes.h */,
 			);
 			name = Enumerations;
@@ -615,6 +622,7 @@
 				036A2F1718F0BB2000EFE3CF /* RCStoryFilter.m in Sources */,
 				03130D4318EAD15100BD315F /* RCQueryInfoObject.m in Sources */,
 				036341EE18F1C5BE008FA7F0 /* RCIssueTypes.m in Sources */,
+				036341F618F1C83F008FA7F0 /* RCDateDescriptors.m in Sources */,
 				03B694FB18E774D400CEF855 /* RCOperationErrors.m in Sources */,
 				03130D6018EB7F8A00BD315F /* RCImageModes.m in Sources */,
 				036341F218F1C72E008FA7F0 /* RCBooleanValues.m in Sources */,
