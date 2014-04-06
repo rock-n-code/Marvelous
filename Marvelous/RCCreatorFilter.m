@@ -70,4 +70,9 @@
 
 	return params;
 }
+- (RCAPITypes)type
+{
+	return RCAPITypeCreators;
+}
+
 @end
