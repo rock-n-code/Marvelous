@@ -75,12 +75,18 @@
 			} else if (orderBy == RCOrderByTypeCodeNameAscending ||
 					   orderBy == RCOrderByTypeCodeNameDescending) {
 				string = RCOrderByTypeName;
+			} else if (orderBy == RCOrderByTypeCodeTitleAscending ||
+					   orderBy == RCOrderByTypeCodeTitleDescending) {
+				string = RCOrderByTypeTitle;
 			} else if (orderBy == RCOrderByTypeCodeDateModifiedAscending ||
 					   orderBy == RCOrderByTypeCodeDateModifiedDescending) {
 				string = RCOrderByTypeDateModified;
 			} else if (orderBy == RCOrderByTypeCodeStartDateAscending ||
 					   orderBy == RCOrderByTypeCodeStartDateDescending) {
 				string = RCOrderByTypeStartDate;
+			} else if (orderBy == RCOrderByTypeCodeStartYearAscending ||
+					   orderBy == RCOrderByTypeCodeStartYearDescending) {
+				string = RCOrderByTypeStartYear;
 			}
 
 			if ([self isDescendingOrderBy:orderBy]) {
@@ -113,8 +119,10 @@
 		   orderBy == RCOrderByTypeCodeLastNameDescending ||
 		   orderBy == RCOrderByTypeCodeSuffixDescending ||
 		   orderBy == RCOrderByTypeCodeNameDescending ||
+		   orderBy == RCOrderByTypeCodeTitleDescending ||
 		   orderBy == RCOrderByTypeCodeDateModifiedDescending ||
-		   orderBy == RCOrderByTypeCodeStartDateDescending;
+		   orderBy == RCOrderByTypeCodeStartDateDescending ||
+		   orderBy == RCOrderByTypeCodeStartYearDescending;
 }
 
 @end
