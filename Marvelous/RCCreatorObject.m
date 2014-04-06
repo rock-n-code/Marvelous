@@ -29,4 +29,30 @@
 
 @implementation RCCreatorObject
 
+#pragma mark - RCObjectProtocol
+
+- (id)initWithDictionary:(NSDictionary *)dictionary
+{
+	self = [super init];
+
+	if (self) {
+		self.identifier = dictionary[RCResponseKeyIdentifier];
+		self.firstName = dictionary[RCResponseKeyFirstName];
+		self.middleName = dictionary[RCResponseKeyMiddleName];
+		self.lastName = dictionary[RCResponseKeyLastName];
+		self.suffix = dictionary[RCResponseKeySuffix];
+		self.fullName = dictionary[RCResponseKeyFullName];
+		self.lastModified = [self dateFromString:dictionary[RCResponseKeyModified]];
+		self.resourceURI = [NSURL URLWithString:dictionary[RCResponseKeyResourceURI]];
+		self.urls = [self urlsFromArray:dictionary[RCResponseKeyURLs]];
+		self.thumbnail = [[RCImageObject alloc] initWithDictionary:dictionary[RCResponseKeyThumbnail]];
+		self.comics = [[RCListObject alloc] initWithDictionary:dictionary[RCResponseKeyComics]];
+		self.stories = [[RCListObject alloc] initWithDictionary:dictionary[RCResponseKeyStories]];
+		self.series = [[RCListObject alloc] initWithDictionary:dictionary[RCResponseKeySeries]];
+		self.events = [[RCListObject alloc] initWithDictionary:dictionary[RCResponseKeyEvents]];
+	}
+
+	return self;
+}
+
 @end

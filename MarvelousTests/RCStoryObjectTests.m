@@ -28,27 +28,27 @@
 
 - (void)testInit
 {
-	RCStoryObject *event = [[RCStoryObject alloc] init];
+	RCStoryObject *story = [[RCStoryObject alloc] init];
 
-	XCTAssertNil(event.identifier, @"\"%s\" is expecting the property 'identifier' to be NULL.", __PRETTY_FUNCTION__);
-	XCTAssertNil(event.title, @"\"%s\" is expecting the property 'name' to be NULL.", __PRETTY_FUNCTION__);
-	XCTAssertNil(event.summary, @"\"%s\" is expecting the property 'bio' to be NULL.", __PRETTY_FUNCTION__);
-	XCTAssertNil(event.resourceURI, @"\"%s\" is expecting the property 'resourceURI' to be NULL.", __PRETTY_FUNCTION__);
-	XCTAssertNil(event.type, @"\"%s\" is expecting the property 'urls' to be NULL.", __PRETTY_FUNCTION__);
-	XCTAssertNil(event.lastModified, @"\"%s\" is expecting the property 'lastModified' to be NULL.", __PRETTY_FUNCTION__);
-	XCTAssertNil(event.thumbnail, @"\"%s\" is expecting the property 'thumbnail' to be NULL.", __PRETTY_FUNCTION__);
-	XCTAssertNil(event.comics, @"\"%s\" is expecting the property 'comics' to be NULL.", __PRETTY_FUNCTION__);
-	XCTAssertNil(event.series, @"\"%s\" is expecting the property 'events' to be NULL.", __PRETTY_FUNCTION__);
-	XCTAssertNil(event.events, @"\"%s\" is expecting the property 'events' to be NULL.", __PRETTY_FUNCTION__);
-	XCTAssertNil(event.characters, @"\"%s\" is expecting the property 'series' to be NULL.", __PRETTY_FUNCTION__);
-	XCTAssertNil(event.creators, @"\"%s\" is expecting the property 'series' to be NULL.", __PRETTY_FUNCTION__);
-	XCTAssertNil(event.originalIssue, @"\"%s\" is expecting the property 'originalIssue' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(story.identifier, @"\"%s\" is expecting the property 'identifier' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(story.title, @"\"%s\" is expecting the property 'name' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(story.summary, @"\"%s\" is expecting the property 'bio' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(story.resourceURI, @"\"%s\" is expecting the property 'resourceURI' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(story.type, @"\"%s\" is expecting the property 'urls' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(story.lastModified, @"\"%s\" is expecting the property 'lastModified' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(story.thumbnail, @"\"%s\" is expecting the property 'thumbnail' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(story.comics, @"\"%s\" is expecting the property 'comics' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(story.series, @"\"%s\" is expecting the property 'events' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(story.events, @"\"%s\" is expecting the property 'events' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(story.characters, @"\"%s\" is expecting the property 'series' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(story.creators, @"\"%s\" is expecting the property 'series' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(story.originalIssue, @"\"%s\" is expecting the property 'originalIssue' to be NULL.", __PRETTY_FUNCTION__);
 }
 
 - (void)testInitWithDictionary
 {
 	NSDictionary *dictionary = @{RCResponseKeyIdentifier: @1234,
-								 RCResponseKeyTitle: @"TestName",
+								 RCResponseKeyTitle: @"TestTitle",
 								 RCResponseKeyDescription: @"TestDescription",
 								 RCResponseKeyResourceURI: @"http://testcollectionuri.com",
 								 RCResponseKeyType: @"TestType",
@@ -79,21 +79,21 @@
 															   RCResponseKeyRole: @"TestRole",
 															   RCResponseKeyResourceURI: @"TestResourceURI"}};
 
-	RCStoryObject *event = [[RCStoryObject alloc] initWithDictionary:dictionary];
+	RCStoryObject *story = [[RCStoryObject alloc] initWithDictionary:dictionary];
 
-	XCTAssertNotNil(event.identifier, @"\"%s\" is expecting the property 'identifier' to be not NULL.", __PRETTY_FUNCTION__);
-	XCTAssertNotNil(event.title, @"\"%s\" is expecting the property 'title' to be not NULL.", __PRETTY_FUNCTION__);
-	XCTAssertNotNil(event.summary, @"\"%s\" is expecting the property 'summary' to be not NULL.", __PRETTY_FUNCTION__);
-	XCTAssertNotNil(event.resourceURI, @"\"%s\" is expecting the property 'resourceURI' to be not NULL.", __PRETTY_FUNCTION__);
-	XCTAssertNotNil(event.type, @"\"%s\" is expecting the property 'urls' to be not NULL.", __PRETTY_FUNCTION__);
-	XCTAssertNotNil(event.lastModified, @"\"%s\" is expecting the property 'lastModified' to be not NULL.", __PRETTY_FUNCTION__);
-	XCTAssertNotNil(event.thumbnail, @"\"%s\" is expecting the property 'thumbnail' to be not NULL.", __PRETTY_FUNCTION__);
-	XCTAssertNotNil(event.comics, @"\"%s\" is expecting the property 'comics' to be not NULL.", __PRETTY_FUNCTION__);
-	XCTAssertNotNil(event.series, @"\"%s\" is expecting the property 'series' to be not NULL.", __PRETTY_FUNCTION__);
-	XCTAssertNotNil(event.events, @"\"%s\" is expecting the property 'events' to be not NULL.", __PRETTY_FUNCTION__);
-	XCTAssertNotNil(event.characters, @"\"%s\" is expecting the property 'characters' to be not NULL.", __PRETTY_FUNCTION__);
-	XCTAssertNotNil(event.creators, @"\"%s\" is expecting the property 'creators' to be not NULL.", __PRETTY_FUNCTION__);
-	XCTAssertNotNil(event.originalIssue, @"\"%s\" is expecting the property 'originalIssue' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(story.identifier, @"\"%s\" is expecting the property 'identifier' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(story.title, @"\"%s\" is expecting the property 'title' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(story.summary, @"\"%s\" is expecting the property 'summary' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(story.resourceURI, @"\"%s\" is expecting the property 'resourceURI' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(story.type, @"\"%s\" is expecting the property 'urls' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(story.lastModified, @"\"%s\" is expecting the property 'lastModified' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(story.thumbnail, @"\"%s\" is expecting the property 'thumbnail' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(story.comics, @"\"%s\" is expecting the property 'comics' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(story.series, @"\"%s\" is expecting the property 'series' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(story.events, @"\"%s\" is expecting the property 'events' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(story.characters, @"\"%s\" is expecting the property 'characters' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(story.creators, @"\"%s\" is expecting the property 'creators' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(story.originalIssue, @"\"%s\" is expecting the property 'originalIssue' to be not NULL.", __PRETTY_FUNCTION__);
 }
 
 @end
