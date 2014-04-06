@@ -17,4 +17,18 @@
 
 @implementation RCComicPrice
 
+#pragma mark - RCObjectProtocol
+
+- (id)initWithDictionary:(NSDictionary *)dictionary
+{
+	self = [super init];
+
+	if (self) {
+		self.type = dictionary[RCResponseKeyType];
+		self.price = dictionary[RCResponseKeyPrice];
+	}
+
+	return self;
+}
+
 @end
