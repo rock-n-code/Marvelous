@@ -26,9 +26,12 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testInit
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+	RCComicPrice *comicPrice = [[RCComicPrice alloc] init];
+	
+    XCTAssertNil(comicPrice.type, @"\"%s\" is expecting the property 'type' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(comicPrice.price, @"\"%s\" is expecting the property 'price' to be NULL.", __PRETTY_FUNCTION__);
 }
 
 @end

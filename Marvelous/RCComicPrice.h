@@ -10,4 +10,7 @@
 
 @interface RCComicPrice : RCObject
 
+@property (nonatomic, readonly, strong) NSString *type;
+@property (nonatomic, readonly, strong) NSNumber *price;
+
 @end
