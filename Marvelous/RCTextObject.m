@@ -10,6 +10,10 @@
 
 @interface RCTextObject ()
 
+@property (nonatomic, strong) NSString *type;
+@property (nonatomic, strong) NSString *language;
+@property (nonatomic, strong) NSString *text;
+
 @end
 
 @implementation RCTextObject

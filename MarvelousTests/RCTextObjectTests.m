@@ -26,9 +26,13 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testInit
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+	RCTextObject *object = [[RCTextObject alloc] init];
+
+	XCTAssertNil(object.type, @"\"%s\" is expecting the property 'type' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(object.language, @"\"%s\" is expecting the property 'language' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(object.text, @"\"%s\" is expecting the property 'text' to be NULL.", __PRETTY_FUNCTION__);
 }
 
 @end
