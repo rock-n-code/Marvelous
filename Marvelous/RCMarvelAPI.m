@@ -110,21 +110,12 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 	[self.queue addOperation:operation];
 }
 
-- (void)charactersWithEventIdentifier:(NSNumber *)identifier andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)charactersByEventIdentifier:(NSNumber *)identifier filter:(RCCharacterFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
 {
-	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
-	RCCharacterFilter *filter = [[RCCharacterFilter alloc] init];
-	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeEvents identifier:stringfiedIdentifier filter:filter andAuthentication:self.authParameters];
+	if (!filter) {
+		filter = [[RCCharacterFilter alloc] init];
+	}
 
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		[self sendResultsToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
-	};
-
-	[self.queue addOperation:operation];
-}
-
-- (void)charactersByFilter:(RCCharacterFilter *)filter eventIdentifier:(NSNumber *)identifier andCompletionBlock:(resultsCompletionBlock)completionBlock
-{
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeEvents identifier:stringfiedIdentifier filter:filter andAuthentication:self.authParameters];
 

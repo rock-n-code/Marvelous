@@ -26,8 +26,7 @@ typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *inf
 
 - (void)characterByIdentifier:(NSNumber *)identifier andCompletionBlock:(resultCompletionBlock)completionBlock;
 - (void)charactersByFilter:(RCCharacterFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
-- (void)charactersWithEventIdentifier:(NSNumber *)identifier andCompletionBlock:(resultsCompletionBlock)completionBlock;
-- (void)charactersByFilter:(RCCharacterFilter *)filter eventIdentifier:(NSNumber *)identifier andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)charactersByEventIdentifier:(NSNumber *)identifier filter:(RCCharacterFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 
 - (void)eventByIdentifier:(NSNumber *)identifier andCompletionBlock:(resultCompletionBlock)completionBlock;
 - (void)eventsByFilter:(RCEventFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
