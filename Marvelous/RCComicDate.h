@@ -10,4 +10,7 @@
 
 @interface RCComicDate : RCObject
 
+@property (nonatomic, readonly, strong) NSString *type;
+@property (nonatomic, readonly, strong) NSDate *date;
+
 @end
