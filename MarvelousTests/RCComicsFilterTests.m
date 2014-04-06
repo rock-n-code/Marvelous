@@ -55,6 +55,62 @@
 	XCTAssertNotNil(filter.validOrderTypes, @"\"%s\" is expecting the property 'validOrderTypes' to be not NULL.", __PRETTY_FUNCTION__);
 }
 
+- (void)testParameters
+{
+	NSDate *today = [NSDate date];
+	RCComicsFilter *filter = [[RCComicsFilter alloc] init];
+
+	filter.format = RCFormatTypeCodeComic;
+	filter.formatType = RCIssueTypeCodeComic;
+	filter.noVariants = RCBooleanValueCodeTrue;
+	filter.dateDescriptor = RCDateDescriptorCodeThisWeek;
+	filter.dateRange = @[today, today];
+	filter.diamondCode = @"TestDiamondCode";
+	filter.digitalIdentifier = @1234;
+	filter.upc = @"TestUPC";
+	filter.isbn = @"TestISBN";
+	filter.ean = @"TestEAN";
+	filter.issn = @"TestISSN";
+	filter.hasDigitalIssue = RCBooleanValueCodeFalse;
+	filter.modifiedSince = today;
+	filter.creators = @[@0, @1, @2];
+	filter.characters = @[@"0", @"1", @"2"];
+	filter.series = @[@"0", @"1", @"2"];
+	filter.events = @[@0, @1, @2];
+	filter.stories = @[@"0", @"1", @"2"];
+	filter.sharedAppearances = @[@2, @4, @6];
+	filter.offset = @0;
+	filter.limit = @0;
+	filter.orderBy = @[@(RCOrderByTypeCodeFinalOrderCutoffDateDescending), @(RCOrderByTypeCodeIssueNumberAscending)];
+
+	NSDictionary *parameters = filter.parameters;
+	NSInteger countToTest = 22;
+
+	XCTAssertNotNil(parameters, @"\"%s\" is expecting the variable 'parameters' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertEqual(parameters.allKeys.count, countToTest, @"\"%s\" is expecting the property 'count' of the variable 'parameters' to be the integer value %d.", __PRETTY_FUNCTION__, countToTest);
+}
+
+- (void)testPartialParameters
+{
+	RCComicsFilter *filter = [[RCComicsFilter alloc] init];
+
+	filter.format = RCFormatTypeCodeComic;
+	filter.digitalIdentifier = @1234;
+	filter.upc = @"TestUPC";
+	filter.issn = @"TestISSN";
+	filter.series = @[@"0", @"1", @"2"];
+	filter.sharedAppearances = @[@2, @4, @6];
+	filter.offset = @0;
+	filter.limit = @0;
+	filter.orderBy = @[@(RCOrderByTypeCodeIssueNumberDescending)];
+
+	NSDictionary *parameters = filter.parameters;
+	NSInteger countToTest = 9;
+
+	XCTAssertNotNil(parameters, @"\"%s\" is expecting the variable 'parameters' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertEqual(parameters.allKeys.count, countToTest, @"\"%s\" is expecting the property 'count' of the variable 'parameters' to be the integer value %d.", __PRETTY_FUNCTION__, countToTest);
+}
+
 - (void)testValidOrderTypes
 {
 	RCComicsFilter *filter = [[RCComicsFilter alloc] init];
