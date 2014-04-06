@@ -87,6 +87,15 @@
 			} else if (orderBy == RCOrderByTypeCodeStartYearAscending ||
 					   orderBy == RCOrderByTypeCodeStartYearDescending) {
 				string = RCOrderByTypeStartYear;
+			} else if (orderBy == RCOrderByTypeCodeFOCDateAscending ||
+					   orderBy == RCOrderByTypeCodeFOCDateDescending) {
+				string = RCOrderByTypeFOCDate;
+			} else if (orderBy == RCOrderByTypeCodeOnSaleDateAscending ||
+					   orderBy == RCOrderByTypeCodeOnSaleDateDescending) {
+				string = RCOrderByTypeOnSaleDate;
+			} else if (orderBy == RCOrderByTypeCodeIssueNumberAscending ||
+					   orderBy == RCOrderByTypeCodeIssueNumberDescending) {
+				string = RCOrderByTypeIssueNumber;
 			}
 
 			if ([self isDescendingOrderBy:orderBy]) {
@@ -122,7 +131,10 @@
 		   orderBy == RCOrderByTypeCodeTitleDescending ||
 		   orderBy == RCOrderByTypeCodeDateModifiedDescending ||
 		   orderBy == RCOrderByTypeCodeStartDateDescending ||
-		   orderBy == RCOrderByTypeCodeStartYearDescending;
+		   orderBy == RCOrderByTypeCodeStartYearDescending ||
+		   orderBy == RCOrderByTypeCodeFOCDateDescending ||
+		   orderBy == RCOrderByTypeCodeOnSaleDateDescending ||
+		   orderBy == RCOrderByTypeCodeIssueNumberDescending;
 }
 
 @end
