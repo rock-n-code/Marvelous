@@ -1,5 +1,5 @@
 //
-//  RCComicPrice.h
+//  RCComicPriceObject.h
 //  Marvelous
 //
 //  Created by Javier Cicchelli on 07/04/14.
@@ -8,7 +8,7 @@
 
 #import "RCObject.h"
 
-@interface RCComicPrice : RCObject
+@interface RCComicPriceObject : RCObject
 
 @property (nonatomic, readonly, strong) NSString *type;
 @property (nonatomic, readonly, strong) NSNumber *price;

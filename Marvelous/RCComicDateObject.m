@@ -1,21 +1,21 @@
 //
-//  RCComicDate.m
+//  RCComicDateObject.m
 //  Marvelous
 //
 //  Created by Javier Cicchelli on 07/04/14.
 //  Copyright (c) 2014 Rock & Code. All rights reserved.
 //
 
-#import "RCComicDate.h"
+#import "RCComicDateObject.h"
 
-@interface RCComicDate ()
+@interface RCComicDateObject ()
 
 @property (nonatomic, strong) NSString *type;
 @property (nonatomic, strong) NSDate *date;
 
 @end
 
-@implementation RCComicDate
+@implementation RCComicDateObject
 
 #pragma mark - RCObjectProtocol
 

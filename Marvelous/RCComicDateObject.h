@@ -1,5 +1,5 @@
 //
-//  RCComicDate.h
+//  RCComicDateObject.h
 //  Marvelous
 //
 //  Created by Javier Cicchelli on 07/04/14.
@@ -8,7 +8,7 @@
 
 #import "RCObject.h"
 
-@interface RCComicDate : RCObject
+@interface RCComicDateObject : RCObject
 
 @property (nonatomic, readonly, strong) NSString *type;
 @property (nonatomic, readonly, strong) NSDate *date;

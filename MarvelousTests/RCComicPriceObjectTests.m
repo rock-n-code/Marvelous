@@ -8,13 +8,13 @@
 
 #import <XCTest/XCTest.h>
 
-#import "RCComicPrice.h"
+#import "RCComicPriceObject.h"
 
-@interface RCComicPriceTests : XCTestCase
+@interface RCComicPriceObjectTests : XCTestCase
 
 @end
 
-@implementation RCComicPriceTests
+@implementation RCComicPriceObjectTests
 
 - (void)setUp
 {
@@ -28,7 +28,7 @@
 
 - (void)testInit
 {
-	RCComicPrice *comicPrice = [[RCComicPrice alloc] init];
+	RCComicPriceObject *comicPrice = [[RCComicPriceObject alloc] init];
 	
     XCTAssertNil(comicPrice.type, @"\"%s\" is expecting the property 'type' to be NULL.", __PRETTY_FUNCTION__);
 	XCTAssertNil(comicPrice.price, @"\"%s\" is expecting the property 'price' to be NULL.", __PRETTY_FUNCTION__);
@@ -39,7 +39,7 @@
 	NSDictionary *dictionary = @{RCResponseKeyType: @"TestType",
 								 RCResponseKeyPrice: @12.34};
 
-	RCComicPrice *comicPrice = [[RCComicPrice alloc] initWithDictionary:dictionary];
+	RCComicPriceObject *comicPrice = [[RCComicPriceObject alloc] initWithDictionary:dictionary];
 
 	XCTAssertNotNil(comicPrice.type, @"\"%s\" is expecting the property 'type' to be not NULL.", __PRETTY_FUNCTION__);
 	XCTAssertNotNil(comicPrice.price, @"\"%s\" is expecting the property 'price' to be not NULL.", __PRETTY_FUNCTION__);
