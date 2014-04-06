@@ -34,4 +34,15 @@
 	XCTAssertNil(comicDate.date, @"\"%s\" is expecting the property 'date' to be NULL.", __PRETTY_FUNCTION__);
 }
 
+- (void)testInitWithDictionary
+{
+	NSDictionary *dictionary = @{RCResponseKeyType: @"TestType",
+								 RCResponseKeyDate: @"2013-11-20T17:40:18-0500"};
+
+	RCComicDate *comicDate = [[RCComicDate alloc] initWithDictionary:dictionary];
+
+	XCTAssertNotNil(comicDate.type, @"\"%s\" is expecting the property 'type' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(comicDate.date, @"\"%s\" is expecting the property 'date' to be not NULL.", __PRETTY_FUNCTION__);
+}
+
 @end

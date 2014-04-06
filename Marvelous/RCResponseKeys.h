@@ -69,6 +69,7 @@ extern NSString * const RCResponseKeyType;
 extern NSString * const RCResponseKeyURL;
 extern NSString * const RCResponseKeyPath;
 extern NSString * const RCResponseKeyExtension;
+extern NSString * const RCResponseKeyDate;
 extern NSString * const RCResponseKeyPrice;
 extern NSString * const RCResponseKeyRole;
 extern NSString * const RCResponseKeyAvailable;
