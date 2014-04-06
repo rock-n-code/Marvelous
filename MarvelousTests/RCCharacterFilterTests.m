@@ -86,7 +86,7 @@
 	RCCharacterFilter *filter = [[RCCharacterFilter alloc] init];
 	NSInteger countToTest = 4;
 
-	XCTAssertEqual(filter.validOrderTypes.count, 4, @"\"%s\" is expecting the property 'count' of the property 'validOrderTypes' to be the integer value %d.", __PRETTY_FUNCTION__, countToTest);
+	XCTAssertEqual(filter.validOrderTypes.count, countToTest, @"\"%s\" is expecting the property 'count' of the property 'validOrderTypes' to be the integer value %d.", __PRETTY_FUNCTION__, countToTest);
 }
 
 - (void)testType

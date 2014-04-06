@@ -47,4 +47,19 @@
 	XCTAssertNotNil(filter.validOrderTypes, @"\"%s\" is expecting the property 'validOrderTypes' to be not NULL.", __PRETTY_FUNCTION__);
 }
 
+- (void)testValidOrderTypes
+{
+	RCSeriesFilter *filter = [[RCSeriesFilter alloc] init];
+	NSInteger countToTest = 6;
+
+	XCTAssertEqual(filter.validOrderTypes.count, countToTest, @"\"%s\" is expecting the property 'count' of the property 'validOrderTypes' to be the integer value %d.", __PRETTY_FUNCTION__, countToTest);
+}
+
+- (void)testType
+{
+	RCSeriesFilter *filter = [[RCSeriesFilter alloc] init];
+
+	XCTAssertEqual(filter.type, RCAPITypeSeries, @"\"%s\" is expecting the property 'type' to have the '%d' integer value.", __PRETTY_FUNCTION__, RCAPITypeSeries);
+}
+
 @end

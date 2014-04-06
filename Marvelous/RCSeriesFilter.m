@@ -14,4 +14,19 @@
 
 @implementation RCSeriesFilter
 
+- (NSArray *)validOrderTypes
+{
+	return @[@(RCOrderByTypeCodeTitleAscending),
+			 @(RCOrderByTypeCodeTitleDescending),
+			 @(RCOrderByTypeCodeDateModifiedAscending),
+			 @(RCOrderByTypeCodeDateModifiedDescending),
+			 @(RCOrderByTypeCodeStartYearAscending),
+			 @(RCOrderByTypeCodeStartYearDescending)];
+}
+
+- (RCAPITypes)type
+{
+	return RCAPITypeSeries;
+}
+
 @end
