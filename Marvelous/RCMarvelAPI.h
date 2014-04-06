@@ -7,10 +7,12 @@
 //
 
 #import "RCCharacterObject.h"
+#import "RCCreatorObject.h"
 #import "RCEventObject.h"
 #import "RCStoryObject.h"
 #import "RCQueryInfoObject.h"
 #import "RCCharacterFilter.h"
+#import "RCCreatorFilter.h"
 #import "RCEventFilter.h"
 #import "RCStoryFilter.h"
 
@@ -34,6 +36,7 @@ typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *inf
 - (void)eventByIdentifier:(NSNumber *)identifier andCompletionBlock:(resultCompletionBlock)completionBlock;
 - (void)eventsByFilter:(RCEventFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 - (void)eventsByCharacterIdentifier:(NSNumber *)identifier filter:(RCEventFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)eventsByCreatorIdentifier:(NSNumber *)identifier filter:(RCEventFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 - (void)eventsByStoryIdentifier:(NSNumber *)identifier filter:(RCEventFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 
 - (void)storyByIdentifier:(NSNumber *)identifier andCompletionBlock:(resultCompletionBlock)completionBlock;
