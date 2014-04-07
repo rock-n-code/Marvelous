@@ -39,7 +39,8 @@
 	XCTAssertNil(filter.stories, @"\"%s\" is expecting the property 'stories' to be NULL.", __PRETTY_FUNCTION__);
 	XCTAssertNil(filter.limit, @"\"%s\" is expecting the property 'limit' to be NULL.", __PRETTY_FUNCTION__);
     XCTAssertNil(filter.offset, @"\"%s\" is expecting the property 'offset' to be NULL.", __PRETTY_FUNCTION__);
-	XCTAssertEqual(filter.orderBy, RCOrderByTypeCodeUndefined, @"\"%s\" is expecting the property 'orderBy' to have the '%d' integer value.", __PRETTY_FUNCTION__, RCOrderByTypeCodeUndefined);
+	XCTAssertNil(filter.orderBy, @"\"%s\" is expecting the property 'orderBy' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(filter.validOrderTypes, @"\"%s\" is expecting the property 'validOrderTypes' to be not NULL.", __PRETTY_FUNCTION__);
 }
 
 - (void)testParameters
@@ -55,7 +56,7 @@
 	filter.stories = @[@"0", @"1", @"2"];
 	filter.offset = @0;
 	filter.limit = @0;
-	filter.orderBy = RCOrderByTypeCodeNameAscending;
+	filter.orderBy = @[@(RCOrderByTypeCodeNameAscending), @(RCOrderByTypeCodeDateModifiedAscending)];
 
 	NSDictionary *parameters = filter.parameters;
 	NSInteger countToTest = 10;
@@ -71,13 +72,21 @@
 	filter.name = @"TestName";
 	filter.limit = @0;
 	filter.series = @[@"0", @"1", @"2"];
-	filter.orderBy = RCOrderByTypeCodeNameDescending;
+	filter.orderBy = @[@(RCOrderByTypeCodeNameDescending)];
 
 	NSDictionary *parameters = filter.parameters;
 	NSInteger countToTest = 4;
 
 	XCTAssertNotNil(parameters, @"\"%s\" is expecting the variable 'parameters' to be not NULL.", __PRETTY_FUNCTION__);
 	XCTAssertEqual(parameters.allKeys.count, countToTest, @"\"%s\" is expecting the property 'count' of the variable 'parameters' to be the integer value %d.", __PRETTY_FUNCTION__, countToTest);
+}
+
+- (void)testValidOrderTypes
+{
+	RCCharacterFilter *filter = [[RCCharacterFilter alloc] init];
+	NSInteger countToTest = 4;
+
+	XCTAssertEqual(filter.validOrderTypes.count, countToTest, @"\"%s\" is expecting the property 'count' of the property 'validOrderTypes' to be the integer value %d.", __PRETTY_FUNCTION__, countToTest);
 }
 
 - (void)testType

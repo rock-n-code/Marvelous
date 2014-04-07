@@ -1,20 +1,20 @@
 //
-//  RCEventFilterTests.m
+//  RCCreatorFilterTests.m
 //  Marvelous
 //
-//  Created by Javier Cicchelli on 02/04/14.
+//  Created by Javier Cicchelli on 06/04/14.
 //  Copyright (c) 2014 Rock & Code. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-#import "RCEventFilter.h"
+#import "RCCreatorFilter.h"
 
-@interface RCEventFilterTests : XCTestCase
+@interface RCCreatorFilterTests : XCTestCase
 
 @end
 
-@implementation RCEventFilterTests
+@implementation RCCreatorFilterTests
 
 - (void)setUp
 {
@@ -28,15 +28,21 @@
 
 - (void)testInit
 {
-    RCEventFilter *filter = [[RCEventFilter alloc] init];
+    RCCreatorFilter *filter = [[RCCreatorFilter alloc] init];
 
-	XCTAssertNil(filter.name, @"\"%s\" is expecting the property 'name' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(filter.firstName, @"\"%s\" is expecting the property 'firstName' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(filter.middleName, @"\"%s\" is expecting the property 'middleName' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(filter.lastName, @"\"%s\" is expecting the property 'lastName' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(filter.suffix, @"\"%s\" is expecting the property 'suffix' to be NULL.", __PRETTY_FUNCTION__);
 	XCTAssertNil(filter.nameStartsWith, @"\"%s\" is expecting the property 'nameStartsWith' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(filter.firstNameStartsWith, @"\"%s\" is expecting the property 'firstNameStartsWith' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(filter.middleNameStartsWith, @"\"%s\" is expecting the property 'middleNameStartsWith' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(filter.lastNameStartsWith, @"\"%s\" is expecting the property 'lastNameStartsWith' to be NULL.", __PRETTY_FUNCTION__);
 	XCTAssertNil(filter.modifiedSince, @"\"%s\" is expecting the property 'modifiedSince' to be NULL.", __PRETTY_FUNCTION__);
 	XCTAssertNil(filter.comics, @"\"%s\" is expecting the property 'comics' to be NULL.", __PRETTY_FUNCTION__);
 	XCTAssertNil(filter.series, @"\"%s\" is expecting the property 'series' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(filter.events, @"\"%s\" is expecting the property 'events' to be NULL.", __PRETTY_FUNCTION__);
 	XCTAssertNil(filter.stories, @"\"%s\" is expecting the property 'stories' to be NULL.", __PRETTY_FUNCTION__);
-	XCTAssertNil(filter.creators, @"\"%s\" is expecting the property 'creators' to be NULL.", __PRETTY_FUNCTION__);
 	XCTAssertNil(filter.limit, @"\"%s\" is expecting the property 'limit' to be NULL.", __PRETTY_FUNCTION__);
     XCTAssertNil(filter.offset, @"\"%s\" is expecting the property 'offset' to be NULL.", __PRETTY_FUNCTION__);
 	XCTAssertNil(filter.orderBy, @"\"%s\" is expecting the property 'orderBy' to be NULL.", __PRETTY_FUNCTION__);
@@ -45,21 +51,27 @@
 
 - (void)testParameters
 {
-	RCEventFilter *filter = [[RCEventFilter alloc] init];
+	RCCreatorFilter *filter = [[RCCreatorFilter alloc] init];
 
-	filter.name = @"TestName";
+	filter.firstName = @"TestFistName";
+	filter.middleName = @"TestMiddleName";
+	filter.lastName = @"TestLastName";
+	filter.suffix = @"TestSuffix";
 	filter.nameStartsWith = @"TestNameStartsWith";
+	filter.firstNameStartsWith = @"TestFirstNameStartsWith";
+	filter.middleNameStartsWith = @"TestMiddleNameStartsWith";
+	filter.lastNameStartsWith = @"TestLastNameStartsWith";
 	filter.modifiedSince = [NSDate date];
 	filter.comics = @[@0, @1, @2];
 	filter.series = @[@"0", @"1", @"2"];
+	filter.events = @[@0, @1, @2];
 	filter.stories = @[@"0", @"1", @"2"];
-	filter.creators = @[@0, @1, @2];
 	filter.offset = @0;
 	filter.limit = @0;
-	filter.orderBy = @[@(RCOrderByTypeCodeNameAscending), @(RCOrderByTypeCodeStartDateDescending)];
+	filter.orderBy = @[@(RCOrderByTypeCodeDateModifiedAscending)];
 
 	NSDictionary *parameters = filter.parameters;
-	NSInteger countToTest = 10;
+	NSInteger countToTest = 16;
 
 	XCTAssertNotNil(parameters, @"\"%s\" is expecting the variable 'parameters' to be not NULL.", __PRETTY_FUNCTION__);
 	XCTAssertEqual(parameters.allKeys.count, countToTest, @"\"%s\" is expecting the property 'count' of the variable 'parameters' to be the integer value %d.", __PRETTY_FUNCTION__, countToTest);
@@ -67,15 +79,16 @@
 
 - (void)testPartialParameters
 {
-	RCEventFilter *filter = [[RCEventFilter alloc] init];
+	RCCreatorFilter *filter = [[RCCreatorFilter alloc] init];
 
-	filter.name = @"TestName";
-	filter.limit = @0;
+	filter.firstName = @"TestFirstName";
+	filter.lastNameStartsWith = @"TestLastNameStartsWith";
 	filter.series = @[@"0", @"1", @"2"];
-	filter.orderBy = @[@(RCOrderByTypeCodeNameDescending), @(RCOrderByTypeCodeDateModifiedAscending)];
+	filter.limit = @0;
+	filter.orderBy = @[@(RCOrderByTypeCodeDateModifiedDescending)];
 
 	NSDictionary *parameters = filter.parameters;
-	NSInteger countToTest = 4;
+	NSInteger countToTest = 5;
 
 	XCTAssertNotNil(parameters, @"\"%s\" is expecting the variable 'parameters' to be not NULL.", __PRETTY_FUNCTION__);
 	XCTAssertEqual(parameters.allKeys.count, countToTest, @"\"%s\" is expecting the property 'count' of the variable 'parameters' to be the integer value %d.", __PRETTY_FUNCTION__, countToTest);
@@ -83,17 +96,17 @@
 
 - (void)testValidOrderTypes
 {
-	RCEventFilter *filter = [[RCEventFilter alloc] init];
-	NSInteger countToTest = 6;
+	RCCreatorFilter *filter = [[RCCreatorFilter alloc] init];
+	NSInteger countToTest = 10;
 
 	XCTAssertEqual(filter.validOrderTypes.count, countToTest, @"\"%s\" is expecting the property 'count' of the property 'validOrderTypes' to be the integer value %d.", __PRETTY_FUNCTION__, countToTest);
 }
 
 - (void)testType
 {
-	RCEventFilter *filter = [[RCEventFilter alloc] init];
+	RCCreatorFilter *filter = [[RCCreatorFilter alloc] init];
 
-	XCTAssertEqual(filter.type, RCAPITypeEvents, @"\"%s\" is expecting the property 'type' to have the '%d' integer value.", __PRETTY_FUNCTION__, RCAPITypeEvents);
+	XCTAssertEqual(filter.type, RCAPITypeCreators, @"\"%s\" is expecting the property 'type' to have the '%d' integer value.", __PRETTY_FUNCTION__, RCAPITypeCreators);
 }
 
 @end

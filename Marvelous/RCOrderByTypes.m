@@ -8,6 +8,16 @@
 
 #import "RCOrderByTypes.h"
 
+NSString * const RCOrderByTypeIdentifier = @"id";
+NSString * const RCOrderByTypeFirstName = @"firstName";
+NSString * const RCOrderByTypeMiddleName = @"middleName";
+NSString * const RCOrderByTypeLastName = @"lastName";
+NSString * const RCOrderByTypeSuffix = @"suffix";
 NSString * const RCOrderByTypeName = @"name";
+NSString * const RCOrderByTypeTitle = @"title";
 NSString * const RCOrderByTypeDateModified = @"modified";
 NSString * const RCOrderByTypeStartDate = @"startDate";
+NSString * const RCOrderByTypeStartYear = @"startYear";
+NSString * const RCOrderByTypeFinalOrderCutoffDate = @"focDate";
+NSString * const RCOrderByTypeOnSaleDate = @"onsaleDate";
+NSString * const RCOrderByTypeIssueNumber = @"issueNumber";

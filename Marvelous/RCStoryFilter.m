@@ -1,32 +1,24 @@
 //
-//  RCCharacterFilter.m
+//  RCStoryFilter.m
 //  Marvelous
 //
-//  Created by Javier Cicchelli on 01/04/14.
+//  Created by Javier Cicchelli on 06/04/14.
 //  Copyright (c) 2014 Rock & Code. All rights reserved.
 //
 
-#import "RCCharacterFilter.h"
+#import "RCStoryFilter.h"
 
-@interface RCCharacterFilter ()
+@interface RCStoryFilter ()
 
 @end
 
-@implementation RCCharacterFilter
+@implementation RCStoryFilter
 
 #pragma mark - Properties
 
 - (NSDictionary *)parameters
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:super.parameters];
-
-	if (self.name) {
-		params[RCRequestKeyName] = self.name;
-	}
-
-	if (self.nameStartsWith) {
-		params[RCRequestKeyNameStartsWith] = self.nameStartsWith;
-	}
 
 	if (self.comics) {
 		params[RCRequestKeyComics] = [self.comics componentsJoinedByString:@","];
@@ -40,8 +32,12 @@
 		params[RCRequestKeyEvents] = [self.events componentsJoinedByString:@","];
 	}
 
-	if (self.stories) {
-		params[RCRequestKeyStories] = [self.stories componentsJoinedByString:@","];
+	if (self.creators) {
+		params[RCRequestKeyCreators] = [self.creators componentsJoinedByString:@","];
+	}
+
+	if (self.characters) {
+		params[RCRequestKeyCharacters] = [self.characters componentsJoinedByString:@","];
 	}
 
 	return params;
@@ -49,15 +45,15 @@
 
 - (NSArray *)validOrderTypes
 {
-	return @[@(RCOrderByTypeCodeNameAscending),
-			 @(RCOrderByTypeCodeNameDescending),
+	return @[@(RCOrderByTypeCodeIdentifierAscending),
+			 @(RCOrderByTypeCodeIdentifierDescending),
 			 @(RCOrderByTypeCodeDateModifiedAscending),
 			 @(RCOrderByTypeCodeDateModifiedDescending)];
 }
 
 - (RCAPITypes)type
 {
-	return RCAPITypeCharacters;
+	return RCAPITypeStories;
 }
 
 @end

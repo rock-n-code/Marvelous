@@ -12,7 +12,6 @@
 @interface RCFilter ()
 
 @property (nonatomic, readonly, strong) NSString *stringfiedOrderBy;
-@property (nonatomic, readonly) BOOL isOrderByDescending;
 
 @end
 
@@ -50,33 +49,64 @@
 
 - (NSString *)stringfiedOrderBy
 {
-	NSString *orderBy;
+	NSMutableArray *strings = [NSMutableArray array];
 
-	if (self.orderBy == RCOrderByTypeCodeNameAscending ||
-		self.orderBy == RCOrderByTypeCodeNameDescending) {
-		orderBy = RCOrderByTypeName;
-	} else if (self.orderBy == RCOrderByTypeCodeDateModifiedAscending ||
-			   self.orderBy == RCOrderByTypeCodeDateModifiedDescending) {
-		orderBy = RCOrderByTypeDateModified;
-	} else if (self.orderBy == RCOrderByTypeCodeStartDateAscending ||
-			   self.orderBy == RCOrderByTypeCodeStartDateDescending) {
-		return RCOrderByTypeStartDate;
-	} else {
-		return @"";
-	}
+	[self.orderBy enumerateObjectsUsingBlock:^(NSNumber *filter, NSUInteger index, BOOL *stop) {
+		if ([self.validOrderTypes containsObject:filter]) {
+			NSString *string = @"";
 
-	if (self.isOrderByDescending) {
-		orderBy = [@"-" stringByAppendingString:orderBy];
-	}
+			NSInteger orderBy = filter.integerValue;
 
-	return orderBy;
-}
+			if (orderBy == RCOrderByTypeCodeIdentifierAscending ||
+				orderBy == RCOrderByTypeCodeIdentifierDescending) {
+				string = RCOrderByTypeIdentifier;
+			} else if (orderBy == RCOrderByTypeCodeFirstNameAscending ||
+					   orderBy == RCOrderByTypeCodeFirstNameDescending) {
+				string = RCOrderByTypeFirstName;
+			} else if (orderBy == RCOrderByTypeCodeMiddleNameAscending ||
+						 orderBy == RCOrderByTypeCodeMiddleNameDescending) {
+				string = RCOrderByTypeMiddleName;
+			} else if (orderBy == RCOrderByTypeCodeLastNameAscending ||
+					   orderBy == RCOrderByTypeCodeLastNameDescending) {
+				string = RCOrderByTypeLastName;
+			} else if (orderBy == RCOrderByTypeCodeSuffixAscending ||
+					   orderBy == RCOrderByTypeCodeSuffixDescending) {
+				string = RCOrderByTypeSuffix;
+			} else if (orderBy == RCOrderByTypeCodeNameAscending ||
+					   orderBy == RCOrderByTypeCodeNameDescending) {
+				string = RCOrderByTypeName;
+			} else if (orderBy == RCOrderByTypeCodeTitleAscending ||
+					   orderBy == RCOrderByTypeCodeTitleDescending) {
+				string = RCOrderByTypeTitle;
+			} else if (orderBy == RCOrderByTypeCodeDateModifiedAscending ||
+					   orderBy == RCOrderByTypeCodeDateModifiedDescending) {
+				string = RCOrderByTypeDateModified;
+			} else if (orderBy == RCOrderByTypeCodeStartDateAscending ||
+					   orderBy == RCOrderByTypeCodeStartDateDescending) {
+				string = RCOrderByTypeStartDate;
+			} else if (orderBy == RCOrderByTypeCodeStartYearAscending ||
+					   orderBy == RCOrderByTypeCodeStartYearDescending) {
+				string = RCOrderByTypeStartYear;
+			} else if (orderBy == RCOrderByTypeCodeFinalOrderCutoffDateAscending ||
+					   orderBy == RCOrderByTypeCodeFinalOrderCutoffDateDescending) {
+				string = RCOrderByTypeFinalOrderCutoffDate;
+			} else if (orderBy == RCOrderByTypeCodeOnSaleDateAscending ||
+					   orderBy == RCOrderByTypeCodeOnSaleDateDescending) {
+				string = RCOrderByTypeOnSaleDate;
+			} else if (orderBy == RCOrderByTypeCodeIssueNumberAscending ||
+					   orderBy == RCOrderByTypeCodeIssueNumberDescending) {
+				string = RCOrderByTypeIssueNumber;
+			}
 
-- (BOOL)isOrderByDescending
-{
-	return self.orderBy == RCOrderByTypeCodeNameDescending ||
-		   self.orderBy == RCOrderByTypeCodeDateModifiedDescending ||
-		   self.orderBy == RCOrderByTypeCodeStartDateDescending;
+			if ([self isDescendingOrderBy:orderBy]) {
+				string = [@"-" stringByAppendingString:string];
+			}
+
+			[strings addObject:string];
+		}
+	}];
+
+	return [strings componentsJoinedByString:@","];
 }
 
 #pragma mark - Private methods
@@ -88,6 +118,23 @@
 	formatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ssZ";
 
 	return [formatter stringFromDate:date];
+}
+
+- (BOOL)isDescendingOrderBy:(NSInteger)orderBy
+{
+	return orderBy == RCOrderByTypeCodeIdentifierDescending ||
+		   orderBy == RCOrderByTypeCodeFirstNameDescending ||
+		   orderBy == RCOrderByTypeCodeMiddleNameDescending ||
+		   orderBy == RCOrderByTypeCodeLastNameDescending ||
+		   orderBy == RCOrderByTypeCodeSuffixDescending ||
+		   orderBy == RCOrderByTypeCodeNameDescending ||
+		   orderBy == RCOrderByTypeCodeTitleDescending ||
+		   orderBy == RCOrderByTypeCodeDateModifiedDescending ||
+		   orderBy == RCOrderByTypeCodeStartDateDescending ||
+		   orderBy == RCOrderByTypeCodeStartYearDescending ||
+		   orderBy == RCOrderByTypeCodeFinalOrderCutoffDateDescending ||
+		   orderBy == RCOrderByTypeCodeOnSaleDateDescending ||
+		   orderBy == RCOrderByTypeCodeIssueNumberDescending;
 }
 
 @end

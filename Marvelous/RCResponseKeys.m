@@ -71,6 +71,7 @@ NSString * const RCResponseKeyType = @"type";
 NSString * const RCResponseKeyURL = @"url";
 NSString * const RCResponseKeyPath = @"path";
 NSString * const RCResponseKeyExtension = @"extension";
+NSString * const RCResponseKeyDate = @"date";
 NSString * const RCResponseKeyPrice = @"price";
 NSString * const RCResponseKeyRole = @"role";
 NSString * const RCResponseKeyAvailable = @"available";
