@@ -664,19 +664,20 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 
 - (void)validateFilter:(RCFilter *)filter ofType:(RCAPITypes)type
 {
-	if (filter) {
-		return;
-	}
-
-	switch (type) {
-		case RCAPITypeCharacters:
+	if (!filter) {
+		if (type == RCAPITypeCharacters) {
 			filter = [[RCCharacterFilter alloc] init];
-		case RCAPITypeEvents:
+		} else if (type == RCAPITypeComics) {
+			filter = [[RCComicsFilter alloc] init];
+		} else if (type == RCAPITypeCreators) {
+			filter = [[RCCreatorFilter alloc] init];
+		} else if (type == RCAPITypeEvents) {
 			filter = [[RCEventFilter alloc] init];
-		case RCAPITypeStories:
+		} else if (type == RCAPITypeSeries) {
+			filter = [[RCSeriesFilter alloc] init];
+		} else {
 			filter = [[RCStoryFilter alloc] init];
-		default:
-			filter = nil;
+		}
 	}
 }
 
