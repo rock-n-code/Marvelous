@@ -373,6 +373,31 @@
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
+- (void)testEventsByComicIdentifierFilterAndCompletionBlock
+{
+	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
+}
+
+- (void)testEventsByInvalidComicIdentifierFilterAndCompletionBlock
+{
+	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
+}
+
+- (void)testEventsByNilComicIdentifierFilterAndCompletionBlock
+{
+	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
+}
+
+- (void)testEventsByComicIdentifierBadFilterAndCompletionBlock
+{
+	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
+}
+
+- (void)testEventsByComicIdentifierNilFilterAndCompletionBlock
+{
+	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
+}
+
 - (void)testEventsByCreatorIdentifierFilterAndCompletionBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
