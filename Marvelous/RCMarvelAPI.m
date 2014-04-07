@@ -110,6 +110,20 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 	[self.queue addOperation:operation];
 }
 
+- (void)charactersByComicIdentifier:(NSNumber *)identifier filter:(RCCharacterFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
+{
+	[self validateFilter:filter ofType:RCAPITypeCharacters];
+
+	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
+	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeComics identifier:stringfiedIdentifier filter:filter andAuthentication:self.authParameters];
+
+	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		[self sendResultsToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
+	};
+
+	[self.queue addOperation:operation];
+}
+
 - (void)charactersByEventIdentifier:(NSNumber *)identifier filter:(RCCharacterFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
 {
 	[self validateFilter:filter ofType:RCAPITypeCharacters];
