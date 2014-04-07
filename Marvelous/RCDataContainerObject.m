@@ -8,6 +8,7 @@
 
 #import "RCDataContainerObject.h"
 #import "RCCharacterObject.h"
+#import "RCComicsObject.h"
 #import "RCCreatorObject.h"
 #import "RCEventObject.h"
 #import "RCSeriesObject.h"
@@ -54,6 +55,8 @@
 
 		if (type == RCAPITypeCharacters) {
 			result = [[RCCharacterObject alloc] initWithDictionary:dictionary];
+		} else if (type == RCAPITypeComics) {
+			result = [[RCComicsObject alloc] initWithDictionary:dictionary];
 		} else if (type == RCAPITypeCreators) {
 			result = [[RCCreatorObject alloc] initWithDictionary:dictionary];
 		} else if (type == RCAPITypeEvents) {
