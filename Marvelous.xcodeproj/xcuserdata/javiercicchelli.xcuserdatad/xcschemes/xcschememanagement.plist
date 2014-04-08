@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>MarvelousUniversal.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>03C81A5018F497BD00D84C0C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>03DEC83B18E736730098CCE1</key>
 		<dict>
 			<key>primary</key>
