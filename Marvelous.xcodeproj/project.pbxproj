@@ -6,6 +6,19 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		03C81A5018F497BD00D84C0C /* MarvelousUniversal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 03C81A5318F497BD00D84C0C /* Build configuration list for PBXAggregateTarget "MarvelousUniversal" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = MarvelousUniversal;
+			productName = MarvelousUniversal;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		03B6951618E941EB00CEF855 /* XCTest+Async.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B6951518E941EB00CEF855 /* XCTest+Async.m */; };
 		03DEC84018E736730098CCE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC83F18E736730098CCE1 /* Foundation.framework */; };
@@ -203,6 +216,7 @@
 			targets = (
 				03DEC83B18E736730098CCE1 /* Marvelous */,
 				03DEC84B18E736740098CCE1 /* MarvelousTests */,
+				03C81A5018F497BD00D84C0C /* MarvelousUniversal */,
 			);
 		};
 /* End PBXProject section */
@@ -256,6 +270,20 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		03C81A5118F497BD00D84C0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		03C81A5218F497BD00D84C0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		03DEC85D18E736740098CCE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -386,6 +414,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		03C81A5318F497BD00D84C0C /* Build configuration list for PBXAggregateTarget "MarvelousUniversal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03C81A5118F497BD00D84C0C /* Debug */,
+				03C81A5218F497BD00D84C0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		03DEC83718E736730098CCE1 /* Build configuration list for PBXProject "Marvelous" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
