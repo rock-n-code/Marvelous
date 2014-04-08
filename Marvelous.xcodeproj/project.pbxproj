@@ -23,13 +23,9 @@
 /* Begin PBXBuildFile section */
 		03B6951618E941EB00CEF855 /* XCTest+Async.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B6951518E941EB00CEF855 /* XCTest+Async.m */; };
 		03C81A8B18F4BC4C00D84C0C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C81A8A18F4BC4C00D84C0C /* Cocoa.framework */; };
-		03C81A9518F4BC4C00D84C0C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03C81A9318F4BC4C00D84C0C /* InfoPlist.strings */; };
-		03C81A9918F4BC4C00D84C0C /* MarvelousOSX.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C81A9818F4BC4C00D84C0C /* MarvelousOSX.m */; };
 		03C81A9F18F4BC4C00D84C0C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC84D18E736740098CCE1 /* XCTest.framework */; };
 		03C81AA018F4BC4C00D84C0C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C81A8A18F4BC4C00D84C0C /* Cocoa.framework */; };
 		03C81AA318F4BC4C00D84C0C /* MarvelousOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C81A8918F4BC4C00D84C0C /* MarvelousOSX.framework */; };
-		03C81AA918F4BC4C00D84C0C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03C81AA718F4BC4C00D84C0C /* InfoPlist.strings */; };
-		03C81AAB18F4BC4C00D84C0C /* MarvelousOSXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C81AAA18F4BC4C00D84C0C /* MarvelousOSXTests.m */; };
 		03DEC84018E736730098CCE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC83F18E736730098CCE1 /* Foundation.framework */; };
 		03DEC84518E736740098CCE1 /* Marvelous.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03DEC84418E736740098CCE1 /* Marvelous.h */; };
 		03DEC84E18E736740098CCE1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC84D18E736740098CCE1 /* XCTest.framework */; };
@@ -77,15 +73,7 @@
 		03C81A8D18F4BC4C00D84C0C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		03C81A8E18F4BC4C00D84C0C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		03C81A8F18F4BC4C00D84C0C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		03C81A9218F4BC4C00D84C0C /* MarvelousOSX-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MarvelousOSX-Info.plist"; sourceTree = "<group>"; };
-		03C81A9418F4BC4C00D84C0C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		03C81A9618F4BC4C00D84C0C /* MarvelousOSX-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MarvelousOSX-Prefix.pch"; sourceTree = "<group>"; };
-		03C81A9718F4BC4C00D84C0C /* MarvelousOSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarvelousOSX.h; sourceTree = "<group>"; };
-		03C81A9818F4BC4C00D84C0C /* MarvelousOSX.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarvelousOSX.m; sourceTree = "<group>"; };
 		03C81A9E18F4BC4C00D84C0C /* MarvelousOSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelousOSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		03C81AA618F4BC4C00D84C0C /* MarvelousOSXTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MarvelousOSXTests-Info.plist"; sourceTree = "<group>"; };
-		03C81AA818F4BC4C00D84C0C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		03C81AAA18F4BC4C00D84C0C /* MarvelousOSXTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarvelousOSXTests.m; sourceTree = "<group>"; };
 		03DEC83C18E736730098CCE1 /* libMarvelous.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMarvelous.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		03DEC83F18E736730098CCE1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		03DEC84318E736740098CCE1 /* Marvelous-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Marvelous-Prefix.pch"; sourceTree = "<group>"; };
@@ -147,51 +135,11 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		03C81A9018F4BC4C00D84C0C /* MarvelousOSX */ = {
-			isa = PBXGroup;
-			children = (
-				03C81A9718F4BC4C00D84C0C /* MarvelousOSX.h */,
-				03C81A9818F4BC4C00D84C0C /* MarvelousOSX.m */,
-				03C81A9118F4BC4C00D84C0C /* Supporting Files */,
-			);
-			path = MarvelousOSX;
-			sourceTree = "<group>";
-		};
-		03C81A9118F4BC4C00D84C0C /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				03C81A9218F4BC4C00D84C0C /* MarvelousOSX-Info.plist */,
-				03C81A9318F4BC4C00D84C0C /* InfoPlist.strings */,
-				03C81A9618F4BC4C00D84C0C /* MarvelousOSX-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		03C81AA418F4BC4C00D84C0C /* MarvelousOSXTests */ = {
-			isa = PBXGroup;
-			children = (
-				03C81AAA18F4BC4C00D84C0C /* MarvelousOSXTests.m */,
-				03C81AA518F4BC4C00D84C0C /* Supporting Files */,
-			);
-			path = MarvelousOSXTests;
-			sourceTree = "<group>";
-		};
-		03C81AA518F4BC4C00D84C0C /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				03C81AA618F4BC4C00D84C0C /* MarvelousOSXTests-Info.plist */,
-				03C81AA718F4BC4C00D84C0C /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		03DEC83318E736730098CCE1 = {
 			isa = PBXGroup;
 			children = (
 				03DEC84118E736730098CCE1 /* Marvelous */,
 				03DEC85518E736740098CCE1 /* MarvelousTests */,
-				03C81A9018F4BC4C00D84C0C /* MarvelousOSX */,
-				03C81AA418F4BC4C00D84C0C /* MarvelousOSXTests */,
 				03DEC83E18E736730098CCE1 /* Frameworks */,
 				03DEC83D18E736730098CCE1 /* Products */,
 			);
@@ -384,7 +332,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03C81A9518F4BC4C00D84C0C /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,7 +339,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03C81AA918F4BC4C00D84C0C /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,7 +373,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03C81A9918F4BC4C00D84C0C /* MarvelousOSX.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,7 +380,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03C81AAB18F4BC4C00D84C0C /* MarvelousOSXTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,22 +414,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		03C81A9318F4BC4C00D84C0C /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				03C81A9418F4BC4C00D84C0C /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		03C81AA718F4BC4C00D84C0C /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				03C81AA818F4BC4C00D84C0C /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		03DEC85818E736740098CCE1 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -757,6 +685,7 @@
 				03C81AAD18F4BC4C00D84C0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		03C81AB118F4BC4C00D84C0C /* Build configuration list for PBXNativeTarget "MarvelousOSXTests" */ = {
 			isa = XCConfigurationList;
@@ -765,6 +694,7 @@
 				03C81AAF18F4BC4C00D84C0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		03DEC83718E736730098CCE1 /* Build configuration list for PBXProject "Marvelous" */ = {
 			isa = XCConfigurationList;
