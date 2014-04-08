@@ -18,6 +18,7 @@
 #import <Marvelous/RCStoryFilter.h>
 
 // Objects
+#import <Marvelous/RCQueryInfoObject.h>
 #import <Marvelous/RCCharacterObject.h>
 #import <Marvelous/RCComicsObject.h>
 #import <Marvelous/RCCreatorObject.h>
