@@ -12,7 +12,6 @@
 		03DEC84518E736740098CCE1 /* Marvelous.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03DEC84418E736740098CCE1 /* Marvelous.h */; };
 		03DEC84E18E736740098CCE1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC84D18E736740098CCE1 /* XCTest.framework */; };
 		03DEC84F18E736740098CCE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC83F18E736730098CCE1 /* Foundation.framework */; };
-		03DEC85118E736740098CCE1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC85018E736740098CCE1 /* UIKit.framework */; };
 		03DEC85418E736740098CCE1 /* libMarvelous.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC83C18E736730098CCE1 /* libMarvelous.a */; };
 		03DEC85A18E736740098CCE1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03DEC85818E736740098CCE1 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
@@ -69,9 +68,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				03DEC84E18E736740098CCE1 /* XCTest.framework in Frameworks */,
-				03DEC85118E736740098CCE1 /* UIKit.framework in Frameworks */,
-				03DEC85418E736740098CCE1 /* libMarvelous.a in Frameworks */,
 				03DEC84F18E736740098CCE1 /* Foundation.framework in Frameworks */,
+				03DEC85418E736740098CCE1 /* libMarvelous.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
