@@ -118,6 +118,10 @@
 		03C81A4718F4834900D84C0C /* RCSummaryObject.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03130D2818E974C300BD315F /* RCSummaryObject.h */; };
 		03C81A4918F4836100D84C0C /* RCURLObject.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03130D3318E9786A00BD315F /* RCURLObject.h */; };
 		03C81A5518F4B7F900D84C0C /* RCQueryInfoObject.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03130D4118EAD15100BD315F /* RCQueryInfoObject.h */; };
+		03C81A9F18F4BC4C00D84C0C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC84D18E736740098CCE1 /* XCTest.framework */; };
+		03C81AA318F4BC4C00D84C0C /* Marvelous.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C81A8918F4BC4C00D84C0C /* Marvelous.framework */; };
+		03C81AB418F4BFC900D84C0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC83F18E736730098CCE1 /* Foundation.framework */; };
+		03C81AB518F4C12F00D84C0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC83F18E736730098CCE1 /* Foundation.framework */; };
 		03DEC84018E736730098CCE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC83F18E736730098CCE1 /* Foundation.framework */; };
 		03DEC84518E736740098CCE1 /* Marvelous.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03DEC84418E736740098CCE1 /* Marvelous.h */; };
 		03DEC84E18E736740098CCE1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC84D18E736740098CCE1 /* XCTest.framework */; };
@@ -127,6 +131,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		03C81AA118F4BC4C00D84C0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03DEC83418E736730098CCE1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03C81A8818F4BC4C00D84C0C;
+			remoteInfo = MarvelousOSX;
+		};
 		03DEC85218E736740098CCE1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 03DEC83418E736730098CCE1 /* Project object */;
@@ -300,18 +311,37 @@
 		03B694FF18E77B3500CEF855 /* RCAPIOperationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCAPIOperationTests.m; sourceTree = "<group>"; };
 		03B6951418E941EB00CEF855 /* XCTest+Async.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTest+Async.h"; sourceTree = "<group>"; };
 		03B6951518E941EB00CEF855 /* XCTest+Async.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCTest+Async.m"; sourceTree = "<group>"; };
+		03C81A8918F4BC4C00D84C0C /* Marvelous.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Marvelous.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		03C81A9E18F4BC4C00D84C0C /* MarvelousOSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelousOSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03DEC83C18E736730098CCE1 /* libMarvelous.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMarvelous.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		03DEC83F18E736730098CCE1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		03DEC84318E736740098CCE1 /* Marvelous-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Marvelous-Prefix.pch"; sourceTree = "<group>"; };
 		03DEC84418E736740098CCE1 /* Marvelous.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Marvelous.h; sourceTree = "<group>"; };
 		03DEC84C18E736740098CCE1 /* MarvelousTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelousTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03DEC84D18E736740098CCE1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		03DEC85018E736740098CCE1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		03DEC85718E736740098CCE1 /* MarvelousTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MarvelousTests-Info.plist"; sourceTree = "<group>"; };
 		03DEC85918E736740098CCE1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		03C81A8518F4BC4C00D84C0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03C81AB418F4BFC900D84C0C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03C81A9B18F4BC4C00D84C0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03C81AB518F4C12F00D84C0C /* Foundation.framework in Frameworks */,
+				03C81A9F18F4BC4C00D84C0C /* XCTest.framework in Frameworks */,
+				03C81AA318F4BC4C00D84C0C /* Marvelous.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		03DEC83918E736730098CCE1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -551,6 +581,8 @@
 			children = (
 				03DEC83C18E736730098CCE1 /* libMarvelous.a */,
 				03DEC84C18E736740098CCE1 /* MarvelousTests.xctest */,
+				03C81A8918F4BC4C00D84C0C /* Marvelous.framework */,
+				03C81A9E18F4BC4C00D84C0C /* MarvelousOSXTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -560,7 +592,6 @@
 			children = (
 				03DEC83F18E736730098CCE1 /* Foundation.framework */,
 				03DEC84D18E736740098CCE1 /* XCTest.framework */,
-				03DEC85018E736740098CCE1 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -593,8 +624,6 @@
 		03DEC85518E736740098CCE1 /* MarvelousTests */ = {
 			isa = PBXGroup;
 			children = (
-				03B6951418E941EB00CEF855 /* XCTest+Async.h */,
-				03B6951518E941EB00CEF855 /* XCTest+Async.m */,
 				03B694D918E73E4600CEF855 /* APIs */,
 				03B694F118E7748D00CEF855 /* Operations */,
 				03130D4A18EADFC900BD315F /* Filters */,
@@ -616,7 +645,53 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		03C81A8618F4BC4C00D84C0C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		03C81A8818F4BC4C00D84C0C /* MarvelousOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03C81AB018F4BC4C00D84C0C /* Build configuration list for PBXNativeTarget "MarvelousOSX" */;
+			buildPhases = (
+				03C81A8418F4BC4C00D84C0C /* Sources */,
+				03C81A8518F4BC4C00D84C0C /* Frameworks */,
+				03C81A8618F4BC4C00D84C0C /* Headers */,
+				03C81A8718F4BC4C00D84C0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MarvelousOSX;
+			productName = MarvelousOSX;
+			productReference = 03C81A8918F4BC4C00D84C0C /* Marvelous.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		03C81A9D18F4BC4C00D84C0C /* MarvelousOSXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03C81AB118F4BC4C00D84C0C /* Build configuration list for PBXNativeTarget "MarvelousOSXTests" */;
+			buildPhases = (
+				03C81A9A18F4BC4C00D84C0C /* Sources */,
+				03C81A9B18F4BC4C00D84C0C /* Frameworks */,
+				03C81A9C18F4BC4C00D84C0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03C81AA218F4BC4C00D84C0C /* PBXTargetDependency */,
+			);
+			name = MarvelousOSXTests;
+			productName = MarvelousOSXTests;
+			productReference = 03C81A9E18F4BC4C00D84C0C /* MarvelousOSXTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		03DEC83B18E736730098CCE1 /* Marvelous */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03DEC85F18E736740098CCE1 /* Build configuration list for PBXNativeTarget "Marvelous" */;
@@ -660,6 +735,14 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Rock & Code";
+				TargetAttributes = {
+					03C81A9D18F4BC4C00D84C0C = {
+						TestTargetID = 03C81A8818F4BC4C00D84C0C;
+					};
+					03DEC84B18E736740098CCE1 = {
+						TestTargetID = 03C81A8818F4BC4C00D84C0C;
+					};
+				};
 			};
 			buildConfigurationList = 03DEC83718E736730098CCE1 /* Build configuration list for PBXProject "Marvelous" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -674,13 +757,29 @@
 			projectRoot = "";
 			targets = (
 				03DEC83B18E736730098CCE1 /* Marvelous */,
+				03C81A8818F4BC4C00D84C0C /* MarvelousOSX */,
 				03DEC84B18E736740098CCE1 /* MarvelousTests */,
+				03C81A9D18F4BC4C00D84C0C /* MarvelousOSXTests */,
 				03C81A5018F497BD00D84C0C /* MarvelousUniversal */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		03C81A8718F4BC4C00D84C0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03C81A9C18F4BC4C00D84C0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		03DEC84A18E736740098CCE1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -708,6 +807,20 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		03C81A8418F4BC4C00D84C0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03C81A9A18F4BC4C00D84C0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		03DEC83818E736730098CCE1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -792,6 +905,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		03C81AA218F4BC4C00D84C0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03C81A8818F4BC4C00D84C0C /* MarvelousOSX */;
+			targetProxy = 03C81AA118F4BC4C00D84C0C /* PBXContainerItemProxy */;
+		};
 		03DEC85318E736740098CCE1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 03DEC83B18E736730098CCE1 /* Marvelous */;
@@ -822,6 +940,97 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		03C81AAC18F4BC4C00D84C0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Marvelous/Marvelous-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				INFOPLIST_FILE = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = Marvelous;
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		03C81AAD18F4BC4C00D84C0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Marvelous/Marvelous-Prefix.pch";
+				INFOPLIST_FILE = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = Marvelous;
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		03C81AAE18F4BC4C00D84C0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MarvelousOSX.framework/Versions/A/MarvelousOSX";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Marvelous/Marvelous-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				INFOPLIST_FILE = "MarvelousTests/MarvelousTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		03C81AAF18F4BC4C00D84C0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MarvelousOSX.framework/Versions/A/MarvelousOSX";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Marvelous/Marvelous-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				INFOPLIST_FILE = "MarvelousTests/MarvelousTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -922,6 +1131,7 @@
 		03DEC86318E736740098CCE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MarvelousOSX.framework/Versions/A/MarvelousOSX";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -932,6 +1142,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = "MarvelousTests/MarvelousTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -939,6 +1150,7 @@
 		03DEC86418E736740098CCE1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MarvelousOSX.framework/Versions/A/MarvelousOSX";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -948,6 +1160,7 @@
 				GCC_PREFIX_HEADER = "Marvelous/Marvelous-Prefix.pch";
 				INFOPLIST_FILE = "MarvelousTests/MarvelousTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
@@ -960,6 +1173,24 @@
 			buildConfigurations = (
 				03C81A5118F497BD00D84C0C /* Debug */,
 				03C81A5218F497BD00D84C0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03C81AB018F4BC4C00D84C0C /* Build configuration list for PBXNativeTarget "MarvelousOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03C81AAC18F4BC4C00D84C0C /* Debug */,
+				03C81AAD18F4BC4C00D84C0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03C81AB118F4BC4C00D84C0C /* Build configuration list for PBXNativeTarget "MarvelousOSXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03C81AAE18F4BC4C00D84C0C /* Debug */,
+				03C81AAF18F4BC4C00D84C0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
