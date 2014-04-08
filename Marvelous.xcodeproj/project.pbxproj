@@ -11,6 +11,7 @@
 			isa = PBXAggregateTarget;
 			buildConfigurationList = 03C81A5318F497BD00D84C0C /* Build configuration list for PBXAggregateTarget "MarvelousUniversal" */;
 			buildPhases = (
+				03C81A5418F4980A00D84C0C /* ShellScript */,
 			);
 			dependencies = (
 			);
@@ -688,6 +689,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		03C81A5418F4980A00D84C0C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		03DEC83818E736730098CCE1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -943,6 +960,7 @@
 				03C81A5218F497BD00D84C0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		03DEC83718E736730098CCE1 /* Build configuration list for PBXProject "Marvelous" */ = {
 			isa = XCConfigurationList;
