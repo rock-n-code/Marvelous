@@ -22,10 +22,10 @@
 
 /* Begin PBXBuildFile section */
 		03B6951618E941EB00CEF855 /* XCTest+Async.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B6951518E941EB00CEF855 /* XCTest+Async.m */; };
-		03C81A8B18F4BC4C00D84C0C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C81A8A18F4BC4C00D84C0C /* Cocoa.framework */; };
 		03C81A9F18F4BC4C00D84C0C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC84D18E736740098CCE1 /* XCTest.framework */; };
-		03C81AA018F4BC4C00D84C0C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C81A8A18F4BC4C00D84C0C /* Cocoa.framework */; };
-		03C81AA318F4BC4C00D84C0C /* MarvelousOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C81A8918F4BC4C00D84C0C /* MarvelousOSX.framework */; };
+		03C81AA318F4BC4C00D84C0C /* Marvelous.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C81A8918F4BC4C00D84C0C /* Marvelous.framework */; };
+		03C81AB418F4BFC900D84C0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC83F18E736730098CCE1 /* Foundation.framework */; };
+		03C81AB518F4C12F00D84C0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC83F18E736730098CCE1 /* Foundation.framework */; };
 		03DEC84018E736730098CCE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC83F18E736730098CCE1 /* Foundation.framework */; };
 		03DEC84518E736740098CCE1 /* Marvelous.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03DEC84418E736740098CCE1 /* Marvelous.h */; };
 		03DEC84E18E736740098CCE1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC84D18E736740098CCE1 /* XCTest.framework */; };
@@ -68,11 +68,7 @@
 		031B986118EE9FDE00CE30DE /* APIDocs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = APIDocs.json; sourceTree = SOURCE_ROOT; };
 		03B6951418E941EB00CEF855 /* XCTest+Async.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTest+Async.h"; sourceTree = "<group>"; };
 		03B6951518E941EB00CEF855 /* XCTest+Async.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCTest+Async.m"; sourceTree = "<group>"; };
-		03C81A8918F4BC4C00D84C0C /* MarvelousOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MarvelousOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		03C81A8A18F4BC4C00D84C0C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		03C81A8D18F4BC4C00D84C0C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		03C81A8E18F4BC4C00D84C0C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		03C81A8F18F4BC4C00D84C0C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		03C81A8918F4BC4C00D84C0C /* Marvelous.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Marvelous.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		03C81A9E18F4BC4C00D84C0C /* MarvelousOSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelousOSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03DEC83C18E736730098CCE1 /* libMarvelous.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMarvelous.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		03DEC83F18E736730098CCE1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -80,7 +76,6 @@
 		03DEC84418E736740098CCE1 /* Marvelous.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Marvelous.h; sourceTree = "<group>"; };
 		03DEC84C18E736740098CCE1 /* MarvelousTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelousTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03DEC84D18E736740098CCE1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		03DEC85018E736740098CCE1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		03DEC85718E736740098CCE1 /* MarvelousTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MarvelousTests-Info.plist"; sourceTree = "<group>"; };
 		03DEC85918E736740098CCE1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,7 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03C81A8B18F4BC4C00D84C0C /* Cocoa.framework in Frameworks */,
+				03C81AB418F4BFC900D84C0C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,9 +93,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03C81AA018F4BC4C00D84C0C /* Cocoa.framework in Frameworks */,
+				03C81AB518F4C12F00D84C0C /* Foundation.framework in Frameworks */,
 				03C81A9F18F4BC4C00D84C0C /* XCTest.framework in Frameworks */,
-				03C81AA318F4BC4C00D84C0C /* MarvelousOSX.framework in Frameworks */,
+				03C81AA318F4BC4C00D84C0C /* Marvelous.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,16 +120,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		03C81A8C18F4BC4C00D84C0C /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				03C81A8D18F4BC4C00D84C0C /* Foundation.framework */,
-				03C81A8E18F4BC4C00D84C0C /* CoreData.framework */,
-				03C81A8F18F4BC4C00D84C0C /* AppKit.framework */,
-			);
-			name = "Other Frameworks";
-			sourceTree = "<group>";
-		};
 		03DEC83318E736730098CCE1 = {
 			isa = PBXGroup;
 			children = (
@@ -150,7 +135,7 @@
 			children = (
 				03DEC83C18E736730098CCE1 /* libMarvelous.a */,
 				03DEC84C18E736740098CCE1 /* MarvelousTests.xctest */,
-				03C81A8918F4BC4C00D84C0C /* MarvelousOSX.framework */,
+				03C81A8918F4BC4C00D84C0C /* Marvelous.framework */,
 				03C81A9E18F4BC4C00D84C0C /* MarvelousOSXTests.xctest */,
 			);
 			name = Products;
@@ -161,9 +146,6 @@
 			children = (
 				03DEC83F18E736730098CCE1 /* Foundation.framework */,
 				03DEC84D18E736740098CCE1 /* XCTest.framework */,
-				03DEC85018E736740098CCE1 /* UIKit.framework */,
-				03C81A8A18F4BC4C00D84C0C /* Cocoa.framework */,
-				03C81A8C18F4BC4C00D84C0C /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -233,7 +215,7 @@
 			);
 			name = MarvelousOSX;
 			productName = MarvelousOSX;
-			productReference = 03C81A8918F4BC4C00D84C0C /* MarvelousOSX.framework */;
+			productReference = 03C81A8918F4BC4C00D84C0C /* Marvelous.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		03C81A9D18F4BC4C00D84C0C /* MarvelousOSXTests */ = {
@@ -452,14 +434,11 @@
 				FRAMEWORK_VERSION = A;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MarvelousOSX/MarvelousOSX-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "MarvelousOSX/MarvelousOSX-Info.plist";
+				GCC_PREFIX_HEADER = "Marvelous/Marvelous-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				INFOPLIST_FILE = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Marvelous;
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -479,10 +458,10 @@
 				FRAMEWORK_VERSION = A;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MarvelousOSX/MarvelousOSX-Prefix.pch";
-				INFOPLIST_FILE = "MarvelousOSX/MarvelousOSX-Info.plist";
+				GCC_PREFIX_HEADER = "Marvelous/Marvelous-Prefix.pch";
+				INFOPLIST_FILE = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Marvelous;
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -499,12 +478,9 @@
 				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MarvelousOSX/MarvelousOSX-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "MarvelousOSXTests/MarvelousOSXTests-Info.plist";
+				GCC_PREFIX_HEADER = "Marvelous/Marvelous-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				INFOPLIST_FILE = "MarvelousTests/MarvelousTests-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -525,8 +501,9 @@
 				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MarvelousOSX/MarvelousOSX-Prefix.pch";
-				INFOPLIST_FILE = "MarvelousOSXTests/MarvelousOSXTests-Info.plist";
+				GCC_PREFIX_HEADER = "Marvelous/Marvelous-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				INFOPLIST_FILE = "MarvelousTests/MarvelousTests-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
