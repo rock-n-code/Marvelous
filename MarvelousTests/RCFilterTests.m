@@ -48,7 +48,7 @@
 {
 	RCFilter *filter = [[RCFilter alloc] init];
 
-	XCTAssertEqual(filter.type, RCAPITypeUndefined, @"\"%s\" is expecting the property 'type' to have the '%d' integer value.", __PRETTY_FUNCTION__, RCAPITypeUndefined);
+	XCTAssertEqual(filter.type, RCAPITypeUndefined, @"\"%s\" is expecting the property 'type' to have the '%ld' integer value.", __PRETTY_FUNCTION__, (long)RCAPITypeUndefined);
 }
 
 @end
