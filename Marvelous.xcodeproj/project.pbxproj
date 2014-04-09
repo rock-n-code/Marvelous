@@ -992,7 +992,7 @@
 		03C81AAE18F4BC4C00D84C0C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MarvelousOSX.framework/Versions/A/MarvelousOSX";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Marvelous.framework/Versions/A/Marvelous";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -1014,7 +1014,7 @@
 		03C81AAF18F4BC4C00D84C0C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MarvelousOSX.framework/Versions/A/MarvelousOSX";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Marvelous.framework/Versions/A/Marvelous";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1131,7 +1131,7 @@
 		03DEC86318E736740098CCE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MarvelousOSX.framework/Versions/A/MarvelousOSX";
+				BUNDLE_LOADER = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1150,7 +1150,7 @@
 		03DEC86418E736740098CCE1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MarvelousOSX.framework/Versions/A/MarvelousOSX";
+				BUNDLE_LOADER = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
