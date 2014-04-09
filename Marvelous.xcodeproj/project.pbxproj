@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		03C81A5018F497BD00D84C0C /* MarvelousUniversal */ = {
+		03C81A5018F497BD00D84C0C /* MarvelousLibrary */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 03C81A5318F497BD00D84C0C /* Build configuration list for PBXAggregateTarget "MarvelousUniversal" */;
+			buildConfigurationList = 03C81A5318F497BD00D84C0C /* Build configuration list for PBXAggregateTarget "MarvelousLibrary" */;
 			buildPhases = (
 				03C81A5418F4980A00D84C0C /* ShellScript */,
 			);
 			dependencies = (
 			);
-			name = MarvelousUniversal;
+			name = MarvelousLibrary;
 			productName = MarvelousUniversal;
 		};
 /* End PBXAggregateTarget section */
@@ -300,7 +300,7 @@
 				03C81A8818F4BC4C00D84C0C /* MarvelousOSX */,
 				03DEC84B18E736740098CCE1 /* MarvelousTests */,
 				03C81A9D18F4BC4C00D84C0C /* MarvelousOSXTests */,
-				03C81A5018F497BD00D84C0C /* MarvelousUniversal */,
+				03C81A5018F497BD00D84C0C /* MarvelousLibrary */,
 			);
 		};
 /* End PBXProject section */
@@ -642,7 +642,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		03C81A5318F497BD00D84C0C /* Build configuration list for PBXAggregateTarget "MarvelousUniversal" */ = {
+		03C81A5318F497BD00D84C0C /* Build configuration list for PBXAggregateTarget "MarvelousLibrary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				03C81A5118F497BD00D84C0C /* Debug */,
