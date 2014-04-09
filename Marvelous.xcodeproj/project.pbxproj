@@ -11,6 +11,7 @@
 			isa = PBXAggregateTarget;
 			buildConfigurationList = 037F752A18F4DAB300FB3616 /* Build configuration list for PBXAggregateTarget "MarvelousFramework" */;
 			buildPhases = (
+				037F752D18F4DB2000FB3616 /* ShellScript */,
 			);
 			dependencies = (
 			);
@@ -343,6 +344,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		037F752D18F4DB2000FB3616 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
 		03C81A5418F4980A00D84C0C /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
