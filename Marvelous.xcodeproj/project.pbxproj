@@ -981,7 +981,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "BUILDER=/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild\nTARGET=${PROJECT_NAME}OSX\nBUILD_DIRECTORY=./build\nRELEASE_DIRECTORY=${BUILD_DIRECTORY}/Release\nFRAMEWORK_DIRECTORY=./Framework\nFRAMEWORK_NAME=${PROJECT_NAME}.framework\n\nrm -drf ${FRAMEWORK_DIRECTORY}\nmkdir ${FRAMEWORK_DIRECTORY}\n\n${BUILDER} -project \"${PROJECT_FILE_PATH}\" -target ${TARGET} -sdk macosx -configuration Release clean build\n\nmv ${RELEASE_DIRECTORY}/${FRAMEWORK_NAME} ${FRAMEWORK_DIRECTORY}\n\nrm -rf ${BUILD_DIRECTORY}\n\ncd ${FRAMEWORK_DIRECTORY}\nzip -r ${PROJECT_NAME}.zip ${FRAMEWORK_NAME}\nrm -rf ${FRAMEWORK_NAME}";
+			shellScript = "BUILDER=/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild\nTARGET=${PROJECT_NAME}OSX\nBUILD_DIRECTORY=./build\nRELEASE_DIRECTORY=${BUILD_DIRECTORY}/Release\nFRAMEWORK_DIRECTORY=./Framework\nFRAMEWORK_NAME=${PROJECT_NAME}.framework\n\nrm -drf ${FRAMEWORK_DIRECTORY}\nmkdir ${FRAMEWORK_DIRECTORY}\n\n${BUILDER} -project \"${PROJECT_FILE_PATH}\" -target ${TARGET} -sdk macosx -configuration Release clean build\n\nmv ${RELEASE_DIRECTORY}/${FRAMEWORK_NAME} ${FRAMEWORK_DIRECTORY}\n\nrm -rf ${BUILD_DIRECTORY}\n\ncd ${FRAMEWORK_DIRECTORY}\nzip -r ${PROJECT_NAME}-${CURRENT_PROJECT_VERSION}.zip ${FRAMEWORK_NAME}\nrm -rf ${FRAMEWORK_NAME}";
 		};
 		03C81A5418F4980A00D84C0C /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -994,7 +994,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "BUILDER=/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild\nBUILD_DIRECTORY=./build\nSIMULATOR_DIRECTORY=${BUILD_DIRECTORY}/Release-iphonesimulator\nDEVICE_DIRECTORY=${BUILD_DIRECTORY}/Release-iphoneos\nHEADERS_DIRECTORY=${DEVICE_DIRECTORY}/include\nLIBRARY_DIRECTORY=./Library\nARCHIVES_DIRECTORY=${LIBRARY_DIRECTORY}/Archives\nLIBRARY_NAME=lib${PROJECT_NAME}\nARCHIVE_FILES=(${ARCHIVES_DIRECTORY}/${LIBRARY_NAME}-i386.a ${ARCHIVES_DIRECTORY}/${LIBRARY_NAME}-arm7.a ${ARCHIVES_DIRECTORY}/${LIBRARY_NAME}-armv7s.a ${ARCHIVES_DIRECTORY}/${LIBRARY_NAME}-arm64.a)\n\nrm -drf ${LIBRARY_DIRECTORY}\nmkdir -p ${ARCHIVES_DIRECTORY}\n\n${BUILDER} -project \"${PROJECT_FILE_PATH}\" -target ${PROJECT_NAME} -sdk iphonesimulator -configuration Release clean build\n\nmv ${SIMULATOR_DIRECTORY}/${LIBRARY_NAME}.a ${ARCHIVES_DIRECTORY}/${LIBRARY_NAME}-i386.a\n\n${BUILDER} -project \"${PROJECT_FILE_PATH}\" -target ${PROJECT_NAME} -sdk iphoneos -arch armv7 -configuration Release clean build\n\nmv ${DEVICE_DIRECTORY}/${LIBRARY_NAME}.a ${ARCHIVES_DIRECTORY}/${LIBRARY_NAME}-arm7.a\n\n${BUILDER} -project \"${PROJECT_FILE_PATH}\" -target ${PROJECT_NAME} -sdk iphoneos -arch armv7s -configuration Release clean build\n\nmv ${DEVICE_DIRECTORY}/${LIBRARY_NAME}.a ${ARCHIVES_DIRECTORY}/${LIBRARY_NAME}-arm7s.a\n\n${BUILDER} -project \"${PROJECT_FILE_PATH}\" -target ${PROJECT_NAME} -sdk iphoneos -arch arm64 -configuration Release clean build\n\nmv ${DEVICE_DIRECTORY}/${LIBRARY_NAME}.a ${ARCHIVES_DIRECTORY}/${LIBRARY_NAME}-arm64.a\n\nlipo -create -output ${LIBRARY_DIRECTORY}/${LIBRARY_NAME}.a ${ARCHIVE_FILES}\n\nmv ${HEADERS_DIRECTORY}/${PROJECT_NAME} ${LIBRARY_DIRECTORY}/\n\nrm -rf ${ARCHIVES_DIRECTORY}\nrm -rf ${BUILD_DIRECTORY}\n\ncd ${LIBRARY_DIRECTORY}\nzip -r ${LIBRARY_NAME}.zip ${LIBRARY_NAME}.a ${PROJECT_NAME}\nrm -rf ${LIBRARY_NAME}.a ${PROJECT_NAME}";
+			shellScript = "BUILDER=/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild\nBUILD_DIRECTORY=./build\nSIMULATOR_DIRECTORY=${BUILD_DIRECTORY}/Release-iphonesimulator\nDEVICE_DIRECTORY=${BUILD_DIRECTORY}/Release-iphoneos\nHEADERS_DIRECTORY=${DEVICE_DIRECTORY}/include\nLIBRARY_DIRECTORY=./Library\nARCHIVES_DIRECTORY=${LIBRARY_DIRECTORY}/Archives\nLIBRARY_NAME=lib${PROJECT_NAME}\nARCHIVE_FILES=(${ARCHIVES_DIRECTORY}/${LIBRARY_NAME}-i386.a ${ARCHIVES_DIRECTORY}/${LIBRARY_NAME}-arm7.a ${ARCHIVES_DIRECTORY}/${LIBRARY_NAME}-armv7s.a ${ARCHIVES_DIRECTORY}/${LIBRARY_NAME}-arm64.a)\n\nrm -drf ${LIBRARY_DIRECTORY}\nmkdir -p ${ARCHIVES_DIRECTORY}\n\n${BUILDER} -project \"${PROJECT_FILE_PATH}\" -target ${PROJECT_NAME} -sdk iphonesimulator -configuration Release clean build\n\nmv ${SIMULATOR_DIRECTORY}/${LIBRARY_NAME}.a ${ARCHIVES_DIRECTORY}/${LIBRARY_NAME}-i386.a\n\n${BUILDER} -project \"${PROJECT_FILE_PATH}\" -target ${PROJECT_NAME} -sdk iphoneos -arch armv7 -configuration Release clean build\n\nmv ${DEVICE_DIRECTORY}/${LIBRARY_NAME}.a ${ARCHIVES_DIRECTORY}/${LIBRARY_NAME}-arm7.a\n\n${BUILDER} -project \"${PROJECT_FILE_PATH}\" -target ${PROJECT_NAME} -sdk iphoneos -arch armv7s -configuration Release clean build\n\nmv ${DEVICE_DIRECTORY}/${LIBRARY_NAME}.a ${ARCHIVES_DIRECTORY}/${LIBRARY_NAME}-arm7s.a\n\n${BUILDER} -project \"${PROJECT_FILE_PATH}\" -target ${PROJECT_NAME} -sdk iphoneos -arch arm64 -configuration Release clean build\n\nmv ${DEVICE_DIRECTORY}/${LIBRARY_NAME}.a ${ARCHIVES_DIRECTORY}/${LIBRARY_NAME}-arm64.a\n\nlipo -create -output ${LIBRARY_DIRECTORY}/${LIBRARY_NAME}.a ${ARCHIVE_FILES}\n\nmv ${HEADERS_DIRECTORY}/${PROJECT_NAME} ${LIBRARY_DIRECTORY}/\n\nrm -rf ${ARCHIVES_DIRECTORY}\nrm -rf ${BUILD_DIRECTORY}\n\ncd ${LIBRARY_DIRECTORY}\nzip -r ${LIBRARY_NAME}-${CURRENT_PROJECT_VERSION}.zip ${LIBRARY_NAME}.a ${PROJECT_NAME}\nrm -rf ${LIBRARY_NAME}.a ${PROJECT_NAME}";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1189,6 +1189,7 @@
 		037F752B18F4DAB300FB3616 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CURRENT_PROJECT_VERSION = 0.6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = macosx;
@@ -1198,6 +1199,7 @@
 		037F752C18F4DAB300FB3616 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CURRENT_PROJECT_VERSION = 0.6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = macosx;
@@ -1207,6 +1209,7 @@
 		03C81A5118F497BD00D84C0C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CURRENT_PROJECT_VERSION = 0.6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1214,6 +1217,7 @@
 		03C81A5218F497BD00D84C0C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CURRENT_PROJECT_VERSION = 0.6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -1222,6 +1226,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 0.6.0;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1245,6 +1250,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 0.6.0;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1380,7 +1386,7 @@
 		03DEC86018E736740098CCE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CURRENT_PROJECT_VERSION = 0.5.0;
+				CURRENT_PROJECT_VERSION = 0.6.0;
 				DSTROOT = /tmp/Marvelous.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Marvelous/Marvelous-Prefix.pch";
@@ -1393,7 +1399,7 @@
 		03DEC86118E736740098CCE1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CURRENT_PROJECT_VERSION = 0.5.0;
+				CURRENT_PROJECT_VERSION = 0.6.0;
 				DSTROOT = /tmp/Marvelous.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Marvelous/Marvelous-Prefix.pch";
