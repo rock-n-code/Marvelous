@@ -9,9 +9,44 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>MarvelousFramework.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>MarvelousLibrary.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>MarvelousOSX.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>037F752918F4DAB300FB3616</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>03C81A5018F497BD00D84C0C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>03C81A8818F4BC4C00D84C0C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>03C81A9D18F4BC4C00D84C0C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>03DEC83B18E736730098CCE1</key>
 		<dict>
 			<key>primary</key>

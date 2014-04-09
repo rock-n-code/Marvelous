@@ -30,10 +30,10 @@
 {
     RCComicsFilter *filter = [[RCComicsFilter alloc] init];
 
-	XCTAssertEqual(filter.format, RCFormatTypeCodeUndefined, @"\"%s\" is expecting the property 'format' to be the integer value %d.", __PRETTY_FUNCTION__, RCFormatTypeCodeUndefined);
-	XCTAssertEqual(filter.formatType, RCIssueTypeCodeUndefined, @"\"%s\" is expecting the property 'formatType' to be the integer value %d.", __PRETTY_FUNCTION__, RCIssueTypeCodeUndefined);
-	XCTAssertEqual(filter.noVariants, RCBooleanValueCodeUndefined, @"\"%s\" is expecting the property 'noVariants' to be the integer value %d.", __PRETTY_FUNCTION__, RCBooleanValueCodeUndefined);
-	XCTAssertEqual(filter.dateDescriptor, RCDateDescriptorCodeUndefined, @"\"%s\" is expecting the property 'dateDescriptor' to be the integer value %d.", __PRETTY_FUNCTION__, RCDateDescriptorCodeUndefined);
+	XCTAssertEqual(filter.format, RCFormatTypeCodeUndefined, @"\"%s\" is expecting the property 'format' to be the integer value %ld.", __PRETTY_FUNCTION__, (long)RCFormatTypeCodeUndefined);
+	XCTAssertEqual(filter.formatType, RCIssueTypeCodeUndefined, @"\"%s\" is expecting the property 'formatType' to be the integer value %ld.", __PRETTY_FUNCTION__, (long)RCIssueTypeCodeUndefined);
+	XCTAssertEqual(filter.noVariants, RCBooleanValueCodeUndefined, @"\"%s\" is expecting the property 'noVariants' to be the integer value %ld.", __PRETTY_FUNCTION__, (long)RCBooleanValueCodeUndefined);
+	XCTAssertEqual(filter.dateDescriptor, RCDateDescriptorCodeUndefined, @"\"%s\" is expecting the property 'dateDescriptor' to be the integer value %ld.", __PRETTY_FUNCTION__, (long)RCDateDescriptorCodeUndefined);
 	XCTAssertNil(filter.dateRange, @"\"%s\" is expecting the property 'dateRange' to be NULL.", __PRETTY_FUNCTION__);
 	XCTAssertNil(filter.diamondCode, @"\"%s\" is expecting the property 'diamondCode' to be NULL.", __PRETTY_FUNCTION__);
 	XCTAssertNil(filter.digitalIdentifier, @"\"%s\" is expecting the property 'digitalIdentifier' to be NULL.", __PRETTY_FUNCTION__);
@@ -41,7 +41,7 @@
 	XCTAssertNil(filter.isbn, @"\"%s\" is expecting the property 'isbn' to be NULL.", __PRETTY_FUNCTION__);
 	XCTAssertNil(filter.ean, @"\"%s\" is expecting the property 'ean' to be NULL.", __PRETTY_FUNCTION__);
 	XCTAssertNil(filter.issn, @"\"%s\" is expecting the property 'issn' to be NULL.", __PRETTY_FUNCTION__);
-	XCTAssertEqual(filter.hasDigitalIssue, RCBooleanValueCodeUndefined, @"\"%s\" is expecting the property 'hasDigitalIssue' to be the integer value %d.", __PRETTY_FUNCTION__, RCBooleanValueCodeUndefined);
+	XCTAssertEqual(filter.hasDigitalIssue, RCBooleanValueCodeUndefined, @"\"%s\" is expecting the property 'hasDigitalIssue' to be the integer value %ld.", __PRETTY_FUNCTION__, (long)RCBooleanValueCodeUndefined);
 	XCTAssertNil(filter.creators, @"\"%s\" is expecting the property 'creators' to be NULL.", __PRETTY_FUNCTION__);
 	XCTAssertNil(filter.characters, @"\"%s\" is expecting the property 'characters' to be NULL.", __PRETTY_FUNCTION__);
 	XCTAssertNil(filter.series, @"\"%s\" is expecting the property 'series' to be NULL.", __PRETTY_FUNCTION__);
@@ -87,7 +87,7 @@
 	NSInteger countToTest = 22;
 
 	XCTAssertNotNil(parameters, @"\"%s\" is expecting the variable 'parameters' to be not NULL.", __PRETTY_FUNCTION__);
-	XCTAssertEqual(parameters.allKeys.count, countToTest, @"\"%s\" is expecting the property 'count' of the variable 'parameters' to be the integer value %d.", __PRETTY_FUNCTION__, countToTest);
+	XCTAssertEqual(parameters.allKeys.count, countToTest, @"\"%s\" is expecting the property 'count' of the variable 'parameters' to be the integer value %ld.", __PRETTY_FUNCTION__, (long)countToTest);
 }
 
 - (void)testPartialParameters
@@ -108,7 +108,7 @@
 	NSInteger countToTest = 9;
 
 	XCTAssertNotNil(parameters, @"\"%s\" is expecting the variable 'parameters' to be not NULL.", __PRETTY_FUNCTION__);
-	XCTAssertEqual(parameters.allKeys.count, countToTest, @"\"%s\" is expecting the property 'count' of the variable 'parameters' to be the integer value %d.", __PRETTY_FUNCTION__, countToTest);
+	XCTAssertEqual(parameters.allKeys.count, countToTest, @"\"%s\" is expecting the property 'count' of the variable 'parameters' to be the integer value %ld.", __PRETTY_FUNCTION__, (long)countToTest);
 }
 
 - (void)testValidOrderTypes
@@ -116,14 +116,14 @@
 	RCComicsFilter *filter = [[RCComicsFilter alloc] init];
 	NSInteger countToTest = 10;
 
-	XCTAssertEqual(filter.validOrderTypes.count, countToTest, @"\"%s\" is expecting the property 'count' of the property 'validOrderTypes' to be the integer value %d.", __PRETTY_FUNCTION__, countToTest);
+	XCTAssertEqual(filter.validOrderTypes.count, countToTest, @"\"%s\" is expecting the property 'count' of the property 'validOrderTypes' to be the integer value %ld.", __PRETTY_FUNCTION__, (long)countToTest);
 }
 
 - (void)testType
 {
 	RCComicsFilter *filter = [[RCComicsFilter alloc] init];
 
-	XCTAssertEqual(filter.type, RCAPITypeComics, @"\"%s\" is expecting the property 'type' to have the '%d' integer value.", __PRETTY_FUNCTION__, RCAPITypeComics);
+	XCTAssertEqual(filter.type, RCAPITypeComics, @"\"%s\" is expecting the property 'type' to have the '%ld' integer value.", __PRETTY_FUNCTION__, (long)RCAPITypeComics);
 }
 
 @end

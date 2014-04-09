@@ -6,6 +6,31 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		037F752918F4DAB300FB3616 /* MarvelousFramework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 037F752A18F4DAB300FB3616 /* Build configuration list for PBXAggregateTarget "MarvelousFramework" */;
+			buildPhases = (
+				037F752D18F4DB2000FB3616 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = MarvelousFramework;
+			productName = MarvelousFramework;
+		};
+		03C81A5018F497BD00D84C0C /* MarvelousLibrary */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 03C81A5318F497BD00D84C0C /* Build configuration list for PBXAggregateTarget "MarvelousLibrary" */;
+			buildPhases = (
+				03C81A5418F4980A00D84C0C /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = MarvelousLibrary;
+			productName = MarvelousUniversal;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		03130D1518E96A6600BD315F /* RCDataWrapperObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D1418E96A6600BD315F /* RCDataWrapperObjectTests.m */; };
 		03130D1818E96CBD00BD315F /* RCDataWrapperObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D1718E96CBD00BD315F /* RCDataWrapperObject.m */; };
@@ -64,6 +89,124 @@
 		036A2F1918F0BB4000EFE3CF /* RCStoryFilterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 036A2F1818F0BB4000EFE3CF /* RCStoryFilterTests.m */; };
 		036A2F1C18F0C18A00EFE3CF /* RCStoryObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 036A2F1B18F0C18A00EFE3CF /* RCStoryObject.m */; };
 		036A2F1E18F0C1B600EFE3CF /* RCStoryObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 036A2F1D18F0C1B600EFE3CF /* RCStoryObjectTests.m */; };
+		037F74AE18F4CF1400FB3616 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03DEC85818E736740098CCE1 /* InfoPlist.strings */; };
+		037F74AF18F4CFBC00FB3616 /* RCMarvelAPITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B694DA18E73E5E00CEF855 /* RCMarvelAPITests.m */; };
+		037F74B018F4CFC200FB3616 /* RCOperationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B694F318E774AD00CEF855 /* RCOperationTests.m */; };
+		037F74B118F4CFC200FB3616 /* RCAPIOperationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B694FF18E77B3500CEF855 /* RCAPIOperationTests.m */; };
+		037F74B218F4CFC900FB3616 /* RCFilterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D4B18EADFDB00BD315F /* RCFilterTests.m */; };
+		037F74B318F4CFC900FB3616 /* RCCharacterFilterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D5018EAE05600BD315F /* RCCharacterFilterTests.m */; };
+		037F74B418F4CFC900FB3616 /* RCComicsFilterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341E918F1C103008FA7F0 /* RCComicsFilterTests.m */; };
+		037F74B518F4CFC900FB3616 /* RCCreatorFilterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341CD18F15B81008FA7F0 /* RCCreatorFilterTests.m */; };
+		037F74B618F4CFC900FB3616 /* RCEventFilterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D6718EC128200BD315F /* RCEventFilterTests.m */; };
+		037F74B718F4CFC900FB3616 /* RCSeriesFilterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341D718F17389008FA7F0 /* RCSeriesFilterTests.m */; };
+		037F74B818F4CFC900FB3616 /* RCStoryFilterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 036A2F1818F0BB4000EFE3CF /* RCStoryFilterTests.m */; };
+		037F74B918F4CFD100FB3616 /* RCObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D3D18E9D10600BD315F /* RCObjectTests.m */; };
+		037F74BA18F4CFD100FB3616 /* RCSummaryObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D2B18E974EB00BD315F /* RCSummaryObjectTests.m */; };
+		037F74BB18F4CFD100FB3616 /* RCURLObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D3118E9784C00BD315F /* RCURLObjectTests.m */; };
+		037F74BC18F4CFD100FB3616 /* RCTextObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341FF18F20818008FA7F0 /* RCTextObjectTests.m */; };
+		037F74BD18F4CFD100FB3616 /* RCComicDateObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0363420418F20B2F008FA7F0 /* RCComicDateObjectTests.m */; };
+		037F74BE18F4CFD100FB3616 /* RCComicPriceObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0363420918F20E6D008FA7F0 /* RCComicPriceObjectTests.m */; };
+		037F74BF18F4CFD100FB3616 /* RCImageObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D5918EB5A0700BD315F /* RCImageObjectTests.m */; };
+		037F74C018F4CFD100FB3616 /* RCListObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D2618E972A700BD315F /* RCListObjectTests.m */; };
+		037F74C118F4CFD100FB3616 /* RCCharacterObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D2118E96F5300BD315F /* RCCharacterObjectTests.m */; };
+		037F74C218F4CFD100FB3616 /* RCComicsObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341FA18F2005A008FA7F0 /* RCComicsObjectTests.m */; };
+		037F74C318F4CFD100FB3616 /* RCCreatorObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341D218F16882008FA7F0 /* RCCreatorObjectTests.m */; };
+		037F74C418F4CFD100FB3616 /* RCEventObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D6C18EC1BFD00BD315F /* RCEventObjectTests.m */; };
+		037F74C518F4CFD100FB3616 /* RCSeriesObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341E418F1A6C5008FA7F0 /* RCSeriesObjectTests.m */; };
+		037F74C618F4CFD100FB3616 /* RCStoryObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 036A2F1D18F0C1B600EFE3CF /* RCStoryObjectTests.m */; };
+		037F74C718F4CFD100FB3616 /* RCDataContainerObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D1C18E96DB200BD315F /* RCDataContainerObjectTests.m */; };
+		037F74C818F4CFD100FB3616 /* RCDataWrapperObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D1418E96A6600BD315F /* RCDataWrapperObjectTests.m */; };
+		037F74C918F4CFD100FB3616 /* RCQueryInfoObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D4418EAD16B00BD315F /* RCQueryInfoObjectTests.m */; };
+		037F74CA18F4CFD600FB3616 /* RCMarvelAPITestValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D3818E992FA00BD315F /* RCMarvelAPITestValues.m */; };
+		037F74CB18F4D2D900FB3616 /* Marvelous.h in Headers */ = {isa = PBXBuildFile; fileRef = 03DEC84418E736740098CCE1 /* Marvelous.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		037F74CC18F4D2EA00FB3616 /* RCMarvelAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 03B694D618E73E3A00CEF855 /* RCMarvelAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		037F74CD18F4D2EA00FB3616 /* RCMarvelAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B694D718E73E3A00CEF855 /* RCMarvelAPI.m */; };
+		037F74CE18F4D2F800FB3616 /* RCOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B694F618E774BD00CEF855 /* RCOperation.m */; };
+		037F74CF18F4D2FD00FB3616 /* RCAPIOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B694FD18E77B1D00CEF855 /* RCAPIOperation.m */; };
+		037F74D018F4D30000FB3616 /* RCOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 03B694F518E774BD00CEF855 /* RCOperation.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		037F74D118F4D30600FB3616 /* RCAPIOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 03B694FC18E77B1D00CEF855 /* RCAPIOperation.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		037F74D218F4D31400FB3616 /* RCFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 03130D4718EADF9500BD315F /* RCFilter.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		037F74D318F4D31A00FB3616 /* RCFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D4818EADF9500BD315F /* RCFilter.m */; };
+		037F74D418F4D32500FB3616 /* RCCharacterFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D4E18EAE02900BD315F /* RCCharacterFilter.m */; };
+		037F74D518F4D32500FB3616 /* RCComicsFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341E718F1C0EB008FA7F0 /* RCComicsFilter.m */; };
+		037F74D618F4D32500FB3616 /* RCCreatorFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341CB18F15B5E008FA7F0 /* RCCreatorFilter.m */; };
+		037F74D718F4D32500FB3616 /* RCEventFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D6518EC127300BD315F /* RCEventFilter.m */; };
+		037F74D818F4D32500FB3616 /* RCSeriesFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341D518F17367008FA7F0 /* RCSeriesFilter.m */; };
+		037F74D918F4D32500FB3616 /* RCStoryFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 036A2F1618F0BB2000EFE3CF /* RCStoryFilter.m */; };
+		037F74DA18F4D32E00FB3616 /* RCCharacterFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 03130D4D18EAE02900BD315F /* RCCharacterFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		037F74DB18F4D32E00FB3616 /* RCComicsFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 036341E618F1C0EB008FA7F0 /* RCComicsFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		037F74DC18F4D32E00FB3616 /* RCCreatorFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 036341CA18F15B5E008FA7F0 /* RCCreatorFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		037F74DD18F4D32E00FB3616 /* RCEventFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 03130D6418EC127300BD315F /* RCEventFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		037F74DE18F4D32E00FB3616 /* RCSeriesFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 036341D418F17367008FA7F0 /* RCSeriesFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		037F74DF18F4D32E00FB3616 /* RCStoryFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 036A2F1518F0BB2000EFE3CF /* RCStoryFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		037F74E018F4D35100FB3616 /* RCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D3B18E9D09800BD315F /* RCObject.m */; };
+		037F74E118F4D35100FB3616 /* RCSummaryObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D2918E974C300BD315F /* RCSummaryObject.m */; };
+		037F74E218F4D35100FB3616 /* RCURLObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D3418E9786A00BD315F /* RCURLObject.m */; };
+		037F74E318F4D35100FB3616 /* RCTextObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341FD18F207EC008FA7F0 /* RCTextObject.m */; };
+		037F74E418F4D35100FB3616 /* RCComicDateObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0363420218F20B11008FA7F0 /* RCComicDateObject.m */; };
+		037F74E518F4D35100FB3616 /* RCComicPriceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0363420718F20E4C008FA7F0 /* RCComicPriceObject.m */; };
+		037F74E618F4D35100FB3616 /* RCImageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D5718EB59EB00BD315F /* RCImageObject.m */; };
+		037F74E718F4D35100FB3616 /* RCListObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D2418E9727F00BD315F /* RCListObject.m */; };
+		037F74E818F4D35100FB3616 /* RCCharacterObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D1F18E96F3700BD315F /* RCCharacterObject.m */; };
+		037F74E918F4D35100FB3616 /* RCComicsObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341F818F2002A008FA7F0 /* RCComicsObject.m */; };
+		037F74EA18F4D35100FB3616 /* RCCreatorObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341D018F16851008FA7F0 /* RCCreatorObject.m */; };
+		037F74EB18F4D35100FB3616 /* RCEventObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D6A18EC1BE600BD315F /* RCEventObject.m */; };
+		037F74EC18F4D35100FB3616 /* RCSeriesObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341E218F1A691008FA7F0 /* RCSeriesObject.m */; };
+		037F74ED18F4D35100FB3616 /* RCStoryObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 036A2F1B18F0C18A00EFE3CF /* RCStoryObject.m */; };
+		037F74EE18F4D35100FB3616 /* RCDataContainerObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D1A18E96D9E00BD315F /* RCDataContainerObject.m */; };
+		037F74EF18F4D35100FB3616 /* RCDataWrapperObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D1718E96CBD00BD315F /* RCDataWrapperObject.m */; };
+		037F74F018F4D35100FB3616 /* RCQueryInfoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D4218EAD15100BD315F /* RCQueryInfoObject.m */; };
+		037F74F118F4D36A00FB3616 /* RCSummaryObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 03130D2818E974C300BD315F /* RCSummaryObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		037F74F218F4D36A00FB3616 /* RCURLObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 03130D3318E9786A00BD315F /* RCURLObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		037F74F318F4D36A00FB3616 /* RCTextObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 036341FC18F207EC008FA7F0 /* RCTextObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		037F74F418F4D36A00FB3616 /* RCComicDateObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 0363420118F20B11008FA7F0 /* RCComicDateObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		037F74F518F4D36A00FB3616 /* RCComicPriceObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 0363420618F20E4C008FA7F0 /* RCComicPriceObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		037F74F618F4D36A00FB3616 /* RCImageObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 03130D5618EB59EB00BD315F /* RCImageObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		037F74F718F4D36A00FB3616 /* RCListObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 03130D2318E9727F00BD315F /* RCListObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		037F74F818F4D36A00FB3616 /* RCCharacterObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 03130D1E18E96F3700BD315F /* RCCharacterObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		037F74F918F4D36A00FB3616 /* RCComicsObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 036341F718F2002A008FA7F0 /* RCComicsObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		037F74FA18F4D36A00FB3616 /* RCCreatorObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 036341CF18F16851008FA7F0 /* RCCreatorObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		037F74FB18F4D36A00FB3616 /* RCEventObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 03130D6918EC1BE600BD315F /* RCEventObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		037F74FC18F4D36A00FB3616 /* RCSeriesObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 036341E118F1A691008FA7F0 /* RCSeriesObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		037F74FD18F4D36A00FB3616 /* RCStoryObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 036A2F1A18F0C18A00EFE3CF /* RCStoryObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		037F74FE18F4D36A00FB3616 /* RCQueryInfoObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 03130D4118EAD15100BD315F /* RCQueryInfoObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		037F74FF18F4D37400FB3616 /* RCObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 03130D3A18E9D09800BD315F /* RCObject.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		037F750018F4D37400FB3616 /* RCDataContainerObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 03130D1918E96D9E00BD315F /* RCDataContainerObject.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		037F750118F4D37400FB3616 /* RCDataWrapperObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 03130D1618E96CBD00BD315F /* RCDataWrapperObject.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		037F750218F4D38100FB3616 /* RCObjectProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 03130D4018E9D93800BD315F /* RCObjectProtocol.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		037F750318F4D39500FB3616 /* RCAPITypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 03130D3618E989DC00BD315F /* RCAPITypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		037F750418F4D39500FB3616 /* RCOrderByTypeCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 03130D5218EAE1D500BD315F /* RCOrderByTypeCodes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		037F750518F4D39500FB3616 /* RCImageModeCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 03130D5C18EB7DDB00BD315F /* RCImageModeCodes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		037F750618F4D39500FB3616 /* RCImageSizeCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 03130D5D18EB7E6500BD315F /* RCImageSizeCodes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		037F750718F4D39500FB3616 /* RCFormatTypeCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 036341DD18F17653008FA7F0 /* RCFormatTypeCodes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		037F750818F4D39500FB3616 /* RCSeriesTypeCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 036341D918F17431008FA7F0 /* RCSeriesTypeCodes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		037F750918F4D39500FB3616 /* RCIssueTypeCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 036341EB18F1C55A008FA7F0 /* RCIssueTypeCodes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		037F750A18F4D39500FB3616 /* RCBooleanValueCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 036341EF18F1C6B2008FA7F0 /* RCBooleanValueCodes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		037F750B18F4D39500FB3616 /* RCDateDescriptorCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 036341F318F1C7F6008FA7F0 /* RCDateDescriptorCodes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		037F750C18F4D39D00FB3616 /* RCOperationErrorCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 03B694F818E774C800CEF855 /* RCOperationErrorCodes.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		037F750D18F4D39D00FB3616 /* RCStatusCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 03B694E218E7583600CEF855 /* RCStatusCodes.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		037F750E18F4D3BF00FB3616 /* RCOperationErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B694FA18E774D400CEF855 /* RCOperationErrors.m */; };
+		037F750F18F4D3BF00FB3616 /* RCRequestKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B694DF18E74D6300CEF855 /* RCRequestKeys.m */; };
+		037F751018F4D3BF00FB3616 /* RCResponseKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B694E418E75B0D00CEF855 /* RCResponseKeys.m */; };
+		037F751118F4D3BF00FB3616 /* RCOrderByTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D5418EAE7F800BD315F /* RCOrderByTypes.m */; };
+		037F751218F4D3BF00FB3616 /* RCImageModes.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D5F18EB7F8A00BD315F /* RCImageModes.m */; };
+		037F751318F4D3BF00FB3616 /* RCImageSizes.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D6218EB801800BD315F /* RCImageSizes.m */; };
+		037F751418F4D3BF00FB3616 /* RCFormatTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341DF18F176C6008FA7F0 /* RCFormatTypes.m */; };
+		037F751518F4D3BF00FB3616 /* RCIssueTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341ED18F1C5BE008FA7F0 /* RCIssueTypes.m */; };
+		037F751618F4D3BF00FB3616 /* RCBooleanValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341F118F1C72E008FA7F0 /* RCBooleanValues.m */; };
+		037F751718F4D3BF00FB3616 /* RCDateDescriptors.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341F518F1C83F008FA7F0 /* RCDateDescriptors.m */; };
+		037F751818F4D3BF00FB3616 /* RCSeriesTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341DB18F174B8008FA7F0 /* RCSeriesTypes.m */; };
+		037F751918F4D3CC00FB3616 /* RCOperationErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = 03B694F918E774D300CEF855 /* RCOperationErrors.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		037F751A18F4D3CC00FB3616 /* RCRequestKeys.h in Headers */ = {isa = PBXBuildFile; fileRef = 03B694DE18E74D6300CEF855 /* RCRequestKeys.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		037F751B18F4D3CC00FB3616 /* RCResponseKeys.h in Headers */ = {isa = PBXBuildFile; fileRef = 03B694E318E75B0C00CEF855 /* RCResponseKeys.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		037F751C18F4D3CC00FB3616 /* RCOrderByTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 03130D5318EAE7F800BD315F /* RCOrderByTypes.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		037F751D18F4D3CC00FB3616 /* RCImageModes.h in Headers */ = {isa = PBXBuildFile; fileRef = 03130D5E18EB7F8A00BD315F /* RCImageModes.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		037F751E18F4D3CC00FB3616 /* RCImageSizes.h in Headers */ = {isa = PBXBuildFile; fileRef = 03130D6118EB801800BD315F /* RCImageSizes.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		037F751F18F4D3CC00FB3616 /* RCFormatTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 036341DE18F176C6008FA7F0 /* RCFormatTypes.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		037F752018F4D3CC00FB3616 /* RCIssueTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 036341EC18F1C5BE008FA7F0 /* RCIssueTypes.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		037F752118F4D3CC00FB3616 /* RCBooleanValues.h in Headers */ = {isa = PBXBuildFile; fileRef = 036341F018F1C72E008FA7F0 /* RCBooleanValues.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		037F752218F4D3CC00FB3616 /* RCDateDescriptors.h in Headers */ = {isa = PBXBuildFile; fileRef = 036341F418F1C83F008FA7F0 /* RCDateDescriptors.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		037F752318F4D3CC00FB3616 /* RCSeriesTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 036341DA18F174B8008FA7F0 /* RCSeriesTypes.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		03B694D818E73E3A00CEF855 /* RCMarvelAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B694D718E73E3A00CEF855 /* RCMarvelAPI.m */; };
 		03B694DB18E73E5E00CEF855 /* RCMarvelAPITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B694DA18E73E5E00CEF855 /* RCMarvelAPITests.m */; };
 		03B694DC18E73EF900CEF855 /* RCMarvelAPI.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03B694D618E73E3A00CEF855 /* RCMarvelAPI.h */; };
@@ -74,17 +217,55 @@
 		03B694FB18E774D400CEF855 /* RCOperationErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B694FA18E774D400CEF855 /* RCOperationErrors.m */; };
 		03B694FE18E77B1D00CEF855 /* RCAPIOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B694FD18E77B1D00CEF855 /* RCAPIOperation.m */; };
 		03B6950018E77B3500CEF855 /* RCAPIOperationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B694FF18E77B3500CEF855 /* RCAPIOperationTests.m */; };
-		03B6951618E941EB00CEF855 /* XCTest+Async.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B6951518E941EB00CEF855 /* XCTest+Async.m */; };
+		03C81A2618F4656D00D84C0C /* RCCharacterFilter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03130D4D18EAE02900BD315F /* RCCharacterFilter.h */; };
+		03C81A2718F4657100D84C0C /* RCComicsFilter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 036341E618F1C0EB008FA7F0 /* RCComicsFilter.h */; };
+		03C81A2818F4657400D84C0C /* RCCreatorFilter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 036341CA18F15B5E008FA7F0 /* RCCreatorFilter.h */; };
+		03C81A2A18F4658C00D84C0C /* RCSeriesFilter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 036341D418F17367008FA7F0 /* RCSeriesFilter.h */; };
+		03C81A2B18F4659600D84C0C /* RCEventFilter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03130D6418EC127300BD315F /* RCEventFilter.h */; };
+		03C81A2C18F4659B00D84C0C /* RCStoryFilter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 036A2F1518F0BB2000EFE3CF /* RCStoryFilter.h */; };
+		03C81A2E18F4812200D84C0C /* RCAPITypes.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03130D3618E989DC00BD315F /* RCAPITypes.h */; };
+		03C81A2F18F4812700D84C0C /* RCOrderByTypeCodes.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03130D5218EAE1D500BD315F /* RCOrderByTypeCodes.h */; };
+		03C81A3118F4814600D84C0C /* RCFormatTypeCodes.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 036341DD18F17653008FA7F0 /* RCFormatTypeCodes.h */; };
+		03C81A3218F4814B00D84C0C /* RCIssueTypeCodes.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 036341EB18F1C55A008FA7F0 /* RCIssueTypeCodes.h */; };
+		03C81A3418F4815300D84C0C /* RCDateDescriptorCodes.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 036341F318F1C7F6008FA7F0 /* RCDateDescriptorCodes.h */; };
+		03C81A3518F4815F00D84C0C /* RCSeriesTypeCodes.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 036341D918F17431008FA7F0 /* RCSeriesTypeCodes.h */; };
+		03C81A3618F481D000D84C0C /* RCImageModeCodes.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03130D5C18EB7DDB00BD315F /* RCImageModeCodes.h */; };
+		03C81A3718F481D800D84C0C /* RCImageSizeCodes.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03130D5D18EB7E6500BD315F /* RCImageSizeCodes.h */; };
+		03C81A3818F481E100D84C0C /* RCBooleanValueCodes.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 036341EF18F1C6B2008FA7F0 /* RCBooleanValueCodes.h */; };
+		03C81A3918F482D400D84C0C /* RCCharacterObject.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03130D1E18E96F3700BD315F /* RCCharacterObject.h */; };
+		03C81A3A18F482D800D84C0C /* RCComicsObject.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 036341F718F2002A008FA7F0 /* RCComicsObject.h */; };
+		03C81A3B18F482EC00D84C0C /* RCCreatorObject.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 036341CF18F16851008FA7F0 /* RCCreatorObject.h */; };
+		03C81A3C18F482F000D84C0C /* RCEventObject.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03130D6918EC1BE600BD315F /* RCEventObject.h */; };
+		03C81A3E18F4830D00D84C0C /* RCSeriesObject.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 036341E118F1A691008FA7F0 /* RCSeriesObject.h */; };
+		03C81A3F18F4831200D84C0C /* RCStoryObject.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 036A2F1A18F0C18A00EFE3CF /* RCStoryObject.h */; };
+		03C81A4018F4831C00D84C0C /* RCListObject.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03130D2318E9727F00BD315F /* RCListObject.h */; };
+		03C81A4218F4832B00D84C0C /* RCImageObject.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03130D5618EB59EB00BD315F /* RCImageObject.h */; };
+		03C81A4318F4833000D84C0C /* RCComicPriceObject.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0363420618F20E4C008FA7F0 /* RCComicPriceObject.h */; };
+		03C81A4418F4833500D84C0C /* RCComicDateObject.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0363420118F20B11008FA7F0 /* RCComicDateObject.h */; };
+		03C81A4518F4833B00D84C0C /* RCTextObject.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 036341FC18F207EC008FA7F0 /* RCTextObject.h */; };
+		03C81A4718F4834900D84C0C /* RCSummaryObject.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03130D2818E974C300BD315F /* RCSummaryObject.h */; };
+		03C81A4918F4836100D84C0C /* RCURLObject.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03130D3318E9786A00BD315F /* RCURLObject.h */; };
+		03C81A5518F4B7F900D84C0C /* RCQueryInfoObject.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03130D4118EAD15100BD315F /* RCQueryInfoObject.h */; };
+		03C81A9F18F4BC4C00D84C0C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC84D18E736740098CCE1 /* XCTest.framework */; };
+		03C81AA318F4BC4C00D84C0C /* Marvelous.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C81A8918F4BC4C00D84C0C /* Marvelous.framework */; };
+		03C81AB418F4BFC900D84C0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC83F18E736730098CCE1 /* Foundation.framework */; };
+		03C81AB518F4C12F00D84C0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC83F18E736730098CCE1 /* Foundation.framework */; };
 		03DEC84018E736730098CCE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC83F18E736730098CCE1 /* Foundation.framework */; };
 		03DEC84518E736740098CCE1 /* Marvelous.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03DEC84418E736740098CCE1 /* Marvelous.h */; };
 		03DEC84E18E736740098CCE1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC84D18E736740098CCE1 /* XCTest.framework */; };
 		03DEC84F18E736740098CCE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC83F18E736730098CCE1 /* Foundation.framework */; };
-		03DEC85118E736740098CCE1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC85018E736740098CCE1 /* UIKit.framework */; };
 		03DEC85418E736740098CCE1 /* libMarvelous.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC83C18E736730098CCE1 /* libMarvelous.a */; };
 		03DEC85A18E736740098CCE1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03DEC85818E736740098CCE1 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		03C81AA118F4BC4C00D84C0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03DEC83418E736730098CCE1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03C81A8818F4BC4C00D84C0C;
+			remoteInfo = MarvelousOSX;
+		};
 		03DEC85218E736740098CCE1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 03DEC83418E736730098CCE1 /* Project object */;
@@ -103,6 +284,35 @@
 			files = (
 				03DEC84518E736740098CCE1 /* Marvelous.h in CopyFiles */,
 				03B694DC18E73EF900CEF855 /* RCMarvelAPI.h in CopyFiles */,
+				03C81A2618F4656D00D84C0C /* RCCharacterFilter.h in CopyFiles */,
+				03C81A2718F4657100D84C0C /* RCComicsFilter.h in CopyFiles */,
+				03C81A2818F4657400D84C0C /* RCCreatorFilter.h in CopyFiles */,
+				03C81A2B18F4659600D84C0C /* RCEventFilter.h in CopyFiles */,
+				03C81A2A18F4658C00D84C0C /* RCSeriesFilter.h in CopyFiles */,
+				03C81A2C18F4659B00D84C0C /* RCStoryFilter.h in CopyFiles */,
+				03C81A5518F4B7F900D84C0C /* RCQueryInfoObject.h in CopyFiles */,
+				03C81A3918F482D400D84C0C /* RCCharacterObject.h in CopyFiles */,
+				03C81A3A18F482D800D84C0C /* RCComicsObject.h in CopyFiles */,
+				03C81A3B18F482EC00D84C0C /* RCCreatorObject.h in CopyFiles */,
+				03C81A3C18F482F000D84C0C /* RCEventObject.h in CopyFiles */,
+				03C81A3E18F4830D00D84C0C /* RCSeriesObject.h in CopyFiles */,
+				03C81A3F18F4831200D84C0C /* RCStoryObject.h in CopyFiles */,
+				03C81A4018F4831C00D84C0C /* RCListObject.h in CopyFiles */,
+				03C81A4218F4832B00D84C0C /* RCImageObject.h in CopyFiles */,
+				03C81A4318F4833000D84C0C /* RCComicPriceObject.h in CopyFiles */,
+				03C81A4418F4833500D84C0C /* RCComicDateObject.h in CopyFiles */,
+				03C81A4518F4833B00D84C0C /* RCTextObject.h in CopyFiles */,
+				03C81A4718F4834900D84C0C /* RCSummaryObject.h in CopyFiles */,
+				03C81A4918F4836100D84C0C /* RCURLObject.h in CopyFiles */,
+				03C81A2E18F4812200D84C0C /* RCAPITypes.h in CopyFiles */,
+				03C81A2F18F4812700D84C0C /* RCOrderByTypeCodes.h in CopyFiles */,
+				03C81A3118F4814600D84C0C /* RCFormatTypeCodes.h in CopyFiles */,
+				03C81A3518F4815F00D84C0C /* RCSeriesTypeCodes.h in CopyFiles */,
+				03C81A3218F4814B00D84C0C /* RCIssueTypeCodes.h in CopyFiles */,
+				03C81A3418F4815300D84C0C /* RCDateDescriptorCodes.h in CopyFiles */,
+				03C81A3618F481D000D84C0C /* RCImageModeCodes.h in CopyFiles */,
+				03C81A3718F481D800D84C0C /* RCImageSizeCodes.h in CopyFiles */,
+				03C81A3818F481E100D84C0C /* RCBooleanValueCodes.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,20 +437,37 @@
 		03B694FC18E77B1D00CEF855 /* RCAPIOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCAPIOperation.h; sourceTree = "<group>"; };
 		03B694FD18E77B1D00CEF855 /* RCAPIOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCAPIOperation.m; sourceTree = "<group>"; };
 		03B694FF18E77B3500CEF855 /* RCAPIOperationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCAPIOperationTests.m; sourceTree = "<group>"; };
-		03B6951418E941EB00CEF855 /* XCTest+Async.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTest+Async.h"; sourceTree = "<group>"; };
-		03B6951518E941EB00CEF855 /* XCTest+Async.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCTest+Async.m"; sourceTree = "<group>"; };
+		03C81A8918F4BC4C00D84C0C /* Marvelous.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Marvelous.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		03C81A9E18F4BC4C00D84C0C /* MarvelousOSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelousOSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03DEC83C18E736730098CCE1 /* libMarvelous.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMarvelous.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		03DEC83F18E736730098CCE1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		03DEC84318E736740098CCE1 /* Marvelous-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Marvelous-Prefix.pch"; sourceTree = "<group>"; };
 		03DEC84418E736740098CCE1 /* Marvelous.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Marvelous.h; sourceTree = "<group>"; };
 		03DEC84C18E736740098CCE1 /* MarvelousTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelousTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03DEC84D18E736740098CCE1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		03DEC85018E736740098CCE1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		03DEC85718E736740098CCE1 /* MarvelousTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MarvelousTests-Info.plist"; sourceTree = "<group>"; };
 		03DEC85918E736740098CCE1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		03C81A8518F4BC4C00D84C0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03C81AB418F4BFC900D84C0C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03C81A9B18F4BC4C00D84C0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03C81AB518F4C12F00D84C0C /* Foundation.framework in Frameworks */,
+				03C81A9F18F4BC4C00D84C0C /* XCTest.framework in Frameworks */,
+				03C81AA318F4BC4C00D84C0C /* Marvelous.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		03DEC83918E736730098CCE1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -254,9 +481,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				03DEC84E18E736740098CCE1 /* XCTest.framework in Frameworks */,
-				03DEC85118E736740098CCE1 /* UIKit.framework in Frameworks */,
-				03DEC85418E736740098CCE1 /* libMarvelous.a in Frameworks */,
 				03DEC84F18E736740098CCE1 /* Foundation.framework in Frameworks */,
+				03DEC85418E736740098CCE1 /* libMarvelous.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,10 +655,10 @@
 				03130D5C18EB7DDB00BD315F /* RCImageModeCodes.h */,
 				03130D5D18EB7E6500BD315F /* RCImageSizeCodes.h */,
 				036341DD18F17653008FA7F0 /* RCFormatTypeCodes.h */,
+				036341D918F17431008FA7F0 /* RCSeriesTypeCodes.h */,
 				036341EB18F1C55A008FA7F0 /* RCIssueTypeCodes.h */,
 				036341EF18F1C6B2008FA7F0 /* RCBooleanValueCodes.h */,
 				036341F318F1C7F6008FA7F0 /* RCDateDescriptorCodes.h */,
-				036341D918F17431008FA7F0 /* RCSeriesTypeCodes.h */,
 			);
 			name = Enumerations;
 			sourceTree = "<group>";
@@ -481,6 +707,8 @@
 			children = (
 				03DEC83C18E736730098CCE1 /* libMarvelous.a */,
 				03DEC84C18E736740098CCE1 /* MarvelousTests.xctest */,
+				03C81A8918F4BC4C00D84C0C /* Marvelous.framework */,
+				03C81A9E18F4BC4C00D84C0C /* MarvelousOSXTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -490,7 +718,6 @@
 			children = (
 				03DEC83F18E736730098CCE1 /* Foundation.framework */,
 				03DEC84D18E736740098CCE1 /* XCTest.framework */,
-				03DEC85018E736740098CCE1 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -523,8 +750,6 @@
 		03DEC85518E736740098CCE1 /* MarvelousTests */ = {
 			isa = PBXGroup;
 			children = (
-				03B6951418E941EB00CEF855 /* XCTest+Async.h */,
-				03B6951518E941EB00CEF855 /* XCTest+Async.m */,
 				03B694D918E73E4600CEF855 /* APIs */,
 				03B694F118E7748D00CEF855 /* Operations */,
 				03130D4A18EADFC900BD315F /* Filters */,
@@ -546,7 +771,104 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		03C81A8618F4BC4C00D84C0C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				037F74FE18F4D36A00FB3616 /* RCQueryInfoObject.h in Headers */,
+				037F750C18F4D39D00FB3616 /* RCOperationErrorCodes.h in Headers */,
+				037F750A18F4D39500FB3616 /* RCBooleanValueCodes.h in Headers */,
+				037F74FA18F4D36A00FB3616 /* RCCreatorObject.h in Headers */,
+				037F74F718F4D36A00FB3616 /* RCListObject.h in Headers */,
+				037F74F218F4D36A00FB3616 /* RCURLObject.h in Headers */,
+				037F752218F4D3CC00FB3616 /* RCDateDescriptors.h in Headers */,
+				037F751E18F4D3CC00FB3616 /* RCImageSizes.h in Headers */,
+				037F750318F4D39500FB3616 /* RCAPITypes.h in Headers */,
+				037F750618F4D39500FB3616 /* RCImageSizeCodes.h in Headers */,
+				037F750918F4D39500FB3616 /* RCIssueTypeCodes.h in Headers */,
+				037F74F318F4D36A00FB3616 /* RCTextObject.h in Headers */,
+				037F74DE18F4D32E00FB3616 /* RCSeriesFilter.h in Headers */,
+				037F74FB18F4D36A00FB3616 /* RCEventObject.h in Headers */,
+				037F751918F4D3CC00FB3616 /* RCOperationErrors.h in Headers */,
+				037F74F818F4D36A00FB3616 /* RCCharacterObject.h in Headers */,
+				037F74FF18F4D37400FB3616 /* RCObject.h in Headers */,
+				037F74F118F4D36A00FB3616 /* RCSummaryObject.h in Headers */,
+				037F74F518F4D36A00FB3616 /* RCComicPriceObject.h in Headers */,
+				037F750218F4D38100FB3616 /* RCObjectProtocol.h in Headers */,
+				037F74F418F4D36A00FB3616 /* RCComicDateObject.h in Headers */,
+				037F750B18F4D39500FB3616 /* RCDateDescriptorCodes.h in Headers */,
+				037F74FD18F4D36A00FB3616 /* RCStoryObject.h in Headers */,
+				037F750D18F4D39D00FB3616 /* RCStatusCodes.h in Headers */,
+				037F74D018F4D30000FB3616 /* RCOperation.h in Headers */,
+				037F74DD18F4D32E00FB3616 /* RCEventFilter.h in Headers */,
+				037F74D218F4D31400FB3616 /* RCFilter.h in Headers */,
+				037F74F618F4D36A00FB3616 /* RCImageObject.h in Headers */,
+				037F750518F4D39500FB3616 /* RCImageModeCodes.h in Headers */,
+				037F751C18F4D3CC00FB3616 /* RCOrderByTypes.h in Headers */,
+				037F74DC18F4D32E00FB3616 /* RCCreatorFilter.h in Headers */,
+				037F750418F4D39500FB3616 /* RCOrderByTypeCodes.h in Headers */,
+				037F750018F4D37400FB3616 /* RCDataContainerObject.h in Headers */,
+				037F752118F4D3CC00FB3616 /* RCBooleanValues.h in Headers */,
+				037F74DB18F4D32E00FB3616 /* RCComicsFilter.h in Headers */,
+				037F750718F4D39500FB3616 /* RCFormatTypeCodes.h in Headers */,
+				037F751F18F4D3CC00FB3616 /* RCFormatTypes.h in Headers */,
+				037F74CB18F4D2D900FB3616 /* Marvelous.h in Headers */,
+				037F751A18F4D3CC00FB3616 /* RCRequestKeys.h in Headers */,
+				037F751D18F4D3CC00FB3616 /* RCImageModes.h in Headers */,
+				037F74DF18F4D32E00FB3616 /* RCStoryFilter.h in Headers */,
+				037F752318F4D3CC00FB3616 /* RCSeriesTypes.h in Headers */,
+				037F752018F4D3CC00FB3616 /* RCIssueTypes.h in Headers */,
+				037F750118F4D37400FB3616 /* RCDataWrapperObject.h in Headers */,
+				037F74FC18F4D36A00FB3616 /* RCSeriesObject.h in Headers */,
+				037F74F918F4D36A00FB3616 /* RCComicsObject.h in Headers */,
+				037F74D118F4D30600FB3616 /* RCAPIOperation.h in Headers */,
+				037F750818F4D39500FB3616 /* RCSeriesTypeCodes.h in Headers */,
+				037F751B18F4D3CC00FB3616 /* RCResponseKeys.h in Headers */,
+				037F74CC18F4D2EA00FB3616 /* RCMarvelAPI.h in Headers */,
+				037F74DA18F4D32E00FB3616 /* RCCharacterFilter.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		03C81A8818F4BC4C00D84C0C /* MarvelousOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03C81AB018F4BC4C00D84C0C /* Build configuration list for PBXNativeTarget "MarvelousOSX" */;
+			buildPhases = (
+				03C81A8418F4BC4C00D84C0C /* Sources */,
+				03C81A8518F4BC4C00D84C0C /* Frameworks */,
+				03C81A8618F4BC4C00D84C0C /* Headers */,
+				03C81A8718F4BC4C00D84C0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MarvelousOSX;
+			productName = MarvelousOSX;
+			productReference = 03C81A8918F4BC4C00D84C0C /* Marvelous.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		03C81A9D18F4BC4C00D84C0C /* MarvelousOSXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03C81AB118F4BC4C00D84C0C /* Build configuration list for PBXNativeTarget "MarvelousOSXTests" */;
+			buildPhases = (
+				03C81A9A18F4BC4C00D84C0C /* Sources */,
+				03C81A9B18F4BC4C00D84C0C /* Frameworks */,
+				03C81A9C18F4BC4C00D84C0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03C81AA218F4BC4C00D84C0C /* PBXTargetDependency */,
+			);
+			name = MarvelousOSXTests;
+			productName = MarvelousOSXTests;
+			productReference = 03C81A9E18F4BC4C00D84C0C /* MarvelousOSXTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		03DEC83B18E736730098CCE1 /* Marvelous */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03DEC85F18E736740098CCE1 /* Build configuration list for PBXNativeTarget "Marvelous" */;
@@ -590,6 +912,14 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Rock & Code";
+				TargetAttributes = {
+					03C81A9D18F4BC4C00D84C0C = {
+						TestTargetID = 03C81A8818F4BC4C00D84C0C;
+					};
+					03DEC84B18E736740098CCE1 = {
+						TestTargetID = 03C81A8818F4BC4C00D84C0C;
+					};
+				};
 			};
 			buildConfigurationList = 03DEC83718E736730098CCE1 /* Build configuration list for PBXProject "Marvelous" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -604,12 +934,31 @@
 			projectRoot = "";
 			targets = (
 				03DEC83B18E736730098CCE1 /* Marvelous */,
+				03C81A8818F4BC4C00D84C0C /* MarvelousOSX */,
 				03DEC84B18E736740098CCE1 /* MarvelousTests */,
+				03C81A9D18F4BC4C00D84C0C /* MarvelousOSXTests */,
+				03C81A5018F497BD00D84C0C /* MarvelousLibrary */,
+				037F752918F4DAB300FB3616 /* MarvelousFramework */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		03C81A8718F4BC4C00D84C0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03C81A9C18F4BC4C00D84C0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				037F74AE18F4CF1400FB3616 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		03DEC84A18E736740098CCE1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -620,7 +969,116 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		037F752D18F4DB2000FB3616 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "BUILDER=/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild\nTARGET=${PROJECT_NAME}OSX\nBUILD_DIRECTORY=./build\nRELEASE_DIRECTORY=${BUILD_DIRECTORY}/Release\nFRAMEWORK_DIRECTORY=./Framework\nFRAMEWORK_NAME=${PROJECT_NAME}.framework\n\nrm -drf ${FRAMEWORK_DIRECTORY}\nmkdir ${FRAMEWORK_DIRECTORY}\n\n${BUILDER} -project \"${PROJECT_FILE_PATH}\" -target ${TARGET} -sdk macosx -configuration Release clean build\n\nmv ${RELEASE_DIRECTORY}/${FRAMEWORK_NAME} ${FRAMEWORK_DIRECTORY}\n\nrm -rf ${BUILD_DIRECTORY}\n\ncd ${FRAMEWORK_DIRECTORY}\nzip -r ${PROJECT_NAME}-${CURRENT_PROJECT_VERSION}.zip ${FRAMEWORK_NAME}\nrm -rf ${FRAMEWORK_NAME}";
+		};
+		03C81A5418F4980A00D84C0C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "BUILDER=/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild\nBUILD_DIRECTORY=./build\nSIMULATOR_DIRECTORY=${BUILD_DIRECTORY}/Release-iphonesimulator\nDEVICE_DIRECTORY=${BUILD_DIRECTORY}/Release-iphoneos\nHEADERS_DIRECTORY=${DEVICE_DIRECTORY}/include\nLIBRARY_DIRECTORY=./Library\nARCHIVES_DIRECTORY=${LIBRARY_DIRECTORY}/Archives\nLIBRARY_NAME=lib${PROJECT_NAME}\nARCHIVE_FILES=(${ARCHIVES_DIRECTORY}/${LIBRARY_NAME}-i386.a ${ARCHIVES_DIRECTORY}/${LIBRARY_NAME}-arm7.a ${ARCHIVES_DIRECTORY}/${LIBRARY_NAME}-armv7s.a ${ARCHIVES_DIRECTORY}/${LIBRARY_NAME}-arm64.a)\n\nrm -drf ${LIBRARY_DIRECTORY}\nmkdir -p ${ARCHIVES_DIRECTORY}\n\n${BUILDER} -project \"${PROJECT_FILE_PATH}\" -target ${PROJECT_NAME} -sdk iphonesimulator -configuration Release clean build\n\nmv ${SIMULATOR_DIRECTORY}/${LIBRARY_NAME}.a ${ARCHIVES_DIRECTORY}/${LIBRARY_NAME}-i386.a\n\n${BUILDER} -project \"${PROJECT_FILE_PATH}\" -target ${PROJECT_NAME} -sdk iphoneos -arch armv7 -configuration Release clean build\n\nmv ${DEVICE_DIRECTORY}/${LIBRARY_NAME}.a ${ARCHIVES_DIRECTORY}/${LIBRARY_NAME}-arm7.a\n\n${BUILDER} -project \"${PROJECT_FILE_PATH}\" -target ${PROJECT_NAME} -sdk iphoneos -arch armv7s -configuration Release clean build\n\nmv ${DEVICE_DIRECTORY}/${LIBRARY_NAME}.a ${ARCHIVES_DIRECTORY}/${LIBRARY_NAME}-arm7s.a\n\n${BUILDER} -project \"${PROJECT_FILE_PATH}\" -target ${PROJECT_NAME} -sdk iphoneos -arch arm64 -configuration Release clean build\n\nmv ${DEVICE_DIRECTORY}/${LIBRARY_NAME}.a ${ARCHIVES_DIRECTORY}/${LIBRARY_NAME}-arm64.a\n\nlipo -create -output ${LIBRARY_DIRECTORY}/${LIBRARY_NAME}.a ${ARCHIVE_FILES}\n\nmv ${HEADERS_DIRECTORY}/${PROJECT_NAME} ${LIBRARY_DIRECTORY}/\n\nrm -rf ${ARCHIVES_DIRECTORY}\nrm -rf ${BUILD_DIRECTORY}\n\ncd ${LIBRARY_DIRECTORY}\nzip -r ${LIBRARY_NAME}-${CURRENT_PROJECT_VERSION}.zip ${LIBRARY_NAME}.a ${PROJECT_NAME}\nrm -rf ${LIBRARY_NAME}.a ${PROJECT_NAME}";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		03C81A8418F4BC4C00D84C0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				037F74E818F4D35100FB3616 /* RCCharacterObject.m in Sources */,
+				037F74E918F4D35100FB3616 /* RCComicsObject.m in Sources */,
+				037F74E018F4D35100FB3616 /* RCObject.m in Sources */,
+				037F74D518F4D32500FB3616 /* RCComicsFilter.m in Sources */,
+				037F74EE18F4D35100FB3616 /* RCDataContainerObject.m in Sources */,
+				037F74E218F4D35100FB3616 /* RCURLObject.m in Sources */,
+				037F751518F4D3BF00FB3616 /* RCIssueTypes.m in Sources */,
+				037F74D318F4D31A00FB3616 /* RCFilter.m in Sources */,
+				037F74E418F4D35100FB3616 /* RCComicDateObject.m in Sources */,
+				037F74ED18F4D35100FB3616 /* RCStoryObject.m in Sources */,
+				037F751418F4D3BF00FB3616 /* RCFormatTypes.m in Sources */,
+				037F74D418F4D32500FB3616 /* RCCharacterFilter.m in Sources */,
+				037F74CE18F4D2F800FB3616 /* RCOperation.m in Sources */,
+				037F751718F4D3BF00FB3616 /* RCDateDescriptors.m in Sources */,
+				037F750F18F4D3BF00FB3616 /* RCRequestKeys.m in Sources */,
+				037F74E718F4D35100FB3616 /* RCListObject.m in Sources */,
+				037F74D918F4D32500FB3616 /* RCStoryFilter.m in Sources */,
+				037F74E618F4D35100FB3616 /* RCImageObject.m in Sources */,
+				037F751018F4D3BF00FB3616 /* RCResponseKeys.m in Sources */,
+				037F74D618F4D32500FB3616 /* RCCreatorFilter.m in Sources */,
+				037F74F018F4D35100FB3616 /* RCQueryInfoObject.m in Sources */,
+				037F74E518F4D35100FB3616 /* RCComicPriceObject.m in Sources */,
+				037F74CF18F4D2FD00FB3616 /* RCAPIOperation.m in Sources */,
+				037F751318F4D3BF00FB3616 /* RCImageSizes.m in Sources */,
+				037F74CD18F4D2EA00FB3616 /* RCMarvelAPI.m in Sources */,
+				037F751818F4D3BF00FB3616 /* RCSeriesTypes.m in Sources */,
+				037F74EB18F4D35100FB3616 /* RCEventObject.m in Sources */,
+				037F751618F4D3BF00FB3616 /* RCBooleanValues.m in Sources */,
+				037F74D718F4D32500FB3616 /* RCEventFilter.m in Sources */,
+				037F750E18F4D3BF00FB3616 /* RCOperationErrors.m in Sources */,
+				037F751118F4D3BF00FB3616 /* RCOrderByTypes.m in Sources */,
+				037F751218F4D3BF00FB3616 /* RCImageModes.m in Sources */,
+				037F74E118F4D35100FB3616 /* RCSummaryObject.m in Sources */,
+				037F74EA18F4D35100FB3616 /* RCCreatorObject.m in Sources */,
+				037F74E318F4D35100FB3616 /* RCTextObject.m in Sources */,
+				037F74EF18F4D35100FB3616 /* RCDataWrapperObject.m in Sources */,
+				037F74D818F4D32500FB3616 /* RCSeriesFilter.m in Sources */,
+				037F74EC18F4D35100FB3616 /* RCSeriesObject.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03C81A9A18F4BC4C00D84C0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				037F74BC18F4CFD100FB3616 /* RCTextObjectTests.m in Sources */,
+				037F74C518F4CFD100FB3616 /* RCSeriesObjectTests.m in Sources */,
+				037F74BE18F4CFD100FB3616 /* RCComicPriceObjectTests.m in Sources */,
+				037F74B218F4CFC900FB3616 /* RCFilterTests.m in Sources */,
+				037F74B318F4CFC900FB3616 /* RCCharacterFilterTests.m in Sources */,
+				037F74C418F4CFD100FB3616 /* RCEventObjectTests.m in Sources */,
+				037F74B418F4CFC900FB3616 /* RCComicsFilterTests.m in Sources */,
+				037F74BF18F4CFD100FB3616 /* RCImageObjectTests.m in Sources */,
+				037F74BD18F4CFD100FB3616 /* RCComicDateObjectTests.m in Sources */,
+				037F74B118F4CFC200FB3616 /* RCAPIOperationTests.m in Sources */,
+				037F74B818F4CFC900FB3616 /* RCStoryFilterTests.m in Sources */,
+				037F74C018F4CFD100FB3616 /* RCListObjectTests.m in Sources */,
+				037F74B018F4CFC200FB3616 /* RCOperationTests.m in Sources */,
+				037F74C118F4CFD100FB3616 /* RCCharacterObjectTests.m in Sources */,
+				037F74AF18F4CFBC00FB3616 /* RCMarvelAPITests.m in Sources */,
+				037F74C618F4CFD100FB3616 /* RCStoryObjectTests.m in Sources */,
+				037F74CA18F4CFD600FB3616 /* RCMarvelAPITestValues.m in Sources */,
+				037F74C718F4CFD100FB3616 /* RCDataContainerObjectTests.m in Sources */,
+				037F74C218F4CFD100FB3616 /* RCComicsObjectTests.m in Sources */,
+				037F74B918F4CFD100FB3616 /* RCObjectTests.m in Sources */,
+				037F74C318F4CFD100FB3616 /* RCCreatorObjectTests.m in Sources */,
+				037F74BB18F4CFD100FB3616 /* RCURLObjectTests.m in Sources */,
+				037F74B518F4CFC900FB3616 /* RCCreatorFilterTests.m in Sources */,
+				037F74B718F4CFC900FB3616 /* RCSeriesFilterTests.m in Sources */,
+				037F74BA18F4CFD100FB3616 /* RCSummaryObjectTests.m in Sources */,
+				037F74C918F4CFD100FB3616 /* RCQueryInfoObjectTests.m in Sources */,
+				037F74B618F4CFC900FB3616 /* RCEventFilterTests.m in Sources */,
+				037F74C818F4CFD100FB3616 /* RCDataWrapperObjectTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		03DEC83818E736730098CCE1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -697,7 +1155,6 @@
 				036341D318F16882008FA7F0 /* RCCreatorObjectTests.m in Sources */,
 				03B694DB18E73E5E00CEF855 /* RCMarvelAPITests.m in Sources */,
 				036341FB18F2005A008FA7F0 /* RCComicsObjectTests.m in Sources */,
-				03B6951618E941EB00CEF855 /* XCTest+Async.m in Sources */,
 				036341CE18F15B81008FA7F0 /* RCCreatorFilterTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -705,6 +1162,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		03C81AA218F4BC4C00D84C0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03C81A8818F4BC4C00D84C0C /* MarvelousOSX */;
+			targetProxy = 03C81AA118F4BC4C00D84C0C /* PBXContainerItemProxy */;
+		};
 		03DEC85318E736740098CCE1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 03DEC83B18E736730098CCE1 /* Marvelous */;
@@ -724,6 +1186,135 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		037F752B18F4DAB300FB3616 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 0.6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Debug;
+		};
+		037F752C18F4DAB300FB3616 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 0.6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Release;
+		};
+		03C81A5118F497BD00D84C0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 0.6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		03C81A5218F497BD00D84C0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 0.6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		03C81AAC18F4BC4C00D84C0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 0.6.0;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Marvelous/Marvelous-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				INFOPLIST_FILE = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = Marvelous;
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		03C81AAD18F4BC4C00D84C0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 0.6.0;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Marvelous/Marvelous-Prefix.pch";
+				INFOPLIST_FILE = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = Marvelous;
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		03C81AAE18F4BC4C00D84C0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Marvelous.framework/Versions/A/Marvelous";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Marvelous/Marvelous-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				INFOPLIST_FILE = "MarvelousTests/MarvelousTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		03C81AAF18F4BC4C00D84C0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Marvelous.framework/Versions/A/Marvelous";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Marvelous/Marvelous-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				INFOPLIST_FILE = "MarvelousTests/MarvelousTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 		03DEC85D18E736740098CCE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -795,7 +1386,7 @@
 		03DEC86018E736740098CCE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CURRENT_PROJECT_VERSION = 0.5.0;
+				CURRENT_PROJECT_VERSION = 0.6.0;
 				DSTROOT = /tmp/Marvelous.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Marvelous/Marvelous-Prefix.pch";
@@ -808,7 +1399,7 @@
 		03DEC86118E736740098CCE1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CURRENT_PROJECT_VERSION = 0.5.0;
+				CURRENT_PROJECT_VERSION = 0.6.0;
 				DSTROOT = /tmp/Marvelous.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Marvelous/Marvelous-Prefix.pch";
@@ -821,6 +1412,7 @@
 		03DEC86318E736740098CCE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Marvelous.framework/Versions/A/Marvelous";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -831,6 +1423,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = "MarvelousTests/MarvelousTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -838,6 +1431,7 @@
 		03DEC86418E736740098CCE1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Marvelous.framework/Versions/A/Marvelous";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -847,6 +1441,7 @@
 				GCC_PREFIX_HEADER = "Marvelous/Marvelous-Prefix.pch";
 				INFOPLIST_FILE = "MarvelousTests/MarvelousTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
@@ -854,6 +1449,41 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		037F752A18F4DAB300FB3616 /* Build configuration list for PBXAggregateTarget "MarvelousFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				037F752B18F4DAB300FB3616 /* Debug */,
+				037F752C18F4DAB300FB3616 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		03C81A5318F497BD00D84C0C /* Build configuration list for PBXAggregateTarget "MarvelousLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03C81A5118F497BD00D84C0C /* Debug */,
+				03C81A5218F497BD00D84C0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03C81AB018F4BC4C00D84C0C /* Build configuration list for PBXNativeTarget "MarvelousOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03C81AAC18F4BC4C00D84C0C /* Debug */,
+				03C81AAD18F4BC4C00D84C0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03C81AB118F4BC4C00D84C0C /* Build configuration list for PBXNativeTarget "MarvelousOSXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03C81AAE18F4BC4C00D84C0C /* Debug */,
+				03C81AAF18F4BC4C00D84C0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		03DEC83718E736730098CCE1 /* Build configuration list for PBXProject "Marvelous" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
