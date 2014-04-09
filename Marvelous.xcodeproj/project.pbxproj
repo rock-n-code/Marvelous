@@ -77,6 +77,7 @@
 
 /* Begin PBXFileReference section */
 		031B986118EE9FDE00CE30DE /* APIDocs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = APIDocs.json; sourceTree = SOURCE_ROOT; };
+		034DDCFF18F5E6F1000E823F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		03C81A8918F4BC4C00D84C0C /* Marvelous.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Marvelous.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		03C81A9E18F4BC4C00D84C0C /* MarvelousOSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelousOSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03DEC83C18E736730098CCE1 /* libMarvelous.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMarvelous.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +133,7 @@
 		03DEC83318E736730098CCE1 = {
 			isa = PBXGroup;
 			children = (
+				034DDCFF18F5E6F1000E823F /* LICENSE */,
 				03DEC84118E736730098CCE1 /* Marvelous */,
 				03DEC85518E736740098CCE1 /* MarvelousTests */,
 				03DEC83E18E736730098CCE1 /* Frameworks */,
@@ -698,6 +700,7 @@
 				037F752C18F4DAB300FB3616 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		03C81A5318F497BD00D84C0C /* Build configuration list for PBXAggregateTarget "MarvelousLibrary" */ = {
 			isa = XCConfigurationList;
