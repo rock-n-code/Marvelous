@@ -355,7 +355,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "";
+			shellScript = "BUILDER=/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild\nTARGET=${PROJECT_NAME}OSX\nBUILD_DIRECTORY=./build\nRELEASE_DIRECTORY=${BUILD_DIRECTORY}/Release\nFRAMEWORK_DIRECTORY=./Framework\nFRAMEWORK_NAME=${PROJECT_NAME}.framework\n\nrm -drf ${FRAMEWORK_DIRECTORY}\nmkdir ${FRAMEWORK_DIRECTORY}\n\n${BUILDER} -project \"${PROJECT_FILE_PATH}\" -target ${TARGET} -sdk macosx -configuration Release clean build\n\nmv ${RELEASE_DIRECTORY}/${FRAMEWORK_NAME} ${FRAMEWORK_DIRECTORY}\n\nrm -rf ${BUILD_DIRECTORY}\n\ncd ${FRAMEWORK_DIRECTORY}\nzip -r ${PROJECT_NAME}.zip ${FRAMEWORK_NAME}\nrm -rf ${FRAMEWORK_NAME}";
 		};
 		03C81A5418F4980A00D84C0C /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
