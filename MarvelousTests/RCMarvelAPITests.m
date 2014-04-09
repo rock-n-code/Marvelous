@@ -8,7 +8,6 @@
 
 #import <XCTest/XCTest.h>
 
-#import "XCTest+Async.h"
 #import "RCMarvelAPI.h"
 #import "RCMarvelAPITestValues.h"
 

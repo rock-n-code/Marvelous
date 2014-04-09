@@ -88,7 +88,6 @@
 		03B694FB18E774D400CEF855 /* RCOperationErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B694FA18E774D400CEF855 /* RCOperationErrors.m */; };
 		03B694FE18E77B1D00CEF855 /* RCAPIOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B694FD18E77B1D00CEF855 /* RCAPIOperation.m */; };
 		03B6950018E77B3500CEF855 /* RCAPIOperationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B694FF18E77B3500CEF855 /* RCAPIOperationTests.m */; };
-		03B6951618E941EB00CEF855 /* XCTest+Async.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B6951518E941EB00CEF855 /* XCTest+Async.m */; };
 		03C81A2618F4656D00D84C0C /* RCCharacterFilter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03130D4D18EAE02900BD315F /* RCCharacterFilter.h */; };
 		03C81A2718F4657100D84C0C /* RCComicsFilter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 036341E618F1C0EB008FA7F0 /* RCComicsFilter.h */; };
 		03C81A2818F4657400D84C0C /* RCCreatorFilter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 036341CA18F15B5E008FA7F0 /* RCCreatorFilter.h */; };
@@ -309,8 +308,6 @@
 		03B694FC18E77B1D00CEF855 /* RCAPIOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCAPIOperation.h; sourceTree = "<group>"; };
 		03B694FD18E77B1D00CEF855 /* RCAPIOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCAPIOperation.m; sourceTree = "<group>"; };
 		03B694FF18E77B3500CEF855 /* RCAPIOperationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCAPIOperationTests.m; sourceTree = "<group>"; };
-		03B6951418E941EB00CEF855 /* XCTest+Async.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTest+Async.h"; sourceTree = "<group>"; };
-		03B6951518E941EB00CEF855 /* XCTest+Async.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCTest+Async.m"; sourceTree = "<group>"; };
 		03C81A8918F4BC4C00D84C0C /* Marvelous.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Marvelous.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		03C81A9E18F4BC4C00D84C0C /* MarvelousOSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelousOSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03DEC83C18E736730098CCE1 /* libMarvelous.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMarvelous.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -897,7 +894,6 @@
 				036341D318F16882008FA7F0 /* RCCreatorObjectTests.m in Sources */,
 				03B694DB18E73E5E00CEF855 /* RCMarvelAPITests.m in Sources */,
 				036341FB18F2005A008FA7F0 /* RCComicsObjectTests.m in Sources */,
-				03B6951618E941EB00CEF855 /* XCTest+Async.m in Sources */,
 				036341CE18F15B81008FA7F0 /* RCCreatorFilterTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
