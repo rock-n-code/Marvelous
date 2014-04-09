@@ -7,15 +7,26 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		03C81A5018F497BD00D84C0C /* MarvelousUniversal */ = {
+		037F752918F4DAB300FB3616 /* MarvelousFramework */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 03C81A5318F497BD00D84C0C /* Build configuration list for PBXAggregateTarget "MarvelousUniversal" */;
+			buildConfigurationList = 037F752A18F4DAB300FB3616 /* Build configuration list for PBXAggregateTarget "MarvelousFramework" */;
+			buildPhases = (
+				037F752D18F4DB2000FB3616 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = MarvelousFramework;
+			productName = MarvelousFramework;
+		};
+		03C81A5018F497BD00D84C0C /* MarvelousLibrary */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 03C81A5318F497BD00D84C0C /* Build configuration list for PBXAggregateTarget "MarvelousLibrary" */;
 			buildPhases = (
 				03C81A5418F4980A00D84C0C /* ShellScript */,
 			);
 			dependencies = (
 			);
-			name = MarvelousUniversal;
+			name = MarvelousLibrary;
 			productName = MarvelousUniversal;
 		};
 /* End PBXAggregateTarget section */
@@ -926,7 +937,8 @@
 				03C81A8818F4BC4C00D84C0C /* MarvelousOSX */,
 				03DEC84B18E736740098CCE1 /* MarvelousTests */,
 				03C81A9D18F4BC4C00D84C0C /* MarvelousOSXTests */,
-				03C81A5018F497BD00D84C0C /* MarvelousUniversal */,
+				03C81A5018F497BD00D84C0C /* MarvelousLibrary */,
+				037F752918F4DAB300FB3616 /* MarvelousFramework */,
 			);
 		};
 /* End PBXProject section */
@@ -958,6 +970,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		037F752D18F4DB2000FB3616 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "BUILDER=/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild\nTARGET=${PROJECT_NAME}OSX\nBUILD_DIRECTORY=./build\nRELEASE_DIRECTORY=${BUILD_DIRECTORY}/Release\nFRAMEWORK_DIRECTORY=./Framework\nFRAMEWORK_NAME=${PROJECT_NAME}.framework\n\nrm -drf ${FRAMEWORK_DIRECTORY}\nmkdir ${FRAMEWORK_DIRECTORY}\n\n${BUILDER} -project \"${PROJECT_FILE_PATH}\" -target ${TARGET} -sdk macosx -configuration Release clean build\n\nmv ${RELEASE_DIRECTORY}/${FRAMEWORK_NAME} ${FRAMEWORK_DIRECTORY}\n\nrm -rf ${BUILD_DIRECTORY}\n\ncd ${FRAMEWORK_DIRECTORY}\nzip -r ${PROJECT_NAME}.zip ${FRAMEWORK_NAME}\nrm -rf ${FRAMEWORK_NAME}";
+		};
 		03C81A5418F4980A00D84C0C /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1161,6 +1186,24 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		037F752B18F4DAB300FB3616 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Debug;
+		};
+		037F752C18F4DAB300FB3616 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Release;
+		};
 		03C81A5118F497BD00D84C0C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1363,7 +1406,7 @@
 		03DEC86318E736740098CCE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Marvelous.framework/Versions/A/Marvelous";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1382,7 +1425,7 @@
 		03DEC86418E736740098CCE1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Marvelous.framework/Versions/A/Marvelous";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1400,7 +1443,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		03C81A5318F497BD00D84C0C /* Build configuration list for PBXAggregateTarget "MarvelousUniversal" */ = {
+		037F752A18F4DAB300FB3616 /* Build configuration list for PBXAggregateTarget "MarvelousFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				037F752B18F4DAB300FB3616 /* Debug */,
+				037F752C18F4DAB300FB3616 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		03C81A5318F497BD00D84C0C /* Build configuration list for PBXAggregateTarget "MarvelousLibrary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				03C81A5118F497BD00D84C0C /* Debug */,
