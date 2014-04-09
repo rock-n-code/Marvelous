@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		037F74AE18F4CF1400FB3616 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03DEC85818E736740098CCE1 /* InfoPlist.strings */; };
 		03C81A9F18F4BC4C00D84C0C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC84D18E736740098CCE1 /* XCTest.framework */; };
 		03C81AA318F4BC4C00D84C0C /* Marvelous.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C81A8918F4BC4C00D84C0C /* Marvelous.framework */; };
 		03C81AB418F4BFC900D84C0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DEC83F18E736730098CCE1 /* Foundation.framework */; };
@@ -316,6 +317,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				037F74AE18F4CF1400FB3616 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
