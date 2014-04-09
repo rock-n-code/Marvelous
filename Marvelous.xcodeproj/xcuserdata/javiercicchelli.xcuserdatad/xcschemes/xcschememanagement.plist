@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>MarvelousFramework.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>MarvelousLibrary.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -22,6 +27,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>037F752918F4DAB300FB3616</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>03C81A5018F497BD00D84C0C</key>
 		<dict>
 			<key>primary</key>

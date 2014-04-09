@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
+		037F752918F4DAB300FB3616 /* MarvelousFramework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 037F752A18F4DAB300FB3616 /* Build configuration list for PBXAggregateTarget "MarvelousFramework" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = MarvelousFramework;
+			productName = MarvelousFramework;
+		};
 		03C81A5018F497BD00D84C0C /* MarvelousLibrary */ = {
 			isa = PBXAggregateTarget;
 			buildConfigurationList = 03C81A5318F497BD00D84C0C /* Build configuration list for PBXAggregateTarget "MarvelousLibrary" */;
@@ -301,6 +311,7 @@
 				03DEC84B18E736740098CCE1 /* MarvelousTests */,
 				03C81A9D18F4BC4C00D84C0C /* MarvelousOSXTests */,
 				03C81A5018F497BD00D84C0C /* MarvelousLibrary */,
+				037F752918F4DAB300FB3616 /* MarvelousFramework */,
 			);
 		};
 /* End PBXProject section */
@@ -403,6 +414,24 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		037F752B18F4DAB300FB3616 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Debug;
+		};
+		037F752C18F4DAB300FB3616 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Release;
+		};
 		03C81A5118F497BD00D84C0C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -605,7 +634,7 @@
 		03DEC86318E736740098CCE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Marvelous.framework/Versions/A/Marvelous";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -624,7 +653,7 @@
 		03DEC86418E736740098CCE1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Marvelous.framework/Versions/A/Marvelous";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -642,6 +671,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		037F752A18F4DAB300FB3616 /* Build configuration list for PBXAggregateTarget "MarvelousFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				037F752B18F4DAB300FB3616 /* Debug */,
+				037F752C18F4DAB300FB3616 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		03C81A5318F497BD00D84C0C /* Build configuration list for PBXAggregateTarget "MarvelousLibrary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
