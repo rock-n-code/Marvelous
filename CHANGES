@@ -1,0 +1,7 @@
+= 0.6.1 (2014-04-11)
+
+  * Added LICENSE file [Javier Cicchelli]
+  * Added CHANGES file [Javier Cicchelli]
+  * Added README file [Javier Cicchelli]
+  * Assigned to this project the MIT license [Javier Cicchelli]
+  * Improved the run scripts on the build phase of the "MarvelousLibrary" and "MarvelousFramework" aggregates to include the LICENSE and CHANGES into the generated .zip files [Javier Cicchelli]
