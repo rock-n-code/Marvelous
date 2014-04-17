@@ -33,9 +33,25 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 
 @interface RCMarvelAPI ()
 
+/*!
+ @property queue
+ This property sets and gets the @p NSOperationQueue object that handle the @p RCAPIOperation objects which represents call to the API.
+ @internal
+ */
 @property (nonatomic, strong) NSOperationQueue *queue;
 
+/*!
+ @property timestamp
+ This property gets a @p NSString object that represent the timestamp generated at the time of its call.
+ @internal
+ */
 @property (nonatomic, readonly, strong) NSString *timestamp;
+
+/*!
+ @property authParameters
+ This property gets a @p NSDictionary object with the authentication parameters to sign any API call.
+ @internal
+ */
 @property (nonatomic, readonly, strong) NSDictionary *authParameters;
 
 @end
@@ -43,6 +59,7 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 @implementation RCMarvelAPI
 
 #pragma mark - NSObject
+
 
 - (id)init
 {
@@ -76,6 +93,7 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 
 - (NSString *)version
 {
+//	TODO: it should be fetched from the API in the near future.
 	return RCMarvelAPIVersionName;
 }
 
@@ -195,7 +213,7 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 	[self.queue addOperation:operation];
 }
 
-- (void)comicsByFilter:(RCCharacterFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)comicsByFilter:(RCComicsFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
 {
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithFilter:filter andAuthentication:self.authParameters];
 
@@ -622,6 +640,12 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 
 #pragma mark - Private methods
 
+/*!
+ This instance method convert a list of strings into a MD5 hash.
+ @param strings A list of @p NSString objects
+ @return A MD5 hash as a @p NSString object
+ @internal
+ */
 - (NSString *)hashFromStrings:(NSArray *)strings
 {
 	NSMutableString *stringToHash = [NSMutableString string];
@@ -643,42 +667,24 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 	return hashedString;
 }
 
-- (void)sendResultToCompletionBlock:(resultCompletionBlock)completionBlock fromDataWrapper:(RCDataWrapperObject *)dataWrapper andError:(NSError *)error
-{
-	id result = nil;
-	RCQueryInfoObject *info = nil;
-
-	if (!error) {
-		info = [[RCQueryInfoObject alloc] initWithDataWrapper:dataWrapper];
-
-		if (dataWrapper.data.results.count > 0) {
-			result = dataWrapper.data.results[0];
-		}
-	}
-
-	completionBlock(result, info, error);
-}
-
-- (void)sendResultsToCompletionBlock:(resultsCompletionBlock)completionBlock fromDataWrapper:(RCDataWrapperObject *)dataWrapper andError:(NSError *)error
-{
-	NSArray *results = nil;
-	RCQueryInfoObject *info = nil;
-
-	if (!error) {
-		info = [[RCQueryInfoObject alloc] initWithDataWrapper:dataWrapper];
-		results = dataWrapper.data.results;
-	}
-
-	completionBlock(results, info, error);
-}
-
-#pragma mark - Private methods
-
+/*!
+ This instance method convert to string a value contained on a @p NSNumber object.
+ @param strings A @p NSNumber object
+ @return A @p NSString object in case the given parameter is indeed a @p NSNumber object. 
+		 NULL in case the given parameter is NULL
+ @internal
+ */
 - (NSString *)stringFromIdentifier:(NSNumber *)identifier
 {
 	return identifier ? identifier.stringValue : nil;
 }
 
+/*!
+ This instance method check if a given filter is an object or NULL. In case the filter is not an allocated object, then it creates a new instance of @p RCFilter depending the given type.
+ @param filter A @p RCFilter object
+ @param type A @RCAPITypes enumeration
+ @internal
+ */
 - (void)validateFilter:(RCFilter *)filter ofType:(RCAPITypes)type
 {
 	if (!filter) {
@@ -696,6 +702,49 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 			filter = [[RCStoryFilter alloc] init];
 		}
 	}
+}
+
+/*!
+ This instance method prepare the objects to send back to a @p resultCompletionBlock callback. It create a @p RCQueryInfoObject object and get the first object of the "results" property from a @p RCDataWrapperObject object in case the API response don't return any error.
+ @param completionBlock A @p resultCompletionBlock block that is used as the callback
+ @param dataWrapper A @p RCDataWrapperObject object containing the data retrieved from an API call
+ @param error A @p NSError object that contain the error data retrieved from an API call
+ @internal
+ */
+- (void)sendResultToCompletionBlock:(resultCompletionBlock)completionBlock fromDataWrapper:(RCDataWrapperObject *)dataWrapper andError:(NSError *)error
+{
+	id result = nil;
+	RCQueryInfoObject *info = nil;
+
+	if (!error) {
+		info = [[RCQueryInfoObject alloc] initWithDataWrapper:dataWrapper];
+
+		if (dataWrapper.data.results.count > 0) {
+			result = dataWrapper.data.results[0];
+		}
+	}
+
+	completionBlock(result, info, error);
+}
+
+/*!
+ This instance method prepare the objects to send back to a @p resultsCompletionBlock callback. It create a @p RCQueryInfoObject object and get the objects of the "results" property from a @p RCDataWrapperObject object in case the API response don't return any error.
+ @param completionBlock A @p resultsCompletionBlock block that is used as the callback
+ @param dataWrapper A @p RCDataWrapperObject object containing the data retrieved from an API call
+ @param error A @p NSError object that contain the error data retrieved from an API call
+ @internal
+ */
+- (void)sendResultsToCompletionBlock:(resultsCompletionBlock)completionBlock fromDataWrapper:(RCDataWrapperObject *)dataWrapper andError:(NSError *)error
+{
+	NSArray *results = nil;
+	RCQueryInfoObject *info = nil;
+
+	if (!error) {
+		info = [[RCQueryInfoObject alloc] initWithDataWrapper:dataWrapper];
+		results = dataWrapper.data.results;
+	}
+
+	completionBlock(results, info, error);
 }
 
 @end
