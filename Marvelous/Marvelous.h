@@ -23,6 +23,15 @@
 //  THE SOFTWARE.
 //
 
+/*!
+ @header Marvelous
+ The Marvelous library/framework provides a native interface to the Marvel Comics API.
+ @author Javier Cicchelli (@monsieur_rock)
+ @copyright © 2014, Rock & Code VoF [http://rock-n-code.com]
+ @version 0.6.1
+ @whyinclude This header imports all the classes you require to use this library/framework
+ */
+
 // API Interface
 #import <Marvelous/RCMarvelAPI.h>
 
