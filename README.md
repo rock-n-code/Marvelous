@@ -14,10 +14,8 @@
 1. Download the [static library for iOS](http://dropbox.rock-n-co.de/marvelous/libMarvelous-0.6.1.zip) or the [framework for OSX](http://dropbox.rock-n-co.de/marvelous/Marvelous-0.6.1.zip).
 2. Install the [static library](https://developer.apple.com/library/ios/technotes/iOSStaticLibraries/Articles/configuration.html) or [framework](https://developer.apple.com/library/mac/documentation/macosx/conceptual/BPFrameworks/Tasks/InstallingFrameworks.html#//apple_ref/doc/uid/20002261-BBCCFBJA) into your prject.
 3. Create your [Marvel developer account](https://developer.marvel.com/account) to obtain the public and private keys required to sign any request to the API. Of course, you can skip this step in case you already have a developer account.
-4. Play with it 'til you drop!
+4. [Play with it](https://www.youtube.com/watch?v=sGjmXhES2wQ) 'til you drop!
 5. Check the [Marvel Comics online documentation](http://developer.marvel.com/docs) for further information about the API calls.
-
-<p align="center"><iframe width="420" height="315" src="//www.youtube.com/embed/sGjmXhES2wQ" frameborder="0" allowfullscreen></iframe></p>
 
 If you're looking for the online documentation, you'll have to wait for it a bit longer.
 
@@ -123,6 +121,13 @@ filter.orderBy = @[@(RCOrderByTypeCodeDateModifieDescending)];
 ## Unit Tests
 
 **Marvelous** includes a suite of unit tests within the *MarvelousTests* folder. You can execute the test suite inside XCode by selecting either the *Marvelous*  or the *MarvelousOSX* scheme and then pressing the &#8984;+U key shortcut.
+
+## TODOs
+
+- Documentation (already on it...)
+- Documentation generation
+- `RCMarvelAPI` asynchronous tests
+- CocoaPods support
 
 ## Credits
 
