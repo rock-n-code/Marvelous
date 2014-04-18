@@ -23,7 +23,18 @@
 //  THE SOFTWARE.
 //
 
-typedef NS_ENUM(NSInteger, RCAPITypes) {
+/*!
+ @enum RCAPITypes
+ This enumeration defines the types of API calls the @p RCAPIOperation object can handle.
+ @constant RCAPITypeUndefined Undefined API call type
+ @constant RCAPITypeCharacters Characters API call type
+ @constant RCAPITypeComics Comics API call type
+ @constant RCAPITypeCreators Creators API call type
+ @constant RCAPITypeEvents Events API call type
+ @constant RCAPITypeSeries Series API call type
+ @constant RCAPITypeStories Stories API call type
+ */
+typedef enum {
 	RCAPITypeUndefined = 0,
 	RCAPITypeCharacters,
 	RCAPITypeComics,
@@ -31,4 +42,4 @@ typedef NS_ENUM(NSInteger, RCAPITypes) {
 	RCAPITypeEvents,
 	RCAPITypeSeries,
 	RCAPITypeStories
-};
+} RCAPITypes;
