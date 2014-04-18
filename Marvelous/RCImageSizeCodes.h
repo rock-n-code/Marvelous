@@ -23,7 +23,19 @@
 //  THE SOFTWARE.
 //
 
-typedef NS_ENUM(NSInteger, RCImageSizeCodes) {
+/*!
+ @enum RCImageSizeCodes
+ This enumeration defines the available image sizes use by a @p RCImageObject object to produce a URL to a customised image.
+ @constant RCImageSizeCodeSmall Size on portrait mode: 50x75px, on standard mode: 65x45px, on landscape mode: 120x90px
+ @constant RCImageSizeCodeMedium Size on portrait mode: 100x150px, on standard mode: 100x100px, on landscape mode: 175x130px
+ @constant RCImageSizeCodeLarge Size not supported on portrait mode, on standard mode: 140x140px, on landscape: 190x140px
+ @constant RCImageSizeCodeXLarge Size on portrait mode: 150x225px, on standard mode: 200x200px, on landscape mode: 270x200px
+ @constant RCImageSizeCodeAmazing Size not supported on portrait mode, on standard mode: 180x180px, on landscape: 250x156px
+ @constant RCImageSizeCodeFantastic Size on portrait mode: 168x252px, on standard: 250x250px, not supported on landscape mode
+ @constant RCImageSizeCodeUncanny Size on portrait mode: 300x450px, not supported on standard and landscape modes
+ @constant RCImageSizeCodeIncredible Size on portrait mode: 216x324px, not supported on standard mode, on landscape: 464x261px
+ */
+typedef enum {
 	RCImageSizeCodeSmall = 0,
 	RCImageSizeCodeMedium,
 	RCImageSizeCodeLarge,
@@ -32,4 +44,4 @@ typedef NS_ENUM(NSInteger, RCImageSizeCodes) {
 	RCImageSizeCodeFantastic,
 	RCImageSizeCodeUncanny,
 	RCImageSizeCodeIncredible
-};
+} RCImageSizeCodes;
