@@ -23,11 +23,39 @@
 //  THE SOFTWARE.
 //
 
+/*!
+ @header
+
+ RCComicDateObject class.
+
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+
+ @version 0.6.1
+ */
+
 #import "RCObject.h"
 
+/*!
+ @class
+
+ This class is a key date related to a Comic resource.
+ */
 @interface RCComicDateObject : RCObject
 
+/*!
+ @property
+
+ This property gets the description of the date (for example: onsale date, final order cutoff date, etc.).
+ */
 @property (nonatomic, readonly, strong) NSString *type;
+
+/*!
+ @property
+
+ This property gets the date of the object.
+ */
 @property (nonatomic, readonly, strong) NSDate *date;
 
 @end

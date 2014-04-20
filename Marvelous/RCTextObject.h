@@ -61,7 +61,7 @@
 /*!
  @property
 
- This property gets the text ob the object.
+ This property gets the text of the object.
  */
 @property (nonatomic, readonly, strong) NSString *text;
 
