@@ -24,14 +24,17 @@
 //
 
 /*!
- @enum RCStatusCodes
- This enumeration defines the HTTP status codes a @p RCAPIOperation object can get from the API response.
+ @enum
+
+ This enumeration defines the HTTP status codes a RCAPIOperation object can get from the API response.
+ 
  @constant RCStatusCodeOK A request sent to an endpoint is OK
  @constant RCStatusCodeInvalidParameter An assigned value to a parameter sent with the request to an endpoint is invalid
  @constant RCStatusCodeAccessForbidden A not-authenticated user sent a request to an endpoint in which authentication is required
  @constant RCStatusCodeDataNotFound A request to an endpoint that doesn't contain the request data
  @constant RCStatusCodeMethodNotAllowed A request sent to an endpoint with a not-supported HTTP verb
  @constant RCStatusCodeParameterError A request send to an endpoint with missing or invalid parameters
+ 
  @internal
  */
 typedef enum {
