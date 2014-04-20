@@ -24,7 +24,7 @@
 //
 
 #import "RCImageObject.h"
-#import "RCImageModes.h"
+#import "RCImageAspectRatios.h"
 #import "RCImageSizes.h"
 
 static NSString * const RCImageObjectPathFormat = @"%@.%@";
@@ -73,16 +73,16 @@ static NSString * const RCImageObjectPathModeSizeFormat = @"%@/%@_%@.%@";
 		return nil;
 	}
 	
-	NSString *path = [NSString stringWithFormat:RCImageObjectPathSeparatorFormat, self.basePath, RCImageModeDetail, self.extension];
+	NSString *path = [NSString stringWithFormat:RCImageObjectPathSeparatorFormat, self.basePath, RCImageAspectRatioDetail, self.extension];
 
 	return [NSURL URLWithString:path];
 }
 
 #pragma mark - Public methods
 
-- (NSURL *)urlForMode:(RCImageModeCodes)mode andSize:(RCImageSizeCodes)size
+- (NSURL *)urlForAspectRatio:(RCImageAspectRatioCodes)aspectRatio andSize:(RCImageSizeCodes)size
 {
-	NSString *stringfiedMode = [self modeFromCode:mode];
+	NSString *stringfiedMode = [self aspectRatioFromCode:aspectRatio];
 	NSString *stringfiedSize = [self sizeForCode:size];
 	NSString *path = [NSString stringWithFormat:RCImageObjectPathModeSizeFormat, self.basePath, stringfiedMode, stringfiedSize, self.extension];
 
@@ -91,14 +91,14 @@ static NSString * const RCImageObjectPathModeSizeFormat = @"%@/%@_%@.%@";
 
 #pragma mark - Private methods
 
-- (NSString *)modeFromCode:(RCImageModeCodes)code
+- (NSString *)aspectRatioFromCode:(RCImageAspectRatioCodes)aspectRatioCode
 {
-	if (code == RCImageModeCodePortrait) {
-		return RCImageModePortrait;
-	} else if (code == RCImageModeCodeLandscape) {
-		return RCImageModeLandscape;
+	if (aspectRatioCode == RCImageAspectRatioCodePortrait) {
+		return RCImageAspectRatioPortrait;
+	} else if (aspectRatioCode == RCImageAspectRatioCodeLandscape) {
+		return RCImageAspectRatioLandscape;
 	} else {
-		return RCImageModeSquare;
+		return RCImageAspectRatioSquare;
 	}
 }
 

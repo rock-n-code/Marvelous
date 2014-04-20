@@ -1,5 +1,5 @@
 //
-//  RCImageModeCodes.h
+//  RCImageAspectRatios.m
 //  Marvelous
 //
 //  Copyright (c) 2014 Rock & Code [http://rock-n-code.com]
@@ -23,17 +23,9 @@
 //  THE SOFTWARE.
 //
 
-/*!
- @enum
+#import "RCImageAspectRatios.h"
 
- This enumeration defines the aspect ratio modes available use by an RCImageObject object to produce a URL to a customised image.
- 
- @constant RCImageModeCodeSquare Standard (or Square) aspect ratio mode
- @constant RCImageModeCodePortrait Portrait aspect ratio mode
- @constant RCImageModeCodeLandscape Landscape aspect ratio mode
- */
-typedef enum {
-	RCImageModeCodeSquare = 0,
-	RCImageModeCodePortrait,
-	RCImageModeCodeLandscape
-} RCImageModeCodes;
+NSString * const RCImageAspectRatioDetail = @"detail";
+NSString * const RCImageAspectRatioSquare = @"standard";
+NSString * const RCImageAspectRatioPortrait = @"portrait";
+NSString * const RCImageAspectRatioLandscape = @"landscape";

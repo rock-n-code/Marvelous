@@ -69,6 +69,6 @@
 #import <Marvelous/RCSeriesTypeCodes.h>
 #import <Marvelous/RCIssueTypeCodes.h>
 #import <Marvelous/RCDateDescriptorCodes.h>
-#import <Marvelous/RCBooleanValueCodes.h>
-#import <Marvelous/RCImageModeCodes.h>
+#import <Marvelous/RCImageAspectRatioCodes.h>
 #import <Marvelous/RCImageSizeCodes.h>
+#import <Marvelous/RCBooleanValueCodes.h>

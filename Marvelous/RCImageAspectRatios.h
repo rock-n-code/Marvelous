@@ -1,5 +1,5 @@
 //
-//  RCImageModes.h
+//  RCImageAspectRatios.h
 //  Marvelous
 //
 //  Copyright (c) 2014 Rock & Code [http://rock-n-code.com]
@@ -23,7 +23,7 @@
 //  THE SOFTWARE.
 //
 
-extern NSString * const RCImageModeDetail;
-extern NSString * const RCImageModeSquare;
-extern NSString * const RCImageModePortrait;
-extern NSString * const RCImageModeLandscape;
+extern NSString * const RCImageAspectRatioDetail;
+extern NSString * const RCImageAspectRatioSquare;
+extern NSString * const RCImageAspectRatioPortrait;
+extern NSString * const RCImageAspectRatioLandscape;
