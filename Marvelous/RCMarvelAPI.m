@@ -36,7 +36,7 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 /*!
  @property
 
- This property sets and gets NSOperationQueue object that handle the RCAPIOperation objects which represents call to the API.
+ This property sets and gets an operation queue object that handle operation objects that interact with API endpoints.
  
  @internal
  */
@@ -45,7 +45,7 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 /*!
  @property
 
- This property gets a NSString object that represent the timestamp generated at the time of its call.
+ This property gets a timestamp generated at the time of its call.
  
  @internal
  */
@@ -54,7 +54,7 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 /*!
  @property
 
- This property gets a NSDictionary object with the authentication parameters to sign any API call.
+ This property gets a dictionary containing authentication parameters to sign a request to any API endpoint.
  
  @internal
  */
@@ -651,9 +651,9 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 
  This instance method convert a list of strings into a MD5 hash.
  
- @param strings A list of NSString objects
+ @param strings A list of strings represented as NSString objects
  
- @return An NSString object that represent the generated MD5 hash
+ @return A generated MD5 hash
  
  @internal
  */
@@ -681,12 +681,12 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 /*!
  @method
 
- This instance method convert to string a value contained on a NSNumber object.
+ This instance method convert to string a value contained on a given identifier.
  
- @param strings A @p NSNumber object
+ @param strings An identifier
  
- @return A NSString object in case the given parameter is indeed a NSNumber object.
-		 NULL in case the given parameter is NULL
+ @return A string in case the given identifier is indeed a NSNumber object.
+		 NULL in case the given identifier is NULL
 
  @internal
  */
@@ -700,8 +700,8 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 
  This instance method check if a given filter is an object or NULL. In case the filter is not an allocated object, then it creates a new instance of RCFilter depending the given type.
  
- @param filter A RCFilter object
- @param type A RCAPITypes enumeration
+ @param filter A filter
+ @param type A RCAPITypes value
  
  @internal
  */
@@ -727,11 +727,11 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 /*!
  @method
 
- This instance method prepare the objects to send back to a resultCompletionBlock callback. It create a RCQueryInfoObject object and get the first object of the "results" property from a RCDataWrapperObject object in case the API response doesn't return any error.
+ This instance method prepare the objects to send back to a given callback block. It create a metadata object and get the first object of the "results" property from a given data wrapper object in case the API response doesn't return any error.
  
- @param completionBlock A @p resultCompletionBlock block that is used as the callback
- @param dataWrapper A RCDataWrapperObject object containing the data retrieved from an API endpoint
- @param error A NSError object that contain the error data retrieved from an API endpoint
+ @param completionBlock A callback block
+ @param dataWrapper The data received from the API endpoint
+ @param error An error retrieved from the API endpoint
  
  @internal
  */
@@ -754,12 +754,12 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 /*!
  @method
 
- This instance method prepare the objects to send back to a resultsCompletionBlock callback. It create a RCQueryInfoObject object and get the objects of the "results" property from a RCDataWrapperObject object in case the API response doesn't return any error.
+ This instance method prepare the objects to send back to a given callback block. It create a metadata object and get the objects of the "results" property from the given data wrapper object in case the API response doesn't return any error.
  
- @param completionBlock A resultsCompletionBlock block that is used as the callback
- @param dataWrapper A RCDataWrapperObject object containing the data retrieved from an API endpoint
- @param error A NSError object that contain the error data retrieved from an API endpoint
- 
+ @param completionBlock A callback block
+ @param dataWrapper The data received from the API endpoint
+ @param error An error retrieved from the API endpoint
+
  @internal
  */
 - (void)sendResultsToCompletionBlock:(resultsCompletionBlock)completionBlock fromDataWrapper:(RCDataWrapperObject *)dataWrapper andError:(NSError *)error
