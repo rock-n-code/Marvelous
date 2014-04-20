@@ -23,6 +23,33 @@
 //  THE SOFTWARE.
 //
 
+/*!
+ @header
+
+ RCIssueFormatCodes enumeration.
+
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+
+ @version 0.6.1
+ */
+
+/*!
+ @enum
+
+ This enumeration defines the issue format types available to use by the "format" property of any RCComicsFilter or RCSeriesFilter object.
+
+ @constant RCIssueFormatCodeUndefined Undefined issue format
+ @constant RCIssueFormatCodeComic Comic issue format
+ @constant RCIssueFormatCodeMagazine Magazine issue format
+ @constant RCIssueFormatCodeTradePaperback Trade paperback issue format
+ @constant RCIssueFormatCodeHardcover Hardcover issue format
+ @constant RCIssueFormatCodeDigest Digest issue format
+ @constant RCIssueFormatCodeGraphicNovel Graphic novel issue format
+ @constant RCIssueFormatCodeDigitalComic Digital comic issue format
+ @constant RCIssueFormatCodeInfiniteComic Infinite comic issue format
+ */
 typedef enum {
 	RCIssueFormatCodeUndefined = 0,
 	RCIssueFormatCodeComic,
