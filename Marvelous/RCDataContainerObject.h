@@ -23,16 +23,72 @@
 //  THE SOFTWARE.
 //
 
+/*!
+ @header
+
+ RCDataContainerObject class.
+
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+
+ @version 0.6.1
+ */
+
 #import "RCAPITypes.h"
 
+/*!
+ @class
+
+ This class is a object representation of a DataContainer resource.
+ */
 @interface RCDataContainerObject : NSObject
 
+/*!
+ @property
+
+ This property gets the number of skipped results of a API call.
+ */
 @property (nonatomic, readonly, strong) NSNumber *offset;
+
+/*!
+ @property
+
+ This property gets the number of result limit.
+ */
 @property (nonatomic, readonly, strong) NSNumber *limit;
+
+/*!
+ @property
+
+ This property gets the total number of resources available given the current filter set.
+ */
 @property (nonatomic, readonly, strong) NSNumber *total;
+
+/*!
+ @property
+
+ This property gets the number of results returned by an API call.
+ */
 @property (nonatomic, readonly, strong) NSNumber *count;
+
+/*!
+ @property
+
+ This property gets the list of resources returned by an API call.
+ */
 @property (nonatomic, readonly, strong) NSArray *results;
 
+/*!
+ @method
+
+ This method initialise a data container object with a type and a given JSON dictionary returned by an API endpoint.
+
+ @param type The type of resource to initialise with a JSON dictionary
+ @param dictionary A JSON dictionary retrieved from an API endpoint
+
+ @return An initialised object
+ */
 - (id)initWithType:(RCAPITypes)type andDictionary:(NSDictionary *)dictionary;
 
 @end
