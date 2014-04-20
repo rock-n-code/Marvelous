@@ -41,8 +41,8 @@
 @property (nonatomic, strong) RCListObject *series;
 @property (nonatomic, strong) RCListObject *characters;
 @property (nonatomic, strong) RCListObject *creators;
-@property (nonatomic, strong) RCSummaryObject *previous;
 @property (nonatomic, strong) RCSummaryObject *next;
+@property (nonatomic, strong) RCSummaryObject *previous;
 
 @end
 
