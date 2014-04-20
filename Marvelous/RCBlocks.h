@@ -23,6 +23,18 @@
 //  THE SOFTWARE.
 //
 
+/*!
+ @header
+
+ RCBlocks definitions.
+
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+
+ @version 0.6.1
+ */
+
 @class RCQueryInfoObject;
 
 /*!
@@ -46,4 +58,3 @@ typedef void (^resultCompletionBlock) (id result, RCQueryInfoObject *info, NSErr
  @param error A NSError object that contain the error data provided by the response
  */
 typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *info, NSError *error);
-
