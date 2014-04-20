@@ -1,5 +1,5 @@
 //
-//  RCFormatTypeCodes.h
+//  RCIssueFormatCodes.h
 //  Marvelous
 //
 //  Copyright (c) 2014 Rock & Code [http://rock-n-code.com]
@@ -23,14 +23,14 @@
 //  THE SOFTWARE.
 //
 
-typedef NS_ENUM(NSInteger, RCFormatTypeCodes) {
-	RCFormatTypeCodeUndefined = 0,
-	RCFormatTypeCodeComic,
-	RCFormatTypeCodeMagazine,
-	RCFormatTypeCodeTradePaperback,
-	RCFormatTypeCodeHardcover,
-	RCFormatTypeCodeDigest,
-	RCFormatTypeCodeGraphicNovel,
-	RCFormatTypeCodeDigitalComic,
-	RCFormatTypeCodeInfiniteComic,
-};
+typedef enum {
+	RCIssueFormatCodeUndefined = 0,
+	RCIssueFormatCodeComic,
+	RCIssueFormatCodeMagazine,
+	RCIssueFormatCodeTradePaperback,
+	RCIssueFormatCodeHardcover,
+	RCIssueFormatCodeDigest,
+	RCIssueFormatCodeGraphicNovel,
+	RCIssueFormatCodeDigitalComic,
+	RCIssueFormatCodeInfiniteComic
+} RCIssueFormatCodes;

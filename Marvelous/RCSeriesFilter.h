@@ -24,7 +24,7 @@
 //
 
 #import "RCFilter.h"
-#import "RCFormatTypeCodes.h"
+#import "RCIssueFormatCodes.h"
 #import "RCSeriesTypeCodes.h"
 
 @interface RCSeriesFilter : RCFilter

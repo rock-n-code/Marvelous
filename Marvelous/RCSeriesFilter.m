@@ -24,7 +24,7 @@
 //
 
 #import "RCSeriesFilter.h"
-#import "RCFormatTypes.h"
+#import "RCIssueFormats.h"
 #import "RCSeriesTypes.h"
 
 @interface RCSeriesFilter ()
@@ -105,26 +105,26 @@
 	NSMutableArray *strings = [NSMutableArray array];
 
 	[self.contains enumerateObjectsUsingBlock:^(NSNumber *formatType, NSUInteger index, BOOL *stop) {
-		if (formatType.integerValue != RCFormatTypeCodeUndefined) {
+		if (formatType.integerValue != RCIssueFormatCodeUndefined) {
 			NSInteger type = formatType.integerValue;
 			NSString *string = @"";
 
-			if (type == RCFormatTypeCodeComic) {
-				string = RCFormatTypeComic;
-			} else if (type == RCFormatTypeCodeMagazine) {
-				string = RCFormatTypeMagazine;
-			} else if (type == RCFormatTypeCodeTradePaperback) {
-				string = RCFormatTypeTradePaperback;
-			} else if (type == RCFormatTypeCodeHardcover) {
-				string = RCFormatTypeHardcover;
-			} else if (type == RCFormatTypeCodeDigest) {
-				string = RCFormatTypeDigest;
-			} else if (type == RCFormatTypeCodeGraphicNovel) {
-				string = RCFormatTypeGraphicNovel;
-			} else if (type == RCFormatTypeCodeDigitalComic) {
-				string = RCFormatTypeDigitalComic;
+			if (type == RCIssueFormatCodeComic) {
+				string = RCIssueFormatComic;
+			} else if (type == RCIssueFormatCodeMagazine) {
+				string = RCIssueFormatMagazine;
+			} else if (type == RCIssueFormatCodeTradePaperback) {
+				string = RCIssueFormatTradePaperback;
+			} else if (type == RCIssueFormatCodeHardcover) {
+				string = RCIssueFormatHardcover;
+			} else if (type == RCIssueFormatCodeDigest) {
+				string = RCIssueFormatDigest;
+			} else if (type == RCIssueFormatCodeGraphicNovel) {
+				string = RCIssueFormatGraphicNovel;
+			} else if (type == RCIssueFormatCodeDigitalComic) {
+				string = RCIssueFormatDigitalComic;
 			} else {
-				string = RCFormatTypeInfiniteComic;
+				string = RCIssueFormatInfiniteComic;
 			}
 
 			[strings addObject:string];

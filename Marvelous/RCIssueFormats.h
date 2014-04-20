@@ -1,5 +1,5 @@
 //
-//  RCFormatTypes.h
+//  RCIssueFormats.h
 //  Marvelous
 //
 //  Copyright (c) 2014 Rock & Code [http://rock-n-code.com]
@@ -23,11 +23,11 @@
 //  THE SOFTWARE.
 //
 
-extern NSString * const RCFormatTypeComic;
-extern NSString * const RCFormatTypeMagazine;
-extern NSString * const RCFormatTypeTradePaperback;
-extern NSString * const RCFormatTypeHardcover;
-extern NSString * const RCFormatTypeDigest;
-extern NSString * const RCFormatTypeGraphicNovel;
-extern NSString * const RCFormatTypeDigitalComic;
-extern NSString * const RCFormatTypeInfiniteComic;
+extern NSString * const RCIssueFormatComic;
+extern NSString * const RCIssueFormatMagazine;
+extern NSString * const RCIssueFormatTradePaperback;
+extern NSString * const RCIssueFormatHardcover;
+extern NSString * const RCIssueFormatDigest;
+extern NSString * const RCIssueFormatGraphicNovel;
+extern NSString * const RCIssueFormatDigitalComic;
+extern NSString * const RCIssueFormatInfiniteComic;

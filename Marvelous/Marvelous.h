@@ -68,7 +68,7 @@
 // Enumerations
 #import <Marvelous/RCAPITypes.h>
 #import <Marvelous/RCOrderByTypeCodes.h>
-#import <Marvelous/RCFormatTypeCodes.h>
+#import <Marvelous/RCIssueFormatCodes.h>
 #import <Marvelous/RCSeriesTypeCodes.h>
 #import <Marvelous/RCIssueTypeCodes.h>
 #import <Marvelous/RCDateDescriptorCodes.h>

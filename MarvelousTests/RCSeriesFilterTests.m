@@ -78,7 +78,7 @@
 	filter.creators = @[@0, @1, @2];
 	filter.characters = @[@"0", @"2", @"4"];
 	filter.seriesType = RCSeriesTypeCodeOneShot;
-	filter.contains = @[@(RCFormatTypeCodeComic), @(RCFormatTypeCodeTradePaperback)];
+	filter.contains = @[@(RCIssueFormatCodeComic), @(RCIssueFormatCodeTradePaperback)];
 	filter.orderBy = @[@(RCOrderByTypeCodeTitleDescending), @(RCOrderByTypeCodeStartYearAscending)];
 	filter.offset = @0;
 	filter.limit = @0;

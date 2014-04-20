@@ -24,14 +24,14 @@
 //
 
 #import "RCFilter.h"
-#import "RCFormatTypeCodes.h"
+#import "RCIssueFormatCodes.h"
 #import "RCIssueTypeCodes.h"
 #import "RCBooleanValueCodes.h"
 #import "RCDateDescriptorCodes.h"
 
 @interface RCComicsFilter : RCFilter
 
-@property (nonatomic) RCFormatTypeCodes format;
+@property (nonatomic) RCIssueFormatCodes format;
 @property (nonatomic) RCIssueTypeCodes formatType;
 @property (nonatomic) RCBooleanValueCodes noVariants;
 @property (nonatomic) RCDateDescriptorCodes dateDescriptor;

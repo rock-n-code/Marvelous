@@ -77,7 +77,7 @@
 	NSDate *today = [NSDate date];
 	RCComicsFilter *filter = [[RCComicsFilter alloc] init];
 
-	filter.format = RCFormatTypeCodeComic;
+	filter.format = RCIssueFormatCodeComic;
 	filter.formatType = RCIssueTypeCodeComic;
 	filter.noVariants = RCBooleanValueCodeTrue;
 	filter.dateDescriptor = RCDateDescriptorCodeThisWeek;
@@ -111,7 +111,7 @@
 {
 	RCComicsFilter *filter = [[RCComicsFilter alloc] init];
 
-	filter.format = RCFormatTypeCodeComic;
+	filter.format = RCIssueFormatCodeComic;
 	filter.digitalIdentifier = @1234;
 	filter.upc = @"TestUPC";
 	filter.issn = @"TestISSN";

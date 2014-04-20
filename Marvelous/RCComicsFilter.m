@@ -24,7 +24,7 @@
 //
 
 #import "RCComicsFilter.h"
-#import "RCFormatTypes.h"
+#import "RCIssueFormats.h"
 #import "RCIssueTypes.h"
 #import "RCBooleanValues.h"
 #import "RCDateDescriptors.h"
@@ -46,7 +46,7 @@
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:super.parameters];
 
-	if (self.format != RCFormatTypeCodeUndefined) {
+	if (self.format != RCIssueFormatCodeUndefined) {
 		params[RCRequestKeyFormat] = self.stringfiedFormat;
 	}
 
@@ -128,22 +128,22 @@
 - (NSString *)stringfiedFormat
 {
 	switch (self.format) {
-		case RCFormatTypeCodeComic:
-			return RCFormatTypeComic;
-		case RCFormatTypeCodeMagazine:
-			return RCFormatTypeMagazine;
-		case RCFormatTypeCodeTradePaperback:
-			return RCFormatTypeTradePaperback;
-		case RCFormatTypeCodeHardcover:
-			return RCFormatTypeHardcover;
-		case RCFormatTypeCodeDigest:
-			return RCFormatTypeDigest;
-		case RCFormatTypeCodeGraphicNovel:
-			return RCFormatTypeGraphicNovel;
-		case RCFormatTypeCodeDigitalComic:
-			return RCFormatTypeDigitalComic;
+		case RCIssueFormatCodeComic:
+			return RCIssueFormatComic;
+		case RCIssueFormatCodeMagazine:
+			return RCIssueFormatMagazine;
+		case RCIssueFormatCodeTradePaperback:
+			return RCIssueFormatTradePaperback;
+		case RCIssueFormatCodeHardcover:
+			return RCIssueFormatHardcover;
+		case RCIssueFormatCodeDigest:
+			return RCIssueFormatDigest;
+		case RCIssueFormatCodeGraphicNovel:
+			return RCIssueFormatGraphicNovel;
+		case RCIssueFormatCodeDigitalComic:
+			return RCIssueFormatDigitalComic;
 		default:
-			return RCFormatTypeInfiniteComic;
+			return RCIssueFormatInfiniteComic;
 	}
 }
 

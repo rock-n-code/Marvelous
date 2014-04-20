@@ -40,9 +40,9 @@
 
  This enumeration defines the aspect ratio modes available use by an RCImageObject object to produce a URL to a customised image.
  
- @constant RCImageModeCodeSquare Standard (or Square) aspect ratio
- @constant RCImageModeCodePortrait Portrait aspect ratio
- @constant RCImageModeCodeLandscape Landscape aspect ratio
+ @constant RCImageAspectRatioCodeSquare Standard (or Square) aspect ratio
+ @constant RCImageAspectRatioCodePortrait Portrait aspect ratio
+ @constant RCImageAspectRatioCodeLandscape Landscape aspect ratio
  */
 typedef enum {
 	RCImageAspectRatioCodeSquare = 0,
