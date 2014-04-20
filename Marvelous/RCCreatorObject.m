@@ -37,9 +37,9 @@
 @property (nonatomic, strong) NSURL *resourceURI;
 @property (nonatomic, strong) NSArray *urls;
 @property (nonatomic, strong) RCImageObject *thumbnail;
-@property (nonatomic, strong) RCListObject *comics;
-@property (nonatomic, strong) RCListObject *stories;
 @property (nonatomic, strong) RCListObject *series;
+@property (nonatomic, strong) RCListObject *stories;
+@property (nonatomic, strong) RCListObject *comics;
 @property (nonatomic, strong) RCListObject *events;
 
 @end

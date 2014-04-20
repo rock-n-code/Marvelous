@@ -23,25 +23,127 @@
 //  THE SOFTWARE.
 //
 
+/*!
+ @header
+
+ RCCreatorObject class.
+
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+
+ @version 0.6.1
+ */
+
 #import "RCObject.h"
 #import "RCImageObject.h"
 #import "RCListObject.h"
 
+/*!
+ @class
+
+ This class is a object representation of a Creator resource.
+ */
 @interface RCCreatorObject : RCObject
 
+/*!
+ @property
+
+ This property gets the unique identifier of the resource.
+ */
 @property (nonatomic, readonly, strong) NSNumber *identifier;
+
+/*!
+ @property
+
+ This property gets the first name of the resource.
+ */
 @property (nonatomic, readonly, strong) NSString *firstName;
+
+/*!
+ @property
+
+ This property gets the middle name of the resource.
+ */
 @property (nonatomic, readonly, strong) NSString *middleName;
+
+/*!
+ @property
+
+ This property gets the last name of the resource.
+ */
 @property (nonatomic, readonly, strong) NSString *lastName;
+
+/*!
+ @property
+
+ This property gets the suffix or honorific for the resource.
+ */
 @property (nonatomic, readonly, strong) NSString *suffix;
+
+/*!
+ @property
+
+ This property gets the full name identifier of the resource.
+ 
+ Its value is a space-separated concatenation of the first name, middle name, last name and suffix.
+ */
 @property (nonatomic, readonly, strong) NSString *fullName;
+
+/*!
+ @property
+
+ This property gets the date the resource was most recently modified.
+ */
 @property (nonatomic, readonly, strong) NSDate *lastModified;
+
+/*!
+ @property
+
+ This property gets the canonical URL identifier for the resource.
+ */
 @property (nonatomic, readonly, strong) NSURL *resourceURI;
+
+/*!
+ @property
+
+ This property gets the set of public web site URLs for the resource.
+ */
 @property (nonatomic, readonly, strong) NSArray *urls;
+
+/*!
+ @property
+
+ This property gets the representative image for the resource.
+ */
 @property (nonatomic, readonly, strong) RCImageObject *thumbnail;
-@property (nonatomic, readonly, strong) RCListObject *comics;
-@property (nonatomic, readonly, strong) RCListObject *stories;
+
+/*!
+ @property
+
+ This property gets the list of series summaries which feature work by the resource.
+ */
 @property (nonatomic, readonly, strong) RCListObject *series;
+
+/*!
+ @property
+
+ This property gets the list of story summaries which feature work by the resource.
+ */
+@property (nonatomic, readonly, strong) RCListObject *stories;
+
+/*!
+ @property
+
+ This property gets the list of comic summaries which feature work by the resource.
+ */
+@property (nonatomic, readonly, strong) RCListObject *comics;
+
+/*!
+ @property
+
+ This property gets the list of event summaries which feature work by the resource.
+ */
 @property (nonatomic, readonly, strong) RCListObject *events;
 
 @end
