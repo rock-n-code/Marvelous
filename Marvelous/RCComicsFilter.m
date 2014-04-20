@@ -31,9 +31,42 @@
 
 @interface RCComicsFilter ()
 
+/*!
+ @property
+
+ This property gets a string representation of a RCIssueFormatCodes value.
+
+ @internal
+ */
 @property (nonatomic, readonly, strong) NSString *stringfiedFormat;
+
+/*!
+ @property
+
+ This property gets a string representation of a RCIssueTypeCodes value.
+
+ @internal
+ */
 @property (nonatomic, readonly, strong) NSString *stringfiedFormatType;
+
+/*!
+ @property
+
+ This property gets a string representation of a RCDateDescriptorCodes value.
+
+ @internal
+ */
 @property (nonatomic, readonly, strong) NSString *stringfiedDateDescriptor;
+
+/*!
+ @property
+
+ This property gets a string representation of a list of dates (represented as NSDate objects).
+ 
+ Every string that represents a given date is formatted as "yyyy-MM-dd" and they are joined by a comma (",").
+
+ @internal
+ */
 @property (nonatomic, readonly, strong) NSString *stringfiedDateRange;
 
 @end
@@ -207,6 +240,17 @@
 
 #pragma mark - Private methods
 
+/*!
+ @method
+
+ This methods converts a given boolean value to string.
+
+ @param date An integer that represent a RCBooleanValueCodes value.
+
+ @return A string that represent the given boolean value.
+
+ @internal
+ */
 - (NSString *)stringForBooleanValue:(RCBooleanValueCodes)boolean
 {
 	if (boolean == RCBooleanValueCodeTrue) {

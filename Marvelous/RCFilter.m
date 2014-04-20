@@ -160,11 +160,12 @@
 /*!
  @method
 
- This methods checks if a given order by type code is a descending type or not.
+ This methods checks if a given order type value is a descending type or not.
 
  @param date An integer that represent a RCOrderByTypeCodes value.
 
- @return YES in case the given order by type is a descending type. Otherwise, NO.
+ @return YES in case the given order type value is a descending type.
+		 NO in case the given order type value is an ascending type.
  
  @internal
  */
