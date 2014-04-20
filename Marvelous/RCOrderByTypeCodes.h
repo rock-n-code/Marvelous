@@ -24,8 +24,10 @@
 //
 
 /*!
- @enum RCOrderByTypeCodes
- This enumeration defines the order by code types to use with any @p RCFilter object.
+ @enum
+
+ This enumeration defines the order by code types to use with any RCFilter object.
+ 
  @constant RCOrderByTypeCodeUndefined Undefined order by type
  @constant RCOrderByTypeCodeIdentifierAscending Order by identifier in ascending order
  @constant RCOrderByTypeCodeIdentifierDescending Order by identifier in descending order
