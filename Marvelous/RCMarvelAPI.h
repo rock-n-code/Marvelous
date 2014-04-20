@@ -107,7 +107,7 @@ typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *inf
 
  This instance method interact with the/v1/public/characters/{characterId} API endpoint and fetches a single RCCharacterObject object.
 
- @param identifier A NSNumber object that represent a unique character identifier
+ @param identifier An NSNumber object that represent a unique character identifier
  @param completionBlock A resultCompletionBlock block as a callback
  
  @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
@@ -131,7 +131,7 @@ typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *inf
 
  This instance method interact with the/v1/public/comics/{comicId}/characters API endpoint and fetches a list of RCCharacterObject objects which appear in a specific comic, with optional filters.
 
- @param identifier A NSNumber object that represent a unique comic identifier
+ @param identifier An NSNumber object that represent a unique comic identifier
  @param filter An optional RCCharacterFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
 
@@ -144,7 +144,7 @@ typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *inf
 
  This instance method interact with the/v1/public/events/{eventId}/characters API endpoint and fetches a list of RCCharacterObject objects which appear in a specific event, with optional filters.
 
- @param identifier A NSNumber object that represent a unique event identifier
+ @param identifier An NSNumber object that represent a unique event identifier
  @param filter An optional RCCharacterFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
 
@@ -157,7 +157,7 @@ typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *inf
 
  This instance method interact with the/v1/public/series/{seriesId}/characters API endpoint and fetches a list of RCCharacterObject objects which appear in a specific series, with optional filters.
 
- @param identifier A NSNumber object that represent a unique series identifier
+ @param identifier An NSNumber object that represent a unique series identifier
  @param filter An optional RCCharacterFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
 
@@ -170,7 +170,7 @@ typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *inf
 
  This instance method interact with the/v1/public/stories/{storyId}/characters API endpoint and fetches a list of RCCharacterObject objects which appear in a single story, with optional filters.
 
- @param identifier A NSNumber object that represent a unique series identifier
+ @param identifier An NSNumber object that represent a unique series identifier
  @param filter An optional RCCharacterFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
 
@@ -183,7 +183,7 @@ typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *inf
 
  This instance method interact with the/v1/public/comics/{comicId} API endpoint and fetches a single RCComicsObject object.
 
- @param identifier A NSNumber object that represent a unique comic identifier
+ @param identifier An NSNumber object that represent a unique comic identifier
  @param completionBlock A resultCompletionBlock block as a callback
 
  @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
@@ -207,7 +207,7 @@ typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *inf
 
  This instance method interact with the/v1/public/characters/{characterId}/comics API endpoint and fetches a list of RCComicsObject objects containing a specific character, with optional filters.
 
- @param identifier A NSNumber object that represent a unique character identifier
+ @param identifier An NSNumber object that represent a unique character identifier
  @param filter An optional RCComicsFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
 
@@ -220,7 +220,7 @@ typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *inf
 
  This instance method interact with the/v1/public/creators/{creatorId}/comics API endpoint and fetches a list of RCComicsObject objects in which the works of a specific creator appears, with optional filters.
 
- @param identifier A NSNumber object that represent a unique creator identifier
+ @param identifier An NSNumber object that represent a unique creator identifier
  @param filter An optional RCComicsFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
 
@@ -233,7 +233,7 @@ typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *inf
 
  This instance method interact with the/v1/public/events/{eventId}/comics API endpoint and fetches a list of RCComicsObject objects which takes place during a specific event, with optional filters.
 
- @param identifier A NSNumber object that represent a unique event identifier
+ @param identifier An NSNumber object that represent a unique event identifier
  @param filter An optional RCComicsFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
 
@@ -246,7 +246,7 @@ typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *inf
 
  This instance method interact with the/v1/public/series/{seriesId}/comics API endpoint and fetches a list of RCComicsObject objects which are published as part of a specific series, with optional filters.
 
- @param identifier A NSNumber object that represent a unique series identifier
+ @param identifier An NSNumber object that represent a unique series identifier
  @param filter An optional RCComicsFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
  
@@ -259,7 +259,7 @@ typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *inf
 
  This instance method interact with the/v1/public/stories/{storyId}/comics API endpoint and fetches a list of RCComicsObject objects in which a specific story appears, with optional filters.
 
- @param identifier A NSNumber object that represent a unique story identifier
+ @param identifier An NSNumber object that represent a unique story identifier
  @param filter An optional RCComicsFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
  
@@ -272,7 +272,7 @@ typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *inf
 
  This instance method interact with the/v1/public/creators/{creatorId} API endpoint and fetches a single RCCreatorObject object.
 
- @param identifier A NSNumber object that represent a unique creator identifier
+ @param identifier An NSNumber object that represent a unique creator identifier
  @param completionBlock A resultCompletionBlock block as a callback
  @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
  */
@@ -290,7 +290,7 @@ typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *inf
 /*!
  This instance method interact with the/v1/public/comics/{comicId}/creators API endpoint and fetches a list of RCCreatorObject objects whose works appears in a specific comic, with optional filters.
 
- @param identifier A NSNumber object that represent a unique comic identifier
+ @param identifier An NSNumber object that represent a unique comic identifier
  @param filter An optional RCCreatorFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
  @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
@@ -300,7 +300,7 @@ typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *inf
 /*!
  This instance method interact with the/v1/public/events/{eventId}/creators API endpoint and fetches a list of RCCreatorObject objects whose works appears in a specific event, with optional filters.
 
- @param identifier A NSNumber object that represent a unique event identifier
+ @param identifier An NSNumber object that represent a unique event identifier
  @param filter An optional RCCreatorFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
  @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
@@ -310,7 +310,7 @@ typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *inf
 /*!
  This instance method interact with the/v1/public/series/{seriesId}/creators API endpoint and fetches a list of RCCreatorObject objects whose works appears in a specific series, with optional filters.
 
- @param identifier A NSNumber object that represent a unique series identifier
+ @param identifier An NSNumber object that represent a unique series identifier
  @param filter An optional RCCreatorFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
  @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
@@ -320,7 +320,7 @@ typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *inf
 /*!
  This instance method interact with the/v1/public/stories/{storyId}/creators API endpoint and fetches a list of RCCreatorObject objects whose works appears in a specific story, with optional filters.
 
- @param identifier A NSNumber object that represent a unique story identifier
+ @param identifier An NSNumber object that represent a unique story identifier
  @param filter An optional RCCreatorFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
  @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
@@ -332,7 +332,7 @@ typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *inf
 
  This instance method interact with the/v1/public/events/{eventId} API endpoint and fetches a single RCEventObject object.
 
- @param identifier A NSNumber object that represent a unique event identifier
+ @param identifier An NSNumber object that represent a unique event identifier
  @param completionBlock A resultCompletionBlock block as a callback
  
  @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
@@ -356,7 +356,7 @@ typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *inf
 
  This instance method interact with the/v1/public/characters/{characterId}/events API endpoint and fetches a list of RCEventObject objects in which a specific character appears, with optional filters.
 
- @param identifier A NSNumber object that represent a unique character identifier
+ @param identifier An NSNumber object that represent a unique character identifier
  @param filter An optional RCEventFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
  
@@ -369,7 +369,7 @@ typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *inf
 
  This instance method interact with the/v1/public/comics/{comicId}/events API endpoint and fetches a list of RCEventObject objects in which a specific comic appears, with optional filters.
 
- @param identifier A NSNumber object that represent a unique comic identifier
+ @param identifier An NSNumber object that represent a unique comic identifier
  @param filter An optional RCEventFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
  
@@ -382,7 +382,7 @@ typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *inf
 
  This instance method interact with the/v1/public/creators/{creatorId}/events API endpoint and fetches a list of RCEventObject objects featuring the work of a specific creator, with optional filters.
 
- @param identifier A NSNumber object that represent a unique creator identifier
+ @param identifier An NSNumber object that represent a unique creator identifier
  @param filter An optional RCEventFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
  
@@ -395,7 +395,7 @@ typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *inf
 
  This instance method interact with the/v1/public/series/{seriesId}/events API endpoint and fetches a list of RCEventObject objects which occur in a specific series, with optional filters.
 
- @param identifier A NSNumber object that represent a unique series identifier
+ @param identifier An NSNumber object that represent a unique series identifier
  @param filter An optional RCEventFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
  
@@ -408,7 +408,7 @@ typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *inf
 
  This instance method interact with the/v1/public/stories/{storyId}/events API endpoint and fetches a list of RCEventObject objects in which a specific story appears, with optional filters.
 
- @param identifier A NSNumber object that represent a unique story identifier
+ @param identifier An NSNumber object that represent a unique story identifier
  @param filter An optional RCEventFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
  
@@ -421,7 +421,7 @@ typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *inf
 
  This instance method interact with the/v1/public/series/{eventId} API endpoint and fetches a single RCSeriesObject object.
 
- @param identifier A NSNumber object that represent a unique series identifier
+ @param identifier An NSNumber object that represent a unique series identifier
  @param completionBlock A resultCompletionBlock block as a callback
  
  @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
@@ -445,7 +445,7 @@ typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *inf
 
  This instance method interact with the/v1/public/characters/{characterId}/series API endpoint and fetches a list of RCSeriesObject objects in which a specific character appears, with optional filters.
 
- @param identifier A NSNumber object that represent a unique character identifier
+ @param identifier An NSNumber object that represent a unique character identifier
  @param filter An optional RCSeriesFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
  
@@ -458,7 +458,7 @@ typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *inf
 
  This instance method interact with the/v1/public/creators/{creatorId}/series API endpoint and fetches a list of RCSeriesObject objects in which a specific creator's work appears, with optional filters.
 
- @param identifier A NSNumber object that represent a unique creator identifier
+ @param identifier An NSNumber object that represent a unique creator identifier
  @param filter An optional RCSeriesFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
  
@@ -471,7 +471,7 @@ typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *inf
 
  This instance method interact with the/v1/public/events/{eventId}/series API endpoint and fetches a list of RCSeriesObject objects in which a specific event takes place, with optional filters.
 
- @param identifier A NSNumber object that represent a unique event identifier
+ @param identifier An NSNumber object that represent a unique event identifier
  @param filter An optional RCSeriesFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
  
@@ -484,7 +484,7 @@ typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *inf
 
  This instance method interact with the/v1/public/stories/{storyId}/series API endpoint and fetches a list of RCSeriesObject objects in which the specified story takes place, with optional filters.
 
- @param identifier A NSNumber object that represent a unique story identifier
+ @param identifier An NSNumber object that represent a unique story identifier
  @param filter An optional RCSeriesFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
  
@@ -497,7 +497,7 @@ typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *inf
 
  This instance method interact with the/v1/public/stories/{storyId} API endpoint and fetches a single RCStoryObject object.
 
- @param identifier A NSNumber object that represent a unique story identifier
+ @param identifier An NSNumber object that represent a unique story identifier
  @param completionBlock A resultCompletionBlock block as a callback
  
  @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
@@ -521,7 +521,7 @@ typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *inf
 
  This instance method interact with the/v1/public/characters/{characterId}/stories API endpoint and fetches a list of RCStoryObject objects featuring a specific character, with optional filters.
 
- @param identifier A NSNumber object that represent a unique character identifier
+ @param identifier An NSNumber object that represent a unique character identifier
  @param filter An optional RCStoryFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
  
@@ -534,7 +534,7 @@ typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *inf
 
  This instance method interact with the/v1/public/comics/{comicId}/stories API endpoint and fetches a list of RCStoryObject objects in a specific comic issue, with optional filters.
 
- @param identifier A NSNumber object that represent a unique comic identifier
+ @param identifier An NSNumber object that represent a unique comic identifier
  @param filter An optional RCStoryFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
  
@@ -547,7 +547,7 @@ typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *inf
 
  This instance method interact with the/v1/public/creators/{creatorId}/stories API endpoint and fetches a list of RCStoryObject objects by a specific creator, with optional filters.
 
- @param identifier A NSNumber object that represent a unique creator identifier
+ @param identifier An NSNumber object that represent a unique creator identifier
  @param filter An optional RCStoryFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
  
@@ -560,7 +560,7 @@ typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *inf
 
  This instance method interact with the/v1/public/events/{eventId}/stories API endpoint and fetches a list of RCStoryObject objects from a specific event, with optional filters.
 
- @param identifier A NSNumber object that represent a unique event identifier
+ @param identifier An NSNumber object that represent a unique event identifier
  @param filter An optional RCStoryFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
  
@@ -573,7 +573,7 @@ typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *inf
 
  This instance method interact with the/v1/public/series/{seriesId}/stories API endpoint and fetches a list of RCStoryObject objects from a specific series, with optional filters.
 
- @param identifier A NSNumber object that represent a unique series identifier
+ @param identifier An NSNumber object that represent a unique series identifier
  @param filter An optional RCStoryFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
  
