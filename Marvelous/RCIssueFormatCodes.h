@@ -38,7 +38,7 @@
 /*!
  @enum
 
- This enumeration defines the issue format types available to use by the "format" property of any RCComicsFilter or RCSeriesFilter object.
+ This enumeration defines the issue formats available to use by the "format" property of any RCComicsFilter or RCSeriesFilter object.
 
  @constant RCIssueFormatCodeUndefined Undefined issue format
  @constant RCIssueFormatCodeComic Comic issue format

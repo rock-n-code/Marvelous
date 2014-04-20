@@ -23,6 +23,29 @@
 //  THE SOFTWARE.
 //
 
+/*!
+ @header
+
+ RCFrequencyTypeCodes enumeration.
+
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+
+ @version 0.6.1
+ */
+
+/*!
+ @enum
+
+ This enumeration defines the frequency types available to use by the "seriesType" property of any RCSeriesFilter object.
+
+ @constant RCFrequencyTypeCodeUndefined Undefined frequency type
+ @constant RCFrequencyTypeCodeCollection Collection frequency type
+ @constant RCFrequencyTypeCodeOneShot One shot frequency type
+ @constant RCFrequencyTypeCodeLimited Limited series frequency type
+ @constant RCFrequencyTypeCodeOngoing Ongoing series frequency type
+ */
 typedef enum {
 	RCFrequencyTypeCodeUndefined = 0,
 	RCFrequencyTypeCodeCollection,
