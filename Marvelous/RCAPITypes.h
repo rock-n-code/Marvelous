@@ -24,8 +24,10 @@
 //
 
 /*!
- @enum RCAPITypes
- This enumeration defines the types of API calls the @p RCAPIOperation object can handle.
+ @enum
+
+ This enumeration defines the types of API calls an RCAPIOperation object can handle.
+ 
  @constant RCAPITypeUndefined Undefined API call type
  @constant RCAPITypeCharacters Characters API call type
  @constant RCAPITypeComics Comics API call type
