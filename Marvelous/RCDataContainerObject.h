@@ -47,7 +47,7 @@
 /*!
  @property
 
- This property gets the number of skipped results of a API call.
+ This property gets the number of skipped results of an API call.
  */
 @property (nonatomic, readonly, strong) NSNumber *offset;
 
