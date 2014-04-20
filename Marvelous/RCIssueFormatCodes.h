@@ -1,5 +1,5 @@
 //
-//  RCStatusCodes.h
+//  RCIssueFormatCodes.h
 //  Marvelous
 //
 //  Copyright (c) 2014 Rock & Code [http://rock-n-code.com]
@@ -26,35 +26,38 @@
 /*!
  @header
 
- RCStatusCodes enumeration.
+ RCIssueFormatCodes enumeration.
 
  @author Javier Cicchelli (\@monsieur_rock)
 
  @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
- 
+
  @version 0.6.1
  */
 
 /*!
  @enum
 
- This enumeration defines the HTTP status codes a RCAPIOperation object can get from the API response.
- 
- @constant RCStatusCodeOK A request sent to an endpoint is OK
- @constant RCStatusCodeInvalidParameter An assigned value to a parameter sent with the request to an endpoint is invalid
- @constant RCStatusCodeAccessForbidden A not-authenticated user sent a request to an endpoint in which authentication is required
- @constant RCStatusCodeDataNotFound A request to an endpoint that doesn't contain the request data
- @constant RCStatusCodeMethodNotAllowed A request sent to an endpoint with a not-supported HTTP verb
- @constant RCStatusCodeParameterError A request send to an endpoint with missing or invalid parameters
- 
- @internal
+ This enumeration defines the issue formats available to use by the "format" property of any RCComicsFilter or RCSeriesFilter object.
+
+ @constant RCIssueFormatCodeUndefined Undefined issue format
+ @constant RCIssueFormatCodeComic Comic issue format
+ @constant RCIssueFormatCodeMagazine Magazine issue format
+ @constant RCIssueFormatCodeTradePaperback Trade paperback issue format
+ @constant RCIssueFormatCodeHardcover Hardcover issue format
+ @constant RCIssueFormatCodeDigest Digest issue format
+ @constant RCIssueFormatCodeGraphicNovel Graphic novel issue format
+ @constant RCIssueFormatCodeDigitalComic Digital comic issue format
+ @constant RCIssueFormatCodeInfiniteComic Infinite comic issue format
  */
 typedef enum {
-	RCStatusCodeOK = 200,
-	RCStatusCodeInvalidParameter = 401,
-	RCStatusCodeAccessForbidden = 403,
-	RCStatusCodeDataNotFound = 404,
-	RCStatusCodeMethodNotAllowed = 405,
-	RCStatusCodeParameterError = 409
-} RCStatusCodes;
-
+	RCIssueFormatCodeUndefined = 0,
+	RCIssueFormatCodeComic,
+	RCIssueFormatCodeMagazine,
+	RCIssueFormatCodeTradePaperback,
+	RCIssueFormatCodeHardcover,
+	RCIssueFormatCodeDigest,
+	RCIssueFormatCodeGraphicNovel,
+	RCIssueFormatCodeDigitalComic,
+	RCIssueFormatCodeInfiniteComic
+} RCIssueFormatCodes;

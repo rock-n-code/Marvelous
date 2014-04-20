@@ -23,7 +23,114 @@
 //  THE SOFTWARE.
 //
 
-typedef NS_ENUM(NSInteger, RCImageSizeCodes) {
+/*!
+ @header
+
+ RCImageSizeCodes enumeration.
+
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+ 
+ @version 0.6.1
+ */
+
+/*!
+ @enum
+
+ This enumeration defines the available image sizes use by an RCImageObject object to produce a URL to a customised image.
+ 
+ Please notice that the size definition varies depending the select aspect ratio.
+ 
+ * RCImageSizeCodeSmall:
+
+ - on portrait: 50x75px
+
+ - on standard/square: 65x45px
+
+ - on landscape: 120x90px
+ 
+
+
+ * RCImageSizeCodeMedium:
+
+ - portrait: 100x150px
+
+ - standard/square: 100x100px
+
+ - landscape: 175x130px
+
+
+ 
+ * RCImageSizeCodeLarge:
+
+ - portrait: not supported
+
+ - standard/square: 140x140px
+
+ - landscape: 190x140px
+
+
+ 
+ * RCImageSizeCodeXLarge:
+
+ - portrait: 150x225px
+
+ - standard/square: 200x200px
+
+ - landscape: 270x200px
+
+
+ 
+ * RCImageSizeCodeAmazing:
+
+ - portrait: not supported
+
+ - standard/square: 180x180px
+
+ - landscape: 250x156px
+
+
+ 
+ * RCImageSizeCodeFantastic:
+
+ - portrait: 168x252px
+
+ - standard/square: 250x250px
+
+ - landscape: not supported
+
+
+ 
+ * RCImageSizeCodeUncanny:
+
+ - portrait: 300x450px
+
+ - standard/square: not supported
+
+ - landscape: not supported
+
+ 
+ * RCImageSizeCodeIncredible:
+
+ - portrait: 216x324px
+
+ - standard/square: not supported
+
+ - landscape: 464x261px
+
+
+ 
+ @constant RCImageSizeCodeSmall Small size code
+ @constant RCImageSizeCodeMedium Medium size code
+ @constant RCImageSizeCodeLarge Large size code
+ @constant RCImageSizeCodeXLarge Extra large size code
+ @constant RCImageSizeCodeAmazing Amazing size code
+ @constant RCImageSizeCodeFantastic Fantastic size code
+ @constant RCImageSizeCodeUncanny Uncanny size code
+ @constant RCImageSizeCodeIncredible Incredible size code
+ */
+typedef enum {
 	RCImageSizeCodeSmall = 0,
 	RCImageSizeCodeMedium,
 	RCImageSizeCodeLarge,
@@ -32,4 +139,4 @@ typedef NS_ENUM(NSInteger, RCImageSizeCodes) {
 	RCImageSizeCodeFantastic,
 	RCImageSizeCodeUncanny,
 	RCImageSizeCodeIncredible
-};
+} RCImageSizeCodes;

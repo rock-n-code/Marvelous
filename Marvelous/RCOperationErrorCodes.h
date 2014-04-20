@@ -23,11 +23,36 @@
 //  THE SOFTWARE.
 //
 
-typedef NS_ENUM(NSInteger, RCOperationErrorCodes) {
+/*!
+ @header
+
+ RCOperationErrorCodes enumeration.
+
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+ 
+ @version 0.6.1
+ */
+
+/*!
+ @enum
+
+ This enumeration defines the error codes an RCAPIOperation object can emit in case of an error.
+ 
+ @constant RCOperationErrorCodeTypeUndefined Undefined error
+ @constant RCOperationErrorCodeOperationCancelled Operation cancelled error
+ @constant RCOperationErrorCodeTypeUndefined Operation type undefined error
+ @constant RCOperationErrorCodeIdentifierIsNull Operation identifier is NULL error
+ @constant RCOperationErrorCodeFilterUndefined Operation filter is undefined error
+ @constant RCOperationErrorCodeFilterIsNull Operation filter is NULL error
+ 
+ @internal
+ */
+typedef enum {
 	RCOperationErrorCodeOperationCancelled = 1000,
 	RCOperationErrorCodeTypeUndefined = 1001,
 	RCOperationErrorCodeIdentifierIsNull = 1002,
 	RCOperationErrorCodeFilterUndefined = 1003,
-	RCOperationErrorCodeFilterIsNull = 1004,
-	RCOperationErrorCodeJSONStatus = 1005
-};
+	RCOperationErrorCodeFilterIsNull = 1004
+} RCOperationErrorCodes;

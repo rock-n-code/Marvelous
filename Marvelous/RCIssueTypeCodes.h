@@ -23,8 +23,29 @@
 //  THE SOFTWARE.
 //
 
-typedef NS_ENUM(NSInteger, RCIssueTypeCodes) {
+/*!
+ @header
+
+ RCIssueTypeCodes enumeration.
+
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+
+ @version 0.6.1
+ */
+
+/*!
+ @enum
+
+ This enumeration defines the issue format types available to use by the "formatType" property of any RCComicsFilter object.
+
+ @constant RCIssueTypeCodeUndefined Undefined issue format type
+ @constant RCIssueTypeCodeComic Comic issue format type
+ @constant RCIssueTypeCodeCollection Collection issue format type
+ */
+typedef enum {
 	RCIssueTypeCodeUndefined = 0,
 	RCIssueTypeCodeComic,
 	RCIssueTypeCodeCollection
-};
+} RCIssueTypeCodes;

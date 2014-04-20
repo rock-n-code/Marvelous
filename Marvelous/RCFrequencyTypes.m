@@ -1,5 +1,5 @@
 //
-//  RCImageModes.m
+//  RCFrequencyTypes.m
 //  Marvelous
 //
 //  Copyright (c) 2014 Rock & Code [http://rock-n-code.com]
@@ -23,9 +23,9 @@
 //  THE SOFTWARE.
 //
 
-#import "RCImageModes.h"
+#import "RCFrequencyTypes.h"
 
-NSString * const RCImageModeDetail = @"detail";
-NSString * const RCImageModeSquare = @"standard";
-NSString * const RCImageModePortrait = @"portrait";
-NSString * const RCImageModeLandscape = @"landscape";
+NSString * const RCFrequencyTypeCollection = @"collection";
+NSString * const RCFrequencyTypeOneShot = @"one shot";
+NSString * const RCFrequencyTypeLimited = @"limited";
+NSString * const RCFrequencyTypeOngoing = @"ongoing";

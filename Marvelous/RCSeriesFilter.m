@@ -24,12 +24,27 @@
 //
 
 #import "RCSeriesFilter.h"
-#import "RCFormatTypes.h"
-#import "RCSeriesTypes.h"
+#import "RCIssueFormats.h"
+#import "RCFrequencyTypes.h"
 
 @interface RCSeriesFilter ()
 
+/*!
+ @property
+
+ This property gets a string representation of a list of RCIssueFormatCodes value.
+
+ @internal
+ */
 @property (nonatomic, readonly, strong) NSString *stringfiedContains;
+
+/*!
+ @property
+
+ This property gets a string representation of a RCFrequencyTypeCodes value.
+
+ @internal
+ */
 @property (nonatomic, readonly, strong) NSString *stringfiedSeriesType;
 
 @end
@@ -78,7 +93,7 @@
 		params[RCRequestKeyContains] = self.stringfiedContains;
 	}
 
-	if (self.seriesType != RCSeriesTypeCodeUndefined) {
+	if (self.seriesType != RCFrequencyTypeCodeUndefined) {
 		params[RCRequestKeySeriesType] = self.stringfiedSeriesType;
 	}
 
@@ -105,26 +120,26 @@
 	NSMutableArray *strings = [NSMutableArray array];
 
 	[self.contains enumerateObjectsUsingBlock:^(NSNumber *formatType, NSUInteger index, BOOL *stop) {
-		if (formatType.integerValue != RCFormatTypeCodeUndefined) {
+		if (formatType.integerValue != RCIssueFormatCodeUndefined) {
 			NSInteger type = formatType.integerValue;
 			NSString *string = @"";
 
-			if (type == RCFormatTypeCodeComic) {
-				string = RCFormatTypeComic;
-			} else if (type == RCFormatTypeCodeMagazine) {
-				string = RCFormatTypeMagazine;
-			} else if (type == RCFormatTypeCodeTradePaperback) {
-				string = RCFormatTypeTradePaperback;
-			} else if (type == RCFormatTypeCodeHardcover) {
-				string = RCFormatTypeHardcover;
-			} else if (type == RCFormatTypeCodeDigest) {
-				string = RCFormatTypeDigest;
-			} else if (type == RCFormatTypeCodeGraphicNovel) {
-				string = RCFormatTypeGraphicNovel;
-			} else if (type == RCFormatTypeCodeDigitalComic) {
-				string = RCFormatTypeDigitalComic;
+			if (type == RCIssueFormatCodeComic) {
+				string = RCIssueFormatComic;
+			} else if (type == RCIssueFormatCodeMagazine) {
+				string = RCIssueFormatMagazine;
+			} else if (type == RCIssueFormatCodeTradePaperback) {
+				string = RCIssueFormatTradePaperback;
+			} else if (type == RCIssueFormatCodeHardcover) {
+				string = RCIssueFormatHardcover;
+			} else if (type == RCIssueFormatCodeDigest) {
+				string = RCIssueFormatDigest;
+			} else if (type == RCIssueFormatCodeGraphicNovel) {
+				string = RCIssueFormatGraphicNovel;
+			} else if (type == RCIssueFormatCodeDigitalComic) {
+				string = RCIssueFormatDigitalComic;
 			} else {
-				string = RCFormatTypeInfiniteComic;
+				string = RCIssueFormatInfiniteComic;
 			}
 
 			[strings addObject:string];
@@ -137,14 +152,14 @@
 - (NSString *)stringfiedSeriesType
 {
 	switch (self.seriesType) {
-		case RCSeriesTypeCodeCollection:
-			return RCSeriesTypeCollection;
-		case RCSeriesTypeCodeOneShot:
-			return RCSeriesTypeOneShot;
-		case RCSeriesTypeCodeLimited:
-			return RCSeriesTypeLimited;
+		case RCFrequencyTypeCodeCollection:
+			return RCFrequencyTypeCollection;
+		case RCFrequencyTypeCodeOneShot:
+			return RCFrequencyTypeOneShot;
+		case RCFrequencyTypeCodeLimited:
+			return RCFrequencyTypeLimited;
 		default:
-			return RCSeriesTypeOngoing;
+			return RCFrequencyTypeOngoing;
 	}
 }
 

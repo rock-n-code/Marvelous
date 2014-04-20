@@ -24,16 +24,49 @@
 //
 
 #import "RCComicsFilter.h"
-#import "RCFormatTypes.h"
+#import "RCIssueFormats.h"
 #import "RCIssueTypes.h"
 #import "RCBooleanValues.h"
 #import "RCDateDescriptors.h"
 
 @interface RCComicsFilter ()
 
+/*!
+ @property
+
+ This property gets a string representation of a RCIssueFormatCodes value.
+
+ @internal
+ */
 @property (nonatomic, readonly, strong) NSString *stringfiedFormat;
+
+/*!
+ @property
+
+ This property gets a string representation of a RCIssueTypeCodes value.
+
+ @internal
+ */
 @property (nonatomic, readonly, strong) NSString *stringfiedFormatType;
+
+/*!
+ @property
+
+ This property gets a string representation of a RCDateDescriptorCodes value.
+
+ @internal
+ */
 @property (nonatomic, readonly, strong) NSString *stringfiedDateDescriptor;
+
+/*!
+ @property
+
+ This property gets a string representation of a list of dates (represented as NSDate objects).
+ 
+ Every string that represents a given date is formatted as "yyyy-MM-dd" and they are joined by a comma (",").
+
+ @internal
+ */
 @property (nonatomic, readonly, strong) NSString *stringfiedDateRange;
 
 @end
@@ -46,7 +79,7 @@
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:super.parameters];
 
-	if (self.format != RCFormatTypeCodeUndefined) {
+	if (self.format != RCIssueFormatCodeUndefined) {
 		params[RCRequestKeyFormat] = self.stringfiedFormat;
 	}
 
@@ -128,22 +161,22 @@
 - (NSString *)stringfiedFormat
 {
 	switch (self.format) {
-		case RCFormatTypeCodeComic:
-			return RCFormatTypeComic;
-		case RCFormatTypeCodeMagazine:
-			return RCFormatTypeMagazine;
-		case RCFormatTypeCodeTradePaperback:
-			return RCFormatTypeTradePaperback;
-		case RCFormatTypeCodeHardcover:
-			return RCFormatTypeHardcover;
-		case RCFormatTypeCodeDigest:
-			return RCFormatTypeDigest;
-		case RCFormatTypeCodeGraphicNovel:
-			return RCFormatTypeGraphicNovel;
-		case RCFormatTypeCodeDigitalComic:
-			return RCFormatTypeDigitalComic;
+		case RCIssueFormatCodeComic:
+			return RCIssueFormatComic;
+		case RCIssueFormatCodeMagazine:
+			return RCIssueFormatMagazine;
+		case RCIssueFormatCodeTradePaperback:
+			return RCIssueFormatTradePaperback;
+		case RCIssueFormatCodeHardcover:
+			return RCIssueFormatHardcover;
+		case RCIssueFormatCodeDigest:
+			return RCIssueFormatDigest;
+		case RCIssueFormatCodeGraphicNovel:
+			return RCIssueFormatGraphicNovel;
+		case RCIssueFormatCodeDigitalComic:
+			return RCIssueFormatDigitalComic;
 		default:
-			return RCFormatTypeInfiniteComic;
+			return RCIssueFormatInfiniteComic;
 	}
 }
 
@@ -207,6 +240,17 @@
 
 #pragma mark - Private methods
 
+/*!
+ @method
+
+ This methods converts a given boolean value to string.
+
+ @param date An integer that represent a RCBooleanValueCodes value.
+
+ @return A string that represent the given boolean value.
+
+ @internal
+ */
 - (NSString *)stringForBooleanValue:(RCBooleanValueCodes)boolean
 {
 	if (boolean == RCBooleanValueCodeTrue) {

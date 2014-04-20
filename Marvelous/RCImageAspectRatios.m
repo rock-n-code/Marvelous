@@ -1,5 +1,5 @@
 //
-//  RCFormatTypeCodes.h
+//  RCImageAspectRatios.m
 //  Marvelous
 //
 //  Copyright (c) 2014 Rock & Code [http://rock-n-code.com]
@@ -23,14 +23,9 @@
 //  THE SOFTWARE.
 //
 
-typedef NS_ENUM(NSInteger, RCFormatTypeCodes) {
-	RCFormatTypeCodeUndefined = 0,
-	RCFormatTypeCodeComic,
-	RCFormatTypeCodeMagazine,
-	RCFormatTypeCodeTradePaperback,
-	RCFormatTypeCodeHardcover,
-	RCFormatTypeCodeDigest,
-	RCFormatTypeCodeGraphicNovel,
-	RCFormatTypeCodeDigitalComic,
-	RCFormatTypeCodeInfiniteComic,
-};
+#import "RCImageAspectRatios.h"
+
+NSString * const RCImageAspectRatioDetail = @"detail";
+NSString * const RCImageAspectRatioSquare = @"standard";
+NSString * const RCImageAspectRatioPortrait = @"portrait";
+NSString * const RCImageAspectRatioLandscape = @"landscape";

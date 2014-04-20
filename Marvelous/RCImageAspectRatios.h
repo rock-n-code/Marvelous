@@ -1,5 +1,5 @@
 //
-//  RCFormatTypes.m
+//  RCImageAspectRatios.h
 //  Marvelous
 //
 //  Copyright (c) 2014 Rock & Code [http://rock-n-code.com]
@@ -23,13 +23,7 @@
 //  THE SOFTWARE.
 //
 
-#import "RCFormatTypes.h"
-
-NSString * const RCFormatTypeComic = @"comic";
-NSString * const RCFormatTypeMagazine = @"magazine";
-NSString * const RCFormatTypeTradePaperback = @"trade paperback";
-NSString * const RCFormatTypeHardcover = @"hardcover";
-NSString * const RCFormatTypeDigest = @"digest";
-NSString * const RCFormatTypeGraphicNovel = @"graphic novel";
-NSString * const RCFormatTypeDigitalComic = @"digital comic";
-NSString * const RCFormatTypeInfiniteComic = @"infinite comic";
+extern NSString * const RCImageAspectRatioDetail;
+extern NSString * const RCImageAspectRatioSquare;
+extern NSString * const RCImageAspectRatioPortrait;
+extern NSString * const RCImageAspectRatioLandscape;

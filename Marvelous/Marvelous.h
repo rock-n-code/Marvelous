@@ -24,12 +24,15 @@
 //
 
 /*!
- @header Marvelous
+ @header
+ 
  The Marvelous library/framework provides a native interface to the Marvel Comics API.
- @author Javier Cicchelli (@monsieur_rock)
- @copyright © 2014, Rock & Code VoF [http://rock-n-code.com]
+
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+ 
  @version 0.6.1
- @whyinclude This header imports all the classes you require to use this library/framework
  */
 
 // API Interface
@@ -59,13 +62,16 @@
 #import <Marvelous/RCSummaryObject.h>
 #import <Marvelous/RCURLObject.h>
 
+// Blocks
+#import <Marvelous/RCBlocks.h>
+
 // Enumerations
 #import <Marvelous/RCAPITypes.h>
 #import <Marvelous/RCOrderByTypeCodes.h>
-#import <Marvelous/RCFormatTypeCodes.h>
-#import <Marvelous/RCSeriesTypeCodes.h>
+#import <Marvelous/RCIssueFormatCodes.h>
 #import <Marvelous/RCIssueTypeCodes.h>
+#import <Marvelous/RCFrequencyTypeCodes.h>
 #import <Marvelous/RCDateDescriptorCodes.h>
-#import <Marvelous/RCBooleanValueCodes.h>
-#import <Marvelous/RCImageModeCodes.h>
+#import <Marvelous/RCImageAspectRatioCodes.h>
 #import <Marvelous/RCImageSizeCodes.h>
+#import <Marvelous/RCBooleanValueCodes.h>

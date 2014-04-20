@@ -23,8 +23,29 @@
 //  THE SOFTWARE.
 //
 
-typedef NS_ENUM(NSInteger, RCBooleanValueCodes) {
+/*!
+ @header
+
+ RCBooleanValueCodes enumeration.
+
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+ 
+ @version 0.6.1
+ */
+
+/*!
+ @enum
+ 
+ This enumeration defines a tri-state boolean value used by the "noVariants" and "hasDigitalIssue" properties of any RCComicsFilter object.
+
+ @constant RCBooleanValueCodeUndefined Undefined state
+ @constant RCBooleanValueCodeTrue True state
+ @constant RCBooleanValueCodeFalse False state
+ */
+typedef enum {
 	RCBooleanValueCodeUndefined = 0,
 	RCBooleanValueCodeTrue,
 	RCBooleanValueCodeFalse
-};
+} RCBooleanValueCodes;

@@ -24,7 +24,7 @@
 //
 
 #import "RCObject.h"
-#import "RCImageModeCodes.h"
+#import "RCImageAspectRatioCodes.h"
 #import "RCImageSizeCodes.h"
 
 @interface RCImageObject : RCObject
@@ -34,6 +34,6 @@
 @property (nonatomic, readonly, strong) NSURL *fullSizeURL;
 @property (nonatomic, readonly, strong) NSURL *detailURL;
 
-- (NSURL *)urlForMode:(RCImageModeCodes)mode andSize:(RCImageSizeCodes)size;
+- (NSURL *)urlForAspectRatio:(RCImageAspectRatioCodes)aspectRatio andSize:(RCImageSizeCodes)size;
 
 @end
