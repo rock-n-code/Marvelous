@@ -23,6 +23,7 @@
 //  THE SOFTWARE.
 //
 
+#import "RCBlocks.h"
 #import "RCCharacterObject.h"
 #import "RCComicsObject.h"
 #import "RCCreatorObject.h"
@@ -36,28 +37,6 @@
 #import "RCEventFilter.h"
 #import "RCSeriesFilter.h"
 #import "RCStoryFilter.h"
-
-/*!
- @typedef
-
- This block that is used as a callback and it is passed as a parameter to some of the methods of the RCMarvelAPI class. This particular block is used when it is required to return only one result from the API.
- 
- @param result A RCCharacterObject, RCComicsObject, RCCreatorObject, RCEventObject, RCSeriesObject, or RCStoryObject object that contain the result provided by the response
- @param info A RCQueryInfoObject object that contain the metadata about the response
- @param error A NSError object that contain the error data provided by the response
- */
-typedef void (^resultCompletionBlock) (id result, RCQueryInfoObject *info, NSError *error);
-
-/*!
- @typedef
-
- This block that is used as a callback and it is passed as a parameter to some of the methods of theRCMarvelAPI class. This particular block is used when it is required to return a list of results.
- 
- @param results A list of RCCharacterObject, RCComicsObject, RCCreatorObject, RCEventObject, RCSeriesObject, or RCStoryObject objects that contain the results provided by the response
- @param info A RCQueryInfoObject object that contain the metadata about the response
- @param error A NSError object that contain the error data provided by the response
- */
-typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *info, NSError *error);
 
 /*!
  @class

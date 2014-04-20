@@ -62,6 +62,9 @@
 #import <Marvelous/RCSummaryObject.h>
 #import <Marvelous/RCURLObject.h>
 
+// Blocks
+#import <Marvelous/RCBlocks.h>
+
 // Enumerations
 #import <Marvelous/RCAPITypes.h>
 #import <Marvelous/RCOrderByTypeCodes.h>

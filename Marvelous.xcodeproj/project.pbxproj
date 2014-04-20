@@ -89,6 +89,8 @@
 		036A2F1918F0BB4000EFE3CF /* RCStoryFilterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 036A2F1818F0BB4000EFE3CF /* RCStoryFilterTests.m */; };
 		036A2F1C18F0C18A00EFE3CF /* RCStoryObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 036A2F1B18F0C18A00EFE3CF /* RCStoryObject.m */; };
 		036A2F1E18F0C1B600EFE3CF /* RCStoryObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 036A2F1D18F0C1B600EFE3CF /* RCStoryObjectTests.m */; };
+		037021F91903E060001D8F4B /* RCBlocks.h in Headers */ = {isa = PBXBuildFile; fileRef = 037021F81903E060001D8F4B /* RCBlocks.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		037021FA1903E10F001D8F4B /* RCBlocks.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 037021F81903E060001D8F4B /* RCBlocks.h */; };
 		037F74AE18F4CF1400FB3616 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03DEC85818E736740098CCE1 /* InfoPlist.strings */; };
 		037F74AF18F4CFBC00FB3616 /* RCMarvelAPITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B694DA18E73E5E00CEF855 /* RCMarvelAPITests.m */; };
 		037F74B018F4CFC200FB3616 /* RCOperationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B694F318E774AD00CEF855 /* RCOperationTests.m */; };
@@ -304,6 +306,7 @@
 				03C81A4518F4833B00D84C0C /* RCTextObject.h in CopyFiles */,
 				03C81A4718F4834900D84C0C /* RCSummaryObject.h in CopyFiles */,
 				03C81A4918F4836100D84C0C /* RCURLObject.h in CopyFiles */,
+				037021FA1903E10F001D8F4B /* RCBlocks.h in CopyFiles */,
 				03C81A2E18F4812200D84C0C /* RCAPITypes.h in CopyFiles */,
 				03C81A2F18F4812700D84C0C /* RCOrderByTypeCodes.h in CopyFiles */,
 				03C81A3118F4814600D84C0C /* RCFormatTypeCodes.h in CopyFiles */,
@@ -423,6 +426,7 @@
 		036A2F1A18F0C18A00EFE3CF /* RCStoryObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCStoryObject.h; sourceTree = "<group>"; };
 		036A2F1B18F0C18A00EFE3CF /* RCStoryObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCStoryObject.m; sourceTree = "<group>"; };
 		036A2F1D18F0C1B600EFE3CF /* RCStoryObjectTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCStoryObjectTests.m; sourceTree = "<group>"; };
+		037021F81903E060001D8F4B /* RCBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCBlocks.h; sourceTree = "<group>"; };
 		03B694D618E73E3A00CEF855 /* RCMarvelAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCMarvelAPI.h; path = Marvelous/RCMarvelAPI.h; sourceTree = "<group>"; };
 		03B694D718E73E3A00CEF855 /* RCMarvelAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCMarvelAPI.m; path = Marvelous/RCMarvelAPI.m; sourceTree = "<group>"; };
 		03B694DA18E73E5E00CEF855 /* RCMarvelAPITests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCMarvelAPITests.m; sourceTree = "<group>"; };
@@ -600,6 +604,14 @@
 			name = Filters;
 			sourceTree = "<group>";
 		};
+		037021F71903E033001D8F4B /* Blocks */ = {
+			isa = PBXGroup;
+			children = (
+				037021F81903E060001D8F4B /* RCBlocks.h */,
+			);
+			name = Blocks;
+			sourceTree = "<group>";
+		};
 		03B694D518E73DEC00CEF855 /* APIs */ = {
 			isa = PBXGroup;
 			children = (
@@ -736,6 +748,7 @@
 				03B694F218E7749D00CEF855 /* Operations */,
 				03130D4618EADC4B00BD315F /* Filters */,
 				03130D0F18E96A2700BD315F /* Objects */,
+				037021F71903E033001D8F4B /* Blocks */,
 				03130D3F18E9D91F00BD315F /* Protocols */,
 				03B694E118E757C500CEF855 /* Enumerations */,
 				03B694DD18E74D3800CEF855 /* Constants */,
@@ -813,6 +826,7 @@
 				037F750518F4D39500FB3616 /* RCImageAspectRatioCodes.h in Headers */,
 				037F751C18F4D3CC00FB3616 /* RCOrderByTypes.h in Headers */,
 				037F74DC18F4D32E00FB3616 /* RCCreatorFilter.h in Headers */,
+				037021F91903E060001D8F4B /* RCBlocks.h in Headers */,
 				037F750418F4D39500FB3616 /* RCOrderByTypeCodes.h in Headers */,
 				037F750018F4D37400FB3616 /* RCDataContainerObject.h in Headers */,
 				037F752118F4D3CC00FB3616 /* RCBooleanValues.h in Headers */,
