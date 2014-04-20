@@ -42,8 +42,8 @@
 @property (nonatomic, strong) RCListObject *events;
 @property (nonatomic, strong) RCListObject *characters;
 @property (nonatomic, strong) RCListObject *creators;
-@property (nonatomic, strong) RCSummaryObject *previous;
 @property (nonatomic, strong) RCSummaryObject *next;
+@property (nonatomic, strong) RCSummaryObject *previous;
 
 @end
 
@@ -71,8 +71,8 @@
 		self.events = [[RCListObject alloc] initWithDictionary:dictionary[RCResponseKeyEvents]];
 		self.characters = [[RCListObject alloc] initWithDictionary:dictionary[RCResponseKeyCharacters]];
 		self.creators = [[RCListObject alloc] initWithDictionary:dictionary[RCResponseKeyCreators]];
-		self.previous = [[RCSummaryObject alloc] initWithDictionary:dictionary[RCResponseKeyPrevious]];
 		self.next = [[RCSummaryObject alloc] initWithDictionary:dictionary[RCResponseKeyNext]];
+		self.previous = [[RCSummaryObject alloc] initWithDictionary:dictionary[RCResponseKeyPrevious]];
 	}
 
 	return self;
