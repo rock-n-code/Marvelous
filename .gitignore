@@ -1,5 +1,6 @@
 Library/
 Framework/
+Documentation/
 build/
 *.pbxuser
 !default.pbxuser
