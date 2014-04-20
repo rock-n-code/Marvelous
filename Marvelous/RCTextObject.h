@@ -23,12 +23,46 @@
 //  THE SOFTWARE.
 //
 
+/*!
+ @header
+
+ RCTextObject class.
+
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+
+ @version 0.6.1
+ */
+
 #import "RCObject.h"
 
+/*!
+ @class
+
+ This class is a descriptive text blurb for a particular resource.
+ */
 @interface RCTextObject : RCObject
 
+/*!
+ @property
+
+ This property gets the canonical type of the text object (for example: solicit text, preview text, etc.).
+ */
 @property (nonatomic, readonly, strong) NSString *type;
+
+/*!
+ @property
+
+ This property gets the IETF language tag denoting the language the text object is written in.
+ */
 @property (nonatomic, readonly, strong) NSString *language;
+
+/*!
+ @property
+
+ This property gets the text ob the object.
+ */
 @property (nonatomic, readonly, strong) NSString *text;
 
 @end
