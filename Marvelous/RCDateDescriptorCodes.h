@@ -23,10 +23,33 @@
 //  THE SOFTWARE.
 //
 
-typedef NS_ENUM(NSInteger, RCDateDescriptorCodes) {
+/*!
+ @header
+
+ RCDateDescriptorCodes enumeration.
+
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+
+ @version 0.6.1
+ */
+
+/*!
+ @enum
+
+ This enumeration defines a pre-defined date range valuesused by the "dateDescriptor" property of any RCComicsFilter object.
+
+ @constant RCDateDescriptorCodeUndefined Undefined date range
+ @constant RCDateDescriptorCodeLastWeek Since last week
+ @constant RCDateDescriptorCodeThisWeek Since this week
+ @constant RCDateDescriptorCodeNextWeek Since next week
+ @constant RCDateDescriptorCodeThisMonth Since this month
+ */
+typedef enum {
 	RCDateDescriptorCodeUndefined = 0,
 	RCDateDescriptorCodeLastWeek,
 	RCDateDescriptorCodeThisWeek,
 	RCDateDescriptorCodeNextWeek,
 	RCDateDescriptorCodeThisMonth
-};
+} RCDateDescriptorCodes;
