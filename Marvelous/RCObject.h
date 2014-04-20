@@ -59,7 +59,7 @@
 /*!
  @method
 
- This method obtain a list of URL objects from a given list of JSON dictionaries obtained from an API endpoint.
+ This method obtain a list of URL objects from a given list of JSON dictionaries returned by an API endpoint.
 
  @param array A list of given JSON dictionaries
 

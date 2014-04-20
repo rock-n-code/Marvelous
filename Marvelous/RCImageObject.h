@@ -42,7 +42,7 @@
 /*!
  @class
 
- This class is a representative image for a particular resource.
+ This class is an image representation for a particular resource.
  */
 @interface RCImageObject : RCObject
 

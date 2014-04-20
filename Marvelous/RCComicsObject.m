@@ -107,6 +107,18 @@
 
 #pragma mark - Private methods
 
+/*!
+ @method
+
+ This method obtain a list of objects created based on a given class object from a given list of JSON dictionaries returned by an API endpoint.
+
+ @param array A list of given JSON dictionaries
+ @param klass A class in which every object has to be created
+
+ @return A list of RCObject objects obtained from the dictionaries
+
+ @internal
+ */
 - (NSArray *)objectsFromArray:(NSArray *)array ofClass:(Class)klass
 {
 	NSMutableArray *objects = [NSMutableArray array];
