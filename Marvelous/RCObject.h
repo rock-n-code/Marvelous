@@ -23,11 +23,48 @@
 //  THE SOFTWARE.
 //
 
+/*!
+ @header
+
+ RCObject base class.
+
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+
+ @version 0.6.2
+ */
+
 #import "RCObjectProtocol.h"
 
+/*!
+ @class
+
+ This base class defines every common properties and methods every object could be able to access.
+ */
 @interface RCObject : NSObject <RCObjectProtocol>
 
+/*!
+ @method
+ 
+ This method convert a given string with a "yyyy-MM-dd'T'HH:mm:ssZ" format to a date.
+ 
+ @param string A string that represent a date
+ 
+ @return A date that represent the given string
+ */
+
 - (NSDate *)dateFromString:(NSString *)string;
+
+/*!
+ @method
+
+ This method obtain a list of URL objects from a given list of JSON dictionaries returned by an API endpoint.
+
+ @param array A list of given JSON dictionaries
+
+ @return A list of RCURLObject objects obtained from the dictionaries
+ */
 - (NSArray *)urlsFromArray:(NSArray *)array;
 
 @end

@@ -23,12 +23,38 @@
 //  THE SOFTWARE.
 //
 
+/*!
+ @header
+
+ RCObjectProtocol protocol.
+
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+
+ @version 0.6.2
+ */
+
 #import "RCResponseKeys.h"
 
+/*!
+ @protocol
+ 
+ This protocol defines the methods any RCObject class should implement.
+ */
 @protocol RCObjectProtocol <NSObject>
 
 @optional
 
+/*!
+ @method
+ 
+ This optional method initialise an RCObject object from a given dictionary
+ 
+ @param dictionary A JSON dictionary retrieved from an API endpoint
+ 
+ @return An initialised object
+ */
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 
 @end

@@ -23,19 +23,87 @@
 //  THE SOFTWARE.
 //
 
+/*!
+ @header
+
+ RCDataWrapperObject class.
+
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+
+ @version 0.6.2
+ */
+
 #import "RCDataContainerObject.h"
 #import "RCAPITypes.h"
 
+/*!
+ @class
+
+ This class is a object representation of a DataWrapper resource.
+ */
 @interface RCDataWrapperObject : NSObject
 
+/*!
+ @property
+
+ This property gets the HTTP status code of the returned by an API endpoint.
+ */
 @property (nonatomic, readonly, strong) NSNumber *code;
+
+/*!
+ @property
+
+ This property gets the description of the status returned by an API endpoint.
+ */
 @property (nonatomic, readonly, strong) NSString *status;
+
+/*!
+ @property
+
+ This property gets copyright notice for the result returned by an API endpoint.
+ */
 @property (nonatomic, readonly, strong) NSString *copyright;
+
+/*!
+ @property
+
+ This property gets the attribution notice for the result returned by an API endpoint.
+ */
 @property (nonatomic, readonly, strong) NSString *attributionText;
+
+/*!
+ @property
+
+ This property gets the HTML representation of the attribution notice for the result returned by an API endpoint.
+ */
 @property (nonatomic, readonly, strong) NSString *attributionHTML;
+
+/*!
+ @property
+
+ This property gets the results returned by an API endpoint.
+ */
 @property (nonatomic, readonly, strong) RCDataContainerObject *data;
+
+/*!
+ @property
+
+ This property gets the digest value of the content returned by an API endpoint.
+ */
 @property (nonatomic, readonly, strong) NSString *etag;
 
+/*!
+ @method
+
+ This method initialise a data wrapper object with a type and a given JSON dictionary returned by an API endpoint.
+
+ @param type The type of resource to initialise with a JSON dictionary
+ @param dictionary A JSON dictionary retrieved from an API endpoint
+
+ @return An initialised object
+ */
 - (id)initWithType:(RCAPITypes)type andDictionary:(NSDictionary *)dictionary;
 
 @end

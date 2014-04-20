@@ -27,8 +27,31 @@
 #import "RCImageAspectRatios.h"
 #import "RCImageSizes.h"
 
+/*!
+ @constant
+ 
+ This constant defines a path format for a base path and an extension.
+
+ @internal
+ */
 static NSString * const RCImageObjectPathFormat = @"%@.%@";
+
+/*!
+ @constant
+
+ This constant defines a path format for a base path, a stringfied aspect ratio and an extension.
+
+ @internal
+ */
 static NSString * const RCImageObjectPathSeparatorFormat = @"%@/%@.%@";
+
+/*!
+ @constant
+
+ This constant defines a path format for a base path, a stringfied aspect ratio, a stringfied size and an extension.
+
+ @internal
+ */
 static NSString * const RCImageObjectPathModeSizeFormat = @"%@/%@_%@.%@";
 
 @interface RCImageObject ()
@@ -91,6 +114,17 @@ static NSString * const RCImageObjectPathModeSizeFormat = @"%@/%@_%@.%@";
 
 #pragma mark - Private methods
 
+/*!
+ @method
+ 
+ This method convert a given aspect ratio code to string.
+ 
+ @param aspectRatioCode An integer that represent a RCImageAspectRatioCodes value.
+ 
+ @return A string that represent the given aspect ratio code.
+
+ @internal
+ */
 - (NSString *)aspectRatioFromCode:(RCImageAspectRatioCodes)aspectRatioCode
 {
 	if (aspectRatioCode == RCImageAspectRatioCodePortrait) {
@@ -102,6 +136,17 @@ static NSString * const RCImageObjectPathModeSizeFormat = @"%@/%@_%@.%@";
 	}
 }
 
+/*!
+ @method
+
+ This method convert a given size code to string.
+
+ @param aspectRatioCode An integer that represent a RCImageSizeCodes value.
+
+ @return A string that represent the given size code.
+
+ @internal
+ */
 - (NSString *)sizeForCode:(RCImageSizeCodes)code
 {
 	if (code == RCImageSizeCodeSmall) {

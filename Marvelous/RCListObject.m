@@ -55,6 +55,17 @@
 
 #pragma mark - Private methods
 
+/*!
+ @method
+
+ This method obtain a list of summary objects from a given list of JSON dictionaries returned by an API endpoint.
+
+ @param array A list of given JSON dictionaries
+
+ @return A list of RCSummaryObject objects obtained from the dictionaries
+ 
+ @internal
+ */
 - (NSArray *)itemsFromArray:(NSArray *)array
 {
 	NSMutableArray *items = [NSMutableArray array];

@@ -23,13 +23,53 @@
 //  THE SOFTWARE.
 //
 
+/*!
+ @header
+
+ RCListObject class.
+
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+
+ @version 0.6.2
+ */
+
 #import "RCObject.h"
 
+/*!
+ @class
+
+ This class is a list of summary objects related to a particular resource.
+ */
 @interface RCListObject : RCObject
 
+/*!
+ @property
+
+ This property gets the number of total available summaries.
+ */
 @property (nonatomic, readonly, strong) NSNumber *available;
+
+/*!
+ @property
+
+ This property gets the number of returned summaries.
+ */
 @property (nonatomic, readonly, strong) NSNumber *returned;
+
+/*!
+ @property
+
+ This property gets the URL to the full list of summaries related to the resource.
+ */
 @property (nonatomic, readonly, strong) NSURL *collectionURI;
+
+/*!
+ @property
+
+ This property gets the list of returned summaries related to the resource.
+ */
 @property (nonatomic, readonly, strong) NSArray *items;
 
 @end

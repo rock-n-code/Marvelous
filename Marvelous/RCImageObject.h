@@ -23,17 +23,67 @@
 //  THE SOFTWARE.
 //
 
+/*!
+ @header
+
+ RCImageObject class.
+
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+
+ @version 0.6.2
+ */
+
 #import "RCObject.h"
 #import "RCImageAspectRatioCodes.h"
 #import "RCImageSizeCodes.h"
 
+/*!
+ @class
+
+ This class is an image representation for a particular resource.
+ */
 @interface RCImageObject : RCObject
 
+/*!
+ @property
+
+ This property gets the directory path to an image.
+ */
 @property (nonatomic, readonly, strong) NSString *basePath;
+
+/*!
+ @property
+
+ This property gets the file extension for an image.
+ */
 @property (nonatomic, readonly, strong) NSString *extension;
+
+/*!
+ @property
+
+ This property gets the URL to a full size image.
+ */
 @property (nonatomic, readonly, strong) NSURL *fullSizeURL;
+
+/*!
+ @property
+
+ This property gets the URL to a full size image which is constrained to 500px wide.
+ */
 @property (nonatomic, readonly, strong) NSURL *detailURL;
 
+/*!
+ @method
+
+ This method creates a URL to an image based on the given aspect ratio and size.
+ 
+ @param aspectRatio The aspect ratio of the image to retrieve
+ @param size The size of the image to retrieve
+ 
+ @return A full URL to an image (including scheme, domain and path)
+ */
 - (NSURL *)urlForAspectRatio:(RCImageAspectRatioCodes)aspectRatio andSize:(RCImageSizeCodes)size;
 
 @end

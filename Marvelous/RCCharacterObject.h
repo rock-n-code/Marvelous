@@ -23,23 +23,105 @@
 //  THE SOFTWARE.
 //
 
+/*!
+ @header
+
+ RCCharacterObject class.
+
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+
+ @version 0.6.2
+ */
+
 #import "RCObject.h"
 #import "RCImageObject.h"
 #import "RCListObject.h"
 #import "RCURLObject.h"
 
+/*!
+ @class
+
+ This class is a object representation of a Character resource.
+ */
 @interface RCCharacterObject : RCObject
 
+/*!
+ @property
+
+ This property gets the unique identifier of the resource.
+ */
 @property (nonatomic, readonly, strong) NSNumber *identifier;
+
+/*!
+ @property
+
+ This property gets the name of the resource.
+ */
 @property (nonatomic, readonly, strong) NSString *name;
+
+/*!
+ @property
+
+ This property gets the short bio or description of the resource.
+ */
 @property (nonatomic, readonly, strong) NSString *bio;
+
+/*!
+ @property
+
+ This property gets the date the resource was most recently modified.
+ */
 @property (nonatomic, readonly, strong) NSDate *lastModified;
+
+/*!
+ @property
+
+ This property gets the canonical URL identifier for the resource.
+ */
 @property (nonatomic, readonly, strong) NSURL *resourceURI;
+
+/*!
+ @property
+
+ This property gets the set of public web site URLs for the resource.
+ */
 @property (nonatomic, readonly, strong) NSArray *urls;
+
+/*!
+ @property
+
+ This property gets the representative image for the resource.
+ */
 @property (nonatomic, readonly, strong) RCImageObject *thumbnail;
+
+/*!
+ @property
+
+ This property gets the list of comics summaries which feature the resource.
+ */
 @property (nonatomic, readonly, strong) RCListObject *comics;
+
+/*!
+ @property
+
+ This property gets the list of story summaries in which the resource appears.
+ */
 @property (nonatomic, readonly, strong) RCListObject *stories;
+
+/*!
+ @property
+
+ This property gets the list of event summaries in which the resource appears.
+ */
 @property (nonatomic, readonly, strong) RCListObject *events;
+
+/*!
+ @property
+
+ This property gets the list of series summaries in which the resource appears.
+ */
 @property (nonatomic, readonly, strong) RCListObject *series;
 
 @end

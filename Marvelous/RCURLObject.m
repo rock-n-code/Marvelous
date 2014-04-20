@@ -28,6 +28,7 @@
 @interface RCURLObject ()
 
 @property (nonatomic, strong) NSString *type;
+@property (nonatomic, strong) NSURL *url;
 
 @end
 
@@ -37,10 +38,11 @@
 
 - (id)initWithDictionary:(NSDictionary *)dictionary
 {
-	self = [super initWithString:dictionary[RCResponseKeyURL]];
+	self = [super init];
 
 	if (self) {
 		self.type = dictionary[RCResponseKeyType];
+		self.url = [NSURL URLWithString:dictionary[RCResponseKeyURL]];
 	}
 
 	return self;

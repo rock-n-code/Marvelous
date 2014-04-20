@@ -23,19 +23,92 @@
 //  THE SOFTWARE.
 //
 
+/*!
+ @header
+
+ RCQueryInfoObject class.
+
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+
+ @version 0.6.2
+ */
+
 #import "RCDataWrapperObject.h"
 
+/*!
+ @class
+
+ This class is a object representation of an API endpoint response metadata.
+ */
 @interface RCQueryInfoObject : NSObject
 
+/*!
+ @property
+
+ This property gets copyright notice for the result returned by an API endpoint.
+ */
 @property (nonatomic, readonly, strong) NSString *copyright;
+
+/*!
+ @property
+
+ This property gets the attribution notice for the result returned by an API endpoint.
+ */
 @property (nonatomic, readonly, strong) NSString *attributionText;
+
+/*!
+ @property
+
+ This property gets the HTML representation of the attribution notice for the result returned by an API endpoint.
+ */
 @property (nonatomic, readonly, strong) NSString *attributionHTML;
+
+/*!
+ @property
+
+ This property gets the digest value of the content returned by an API endpoint.
+ */
 @property (nonatomic, readonly, strong) NSString *etag;
+
+/*!
+ @property
+
+ This property gets the number of skipped results of an API call.
+ */
 @property (nonatomic, readonly, strong) NSNumber *offset;
+
+/*!
+ @property
+
+ This property gets the number of result limit.
+ */
 @property (nonatomic, readonly, strong) NSNumber *limit;
+
+/*!
+ @property
+
+ This property gets the total number of resources available given the current filter set.
+ */
 @property (nonatomic, readonly, strong) NSNumber *total;
+
+/*!
+ @property
+
+ This property gets the number of results returned by an API call.
+ */
 @property (nonatomic, readonly, strong) NSNumber *count;
 
+/*!
+ @method
+
+ This method initialise a metadata object with a data wrapper object.
+
+ @param dataWrapper A data wrapper object containing all the information returned by an API endpoint
+
+ @return An initialised object
+ */
 - (id)initWithDataWrapper:(RCDataWrapperObject *)dataWrapper;
 
 @end

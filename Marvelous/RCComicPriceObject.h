@@ -23,11 +23,39 @@
 //  THE SOFTWARE.
 //
 
+/*!
+ @header
+
+ RCComicPriceObject class.
+
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+
+ @version 0.6.2
+ */
+
 #import "RCObject.h"
 
+/*!
+ @class
+
+ This class is a price related to a Comic resource.
+ */
 @interface RCComicPriceObject : RCObject
 
+/*!
+ @property
+
+ This property gets the description of the price (for example: print price, digital price, etc.).
+ */
 @property (nonatomic, readonly, strong) NSString *type;
+
+/*!
+ @property
+
+ This property gets the price of the object (in US Dollars).
+ */
 @property (nonatomic, readonly, strong) NSNumber *price;
 
 @end

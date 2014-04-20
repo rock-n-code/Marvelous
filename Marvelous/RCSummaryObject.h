@@ -23,13 +23,53 @@
 //  THE SOFTWARE.
 //
 
+/*!
+ @header
+
+ RCSummaryObject class.
+
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+
+ @version 0.6.2
+ */
+
 #import "RCObject.h"
 
+/*!
+ @class
+
+ This class is a summary representation of a particular resource.
+ */
 @interface RCSummaryObject : RCObject
 
+/*!
+ @property
+ 
+ This property gets the canonical name of the resource.
+ */
 @property (nonatomic, readonly, strong) NSString *name;
+
+/*!
+ @property
+
+ This property gets the type of the resource if defined. Otherwise, it gets a NULL value.
+ */
 @property (nonatomic, readonly, strong) NSString *type;
+
+/*!
+ @property
+
+ This optional property gets the role of the resource in a parent entity if defined. Otherwise, it gets a NULL value.
+ */
 @property (nonatomic, readonly, strong) NSString *role;
+
+/*!
+ @property
+
+ This property gets a URL object with the path to the resource.
+ */
 @property (nonatomic, readonly, strong) NSURL *resourceURI;
 
 @end

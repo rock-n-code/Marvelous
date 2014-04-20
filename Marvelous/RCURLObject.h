@@ -23,10 +23,39 @@
 //  THE SOFTWARE.
 //
 
-#import "RCObjectProtocol.h"
+/*!
+ @header
 
-@interface RCURLObject : NSURL <RCObjectProtocol>
+ RCURLObject class.
 
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+
+ @version 0.6.2
+ */
+
+#import "RCObject.h"
+
+/*!
+ @class
+
+ This class is a public web site URL representation for a particular resource.
+ */
+@interface RCURLObject : RCObject <RCObjectProtocol>
+
+/*!
+ @property
+
+ This property gets the type identifier of the URL.
+ */
 @property (nonatomic, readonly, strong) NSString *type;
+
+/*!
+ @property
+
+ This property gets the URL representation (including scheme, domain and path).
+ */
+@property (nonatomic, readonly, strong) NSURL *url;
 
 @end
