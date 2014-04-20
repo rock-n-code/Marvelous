@@ -24,6 +24,18 @@
 //
 
 /*!
+ @header
+
+ RCAPITypes enumeration.
+
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+ 
+ @version 0.6.1
+ */
+
+/*!
  @enum
 
  This enumeration defines the types of API calls an RCAPIOperation object can handle.

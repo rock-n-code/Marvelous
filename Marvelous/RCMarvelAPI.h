@@ -39,6 +39,18 @@
 #import "RCStoryFilter.h"
 
 /*!
+ @header
+
+ RCMarvelAPI interface.
+
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+ 
+ @version 0.6.1
+ */
+
+/*!
  @class
 
  This class is a manager class (implemented as a singleton) that interfaces with the Marvel Comics API. Throught this class, it is possible to make calls to the API by passing an identifier and/or a filter and a completion block that returns a response from the API server.

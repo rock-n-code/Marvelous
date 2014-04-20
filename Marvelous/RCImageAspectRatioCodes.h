@@ -24,6 +24,18 @@
 //
 
 /*!
+ @header
+
+ RCImageAspectRatioCodes enumeration.
+
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+ 
+ @version 0.6.1
+ */
+
+/*!
  @enum
 
  This enumeration defines the aspect ratio modes available use by an RCImageObject object to produce a URL to a customised image.

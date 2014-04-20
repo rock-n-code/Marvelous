@@ -24,6 +24,18 @@
 //
 
 /*!
+ @header
+
+ RCStatusCodes enumeration.
+
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+ 
+ @version 0.6.1
+ */
+
+/*!
  @enum
 
  This enumeration defines the HTTP status codes a RCAPIOperation object can get from the API response.
