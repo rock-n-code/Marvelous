@@ -68,7 +68,7 @@
 		036341D318F16882008FA7F0 /* RCCreatorObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341D218F16882008FA7F0 /* RCCreatorObjectTests.m */; };
 		036341D618F17367008FA7F0 /* RCSeriesFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341D518F17367008FA7F0 /* RCSeriesFilter.m */; };
 		036341D818F17389008FA7F0 /* RCSeriesFilterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341D718F17389008FA7F0 /* RCSeriesFilterTests.m */; };
-		036341DC18F174B8008FA7F0 /* RCSeriesTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341DB18F174B8008FA7F0 /* RCSeriesTypes.m */; };
+		036341DC18F174B8008FA7F0 /* RCFrequencyTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341DB18F174B8008FA7F0 /* RCFrequencyTypes.m */; };
 		036341E018F176C6008FA7F0 /* RCIssueFormats.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341DF18F176C6008FA7F0 /* RCIssueFormats.m */; };
 		036341E318F1A691008FA7F0 /* RCSeriesObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341E218F1A691008FA7F0 /* RCSeriesObject.m */; };
 		036341E518F1A6C5008FA7F0 /* RCSeriesObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341E418F1A6C5008FA7F0 /* RCSeriesObjectTests.m */; };
@@ -181,7 +181,7 @@
 		037F750518F4D39500FB3616 /* RCImageAspectRatioCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 03130D5C18EB7DDB00BD315F /* RCImageAspectRatioCodes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		037F750618F4D39500FB3616 /* RCImageSizeCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 03130D5D18EB7E6500BD315F /* RCImageSizeCodes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		037F750718F4D39500FB3616 /* RCIssueFormatCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 036341DD18F17653008FA7F0 /* RCIssueFormatCodes.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		037F750818F4D39500FB3616 /* RCSeriesTypeCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 036341D918F17431008FA7F0 /* RCSeriesTypeCodes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		037F750818F4D39500FB3616 /* RCFrequencyTypeCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 036341D918F17431008FA7F0 /* RCFrequencyTypeCodes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		037F750918F4D39500FB3616 /* RCIssueTypeCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 036341EB18F1C55A008FA7F0 /* RCIssueTypeCodes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		037F750A18F4D39500FB3616 /* RCBooleanValueCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 036341EF18F1C6B2008FA7F0 /* RCBooleanValueCodes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		037F750B18F4D39500FB3616 /* RCDateDescriptorCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 036341F318F1C7F6008FA7F0 /* RCDateDescriptorCodes.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -197,7 +197,7 @@
 		037F751518F4D3BF00FB3616 /* RCIssueTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341ED18F1C5BE008FA7F0 /* RCIssueTypes.m */; };
 		037F751618F4D3BF00FB3616 /* RCBooleanValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341F118F1C72E008FA7F0 /* RCBooleanValues.m */; };
 		037F751718F4D3BF00FB3616 /* RCDateDescriptors.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341F518F1C83F008FA7F0 /* RCDateDescriptors.m */; };
-		037F751818F4D3BF00FB3616 /* RCSeriesTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341DB18F174B8008FA7F0 /* RCSeriesTypes.m */; };
+		037F751818F4D3BF00FB3616 /* RCFrequencyTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341DB18F174B8008FA7F0 /* RCFrequencyTypes.m */; };
 		037F751918F4D3CC00FB3616 /* RCOperationErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = 03B694F918E774D300CEF855 /* RCOperationErrors.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		037F751A18F4D3CC00FB3616 /* RCRequestKeys.h in Headers */ = {isa = PBXBuildFile; fileRef = 03B694DE18E74D6300CEF855 /* RCRequestKeys.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		037F751B18F4D3CC00FB3616 /* RCResponseKeys.h in Headers */ = {isa = PBXBuildFile; fileRef = 03B694E318E75B0C00CEF855 /* RCResponseKeys.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -208,7 +208,7 @@
 		037F752018F4D3CC00FB3616 /* RCIssueTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 036341EC18F1C5BE008FA7F0 /* RCIssueTypes.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		037F752118F4D3CC00FB3616 /* RCBooleanValues.h in Headers */ = {isa = PBXBuildFile; fileRef = 036341F018F1C72E008FA7F0 /* RCBooleanValues.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		037F752218F4D3CC00FB3616 /* RCDateDescriptors.h in Headers */ = {isa = PBXBuildFile; fileRef = 036341F418F1C83F008FA7F0 /* RCDateDescriptors.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		037F752318F4D3CC00FB3616 /* RCSeriesTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 036341DA18F174B8008FA7F0 /* RCSeriesTypes.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		037F752318F4D3CC00FB3616 /* RCFrequencyTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 036341DA18F174B8008FA7F0 /* RCFrequencyTypes.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		03B694D818E73E3A00CEF855 /* RCMarvelAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B694D718E73E3A00CEF855 /* RCMarvelAPI.m */; };
 		03B694DB18E73E5E00CEF855 /* RCMarvelAPITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B694DA18E73E5E00CEF855 /* RCMarvelAPITests.m */; };
 		03B694DC18E73EF900CEF855 /* RCMarvelAPI.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03B694D618E73E3A00CEF855 /* RCMarvelAPI.h */; };
@@ -230,7 +230,7 @@
 		03C81A3118F4814600D84C0C /* RCIssueFormatCodes.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 036341DD18F17653008FA7F0 /* RCIssueFormatCodes.h */; };
 		03C81A3218F4814B00D84C0C /* RCIssueTypeCodes.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 036341EB18F1C55A008FA7F0 /* RCIssueTypeCodes.h */; };
 		03C81A3418F4815300D84C0C /* RCDateDescriptorCodes.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 036341F318F1C7F6008FA7F0 /* RCDateDescriptorCodes.h */; };
-		03C81A3518F4815F00D84C0C /* RCSeriesTypeCodes.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 036341D918F17431008FA7F0 /* RCSeriesTypeCodes.h */; };
+		03C81A3518F4815F00D84C0C /* RCFrequencyTypeCodes.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 036341D918F17431008FA7F0 /* RCFrequencyTypeCodes.h */; };
 		03C81A3618F481D000D84C0C /* RCImageAspectRatioCodes.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03130D5C18EB7DDB00BD315F /* RCImageAspectRatioCodes.h */; };
 		03C81A3718F481D800D84C0C /* RCImageSizeCodes.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03130D5D18EB7E6500BD315F /* RCImageSizeCodes.h */; };
 		03C81A3818F481E100D84C0C /* RCBooleanValueCodes.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 036341EF18F1C6B2008FA7F0 /* RCBooleanValueCodes.h */; };
@@ -310,7 +310,7 @@
 				03C81A2E18F4812200D84C0C /* RCAPITypes.h in CopyFiles */,
 				03C81A2F18F4812700D84C0C /* RCOrderByTypeCodes.h in CopyFiles */,
 				03C81A3118F4814600D84C0C /* RCIssueFormatCodes.h in CopyFiles */,
-				03C81A3518F4815F00D84C0C /* RCSeriesTypeCodes.h in CopyFiles */,
+				03C81A3518F4815F00D84C0C /* RCFrequencyTypeCodes.h in CopyFiles */,
 				03C81A3218F4814B00D84C0C /* RCIssueTypeCodes.h in CopyFiles */,
 				03C81A3418F4815300D84C0C /* RCDateDescriptorCodes.h in CopyFiles */,
 				03C81A3618F481D000D84C0C /* RCImageAspectRatioCodes.h in CopyFiles */,
@@ -387,9 +387,9 @@
 		036341D418F17367008FA7F0 /* RCSeriesFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCSeriesFilter.h; sourceTree = "<group>"; };
 		036341D518F17367008FA7F0 /* RCSeriesFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCSeriesFilter.m; sourceTree = "<group>"; };
 		036341D718F17389008FA7F0 /* RCSeriesFilterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCSeriesFilterTests.m; sourceTree = "<group>"; };
-		036341D918F17431008FA7F0 /* RCSeriesTypeCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCSeriesTypeCodes.h; sourceTree = "<group>"; };
-		036341DA18F174B8008FA7F0 /* RCSeriesTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCSeriesTypes.h; path = Marvelous/RCSeriesTypes.h; sourceTree = "<group>"; };
-		036341DB18F174B8008FA7F0 /* RCSeriesTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCSeriesTypes.m; path = Marvelous/RCSeriesTypes.m; sourceTree = "<group>"; };
+		036341D918F17431008FA7F0 /* RCFrequencyTypeCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCFrequencyTypeCodes.h; sourceTree = "<group>"; };
+		036341DA18F174B8008FA7F0 /* RCFrequencyTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCFrequencyTypes.h; path = Marvelous/RCFrequencyTypes.h; sourceTree = "<group>"; };
+		036341DB18F174B8008FA7F0 /* RCFrequencyTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCFrequencyTypes.m; path = Marvelous/RCFrequencyTypes.m; sourceTree = "<group>"; };
 		036341DD18F17653008FA7F0 /* RCIssueFormatCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCIssueFormatCodes.h; sourceTree = "<group>"; };
 		036341DE18F176C6008FA7F0 /* RCIssueFormats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCIssueFormats.h; path = Marvelous/RCIssueFormats.h; sourceTree = "<group>"; };
 		036341DF18F176C6008FA7F0 /* RCIssueFormats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCIssueFormats.m; path = Marvelous/RCIssueFormats.m; sourceTree = "<group>"; };
@@ -653,8 +653,8 @@
 				036341F118F1C72E008FA7F0 /* RCBooleanValues.m */,
 				036341F418F1C83F008FA7F0 /* RCDateDescriptors.h */,
 				036341F518F1C83F008FA7F0 /* RCDateDescriptors.m */,
-				036341DA18F174B8008FA7F0 /* RCSeriesTypes.h */,
-				036341DB18F174B8008FA7F0 /* RCSeriesTypes.m */,
+				036341DA18F174B8008FA7F0 /* RCFrequencyTypes.h */,
+				036341DB18F174B8008FA7F0 /* RCFrequencyTypes.m */,
 			);
 			name = Constants;
 			path = ..;
@@ -670,7 +670,7 @@
 				03130D5C18EB7DDB00BD315F /* RCImageAspectRatioCodes.h */,
 				03130D5D18EB7E6500BD315F /* RCImageSizeCodes.h */,
 				036341DD18F17653008FA7F0 /* RCIssueFormatCodes.h */,
-				036341D918F17431008FA7F0 /* RCSeriesTypeCodes.h */,
+				036341D918F17431008FA7F0 /* RCFrequencyTypeCodes.h */,
 				036341EB18F1C55A008FA7F0 /* RCIssueTypeCodes.h */,
 				036341EF18F1C6B2008FA7F0 /* RCBooleanValueCodes.h */,
 				036341F318F1C7F6008FA7F0 /* RCDateDescriptorCodes.h */,
@@ -837,13 +837,13 @@
 				037F751A18F4D3CC00FB3616 /* RCRequestKeys.h in Headers */,
 				037F751D18F4D3CC00FB3616 /* RCImageAspectRatios.h in Headers */,
 				037F74DF18F4D32E00FB3616 /* RCStoryFilter.h in Headers */,
-				037F752318F4D3CC00FB3616 /* RCSeriesTypes.h in Headers */,
+				037F752318F4D3CC00FB3616 /* RCFrequencyTypes.h in Headers */,
 				037F752018F4D3CC00FB3616 /* RCIssueTypes.h in Headers */,
 				037F750118F4D37400FB3616 /* RCDataWrapperObject.h in Headers */,
 				037F74FC18F4D36A00FB3616 /* RCSeriesObject.h in Headers */,
 				037F74F918F4D36A00FB3616 /* RCComicsObject.h in Headers */,
 				037F74D118F4D30600FB3616 /* RCAPIOperation.h in Headers */,
-				037F750818F4D39500FB3616 /* RCSeriesTypeCodes.h in Headers */,
+				037F750818F4D39500FB3616 /* RCFrequencyTypeCodes.h in Headers */,
 				037F751B18F4D3CC00FB3616 /* RCResponseKeys.h in Headers */,
 				037F74CC18F4D2EA00FB3616 /* RCMarvelAPI.h in Headers */,
 				037F74DA18F4D32E00FB3616 /* RCCharacterFilter.h in Headers */,
@@ -1048,7 +1048,7 @@
 				037F74CF18F4D2FD00FB3616 /* RCAPIOperation.m in Sources */,
 				037F751318F4D3BF00FB3616 /* RCImageSizes.m in Sources */,
 				037F74CD18F4D2EA00FB3616 /* RCMarvelAPI.m in Sources */,
-				037F751818F4D3BF00FB3616 /* RCSeriesTypes.m in Sources */,
+				037F751818F4D3BF00FB3616 /* RCFrequencyTypes.m in Sources */,
 				037F74EB18F4D35100FB3616 /* RCEventObject.m in Sources */,
 				037F751618F4D3BF00FB3616 /* RCBooleanValues.m in Sources */,
 				037F74D718F4D32500FB3616 /* RCEventFilter.m in Sources */,
@@ -1140,7 +1140,7 @@
 				03B694FB18E774D400CEF855 /* RCOperationErrors.m in Sources */,
 				03130D6018EB7F8A00BD315F /* RCImageAspectRatios.m in Sources */,
 				036341F218F1C72E008FA7F0 /* RCBooleanValues.m in Sources */,
-				036341DC18F174B8008FA7F0 /* RCSeriesTypes.m in Sources */,
+				036341DC18F174B8008FA7F0 /* RCFrequencyTypes.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

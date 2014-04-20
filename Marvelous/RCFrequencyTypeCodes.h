@@ -1,5 +1,5 @@
 //
-//  RCSeriesTypeCodes.h
+//  RCFrequencyTypeCodes.h
 //  Marvelous
 //
 //  Copyright (c) 2014 Rock & Code [http://rock-n-code.com]
@@ -23,10 +23,10 @@
 //  THE SOFTWARE.
 //
 
-typedef NS_ENUM(NSInteger, RCSeriesTypeCodes) {
-	RCSeriesTypeCodeUndefined = 0,
-	RCSeriesTypeCodeCollection,
-	RCSeriesTypeCodeOneShot,
-	RCSeriesTypeCodeLimited,
-	RCSeriesTypeCodeOngoing
-};
+typedef enum {
+	RCFrequencyTypeCodeUndefined = 0,
+	RCFrequencyTypeCodeCollection,
+	RCFrequencyTypeCodeOneShot,
+	RCFrequencyTypeCodeLimited,
+	RCFrequencyTypeCodeOngoing
+} RCFrequencyTypeCodes;

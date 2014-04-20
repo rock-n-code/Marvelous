@@ -25,7 +25,7 @@
 
 #import "RCSeriesFilter.h"
 #import "RCIssueFormats.h"
-#import "RCSeriesTypes.h"
+#import "RCFrequencyTypes.h"
 
 @interface RCSeriesFilter ()
 
@@ -78,7 +78,7 @@
 		params[RCRequestKeyContains] = self.stringfiedContains;
 	}
 
-	if (self.seriesType != RCSeriesTypeCodeUndefined) {
+	if (self.seriesType != RCFrequencyTypeCodeUndefined) {
 		params[RCRequestKeySeriesType] = self.stringfiedSeriesType;
 	}
 
@@ -137,14 +137,14 @@
 - (NSString *)stringfiedSeriesType
 {
 	switch (self.seriesType) {
-		case RCSeriesTypeCodeCollection:
-			return RCSeriesTypeCollection;
-		case RCSeriesTypeCodeOneShot:
-			return RCSeriesTypeOneShot;
-		case RCSeriesTypeCodeLimited:
-			return RCSeriesTypeLimited;
+		case RCFrequencyTypeCodeCollection:
+			return RCFrequencyTypeCollection;
+		case RCFrequencyTypeCodeOneShot:
+			return RCFrequencyTypeOneShot;
+		case RCFrequencyTypeCodeLimited:
+			return RCFrequencyTypeLimited;
 		default:
-			return RCSeriesTypeOngoing;
+			return RCFrequencyTypeOngoing;
 	}
 }
 

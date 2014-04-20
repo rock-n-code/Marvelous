@@ -1,5 +1,5 @@
 //
-//  RCSeriesTypes.h
+//  RCFrequencyTypes.m
 //  Marvelous
 //
 //  Copyright (c) 2014 Rock & Code [http://rock-n-code.com]
@@ -23,7 +23,9 @@
 //  THE SOFTWARE.
 //
 
-extern NSString * const RCSeriesTypeCollection;
-extern NSString * const RCSeriesTypeOneShot;
-extern NSString * const RCSeriesTypeLimited;
-extern NSString * const RCSeriesTypeOngoing;
+#import "RCFrequencyTypes.h"
+
+NSString * const RCFrequencyTypeCollection = @"collection";
+NSString * const RCFrequencyTypeOneShot = @"one shot";
+NSString * const RCFrequencyTypeLimited = @"limited";
+NSString * const RCFrequencyTypeOngoing = @"ongoing";

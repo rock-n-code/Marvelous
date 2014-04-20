@@ -25,7 +25,7 @@
 
 #import "RCFilter.h"
 #import "RCIssueFormatCodes.h"
-#import "RCSeriesTypeCodes.h"
+#import "RCFrequencyTypeCodes.h"
 
 @interface RCSeriesFilter : RCFilter
 
@@ -38,6 +38,6 @@
 @property (nonatomic, strong) NSArray *creators;
 @property (nonatomic, strong) NSArray *characters;
 @property (nonatomic, strong) NSArray *contains;
-@property (nonatomic) RCSeriesTypeCodes seriesType;
+@property (nonatomic) RCFrequencyTypeCodes seriesType;
 
 @end

@@ -69,8 +69,8 @@
 #import <Marvelous/RCAPITypes.h>
 #import <Marvelous/RCOrderByTypeCodes.h>
 #import <Marvelous/RCIssueFormatCodes.h>
-#import <Marvelous/RCSeriesTypeCodes.h>
 #import <Marvelous/RCIssueTypeCodes.h>
+#import <Marvelous/RCFrequencyTypeCodes.h>
 #import <Marvelous/RCDateDescriptorCodes.h>
 #import <Marvelous/RCImageAspectRatioCodes.h>
 #import <Marvelous/RCImageSizeCodes.h>
