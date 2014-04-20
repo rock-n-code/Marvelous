@@ -23,15 +23,74 @@
 //  THE SOFTWARE.
 //
 
+/*!
+ @header
+
+ RCEventFilter class.
+
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+
+ @version 0.6.1
+ */
+
 #import "RCFilter.h"
 
+/*!
+ @class
+
+ This class defines the properties a filter could use to filter Event resources.
+ */
 @interface RCEventFilter : RCFilter
 
+/*!
+ @property
+
+ This property sets and gets the event name the filter use to search for Event resources which match this specified name.
+ */
 @property (nonatomic, strong) NSString *name;
+
+/*!
+ @property
+
+ This property sets and gets the event name the filter use to search for Character resources that begin with this specified string.
+ */
 @property (nonatomic, strong) NSString *nameStartsWith;
-@property (nonatomic, strong) NSArray *comics;
-@property (nonatomic, strong) NSArray *series;
-@property (nonatomic, strong) NSArray *stories;
+
+/*!
+ @property
+
+ This property sets and gets the list of creator identifiers (represented as NSNumber objects) the filter use to search for Event resources which feature work by the specified creators.
+ */
 @property (nonatomic, strong) NSArray *creators;
+
+/*!
+ @property
+
+ This property sets and gets the list of character identifiers (represented as NSNumber objects) the filter use to search for Event resources which feature the specified characters.
+ */
+@property (nonatomic, strong) NSArray *characters;
+
+/*!
+ @property
+
+ This property sets and gets the list of comic identifiers (represented as NSNumber objects) the filter use to search for Event resources which take place in the specified comics.
+ */
+@property (nonatomic, strong) NSArray *comics;
+
+/*!
+ @property
+
+ This property sets and gets the list of series identifiers (represented as NSNumber objects) the filter use to search for Event resources which are part of the specified series.
+ */
+@property (nonatomic, strong) NSArray *series;
+
+/*!
+ @property
+
+ This property sets and gets the list of story identifiers (represented as NSNumber objects) the filter use to search for Event resources which take place in the specified stories.
+ */
+@property (nonatomic, strong) NSArray *stories;
 
 @end

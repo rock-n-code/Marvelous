@@ -45,6 +45,14 @@
 		params[RCRequestKeyNameStartsWith] = self.nameStartsWith;
 	}
 
+	if (self.creators) {
+		params[RCRequestKeyCreators] = [self.creators componentsJoinedByString:@","];
+	}
+
+	if (self.characters) {
+		params[RCRequestKeyCharacters] = [self.characters componentsJoinedByString:@","];
+	}
+
 	if (self.comics) {
 		params[RCRequestKeyComics] = [self.comics componentsJoinedByString:@","];
 	}
@@ -55,10 +63,6 @@
 
 	if (self.stories) {
 		params[RCRequestKeyStories] = [self.stories componentsJoinedByString:@","];
-	}
-
-	if (self.creators) {
-		params[RCRequestKeyCreators] = [self.creators componentsJoinedByString:@","];
 	}
 
 	return params;
