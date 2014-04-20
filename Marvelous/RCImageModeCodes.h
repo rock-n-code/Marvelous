@@ -24,8 +24,10 @@
 //
 
 /*!
- @enum RCImageModeCodes
- This enumeration defines the aspect ratio modes available use by a @p RCImageObject object to produce a URL to a customised image.
+ @enum
+
+ This enumeration defines the aspect ratio modes available use by an RCImageObject object to produce a URL to a customised image.
+ 
  @constant RCImageModeCodeSquare Standard (or Square) aspect ratio mode
  @constant RCImageModeCodePortrait Portrait aspect ratio mode
  @constant RCImageModeCodeLandscape Landscape aspect ratio mode
