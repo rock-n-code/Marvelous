@@ -34,6 +34,8 @@
  This property gets a string formed by every RCOrderByTypeCodes value allowed by the filter.
  
  Each and every order by type is converted to its string counterpart and, in case it is a descending order by type, the "-" as a suffix is added to the string value.
+ 
+ @internal
  */
 @property (nonatomic, readonly, strong) NSString *stringfiedOrderBy;
 
@@ -143,6 +145,8 @@
  @param date A date
  
  @return A string that represent a given date
+ 
+ @internal
  */
 - (NSString *)stringFromDate:(NSDate *)date
 {
@@ -161,6 +165,8 @@
  @param date An integer that represent a RCOrderByTypeCodes value.
 
  @return YES in case the given order by type is a descending type. Otherwise, NO.
+ 
+ @internal
  */
 - (BOOL)isDescendingOrderBy:(NSInteger)orderBy
 {

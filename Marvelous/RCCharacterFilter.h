@@ -23,15 +23,67 @@
 //  THE SOFTWARE.
 //
 
+/*!
+ @header
+
+ RCharacterFilter class.
+
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+
+ @version 0.6.1
+ */
+
 #import "RCFilter.h"
 
+/*!
+ @class
+
+ This class defines the properties a filter could use to filter Characters resources.
+ */
 @interface RCCharacterFilter : RCFilter
 
+/*!
+ @property
+
+ This property sets and gets the character name the filter use to search for Character resources that match this specified name.
+ */
 @property (nonatomic, strong) NSString *name;
+
+/*!
+ @property
+
+ This property sets and gets the character name the filter use to search for Character resources that begin with this specified string.
+ */
 @property (nonatomic, strong) NSString *nameStartsWith;
+
+/*!
+ @property
+
+ This property sets and gets the list of comics identifiers (represented as NSNumber objects) the filter use to search for Character resources which appear in the specified comics.
+ */
 @property (nonatomic, strong) NSArray *comics;
+
+/*!
+ @property
+
+ This property sets and gets the list of series identifiers (represented as NSNumber objects) the filter use to search for Character resources which appear in the specified series.
+ */
 @property (nonatomic, strong) NSArray *series;
+
+/*!
+ @property
+
+ This property sets and gets the list of event identifiers (represented as NSNumber objects) the filter use to search for Character resources which appear in the specified events.
+ */
 @property (nonatomic, strong) NSArray *events;
+
+/*!
+ @property
+
+ This property sets and gets the list of story identifiers (represented as NSNumber objects) the filter use to search for Character resources which appear in the specified stories.
+ */
 @property (nonatomic, strong) NSArray *stories;
 
 @end
