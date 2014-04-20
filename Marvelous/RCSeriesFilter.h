@@ -23,21 +23,97 @@
 //  THE SOFTWARE.
 //
 
+/*!
+ @header
+
+ RCSeriesFilter class.
+
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+
+ @version 0.6.1
+ */
+
 #import "RCFilter.h"
 #import "RCIssueFormatCodes.h"
 #import "RCFrequencyTypeCodes.h"
 
+/*!
+ @class
+
+ This class defines the properties a filter could use to filter Series resources.
+ */
 @interface RCSeriesFilter : RCFilter
 
+/*!
+ @property
+
+ This property sets and gets the series title the filter use to search for Series resources which match this specified title.
+ */
 @property (nonatomic, strong) NSString *title;
+
+/*!
+ @property
+
+ This property sets and gets the series title the filter use to search for Series resources that begin with this specified string.
+ */
 @property (nonatomic, strong) NSString *titleStartsWith;
+
+/*!
+ @property
+
+ This property sets and gets the series year the filter use to search for Series resources which match this specified start year.
+ */
 @property (nonatomic, strong) NSNumber *startYear;
+
+/*!
+ @property
+
+ This property sets and gets the list of comic identifiers (represented as NSNumber objects) the filter use to search for Series resources which contain the specified comics.
+ */
 @property (nonatomic, strong) NSArray *comics;
+
+/*!
+ @property
+
+ This property sets and gets the list of story identifiers (represented as NSNumber objects) the filter use to search for Series resources which contain the specified stories.
+ */
 @property (nonatomic, strong) NSArray *stories;
+
+/*!
+ @property
+
+ This property sets and gets the list of event identifiers (represented as NSNumber objects) the filter use to search for Series resources that take place during the specified events.
+ */
 @property (nonatomic, strong) NSArray *events;
+
+/*!
+ @property
+
+ This property sets and gets the list of creator identifiers (represented as NSNumber objects) the filter use to search for Series resources which feature work by the specified creators.
+ */
 @property (nonatomic, strong) NSArray *creators;
+
+/*!
+ @property
+
+ This property sets and gets the list of character identifiers (represented as NSNumber objects) the filter use to search for Series resources which feature the specified characters.
+ */
 @property (nonatomic, strong) NSArray *characters;
-@property (nonatomic, strong) NSArray *contains;
+
+/*!
+ @property
+
+ This property sets and gets the series frequency type value the filter use to search for Series resources by this issue frequency type.
+ */
 @property (nonatomic) RCFrequencyTypeCodes seriesType;
+
+/*!
+ @property
+
+ This property sets and gets the list of RCIssueFormatCodes values (represented as NSNumber objects) the filter use to search for Series resources which contain one or more comics with the specified formats.
+ */
+@property (nonatomic, strong) NSArray *contains;
 
 @end

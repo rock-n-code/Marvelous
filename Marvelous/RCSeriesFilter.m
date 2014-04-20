@@ -29,7 +29,22 @@
 
 @interface RCSeriesFilter ()
 
+/*!
+ @property
+
+ This property gets a string representation of a list of RCIssueFormatCodes value.
+
+ @internal
+ */
 @property (nonatomic, readonly, strong) NSString *stringfiedContains;
+
+/*!
+ @property
+
+ This property gets a string representation of a RCFrequencyTypeCodes value.
+
+ @internal
+ */
 @property (nonatomic, readonly, strong) NSString *stringfiedSeriesType;
 
 @end
