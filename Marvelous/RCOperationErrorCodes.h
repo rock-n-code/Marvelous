@@ -24,14 +24,17 @@
 //
 
 /*!
- @enum RCOperationErrorCodes
- This enumeration defines the error codes a @p RCAPIOperation object can emit in case of an error.
+ @enum
+
+ This enumeration defines the error codes an RCAPIOperation object can emit in case of an error.
+ 
  @constant RCOperationErrorCodeTypeUndefined Undefined error
  @constant RCOperationErrorCodeOperationCancelled Operation cancelled error
  @constant RCOperationErrorCodeTypeUndefined Operation type undefined error
  @constant RCOperationErrorCodeIdentifierIsNull Operation identifier is NULL error
  @constant RCOperationErrorCodeFilterUndefined Operation filter is undefined error
  @constant RCOperationErrorCodeFilterIsNull Operation filter is NULL error
+ 
  @internal
  */
 typedef enum {
