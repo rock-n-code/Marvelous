@@ -23,6 +23,18 @@
 //  THE SOFTWARE.
 //
 
+/*!
+ @header
+
+ RCMarvelAPI interface.
+
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+
+ @version 0.6.1
+ */
+
 #import "RCBlocks.h"
 #import "RCCharacterObject.h"
 #import "RCComicsObject.h"
@@ -39,18 +51,6 @@
 #import "RCStoryFilter.h"
 
 /*!
- @header
-
- RCMarvelAPI interface.
-
- @author Javier Cicchelli (\@monsieur_rock)
-
- @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
- 
- @version 0.6.1
- */
-
-/*!
  @class
 
  This class is a manager class (implemented as a singleton) that interfaces with the Marvel Comics API. Throught this class, it is possible to make calls to the API by passing an identifier and/or a filter and a completion block that returns a response from the API server.
@@ -60,18 +60,18 @@
 /*!
  @property
 
- This property sets and gets the public key provided by the Marvel Developer portal. This key isrequired to sign any request to the API.
+ This property sets and gets the public key provided by the Marvel Developer portal. This key is required to sign any request to the API.
  
- @see In case you don't have a Marvel developer account, you should create one at http://developer.marvel.com/account
+ In case you don't have a Marvel developer account, you should create one at http://developer.marvel.com/account
  */
 @property (nonatomic, strong) NSString *publicKey;
 
 /*!
  @property
 
- This property sets and gets the private key provided by the Marvel Developer portal. This key isrequired to sign any request to the API.
+ This property sets and gets the private key provided by the Marvel Developer portal. This key is required to sign any request to the API.
  
- @see In case you don't have a Marvel developer account, you should create one at http://developer.marvel.com/account
+ In case you don't have a Marvel developer account, you should create one at http://developer.marvel.com/account
  */
 @property (nonatomic, strong) NSString *privateKey;
 
@@ -80,7 +80,7 @@
 
  This property gets the current version name of the API.
  
- @see For more information about the API version, please refer to http://developer.marvel.com/docs
+ For more information about the API version, please refer to http://developer.marvel.com/docs
  */
 @property (nonatomic, readonly, strong) NSString *version;
 
@@ -96,479 +96,485 @@
 /*!
  @method
 
- This instance method interact with the/v1/public/characters/{characterId} API endpoint and fetches a single RCCharacterObject object.
+ This instance method interact with the /v1/public/characters/{characterId} API endpoint and fetches a single RCCharacterObject object.
+
+ For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param identifier An NSNumber object that represent a unique character identifier
  @param completionBlock A resultCompletionBlock block as a callback
- 
- @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
  */
 - (void)characterByIdentifier:(NSNumber *)identifier andCompletionBlock:(resultCompletionBlock)completionBlock;
 
 /*!
  @method
 
- This instance method interact with the/v1/public/characters API endpoint and fetches a list of RCCharacterObject objects, with optional filters.
+ This instance method interact with the /v1/public/characters API endpoint and fetches a list of RCCharacterObject objects, with optional filters.
+ 
+ For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param filter An optional RCCharacterFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
-
- @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
  */
 - (void)charactersByFilter:(RCCharacterFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 
 /*!
  @method 
 
- This instance method interact with the/v1/public/comics/{comicId}/characters API endpoint and fetches a list of RCCharacterObject objects which appear in a specific comic, with optional filters.
+ This instance method interact with the /v1/public/comics/{comicId}/characters API endpoint and fetches a list of RCCharacterObject objects which appear in a specific comic, with optional filters.
+ 
+ For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param identifier An NSNumber object that represent a unique comic identifier
  @param filter An optional RCCharacterFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
-
- @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
  */
 - (void)charactersByComicIdentifier:(NSNumber *)identifier filter:(RCCharacterFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 
 /*!
  @method
 
- This instance method interact with the/v1/public/events/{eventId}/characters API endpoint and fetches a list of RCCharacterObject objects which appear in a specific event, with optional filters.
+ This instance method interact with the /v1/public/events/{eventId}/characters API endpoint and fetches a list of RCCharacterObject objects which appear in a specific event, with optional filters.
+
+ For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param identifier An NSNumber object that represent a unique event identifier
  @param filter An optional RCCharacterFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
-
- @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
  */
 - (void)charactersByEventIdentifier:(NSNumber *)identifier filter:(RCCharacterFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 
 /*!
  @method 
 
- This instance method interact with the/v1/public/series/{seriesId}/characters API endpoint and fetches a list of RCCharacterObject objects which appear in a specific series, with optional filters.
+ This instance method interact with the /v1/public/series/{seriesId}/characters API endpoint and fetches a list of RCCharacterObject objects which appear in a specific series, with optional filters.
+
+ For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param identifier An NSNumber object that represent a unique series identifier
  @param filter An optional RCCharacterFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
-
- @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
  */
 - (void)charactersBySeriesIdentifier:(NSNumber *)identifier filter:(RCCharacterFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 
 /*!
  @method 
 
- This instance method interact with the/v1/public/stories/{storyId}/characters API endpoint and fetches a list of RCCharacterObject objects which appear in a single story, with optional filters.
+ This instance method interact with the /v1/public/stories/{storyId}/characters API endpoint and fetches a list of RCCharacterObject objects which appear in a single story, with optional filters.
+
+ For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param identifier An NSNumber object that represent a unique series identifier
  @param filter An optional RCCharacterFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
-
- @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
  */
 - (void)charactersByStoryIdentifier:(NSNumber *)identifier filter:(RCCharacterFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 
 /*!
  @method
 
- This instance method interact with the/v1/public/comics/{comicId} API endpoint and fetches a single RCComicsObject object.
+ This instance method interact with the /v1/public/comics/{comicId} API endpoint and fetches a single RCComicsObject object.
+
+ For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param identifier An NSNumber object that represent a unique comic identifier
  @param completionBlock A resultCompletionBlock block as a callback
-
- @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
  */
 - (void)comicByIdentifier:(NSNumber *)identifier andCompletionBlock:(resultCompletionBlock)completionBlock;
 
 /*!
  @method
 
- This instance method interact with the/v1/public/comics API endpoint and fetches a list of RCComicsObject objects, with optional filters.
+ This instance method interact with the /v1/public/comics API endpoint and fetches a list of RCComicsObject objects, with optional filters.
+
+ For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param filter An optional RCComicsFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
-
- @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
  */
 - (void)comicsByFilter:(RCComicsFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 
 /*!
  @method
 
- This instance method interact with the/v1/public/characters/{characterId}/comics API endpoint and fetches a list of RCComicsObject objects containing a specific character, with optional filters.
+ This instance method interact with the /v1/public/characters/{characterId}/comics API endpoint and fetches a list of RCComicsObject objects containing a specific character, with optional filters.
+
+ For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param identifier An NSNumber object that represent a unique character identifier
  @param filter An optional RCComicsFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
-
- @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
  */
 - (void)comicsByCharacterIdentifier:(NSNumber *)identifier filter:(RCComicsFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 
 /*!
  @method
 
- This instance method interact with the/v1/public/creators/{creatorId}/comics API endpoint and fetches a list of RCComicsObject objects in which the works of a specific creator appears, with optional filters.
+ This instance method interact with the /v1/public/creators/{creatorId}/comics API endpoint and fetches a list of RCComicsObject objects in which the works of a specific creator appears, with optional filters.
+
+ For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param identifier An NSNumber object that represent a unique creator identifier
  @param filter An optional RCComicsFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
-
- @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
  */
 - (void)comicsByCreatorIdentifier:(NSNumber *)identifier filter:(RCComicsFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 
 /*!
  @method
 
- This instance method interact with the/v1/public/events/{eventId}/comics API endpoint and fetches a list of RCComicsObject objects which takes place during a specific event, with optional filters.
+ This instance method interact with the /v1/public/events/{eventId}/comics API endpoint and fetches a list of RCComicsObject objects which takes place during a specific event, with optional filters.
+
+ For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param identifier An NSNumber object that represent a unique event identifier
  @param filter An optional RCComicsFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
-
- @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
  */
 - (void)comicsByEventIdentifier:(NSNumber *)identifier filter:(RCComicsFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 
 /*!
  @method
 
- This instance method interact with the/v1/public/series/{seriesId}/comics API endpoint and fetches a list of RCComicsObject objects which are published as part of a specific series, with optional filters.
+ This instance method interact with the /v1/public/series/{seriesId}/comics API endpoint and fetches a list of RCComicsObject objects which are published as part of a specific series, with optional filters.
+
+ For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param identifier An NSNumber object that represent a unique series identifier
  @param filter An optional RCComicsFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
- 
- @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
  */
 - (void)comicsBySeriesIdentifier:(NSNumber *)identifier filter:(RCComicsFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 
 /*!
  @method
 
- This instance method interact with the/v1/public/stories/{storyId}/comics API endpoint and fetches a list of RCComicsObject objects in which a specific story appears, with optional filters.
+ This instance method interact with the /v1/public/stories/{storyId}/comics API endpoint and fetches a list of RCComicsObject objects in which a specific story appears, with optional filters.
+
+ For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param identifier An NSNumber object that represent a unique story identifier
  @param filter An optional RCComicsFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
- 
- @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
  */
 - (void)comicsByStoryIdentifier:(NSNumber *)identifier filter:(RCComicsFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 
 /*!
  @method
 
- This instance method interact with the/v1/public/creators/{creatorId} API endpoint and fetches a single RCCreatorObject object.
+ This instance method interact with the /v1/public/creators/{creatorId} API endpoint and fetches a single RCCreatorObject object.
+
+ For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param identifier An NSNumber object that represent a unique creator identifier
  @param completionBlock A resultCompletionBlock block as a callback
- @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
  */
 - (void)creatorByIdentifier:(NSNumber *)identifier andCompletionBlock:(resultCompletionBlock)completionBlock;
 
 /*!
- This instance method interact with the/v1/public/creators API endpoint and fetches a list of RCCreatorObject objects with optional filters.
+ This instance method interact with the /v1/public/creators API endpoint and fetches a list of RCCreatorObject objects with optional filters.
+
+ For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param filter An optional RCCreatorFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
- @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
  */
 - (void)creatorsByFilter:(RCCreatorFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 
 /*!
- This instance method interact with the/v1/public/comics/{comicId}/creators API endpoint and fetches a list of RCCreatorObject objects whose works appears in a specific comic, with optional filters.
+ This instance method interact with the /v1/public/comics/{comicId}/creators API endpoint and fetches a list of RCCreatorObject objects whose works appears in a specific comic, with optional filters.
+
+ For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param identifier An NSNumber object that represent a unique comic identifier
  @param filter An optional RCCreatorFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
- @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
  */
 - (void)creatorsByComicIdentifier:(NSNumber *)identifier filter:(RCCreatorFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 
 /*!
- This instance method interact with the/v1/public/events/{eventId}/creators API endpoint and fetches a list of RCCreatorObject objects whose works appears in a specific event, with optional filters.
+ This instance method interact with the /v1/public/events/{eventId}/creators API endpoint and fetches a list of RCCreatorObject objects whose works appears in a specific event, with optional filters.
+
+ For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param identifier An NSNumber object that represent a unique event identifier
  @param filter An optional RCCreatorFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
- @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
  */
 - (void)creatorsByEventIdentifier:(NSNumber *)identifier filter:(RCCreatorFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 
 /*!
- This instance method interact with the/v1/public/series/{seriesId}/creators API endpoint and fetches a list of RCCreatorObject objects whose works appears in a specific series, with optional filters.
+ This instance method interact with the /v1/public/series/{seriesId}/creators API endpoint and fetches a list of RCCreatorObject objects whose works appears in a specific series, with optional filters.
+
+ For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param identifier An NSNumber object that represent a unique series identifier
  @param filter An optional RCCreatorFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
- @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
  */
 - (void)creatorsBySeriesIdentifier:(NSNumber *)identifier filter:(RCCreatorFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 
 /*!
- This instance method interact with the/v1/public/stories/{storyId}/creators API endpoint and fetches a list of RCCreatorObject objects whose works appears in a specific story, with optional filters.
+ This instance method interact with the /v1/public/stories/{storyId}/creators API endpoint and fetches a list of RCCreatorObject objects whose works appears in a specific story, with optional filters.
+
+ For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param identifier An NSNumber object that represent a unique story identifier
  @param filter An optional RCCreatorFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
- @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
  */
 - (void)creatorsByStoryIdentifier:(NSNumber *)identifier filter:(RCCreatorFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 
 /*!
  @method
 
- This instance method interact with the/v1/public/events/{eventId} API endpoint and fetches a single RCEventObject object.
+ This instance method interact with the /v1/public/events/{eventId} API endpoint and fetches a single RCEventObject object.
+
+ For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param identifier An NSNumber object that represent a unique event identifier
  @param completionBlock A resultCompletionBlock block as a callback
- 
- @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
  */
 - (void)eventByIdentifier:(NSNumber *)identifier andCompletionBlock:(resultCompletionBlock)completionBlock;
 
 /*!
  @method
 
- This instance method interact with the/v1/public/events API endpoint and fetches a list of RCEventObject objects with optional filters.
+ This instance method interact with the /v1/public/events API endpoint and fetches a list of RCEventObject objects with optional filters.
+
+ For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param filter An optional RCEventFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
-
- @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
  */
 - (void)eventsByFilter:(RCEventFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 
 /*!
  @method
 
- This instance method interact with the/v1/public/characters/{characterId}/events API endpoint and fetches a list of RCEventObject objects in which a specific character appears, with optional filters.
+ This instance method interact with the /v1/public/characters/{characterId}/events API endpoint and fetches a list of RCEventObject objects in which a specific character appears, with optional filters.
+
+ For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param identifier An NSNumber object that represent a unique character identifier
  @param filter An optional RCEventFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
- 
- @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
  */
 - (void)eventsByCharacterIdentifier:(NSNumber *)identifier filter:(RCEventFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 
 /*!
  @method
 
- This instance method interact with the/v1/public/comics/{comicId}/events API endpoint and fetches a list of RCEventObject objects in which a specific comic appears, with optional filters.
+ This instance method interact with the /v1/public/comics/{comicId}/events API endpoint and fetches a list of RCEventObject objects in which a specific comic appears, with optional filters.
+
+ For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param identifier An NSNumber object that represent a unique comic identifier
  @param filter An optional RCEventFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
- 
- @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
  */
 - (void)eventsByComicIdentifier:(NSNumber *)identifier filter:(RCEventFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 
 /*!
  @method
 
- This instance method interact with the/v1/public/creators/{creatorId}/events API endpoint and fetches a list of RCEventObject objects featuring the work of a specific creator, with optional filters.
+ This instance method interact with the /v1/public/creators/{creatorId}/events API endpoint and fetches a list of RCEventObject objects featuring the work of a specific creator, with optional filters.
+
+ For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param identifier An NSNumber object that represent a unique creator identifier
  @param filter An optional RCEventFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
- 
- @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
  */
 - (void)eventsByCreatorIdentifier:(NSNumber *)identifier filter:(RCEventFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 
 /*!
  @method
 
- This instance method interact with the/v1/public/series/{seriesId}/events API endpoint and fetches a list of RCEventObject objects which occur in a specific series, with optional filters.
+ This instance method interact with the /v1/public/series/{seriesId}/events API endpoint and fetches a list of RCEventObject objects which occur in a specific series, with optional filters.
+
+ For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param identifier An NSNumber object that represent a unique series identifier
  @param filter An optional RCEventFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
- 
- @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
  */
 - (void)eventsBySeriesIdentifier:(NSNumber *)identifier filter:(RCEventFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 
 /*!
  @method
 
- This instance method interact with the/v1/public/stories/{storyId}/events API endpoint and fetches a list of RCEventObject objects in which a specific story appears, with optional filters.
+ This instance method interact with the /v1/public/stories/{storyId}/events API endpoint and fetches a list of RCEventObject objects in which a specific story appears, with optional filters.
+
+ For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param identifier An NSNumber object that represent a unique story identifier
  @param filter An optional RCEventFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
- 
- @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
  */
 - (void)eventsByStoryIdentifier:(NSNumber *)identifier filter:(RCEventFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 
 /*!
  @method
 
- This instance method interact with the/v1/public/series/{eventId} API endpoint and fetches a single RCSeriesObject object.
+ This instance method interact with the /v1/public/series/{eventId} API endpoint and fetches a single RCSeriesObject object.
+
+ For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param identifier An NSNumber object that represent a unique series identifier
  @param completionBlock A resultCompletionBlock block as a callback
- 
- @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
  */
 - (void)seriesByIdentifier:(NSNumber *)identifier andCompletionBlock:(resultCompletionBlock)completionBlock;
 
 /*!
  @method
 
- This instance method interact with the/v1/public/series API endpoint and fetches a list of RCSeriesObject objects with optional filters.
+ This instance method interact with the /v1/public/series API endpoint and fetches a list of RCSeriesObject objects with optional filters.
+
+ For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param filter An optional RCSeriesFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
- 
- @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
  */
 - (void)seriesByFilter:(RCSeriesFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 
 /*!
  @method
 
- This instance method interact with the/v1/public/characters/{characterId}/series API endpoint and fetches a list of RCSeriesObject objects in which a specific character appears, with optional filters.
+ This instance method interact with the /v1/public/characters/{characterId}/series API endpoint and fetches a list of RCSeriesObject objects in which a specific character appears, with optional filters.
+
+ For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param identifier An NSNumber object that represent a unique character identifier
  @param filter An optional RCSeriesFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
- 
- @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
  */
 - (void)seriesByCharacterIdentifier:(NSNumber *)identifier filter:(RCSeriesFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 
 /*!
  @method
 
- This instance method interact with the/v1/public/creators/{creatorId}/series API endpoint and fetches a list of RCSeriesObject objects in which a specific creator's work appears, with optional filters.
+ This instance method interact with the /v1/public/creators/{creatorId}/series API endpoint and fetches a list of RCSeriesObject objects in which a specific creator's work appears, with optional filters.
+
+ For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param identifier An NSNumber object that represent a unique creator identifier
  @param filter An optional RCSeriesFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
- 
- @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
  */
 - (void)seriesByCreatorIdentifier:(NSNumber *)identifier filter:(RCSeriesFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 
 /*!
  @method
 
- This instance method interact with the/v1/public/events/{eventId}/series API endpoint and fetches a list of RCSeriesObject objects in which a specific event takes place, with optional filters.
+ This instance method interact with the /v1/public/events/{eventId}/series API endpoint and fetches a list of RCSeriesObject objects in which a specific event takes place, with optional filters.
+
+ For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param identifier An NSNumber object that represent a unique event identifier
  @param filter An optional RCSeriesFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
- 
- @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
  */
 - (void)seriesByEventIdentifier:(NSNumber *)identifier filter:(RCSeriesFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 
 /*!
  @method
 
- This instance method interact with the/v1/public/stories/{storyId}/series API endpoint and fetches a list of RCSeriesObject objects in which the specified story takes place, with optional filters.
+ This instance method interact with the /v1/public/stories/{storyId}/series API endpoint and fetches a list of RCSeriesObject objects in which the specified story takes place, with optional filters.
+
+ For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param identifier An NSNumber object that represent a unique story identifier
  @param filter An optional RCSeriesFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
- 
- @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
  */
 - (void)seriesByStoryIdentifier:(NSNumber *)identifier filter:(RCSeriesFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 
 /*!
  @method
 
- This instance method interact with the/v1/public/stories/{storyId} API endpoint and fetches a single RCStoryObject object.
+ This instance method interact with the /v1/public/stories/{storyId} API endpoint and fetches a single RCStoryObject object.
+
+ For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param identifier An NSNumber object that represent a unique story identifier
  @param completionBlock A resultCompletionBlock block as a callback
- 
- @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
  */
 - (void)storyByIdentifier:(NSNumber *)identifier andCompletionBlock:(resultCompletionBlock)completionBlock;
 
 /*!
  @method
 
- This instance method interact with the/v1/public/stories API endpoint and fetches a list of RCStoryObject objects with optional filters.
+ This instance method interact with the /v1/public/stories API endpoint and fetches a list of RCStoryObject objects with optional filters.
+
+ For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param filter An optional RCStoryFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
- 
- @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
  */
 - (void)storiesByFilter:(RCStoryFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 
 /*!
  @method
 
- This instance method interact with the/v1/public/characters/{characterId}/stories API endpoint and fetches a list of RCStoryObject objects featuring a specific character, with optional filters.
+ This instance method interact with the /v1/public/characters/{characterId}/stories API endpoint and fetches a list of RCStoryObject objects featuring a specific character, with optional filters.
+
+ For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param identifier An NSNumber object that represent a unique character identifier
  @param filter An optional RCStoryFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
- 
- @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
  */
 - (void)storiesByCharacterIdentifier:(NSNumber *)identifier filter:(RCStoryFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 
 /*!
  @method
 
- This instance method interact with the/v1/public/comics/{comicId}/stories API endpoint and fetches a list of RCStoryObject objects in a specific comic issue, with optional filters.
+ This instance method interact with the /v1/public/comics/{comicId}/stories API endpoint and fetches a list of RCStoryObject objects in a specific comic issue, with optional filters.
+
+ For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param identifier An NSNumber object that represent a unique comic identifier
  @param filter An optional RCStoryFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
- 
- @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
  */
 - (void)storiesByComicIdentifier:(NSNumber *)identifier filter:(RCStoryFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 
 /*!
  @method
 
- This instance method interact with the/v1/public/creators/{creatorId}/stories API endpoint and fetches a list of RCStoryObject objects by a specific creator, with optional filters.
+ This instance method interact with the /v1/public/creators/{creatorId}/stories API endpoint and fetches a list of RCStoryObject objects by a specific creator, with optional filters.
+
+ For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param identifier An NSNumber object that represent a unique creator identifier
  @param filter An optional RCStoryFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
- 
- @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
  */
 - (void)storiesByCreatorIdentifier:(NSNumber *)identifier filter:(RCStoryFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 
 /*!
  @method
 
- This instance method interact with the/v1/public/events/{eventId}/stories API endpoint and fetches a list of RCStoryObject objects from a specific event, with optional filters.
+ This instance method interact with the /v1/public/events/{eventId}/stories API endpoint and fetches a list of RCStoryObject objects from a specific event, with optional filters.
+
+ For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param identifier An NSNumber object that represent a unique event identifier
  @param filter An optional RCStoryFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
- 
- @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
  */
 - (void)storiesByEventIdentifier:(NSNumber *)identifier filter:(RCStoryFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 
 /*!
  @method
 
- This instance method interact with the/v1/public/series/{seriesId}/stories API endpoint and fetches a list of RCStoryObject objects from a specific series, with optional filters.
+ This instance method interact with the /v1/public/series/{seriesId}/stories API endpoint and fetches a list of RCStoryObject objects from a specific series, with optional filters.
+ 
+ For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param identifier An NSNumber object that represent a unique series identifier
  @param filter An optional RCStoryFilter object that contain the parameters to search
  @param completionBlock A resultsCompletionBlock block as a callback
- 
- @see For more information about this API endpoint, please refer to http://developer.marvel.com/docs
  */
 - (void)storiesBySeriesIdentifier:(NSNumber *)identifier filter:(RCStoryFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
 
