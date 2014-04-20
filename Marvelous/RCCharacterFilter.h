@@ -47,7 +47,7 @@
 /*!
  @property
 
- This property sets and gets the character name the filter use to search for Character resources that match this specified name.
+ This property sets and gets the character name the filter use to search for Character resources which match this specified name.
  */
 @property (nonatomic, strong) NSString *name;
 
@@ -61,7 +61,7 @@
 /*!
  @property
 
- This property sets and gets the list of comics identifiers (represented as NSNumber objects) the filter use to search for Character resources which appear in the specified comics.
+ This property sets and gets the list of comic identifiers (represented as NSNumber objects) the filter use to search for Character resources which appear in the specified comics.
  */
 @property (nonatomic, strong) NSArray *comics;
 
