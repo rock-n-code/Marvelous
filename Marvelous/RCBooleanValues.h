@@ -23,5 +23,28 @@
 //  THE SOFTWARE.
 //
 
+/*!
+ @header
+
+ RCBooleanValues constants.
+
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+
+ @version 0.6.2
+ */
+
+/*!
+ @constant
+
+ Boolean value True string.
+ */
 extern NSString * const RCBooleanValueTrue;
+
+/*!
+ @constant
+
+ Boolean value False string.
+ */
 extern NSString * const RCBooleanValueFalse;
