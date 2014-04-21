@@ -43,7 +43,6 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 
 @interface RCAPIOperation ()
 
-@property (nonatomic, strong) NSURLSession *session;
 @property (nonatomic, strong) NSString *identifier;
 @property (nonatomic, strong) NSURL *url;
 @property (nonatomic, strong) NSDictionary *parameters;
@@ -51,7 +50,31 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 @property (nonatomic, strong) RCDataWrapperObject *data;
 @property (nonatomic) RCAPITypes type;
 
+/*!
+ @property
+ 
+ This property sets and gets the session object in charge of the communication to an API endpoint.
+
+ @internal
+ */
+@property (nonatomic, strong) NSURLSession *session;
+
+/*!
+ @property
+
+ This property gets the URL object that contains the path to an API endpoint based on the given type, identifier, filter and authentication parameters.
+
+ @internal
+ */
 @property (nonatomic, readonly, strong) NSURL *requestURL;
+
+/*!
+ @property
+
+ This property gets the operation type to execute based on the given type and filter.
+
+ @internal
+ */
 @property (nonatomic, readonly) RCAPITypes typeToConvert;
 
 @end
@@ -227,6 +250,19 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 
 #pragma mark - Private methods
 
+/*!
+ @method
+ 
+ This method checks the validity of a given filter. 
+ 
+ In case the filter is not valid, the operation set an error object.
+ 
+ @param filter A filter to validate
+ 
+ @return A boolean value that represent whether the filter is indeed valid
+ 
+ @internal
+ */
 - (BOOL)validateFilter:(RCFilter *)filter
 {
 	BOOL isValidated = filter && filter.type != RCAPITypeUndefined;
@@ -251,6 +287,20 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 	return isValidated;
 }
 
+/*!
+ @method
+
+ This method checks the validity of a given type and identifier for a resource.
+ 
+ In case the type and/or the identifier are not valid, the operation set an error object.
+
+ @param type A type to validate
+ @param identifier An identifier to validate
+
+ @return A boolean value that represent whether the type and identifier are indeed valid
+
+ @internal
+ */
 - (BOOL)validateType:(RCAPITypes)type andIdentifier:(NSString *)identifier
 {
 	BOOL isValidated = type != RCAPITypeUndefined && identifier;
@@ -275,6 +325,20 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 	return isValidated;
 }
 
+/*!
+ @method
+
+ This method assign a given type, identifier, filter and authentication parameters to its respective properties. 
+
+ In case the given filter is an object, the "parameters" property will contain both the filter parameters and the authentication parameters. Otherwise, this property will contain only the authentication parameters.
+
+ @param type The type of operation to initialise
+ @param identifier The identifier to a particular resource to retrieve from an API endpoint
+ @param filter A filter that contain the parameters to search on an API endpoint
+ @param authentication A dictionary that contains authentication parameters which sign a request to an API endpoint
+
+ @internal
+ */
 - (void)initType:(RCAPITypes)type identifier:(NSString *)identifier filter:(RCFilter *)filter andAuthentication:(NSDictionary *)authentication
 {
 	self.type = type;
@@ -290,6 +354,18 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 	self.url = self.requestURL;
 }
 
+/*!
+ @method
+
+ This method creates a dictionary out of two given dictionaries.
+
+ @param filterParams A dictionary that contains the filter parameters
+ @param authParams A dictionary that contains the authentication parameters
+
+ @return A dictionary containing the filter and authentication parameters
+
+ @internal
+ */
 - (NSDictionary *)parametersFromFilter:(NSDictionary *)filterParams andAuthentication:(NSDictionary *)authParams
 {
 	NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
@@ -300,6 +376,17 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 	return parameters;
 }
 
+/*!
+ @method
+ 
+ This method convert a given type into a string.
+ 
+ @param type The type of operation to convert
+
+ @return A string that represent the given operation type
+ 
+ @internal
+*/
 - (NSString *)stringFromType:(RCAPITypes)type
 {
 	switch (type) {
@@ -320,6 +407,19 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 	}
 }
 
+/*!
+ @method
+
+ This method convert a given dictionary containing parameters into a string to be included into a URL request to an API endpoint.
+ 
+ Every value is escaped using UTF-8 encoding and every tuple is joined by the "&" character.
+
+ @param parameters A dictionary containing parameters
+
+ @return A string that represent the given parameters
+
+ @internal
+ */
 - (NSString *)stringFromParameters:(NSDictionary *)parameters
 {
 	NSMutableArray *params = [NSMutableArray array];
