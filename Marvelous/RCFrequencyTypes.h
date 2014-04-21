@@ -23,7 +23,42 @@
 //  THE SOFTWARE.
 //
 
+/*!
+ @header
+
+ RCFrequencyTypes constants.
+
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+
+ @version 0.6.2
+ */
+
+/*!
+ @constant
+
+ Publication frequency type Collection string.
+ */
 extern NSString * const RCFrequencyTypeCollection;
+
+/*!
+ @constant
+
+ Publication frequency type One Shot string.
+ */
 extern NSString * const RCFrequencyTypeOneShot;
+
+/*!
+ @constant
+
+ Publication frequency type Limited Series string.
+ */
 extern NSString * const RCFrequencyTypeLimited;
+
+/*!
+ @constant
+
+ Publication frequency type Ongoing Series string.
+ */
 extern NSString * const RCFrequencyTypeOngoing;
