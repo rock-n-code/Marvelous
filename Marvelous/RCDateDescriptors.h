@@ -23,7 +23,42 @@
 //  THE SOFTWARE.
 //
 
+/*!
+ @header
+
+ RCDateDescriptors constants.
+
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+
+ @version 0.6.2
+ */
+
+/*!
+ @constant
+
+ Date descriptor Last Week string.
+ */
 extern NSString * const RCDateDescriptorLastWeek;
+
+/*!
+ @constant
+
+ Date descriptor This Week string.
+ */
 extern NSString * const RCDateDescriptorThisWeek;
+
+/*!
+ @constant
+
+ Date descriptor Next Week string.
+ */
 extern NSString * const RCDateDescriptorNextWeek;
+
+/*!
+ @constant
+
+ Date descriptor This Month string.
+ */
 extern NSString * const RCDateDescriptorThisMonth;
