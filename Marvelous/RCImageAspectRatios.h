@@ -23,7 +23,42 @@
 //  THE SOFTWARE.
 //
 
+/*!
+ @header
+
+ RCImageAspectRatios constants.
+
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+
+ @version 0.6.2
+ */
+
+/*!
+ @constant
+
+ Aspect Ratio Detail string.
+ */
 extern NSString * const RCImageAspectRatioDetail;
+
+/*!
+ @constant
+
+ Aspect Ratio Square string.
+ */
 extern NSString * const RCImageAspectRatioSquare;
+
+/*!
+ @constant
+
+ Aspect Ratio Portrait string.
+ */
 extern NSString * const RCImageAspectRatioPortrait;
+
+/*!
+ @constant
+
+ Aspect Ratio Landscape string.
+ */
 extern NSString * const RCImageAspectRatioLandscape;

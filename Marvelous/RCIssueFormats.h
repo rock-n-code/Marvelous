@@ -23,11 +23,70 @@
 //  THE SOFTWARE.
 //
 
+/*!
+ @header
+
+ RCIssueFormats constants.
+
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+
+ @version 0.6.2
+ */
+
+/*!
+ @constant
+
+ Issue format Comic string.
+ */
 extern NSString * const RCIssueFormatComic;
+
+/*!
+ @constant
+
+ Issue format Magazine string.
+ */
 extern NSString * const RCIssueFormatMagazine;
+
+/*!
+ @constant
+
+ Issue format Trade Paperback string.
+ */
 extern NSString * const RCIssueFormatTradePaperback;
+
+/*!
+ @constant
+
+ Issue format Hard Cover string.
+ */
 extern NSString * const RCIssueFormatHardcover;
+
+/*!
+ @constant
+
+ Issue format Digest string.
+ */
 extern NSString * const RCIssueFormatDigest;
+
+/*!
+ @constant
+
+ Issue format Graphic Novel string.
+ */
 extern NSString * const RCIssueFormatGraphicNovel;
+
+/*!
+ @constant
+
+ Issue format Digital Comic string.
+ */
 extern NSString * const RCIssueFormatDigitalComic;
+
+/*!
+ @constant
+
+ Issue format Infinite Comic string.
+ */
 extern NSString * const RCIssueFormatInfiniteComic;

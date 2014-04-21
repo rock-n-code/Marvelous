@@ -649,12 +649,12 @@
 				036341DF18F176C6008FA7F0 /* RCIssueFormats.m */,
 				036341EC18F1C5BE008FA7F0 /* RCIssueTypes.h */,
 				036341ED18F1C5BE008FA7F0 /* RCIssueTypes.m */,
-				036341F018F1C72E008FA7F0 /* RCBooleanValues.h */,
-				036341F118F1C72E008FA7F0 /* RCBooleanValues.m */,
-				036341F418F1C83F008FA7F0 /* RCDateDescriptors.h */,
-				036341F518F1C83F008FA7F0 /* RCDateDescriptors.m */,
 				036341DA18F174B8008FA7F0 /* RCFrequencyTypes.h */,
 				036341DB18F174B8008FA7F0 /* RCFrequencyTypes.m */,
+				036341F418F1C83F008FA7F0 /* RCDateDescriptors.h */,
+				036341F518F1C83F008FA7F0 /* RCDateDescriptors.m */,
+				036341F018F1C72E008FA7F0 /* RCBooleanValues.h */,
+				036341F118F1C72E008FA7F0 /* RCBooleanValues.m */,
 			);
 			name = Constants;
 			path = ..;

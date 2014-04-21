@@ -23,5 +23,28 @@
 //  THE SOFTWARE.
 //
 
+/*!
+ @header
+
+ RCIssueTypes constants.
+
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+
+ @version 0.6.2
+ */
+
+/*!
+ @constant
+
+ Issue format type Comic string.
+ */
 extern NSString * const RCIssueTypeComic;
+
+/*!
+ @constant
+
+ Issue format type Collection string.
+ */
 extern NSString * const RCIssueTypeCollection;

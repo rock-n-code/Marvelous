@@ -23,16 +23,105 @@
 //  THE SOFTWARE.
 //
 
+/*!
+ @header
+
+ RCOrderByTypes constants.
+
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+
+ @version 0.6.2
+ */
+
+/*!
+ @constant
+
+ Order by type Identifier string.
+ */
 extern NSString * const RCOrderByTypeIdentifier;
+
+/*!
+ @constant
+
+ Order by type First Name string.
+ */
 extern NSString * const RCOrderByTypeFirstName;
+
+/*!
+ @constant
+
+ Order by type Middle Name string.
+ */
 extern NSString * const RCOrderByTypeMiddleName;
+
+/*!
+ @constant
+
+ Order by type Last Name string.
+ */
 extern NSString * const RCOrderByTypeLastName;
+
+/*!
+ @constant
+
+ Order by type Suffix string.
+ */
 extern NSString * const RCOrderByTypeSuffix;
+
+/*!
+ @constant
+
+ Order by type Name string.
+ */
 extern NSString * const RCOrderByTypeName;
+
+/*!
+ @constant
+
+ Order by type Title string.
+ */
 extern NSString * const RCOrderByTypeTitle;
+
+/*!
+ @constant
+
+ Order by type Date Modified string.
+ */
 extern NSString * const RCOrderByTypeDateModified;
+
+/*!
+ @constant
+
+ Order by type Start Date string.
+ */
 extern NSString * const RCOrderByTypeStartDate;
+
+/*!
+ @constant
+
+ Order by type Start Year string.
+ */
 extern NSString * const RCOrderByTypeStartYear;
+
+/*!
+ @constant
+
+ Order by type Final Order Cutoff Date string.
+ */
 extern NSString * const RCOrderByTypeFinalOrderCutoffDate;
+
+/*!
+ @constant
+
+ Order by type Onsale Date string.
+ */
 extern NSString * const RCOrderByTypeOnSaleDate;
+
+/*!
+ @constant
+
+ Order by type Issue Number string.
+ */
 extern NSString * const RCOrderByTypeIssueNumber;
