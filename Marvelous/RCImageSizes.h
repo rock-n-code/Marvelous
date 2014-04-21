@@ -23,11 +23,70 @@
 //  THE SOFTWARE.
 //
 
+/*!
+ @header
+
+ RCImageSizes constants.
+
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+
+ @version 0.6.2
+ */
+
+/*!
+ @constant
+
+ Image size Small string.
+ */
 extern NSString * const RCImageSizeSmall;
+
+/*!
+ @constant
+
+ Image size Medium string.
+ */
 extern NSString * const RCImageSizeMedium;
+
+/*!
+ @constant
+
+ Image size Large string.
+ */
 extern NSString * const RCImageSizeLarge;
+
+/*!
+ @constant
+
+ Image size Extra Large string.
+ */
 extern NSString * const RCImageSizeXLarge;
+
+/*!
+ @constant
+
+ Image size Amazing string.
+ */
 extern NSString * const RCImageSizeAmazing;
+
+/*!
+ @constant
+
+ Image size Fantastic string.
+ */
 extern NSString * const RCImageSizeFantastic;
+
+/*!
+ @constant
+
+ Image size Uncanny string.
+ */
 extern NSString * const RCImageSizeUncanny;
+
+/*!
+ @constant
+
+ Image size Incredible string.
+ */
 extern NSString * const RCImageSizeIncredible;
