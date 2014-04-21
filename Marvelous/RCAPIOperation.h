@@ -45,7 +45,7 @@
 
  This block that is used as a callback and it is assigned to the "completionBlock" property on RCAPIOperation objects.
 
- @param info A data wrapper object that contain the data provided by the API response
+ @param data A data wrapper object that contain the data provided by the API response
  @param error A NSError object that contain the error data provided by the API response
  */
 typedef void (^operationCompletionBlock) (RCDataWrapperObject *data, NSError *error);

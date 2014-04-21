@@ -245,7 +245,7 @@
 
  This methods converts a given boolean value to string.
 
- @param date An integer that represent a RCBooleanValueCodes value.
+ @param boolean An integer that represent a RCBooleanValueCodes value.
 
  @return A string that represent the given boolean value.
 

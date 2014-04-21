@@ -683,7 +683,7 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 
  This instance method convert to string a value contained on a given identifier.
  
- @param strings An identifier
+ @param identifier An identifier
  
  @return A string in case the given identifier is indeed a NSNumber object.
 		 NULL in case the given identifier is NULL
