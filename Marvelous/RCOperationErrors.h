@@ -23,8 +23,49 @@
 //  THE SOFTWARE.
 //
 
+/*!
+ @header
+
+ RCOperationErrors constants.
+
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+
+ @version 0.6.2
+ */
+
+/*!
+ @constant
+ 
+ Operation cancelled error string.
+ */
 extern NSString * const RCOperationErrorCancelled;
+
+/*!
+ @constant
+
+ Operation type undefined error string.
+ */
 extern NSString * const RCOperationErrorTypeUndefined;
+
+/*!
+ @constant
+
+ Operation identifier is NULL error string.
+ */
 extern NSString * const RCOperationErrorIdentifierIsNull;
+
+/*!
+ @constant
+
+ Operation filter undefined error string.
+ */
 extern NSString * const RCOperationErrorFilterUndefined;
+
+/*!
+ @constant
+
+ Operation filter is NULL error string.
+ */
 extern NSString * const RCOperationErrorFilterIsNull;
