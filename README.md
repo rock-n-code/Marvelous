@@ -5,7 +5,7 @@
 ## Requirements
 
 **Marvelous** requires:
-- *XCode 5.1* or higher
+- *XCode 5.0* or higher
 - *iOS 7.0* (and higher) or *OSX 10.8* Mountain Lion (and higher)
 - *ARC*
 
@@ -122,9 +122,12 @@ filter.orderBy = @[@(RCOrderByTypeCodeDateModifieDescending)];
 
 **Marvelous** includes a suite of unit tests within the *MarvelousTests* folder. You can execute the test suite inside XCode by selecting either the *Marvelous*  or the *MarvelousOSX* scheme and then pressing the &#8984;+U key shortcut.
 
+## Documentation
+
+**Marvelous** includes documentation written in [HeaderDoc](https://developer.apple.com/library/mac/documentation/DeveloperTools/Conceptual/HeaderDoc/intro/intro.html), which is included with XCode. It also support the new feature introduced by XCode 5.0 to display source code comments as documentation in the *Quick Help Inspector*, in a *Help Popup* and for *Code Completion*.
+
 ## TODOs
 
-- Documentation (already on it...)
 - Documentation generation
 - `RCMarvelAPI` asynchronous tests
 - CocoaPods support
