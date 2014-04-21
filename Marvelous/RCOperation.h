@@ -23,23 +23,99 @@
 //  THE SOFTWARE.
 //
 
+/*!
+ @header
+
+ RCOperation class.
+
+ @author Javier Cicchelli (\@monsieur_rock)
+
+ @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
+
+ @version 0.6.2
+ */
+
 #import "RCOperationErrors.h"
 #import "RCOperationErrorCodes.h"
 
+/*!
+ @class
+
+ This class is an base class that extends the NSOperation abstract class and it is capable to handle its execution in an either concurrent and non-concurrent manner.
+ */
 @interface RCOperation : NSOperation
 
+/*!
+ @property
+
+ This property sets and gets the boolean value which indicates whether the operation runs asynchronously.
+ */
 @property (nonatomic) BOOL isConcurrent;
+
+/*!
+ @property
+
+ This property sets and gets the boolean value which indicates whether the operation is currently executing.
+ */
 @property (nonatomic) BOOL isExecuting;
+
+/*!
+ @property
+
+ This property sets and gets the boolean value which indicates whether the operation has been cancelled.
+ */
 @property (nonatomic) BOOL isCancelled;
+
+/*!
+ @property
+
+ This property sets and gets the boolean value which indicates whether the operation is done executing.
+ */
 @property (nonatomic) BOOL isFinished;
 
+/*!
+ @property
+
+ This property gets an error object which was returned by the operation if any.
+ */
 @property (nonatomic, readonly, strong) NSError *error;
 
+/*!
+ @method
+ 
+ This method performs a non-concurrent task.
+ */
 - (void)main;
+
+/*!
+ @method
+
+ This method begins the execution of a concurrent task.
+ */
 - (void)start;
+
+/*!
+ @method
+
+ This method advices the operation object that it should stop executing the task.
+ */
 - (void)cancel;
+
+/*!
+ @method
+
+ This method finish the execution of the task.
+ */
 - (void)finish;
 
+/*!
+ @method
+
+ This method define an error object with a given error code and a dictionary containing relevant information about this error.
+ 
+ @param code An integer value that represent the error code
+ @param userInfo A dictionary that contains relevant information about the error
+ */
 - (void)errorWithCode:(NSInteger)code andUserInfo:(NSDictionary *)userInfo;
 
 @end
