@@ -1245,6 +1245,7 @@
 		03C81AAC18F4BC4C00D84C0C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 0.6.2;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1269,6 +1270,7 @@
 		03C81AAD18F4BC4C00D84C0C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 0.6.2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1408,6 +1410,7 @@
 		03DEC86018E736740098CCE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CURRENT_PROJECT_VERSION = 0.6.2;
 				DSTROOT = /tmp/Marvelous.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1421,6 +1424,7 @@
 		03DEC86118E736740098CCE1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CURRENT_PROJECT_VERSION = 0.6.2;
 				DSTROOT = /tmp/Marvelous.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
