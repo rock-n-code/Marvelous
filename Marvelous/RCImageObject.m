@@ -141,7 +141,7 @@ static NSString * const RCImageObjectPathModeSizeFormat = @"%@/%@_%@.%@";
 
  This method convert a given size code to string.
 
- @param aspectRatioCode An integer that represent a RCImageSizeCodes value.
+ @param code An integer that represent a RCImageSizeCodes value.
 
  @return A string that represent the given size code.
 

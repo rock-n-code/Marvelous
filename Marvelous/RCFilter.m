@@ -162,7 +162,7 @@
 
  This methods checks if a given order type value is a descending type or not.
 
- @param date An integer that represent a RCOrderByTypeCodes value.
+ @param orderBy An integer that represent a RCOrderByTypeCodes value.
 
  @return YES in case the given order type value is a descending type.
 		 NO in case the given order type value is an ascending type.
