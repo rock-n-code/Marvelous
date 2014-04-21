@@ -11,11 +11,12 @@
 
 ## How To Get Started
 
-1. Download the [static library for iOS](http://dropbox.rock-n-co.de/marvelous/libMarvelous-0.6.2.zip) or the [framework for OSX](http://dropbox.rock-n-co.de/marvelous/Marvelous-0.6.2.zip).
+1. Download the [static library for iOS](http://dropbox.rock-n-co.de/marvelous/libMarvelous-0.6.3.zip) or the [framework for OSX](http://dropbox.rock-n-co.de/marvelous/Marvelous-0.6.3.zip).
 2. Install the [static library](https://developer.apple.com/library/ios/technotes/iOSStaticLibraries/Articles/configuration.html) or [framework](https://developer.apple.com/library/mac/documentation/macosx/conceptual/BPFrameworks/Tasks/InstallingFrameworks.html#//apple_ref/doc/uid/20002261-BBCCFBJA) into your prject.
 3. Create your [Marvel developer account](https://developer.marvel.com/account) to obtain the public and private keys required to sign any request to the API. Of course, you can skip this step in case you already have a developer account.
 4. [Play with it](https://www.youtube.com/watch?v=sGjmXhES2wQ) 'til you drop!
-5. Check the [Marvel Comics online documentation](http://developer.marvel.com/docs) for further information about the API calls.
+5. Check the documentation included with the library/framework .zip files for further information about the library.
+6. Check the [Marvel Comics online documentation](http://developer.marvel.com/docs) for further information about the API calls.
 
 If you're looking for the online documentation, you'll have to wait for it a bit longer.
 
@@ -128,9 +129,8 @@ filter.orderBy = @[@(RCOrderByTypeCodeDateModifieDescending)];
 
 ## TODOs
 
-- Documentation generation
-- `RCMarvelAPI` asynchronous tests
 - CocoaPods support
+- `RCMarvelAPI` asynchronous tests
 
 ## Credits
 
@@ -151,7 +151,7 @@ Stay tune for more updates regarding this nice library, among other awesome stuf
 
 - [Javier Cicchelli](http://github.com/mr-rock) ([@monsieur_rock](https://twitter.com/monsieur_rock))
 
-## Before I forget...
+## Just one more thing, folks...
 
 **Marvelous** was crafted with Objective-C, some Software engineering and lots of geekness, fandom and love. And you're all welcome to contribute to it in any way possible: from reporting issues or fixing bugs  to share its existence on Twitter/Facebook/etc.. or just use it on your apps. Just don't forget to mention it and spread the love around, will ya?
 
