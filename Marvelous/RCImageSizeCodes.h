@@ -32,7 +32,7 @@
 
  @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
  
- @version 0.6.2
+ @version 0.6.3
  */
 
 /*!
@@ -42,82 +42,82 @@
  
  Please notice that the size definition varies depending the select aspect ratio.
  
- * RCImageSizeCodeSmall:
+ = RCImageSizeCodeSmall:
 
- - on portrait: 50x75px
+ --> on portrait: 50x75px
 
- - on standard/square: 65x45px
+ --> on standard/square: 65x45px
 
- - on landscape: 120x90px
+ --> on landscape: 120x90px
  
 
 
- * RCImageSizeCodeMedium:
+ = RCImageSizeCodeMedium:
 
- - portrait: 100x150px
+ --> portrait: 100x150px
 
- - standard/square: 100x100px
+ --> standard/square: 100x100px
 
- - landscape: 175x130px
-
-
- 
- * RCImageSizeCodeLarge:
-
- - portrait: not supported
-
- - standard/square: 140x140px
-
- - landscape: 190x140px
+ --> landscape: 175x130px
 
 
  
- * RCImageSizeCodeXLarge:
+ = RCImageSizeCodeLarge:
 
- - portrait: 150x225px
+ --> portrait: not supported
 
- - standard/square: 200x200px
+ --> standard/square: 140x140px
 
- - landscape: 270x200px
-
-
- 
- * RCImageSizeCodeAmazing:
-
- - portrait: not supported
-
- - standard/square: 180x180px
-
- - landscape: 250x156px
+ --> landscape: 190x140px
 
 
  
- * RCImageSizeCodeFantastic:
+ = RCImageSizeCodeXLarge:
 
- - portrait: 168x252px
+ --> portrait: 150x225px
 
- - standard/square: 250x250px
+ --> standard/square: 200x200px
 
- - landscape: not supported
+ --> landscape: 270x200px
+
+
+ 
+ = RCImageSizeCodeAmazing:
+
+ --> portrait: not supported
+
+ --> standard/square: 180x180px
+
+ --> landscape: 250x156px
 
 
  
- * RCImageSizeCodeUncanny:
+ = RCImageSizeCodeFantastic:
 
- - portrait: 300x450px
+ --> portrait: 168x252px
 
- - standard/square: not supported
+ --> standard/square: 250x250px
 
- - landscape: not supported
+ --> landscape: not supported
+
 
  
- * RCImageSizeCodeIncredible:
+ = RCImageSizeCodeUncanny:
 
- - portrait: 216x324px
+ --> portrait: 300x450px
 
- - standard/square: not supported
+ --> standard/square: not supported
 
- - landscape: 464x261px
+ --> landscape: not supported
+
+ 
+ = RCImageSizeCodeIncredible:
+
+ --> portrait: 216x324px
+
+ --> standard/square: not supported
+
+ --> landscape: 464x261px
 
 
  

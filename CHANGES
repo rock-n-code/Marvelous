@@ -1,7 +1,13 @@
+= 0.6.3 (2014-04-21)
+
+  * Written the documentation for the private interfaces [Javier Cicchelli]
+  * Enabled the Documentation Comments settings on both "Marvelous" and "MarvelousOSX" targets [Javier Cicchelli]
+  * Improved the run scripts on the build phase of the "MarvelousLibrary" and "MarvelousFramework" targets to include the generated documentation into the generated .zip files [Javier Cicchelli]
+
 = 0.6.2 (2014-04-20)
 
   * Written the README.md [Javier Cicchelli]
-  * Written the documentation for the public interface [Javier Cicchelli]
+  * Written the documentation for the public interfaces [Javier Cicchelli]
   * Renamed RCImageModeCodes and RCImageModes to RCImageAspectRatioCodes and RCImageAspectRatios respectively [Javier Cicchelli]
   * Renamed RCFormatTypeCodes and RCFormatTypes to RCIssueFormatCodes and RCIssueFormats respectively [Javier Cicchelli]
   * Renamed RCSeriesTypeCodes and RCSeriesTypes to RCFrequencyTypeCodes and RCFrequencyTypes respectively [Javier Cicchelli]
