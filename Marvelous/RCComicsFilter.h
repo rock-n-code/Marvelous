@@ -35,6 +35,8 @@
  @version 0.7.0
  */
 
+#import <Foundation/Foundation.h>
+
 #import "RCFilter.h"
 #import "RCIssueFormatCodes.h"
 #import "RCIssueTypeCodes.h"

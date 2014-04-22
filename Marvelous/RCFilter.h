@@ -35,6 +35,8 @@
  @version 0.7.0
  */
 
+#import <Foundation/Foundation.h>
+
 #import "RCOrderByTypeCodes.h"
 #import "RCAPITypes.h"
 #import "RCRequestKeys.h"

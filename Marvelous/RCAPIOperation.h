@@ -35,6 +35,8 @@
  @version 0.7.0
  */
 
+#import <Foundation/Foundation.h>
+
 #import "RCOperation.h"
 #import "RCFilter.h"
 #import "RCDataWrapperObject.h"
