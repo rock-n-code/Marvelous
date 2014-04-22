@@ -11,16 +11,47 @@
 
 ## How To Get Started
 
-1. Download the [static library for iOS](http://dropbox.rock-n-co.de/marvelous/libMarvelous-0.6.3.zip) or the [framework for OSX](http://dropbox.rock-n-co.de/marvelous/Marvelous-0.6.3.zip).
+**Marvelous** can be included into your projects by downloading a compiled library or framework that you will setup by hand with lots of wisdom and patience or you can just use [Cocoapods](http://cocoapods.org) the library as a pod.
+
+### Installing by getting your hands dirty
+
+1. Download the [static library for iOS](http://dropbox.rock-n-co.de/marvelous/libMarvelous-0.7.0.zip) or the [framework for OSX](http://dropbox.rock-n-co.de/marvelous/Marvelous-0.7.0.zip).
 2. Install the [static library](https://developer.apple.com/library/ios/technotes/iOSStaticLibraries/Articles/configuration.html) or [framework](https://developer.apple.com/library/mac/documentation/macosx/conceptual/BPFrameworks/Tasks/InstallingFrameworks.html#//apple_ref/doc/uid/20002261-BBCCFBJA) into your prject.
 3. Create your [Marvel developer account](https://developer.marvel.com/account) to obtain the public and private keys required to sign any request to the API. Of course, you can skip this step in case you already have a developer account.
 4. [Play with it](https://www.youtube.com/watch?v=sGjmXhES2wQ) 'til you drop!
 5. Check the documentation included with the library/framework .zip files for further information about the library.
 6. Check the [Marvel Comics online documentation](http://developer.marvel.com/docs) for further information about the API calls.
 
-If you're looking for the online documentation, you'll have to wait for it a bit longer.
+### Installing using CocoaPods
 
-If you want to install it via CocoaPods, just hang in there 'cause its support is also on its way. In the meantime, you just need to get your hands dirty to install it.
+1. [Install Cocoapods](http://guides.cocoapods.org/using/getting-started.html) on your system. If you already have it installed, proceed to the next step.
+```bash
+$ sudo gem install cocoapods
+```
+2. [Create a Podfile](http://guides.cocoapods.org/using/using-cocoapods.html) which will define the dependencies of your project.
+```bash
+YourProject$ pod init
+```
+3. Add the **Marvelous** dependency into your [Podfile](http://guides.cocoapods.org/syntax/podfile.html).
+```ruby
+platform :ios, '7.0'
+# platform :osx, '10.8'
+pod 'Marvelous'
+# pod 'Marvelous', '~> 0.7.0'
+# ... more settings ...
+```
+4. Install the dependencies.
+```bash
+YourProject$ pod install
+```
+5. Open the `YourProject.xcworkspace` and build in case you've created a new XCode project with Cocoapods. Otherwise, you should integrate your workspace into the Podfile.
+```ruby
+workspace 'YourProject'
+```
+
+### Oh! By the way...
+
+If you're looking for the online documentation, you'll have to wait for it a bit longer.
 
 ## Architecture
 
@@ -129,7 +160,6 @@ filter.orderBy = @[@(RCOrderByTypeCodeDateModifieDescending)];
 
 ## TODOs
 
-- CocoaPods support
 - `RCMarvelAPI` asynchronous tests
 
 ## Credits
