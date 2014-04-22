@@ -127,7 +127,7 @@
 		037F74CF18F4D2FD00FB3616 /* RCAPIOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B694FD18E77B1D00CEF855 /* RCAPIOperation.m */; };
 		037F74D018F4D30000FB3616 /* RCOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 03B694F518E774BD00CEF855 /* RCOperation.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		037F74D118F4D30600FB3616 /* RCAPIOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 03B694FC18E77B1D00CEF855 /* RCAPIOperation.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		037F74D218F4D31400FB3616 /* RCFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 03130D4718EADF9500BD315F /* RCFilter.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		037F74D218F4D31400FB3616 /* RCFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 03130D4718EADF9500BD315F /* RCFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		037F74D318F4D31A00FB3616 /* RCFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D4818EADF9500BD315F /* RCFilter.m */; };
 		037F74D418F4D32500FB3616 /* RCCharacterFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D4E18EAE02900BD315F /* RCCharacterFilter.m */; };
 		037F74D518F4D32500FB3616 /* RCComicsFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341E718F1C0EB008FA7F0 /* RCComicsFilter.m */; };
@@ -825,7 +825,6 @@
 				037F750D18F4D39D00FB3616 /* RCStatusCodes.h in Headers */,
 				037F74D018F4D30000FB3616 /* RCOperation.h in Headers */,
 				037F74DD18F4D32E00FB3616 /* RCEventFilter.h in Headers */,
-				037F74D218F4D31400FB3616 /* RCFilter.h in Headers */,
 				037F74FF18F4D37400FB3616 /* RCObject.h in Headers */,
 				037F74F618F4D36A00FB3616 /* RCImageObject.h in Headers */,
 				037F750518F4D39500FB3616 /* RCImageAspectRatioCodes.h in Headers */,
@@ -834,6 +833,7 @@
 				037021F91903E060001D8F4B /* RCBlocks.h in Headers */,
 				037F750218F4D38100FB3616 /* RCObjectProtocol.h in Headers */,
 				037F750418F4D39500FB3616 /* RCOrderByTypeCodes.h in Headers */,
+				037F74D218F4D31400FB3616 /* RCFilter.h in Headers */,
 				037F750018F4D37400FB3616 /* RCDataContainerObject.h in Headers */,
 				037F752118F4D3CC00FB3616 /* RCBooleanValues.h in Headers */,
 				037F74DB18F4D32E00FB3616 /* RCComicsFilter.h in Headers */,
