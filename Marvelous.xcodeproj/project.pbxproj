@@ -80,6 +80,7 @@
 		034DDCFF18F5E6F1000E823F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		034DDD0018F5EEE1000E823F /* CHANGES */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGES; sourceTree = "<group>"; };
 		034DDD0118F5EFA5000E823F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		036AC9C81906899100420D66 /* Marvelous.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Marvelous.podspec; sourceTree = "<group>"; };
 		03C81A8918F4BC4C00D84C0C /* Marvelous.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Marvelous.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		03C81A9E18F4BC4C00D84C0C /* MarvelousOSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelousOSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03DEC83C18E736730098CCE1 /* libMarvelous.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMarvelous.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +136,7 @@
 		03DEC83318E736730098CCE1 = {
 			isa = PBXGroup;
 			children = (
+				036AC9C81906899100420D66 /* Marvelous.podspec */,
 				034DDD0118F5EFA5000E823F /* README.md */,
 				034DDD0018F5EEE1000E823F /* CHANGES */,
 				034DDCFF18F5E6F1000E823F /* LICENSE */,
