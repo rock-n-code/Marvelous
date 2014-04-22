@@ -32,7 +32,7 @@
 
  @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
 
- @version 0.6.3
+ @version 0.7.0
  */
 
 #import "RCResponseKeys.h"
