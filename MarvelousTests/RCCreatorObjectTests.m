@@ -26,6 +26,7 @@
 #import <XCTest/XCTest.h>
 
 #import "RCCreatorObject.h"
+#import "RCResponseKeys.h"
 
 @interface RCCreatorObjectTests : XCTestCase
 

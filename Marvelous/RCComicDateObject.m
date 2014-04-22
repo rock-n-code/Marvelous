@@ -24,6 +24,7 @@
 //
 
 #import "RCComicDateObject.h"
+#import "RCResponseKeys.h"
 
 @interface RCComicDateObject ()
 

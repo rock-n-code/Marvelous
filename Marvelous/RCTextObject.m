@@ -24,6 +24,7 @@
 //
 
 #import "RCTextObject.h"
+#import "RCResponseKeys.h"
 
 @interface RCTextObject ()
 

@@ -26,6 +26,7 @@
 #import <XCTest/XCTest.h>
 
 #import "RCTextObject.h"
+#import "RCResponseKeys.h"
 
 @interface RCTextObjectTests : XCTestCase
 

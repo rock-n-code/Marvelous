@@ -24,6 +24,7 @@
 //
 
 #import "RCEventObject.h"
+#import "RCResponseKeys.h"
 
 @interface RCEventObject ()
 

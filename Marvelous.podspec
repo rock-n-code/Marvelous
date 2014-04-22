@@ -1,3 +1,4 @@
+public_headers = []
 public_files = %w(
   RCMarvelAPI
   RCCharacterFilter
@@ -20,6 +21,8 @@ public_files = %w(
   RCTextObject
   RCSummaryObject
   RCURLObject
+  RCObject
+  RCObjectProtocol
   RCBlocks
   RCAPITypes
   RCOrderByTypeCodes
@@ -32,9 +35,7 @@ public_files = %w(
   RCBooleanValueCodes
 )
 
-public_header_files = []
-
-public_files.each { |file| public_header_files << "Marvelous/" + file + ".h" }
+public_files.each { |file| public_headers << "Marvelous/" + file + ".h" }
 
 Pod::Spec.new do |spec|
   spec.name = "Marvelous"
@@ -50,7 +51,7 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = "7.0"
   spec.osx.deployment_target = "10.8"
   spec.source = { :git => "https://github.com/rock-n-code/Marvelous.git", :tag => "0.7.0" }
-  spec.source_files  = "Marvelous/*.{h,m}"
+  spec.source_files  = "Marvelous/Marvelous.h"
   spec.public_header_files = public_header_files
   spec.framework  = "Foundation"
   spec.requires_arc = true

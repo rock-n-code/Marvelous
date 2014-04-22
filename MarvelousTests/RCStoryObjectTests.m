@@ -26,6 +26,7 @@
 #import <XCTest/XCTest.h>
 
 #import "RCStoryObject.h"
+#import "RCResponseKeys.h"
 
 @interface RCStoryObjectTests : XCTestCase
 

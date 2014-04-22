@@ -24,6 +24,7 @@
 //
 
 #import "RCStoryObject.h"
+#import "RCResponseKeys.h"
 
 @interface RCStoryObject ()
 

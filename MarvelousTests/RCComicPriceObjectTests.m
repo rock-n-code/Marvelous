@@ -26,6 +26,7 @@
 #import <XCTest/XCTest.h>
 
 #import "RCComicPriceObject.h"
+#import "RCResponseKeys.h"
 
 @interface RCComicPriceObjectTests : XCTestCase
 

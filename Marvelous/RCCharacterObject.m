@@ -25,6 +25,7 @@
 
 #import "RCCharacterObject.h"
 #import "RCResponseKeys.h"
+#import "RCResponseKeys.h"
 
 @interface RCCharacterObject ()
 

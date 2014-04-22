@@ -24,6 +24,7 @@
 //
 
 #import "RCURLObject.h"
+#import "RCResponseKeys.h"
 
 @interface RCURLObject ()
 

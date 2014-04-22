@@ -24,6 +24,7 @@
 //
 
 #import "RCQueryInfoObject.h"
+#import "RCResponseKeys.h"
 
 @interface RCQueryInfoObject ()
 

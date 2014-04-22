@@ -26,6 +26,7 @@
 #import <XCTest/XCTest.h>
 
 #import "RCComicDateObject.h"
+#import "RCResponseKeys.h"
 
 @interface RCComicDateObjectTests : XCTestCase
 

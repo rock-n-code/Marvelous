@@ -25,6 +25,7 @@
 
 #import "RCListObject.h"
 #import "RCSummaryObject.h"
+#import "RCResponseKeys.h"
 
 @interface RCListObject ()
 

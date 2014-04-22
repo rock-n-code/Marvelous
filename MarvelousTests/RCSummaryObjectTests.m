@@ -26,6 +26,7 @@
 #import <XCTest/XCTest.h>
 
 #import "RCSummaryObject.h"
+#import "RCResponseKeys.h"
 
 @interface RCSummaryModelTests : XCTestCase
 

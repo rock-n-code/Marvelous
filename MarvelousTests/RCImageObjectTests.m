@@ -26,6 +26,7 @@
 #import <XCTest/XCTest.h>
 
 #import "RCImageObject.h"
+#import "RCResponseKeys.h"
 
 @interface RCImageObjectTests : XCTestCase
 

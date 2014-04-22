@@ -27,6 +27,7 @@
 #import "RCTextObject.h"
 #import "RCComicDateObject.h"
 #import "RCComicPriceObject.h"
+#import "RCResponseKeys.h"
 
 @interface RCComicsObject ()
 

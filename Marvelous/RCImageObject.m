@@ -26,6 +26,7 @@
 #import "RCImageObject.h"
 #import "RCImageAspectRatios.h"
 #import "RCImageSizes.h"
+#import "RCResponseKeys.h"
 
 /*!
  @constant

@@ -24,6 +24,7 @@
 //
 
 #import "RCComicPriceObject.h"
+#import "RCResponseKeys.h"
 
 @interface RCComicPriceObject ()
 

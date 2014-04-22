@@ -24,6 +24,7 @@
 //
 
 #import "RCSummaryObject.h"
+#import "RCResponseKeys.h"
 
 @interface RCSummaryObject ()
 

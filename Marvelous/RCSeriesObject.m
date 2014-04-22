@@ -24,6 +24,7 @@
 //
 
 #import "RCSeriesObject.h"
+#import "RCResponseKeys.h"
 
 @interface RCSeriesObject ()
 

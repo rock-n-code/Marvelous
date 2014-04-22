@@ -37,8 +37,6 @@
 
 #import <Foundation/Foundation.h>
 
-#import "RCResponseKeys.h"
-
 /*!
  @protocol
  
