@@ -1,6 +1,6 @@
 = 0.7.0 (2014-04-22)
 
-  * Added support for CocoaPods [Javier Cicchelli]
+  * Added support for CocoaPods and CocoaDocs [Javier Cicchelli]
   * Fixed enumeration values found on the tests [Javier Cicchelli]
   * Fixed a build setting property that was failing the execution of the iOS tests [Javier Cicchelli]
 
