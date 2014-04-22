@@ -49,10 +49,6 @@ YourProject$ pod install
 workspace 'YourProject'
 ```
 
-### Oh! By the way...
-
-If you're looking for the online documentation, you'll have to wait for it a bit longer.
-
 ## Architecture
 
 ### API Interface
@@ -157,6 +153,10 @@ filter.orderBy = @[@(RCOrderByTypeCodeDateModifieDescending)];
 ## Documentation
 
 **Marvelous** includes documentation written in [HeaderDoc](https://developer.apple.com/library/mac/documentation/DeveloperTools/Conceptual/HeaderDoc/intro/intro.html), which is included with XCode. It also support the new feature introduced by XCode 5.0 to display source code comments as documentation in the *Quick Help Inspector*, in a *Help Popup* and for *Code Completion*.
+
+## Online Documentation
+
+**Marvelous** online documentation is available on [CocoaDocs](http://cocoadocs.org/docsets/Marvelous). You're also able to import these docs as docsets to [XCode](https://developer.apple.com/xcode/) and/or to [Dash](http://kapeli.com/dash).
 
 ## TODOs
 
