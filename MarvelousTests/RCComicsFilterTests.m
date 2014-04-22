@@ -47,7 +47,7 @@
 {
     RCComicsFilter *filter = [[RCComicsFilter alloc] init];
 
-	XCTAssertEqual(filter.format, RCFormatTypeCodeUndefined, @"\"%s\" is expecting the property 'format' to be the integer value %ld.", __PRETTY_FUNCTION__, (long)RCFormatTypeCodeUndefined);
+	XCTAssertEqual(filter.format, RCIssueFormatCodeUndefined, @"\"%s\" is expecting the property 'format' to be the integer value %ld.", __PRETTY_FUNCTION__, (long)RCIssueFormatCodeUndefined);
 	XCTAssertEqual(filter.formatType, RCIssueTypeCodeUndefined, @"\"%s\" is expecting the property 'formatType' to be the integer value %ld.", __PRETTY_FUNCTION__, (long)RCIssueTypeCodeUndefined);
 	XCTAssertEqual(filter.noVariants, RCBooleanValueCodeUndefined, @"\"%s\" is expecting the property 'noVariants' to be the integer value %ld.", __PRETTY_FUNCTION__, (long)RCBooleanValueCodeUndefined);
 	XCTAssertEqual(filter.dateDescriptor, RCDateDescriptorCodeUndefined, @"\"%s\" is expecting the property 'dateDescriptor' to be the integer value %ld.", __PRETTY_FUNCTION__, (long)RCDateDescriptorCodeUndefined);

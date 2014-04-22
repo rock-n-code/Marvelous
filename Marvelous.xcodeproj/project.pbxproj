@@ -378,6 +378,7 @@
 		034DDCFF18F5E6F1000E823F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		034DDD0018F5EEE1000E823F /* CHANGES */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGES; sourceTree = "<group>"; };
 		034DDD0118F5EFA5000E823F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		036AC9C81906899100420D66 /* Marvelous.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Marvelous.podspec; sourceTree = "<group>"; };
 		036341CA18F15B5E008FA7F0 /* RCCreatorFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCreatorFilter.h; sourceTree = "<group>"; };
 		036341CB18F15B5E008FA7F0 /* RCCreatorFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCreatorFilter.m; sourceTree = "<group>"; };
 		036341CD18F15B81008FA7F0 /* RCCreatorFilterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCreatorFilterTests.m; sourceTree = "<group>"; };
@@ -710,6 +711,7 @@
 		03DEC83318E736730098CCE1 = {
 			isa = PBXGroup;
 			children = (
+				036AC9C81906899100420D66 /* Marvelous.podspec */,
 				034DDD0118F5EFA5000E823F /* README.md */,
 				034DDD0018F5EEE1000E823F /* CHANGES */,
 				034DDCFF18F5E6F1000E823F /* LICENSE */,
@@ -1438,7 +1440,7 @@
 		03DEC86318E736740098CCE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Marvelous.framework/Versions/A/Marvelous";
+				BUNDLE_LOADER = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1457,7 +1459,7 @@
 		03DEC86418E736740098CCE1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Marvelous.framework/Versions/A/Marvelous";
+				BUNDLE_LOADER = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
