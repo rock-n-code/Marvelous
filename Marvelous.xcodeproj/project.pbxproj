@@ -62,6 +62,7 @@
 		03130D6818EC128200BD315F /* RCEventFilterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D6718EC128200BD315F /* RCEventFilterTests.m */; };
 		03130D6B18EC1BE600BD315F /* RCEventObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D6A18EC1BE600BD315F /* RCEventObject.m */; };
 		03130D6D18EC1BFD00BD315F /* RCEventObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03130D6C18EC1BFD00BD315F /* RCEventObjectTests.m */; };
+		032C5FA519078FB200591F06 /* RCFilter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03130D4718EADF9500BD315F /* RCFilter.h */; };
 		036341CC18F15B5E008FA7F0 /* RCCreatorFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341CB18F15B5E008FA7F0 /* RCCreatorFilter.m */; };
 		036341CE18F15B81008FA7F0 /* RCCreatorFilterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341CD18F15B81008FA7F0 /* RCCreatorFilterTests.m */; };
 		036341D118F16851008FA7F0 /* RCCreatorObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 036341D018F16851008FA7F0 /* RCCreatorObject.m */; };
@@ -294,6 +295,7 @@
 				03C81A2B18F4659600D84C0C /* RCEventFilter.h in CopyFiles */,
 				03C81A2A18F4658C00D84C0C /* RCSeriesFilter.h in CopyFiles */,
 				03C81A2C18F4659B00D84C0C /* RCStoryFilter.h in CopyFiles */,
+				032C5FA519078FB200591F06 /* RCFilter.h in CopyFiles */,
 				03C81A5518F4B7F900D84C0C /* RCQueryInfoObject.h in CopyFiles */,
 				03C81A3918F482D400D84C0C /* RCCharacterObject.h in CopyFiles */,
 				03C81A3A18F482D800D84C0C /* RCComicsObject.h in CopyFiles */,
