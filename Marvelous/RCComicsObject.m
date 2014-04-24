@@ -69,6 +69,10 @@
 
 - (id)initWithDictionary:(NSDictionary *)dictionary
 {
+	if (!dictionary) {
+		return nil;
+	}
+
 	self = [super init];
 
 	if (self) {
@@ -87,7 +91,11 @@
 		self.format = dictionary[RCResponseKeyFormat];
 		self.pageCount = dictionary[RCResponseKeyPageCount];
 		self.textObjects = [self objectsFromArray:dictionary[RCResponseKeyTextObjects] ofClass:[RCTextObject class]];
-		self.resourceURI = [NSURL URLWithString:dictionary[RCResponseKeyResourceURI]];
+
+		if (dictionary[RCResponseKeyResourceURI]) {
+			self.resourceURI = [NSURL URLWithString:dictionary[RCResponseKeyResourceURI]];
+		}
+
 		self.urls = [self urlsFromArray:dictionary[RCResponseKeyURLs]];
 		self.series = [[RCSummaryObject alloc] initWithDictionary:dictionary[RCResponseKeySeries]];
 		self.variants = [self objectsFromArray:dictionary[RCResponseKeyVariants] ofClass:[RCSummaryObject class]];
@@ -122,6 +130,10 @@
  */
 - (NSArray *)objectsFromArray:(NSArray *)array ofClass:(Class)klass
 {
+	if (!array) {
+		return nil;
+	}
+
 	NSMutableArray *objects = [NSMutableArray array];
 
 	[array enumerateObjectsUsingBlock:^(NSDictionary *dictionary, NSUInteger index, BOOL *stop) {
