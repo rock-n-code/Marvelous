@@ -67,6 +67,25 @@
 	XCTAssertNotNil(image.detailURL, @"\"%s\" is expecting the property 'detailURL' to be not NULL.", __PRETTY_FUNCTION__);
 }
 
+- (void)testInitWithPartialDictionary
+{
+	NSDictionary *dictionary = @{RCResponseKeyExtension: @"jpg"};
+
+	RCImageObject *image = [[RCImageObject alloc] initWithDictionary:dictionary];
+
+	XCTAssertNil(image.basePath, @"\"%s\" is expecting the property 'basePath' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(image.extension, @"\"%s\" is expecting the property 'extension' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(image.fullSizeURL, @"\"%s\" is expecting the property 'fullSizeURL' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(image.detailURL, @"\"%s\" is expecting the property 'detailURL' to be NULL.", __PRETTY_FUNCTION__);
+}
+
+- (void)testInitWithNil
+{
+	RCImageObject *image = [[RCImageObject alloc] initWithDictionary:nil];
+
+	XCTAssertNil(image, @"\"%s\" is expecting the property 'image' to be NULL.", __PRETTY_FUNCTION__);
+}
+
 - (void)testURLForAspectRatioAndSize
 {
 	NSDictionary *dictionary = @{RCResponseKeyPath: @"http://i.annihil.us/u/prod/marvel/i/mg/3/40/4bb4680432f73",
@@ -76,6 +95,24 @@
 	NSURL *url = [image urlForAspectRatio:RCImageAspectRatioCodeSquare andSize:RCImageSizeCodeSmall];
 
 	XCTAssertNotNil(url, @"\"%s\" is expecting the variable 'url' to be not NULL.", __PRETTY_FUNCTION__);
+}
+
+- (void)testURLForAspectRatioAndSizeWithPartialDictionary
+{
+	NSDictionary *dictionary = @{RCResponseKeyPath: @"http://i.annihil.us/u/prod/marvel/i/mg/3/40/4bb4680432f73"};
+
+	RCImageObject *image = [[RCImageObject alloc] initWithDictionary:dictionary];
+	NSURL *url = [image urlForAspectRatio:RCImageAspectRatioCodeSquare andSize:RCImageSizeCodeSmall];
+
+	XCTAssertNil(url, @"\"%s\" is expecting the variable 'url' to be NULL.", __PRETTY_FUNCTION__);
+}
+
+- (void)testURLForAspectRatioAndSizeWithNil
+{
+	RCImageObject *image = [[RCImageObject alloc] initWithDictionary:nil];
+	NSURL *url = [image urlForAspectRatio:RCImageAspectRatioCodeSquare andSize:RCImageSizeCodeSmall];
+
+	XCTAssertNil(url, @"\"%s\" is expecting the variable 'url' to be NULL.", __PRETTY_FUNCTION__);
 }
 
 @end

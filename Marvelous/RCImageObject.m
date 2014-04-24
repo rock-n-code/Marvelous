@@ -68,6 +68,10 @@ static NSString * const RCImageObjectPathModeSizeFormat = @"%@/%@_%@.%@";
 
 - (id)initWithDictionary:(NSDictionary *)dictionary
 {
+	if (!dictionary) {
+		return nil;
+	}
+
 	self = [super init];
 
 	if (self) {
@@ -106,6 +110,10 @@ static NSString * const RCImageObjectPathModeSizeFormat = @"%@/%@_%@.%@";
 
 - (NSURL *)urlForAspectRatio:(RCImageAspectRatioCodes)aspectRatio andSize:(RCImageSizeCodes)size
 {
+	if (!self.basePath || !self.extension) {
+		return nil;
+	}
+	
 	NSString *stringfiedMode = [self aspectRatioFromCode:aspectRatio];
 	NSString *stringfiedSize = [self sizeForCode:size];
 	NSString *path = [NSString stringWithFormat:RCImageObjectPathModeSizeFormat, self.basePath, stringfiedMode, stringfiedSize, self.extension];
