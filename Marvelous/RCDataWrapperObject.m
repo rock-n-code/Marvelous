@@ -44,7 +44,7 @@
 
 - (id)initWithType:(RCAPITypes)type andDictionary:(NSDictionary *)dictionary
 {
-	if (type == RCAPITypeUndefined || !dictionary) {
+	if (type == RCAPITypeUndefined || ![self isValidObject:dictionary]) {
 		return nil;
 	}
 

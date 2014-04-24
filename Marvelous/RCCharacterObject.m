@@ -49,7 +49,7 @@
 
 - (id)initWithDictionary:(NSDictionary *)dictionary
 {
-	if (!dictionary) {
+	if (![self isValidObject:dictionary]) {
 		return nil;
 	}
 
@@ -61,7 +61,7 @@
 		self.bio = dictionary[RCResponseKeyDescription];
 		self.lastModified = [self dateFromString:dictionary[RCResponseKeyModified]];
 
-		if (dictionary[RCResponseKeyResourceURI]) {
+		if ([self isValidObject:dictionary[RCResponseKeyResourceURI]]) {
 			self.resourceURI = [NSURL URLWithString:dictionary[RCResponseKeyResourceURI]];
 		}
 

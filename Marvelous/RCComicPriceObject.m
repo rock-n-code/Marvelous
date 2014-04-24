@@ -39,7 +39,7 @@
 
 - (id)initWithDictionary:(NSDictionary *)dictionary
 {
-	if (!dictionary) {
+	if (![self isValidObject:dictionary]) {
 		return nil;
 	}
 

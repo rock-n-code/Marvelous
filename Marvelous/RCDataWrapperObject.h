@@ -35,8 +35,7 @@
  @version 0.7.0
  */
 
-#import <Foundation/Foundation.h>
-
+#import "RCObject.h"
 #import "RCDataContainerObject.h"
 #import "RCAPITypes.h"
 
@@ -45,7 +44,7 @@
 
  This class is a object representation of a DataWrapper resource.
  */
-@interface RCDataWrapperObject : NSObject
+@interface RCDataWrapperObject : RCObject
 
 /*!
  @property

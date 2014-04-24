@@ -42,7 +42,7 @@
 
 - (id)initWithDictionary:(NSDictionary *)dictionary
 {
-	if (!dictionary) {
+	if (![self isValidObject:dictionary]) {
 		return nil;
 	}
 
@@ -52,11 +52,11 @@
 		self.available = dictionary[RCResponseKeyAvailable];
 		self.returned = dictionary[RCResponseKeyReturned];
 
-		if (dictionary[RCResponseKeyCollectionURI]) {
+		if ([self isValidObject:dictionary[RCResponseKeyCollectionURI]]) {
 			self.collectionURI = [NSURL URLWithString:dictionary[RCResponseKeyCollectionURI]];
 		}
 
-		if (dictionary[RCResponseKeyItems]) {
+		if ([self isValidObject:dictionary[RCResponseKeyItems]]) {
 			self.items = [self itemsFromArray:dictionary[RCResponseKeyItems]];
 		}
 	}

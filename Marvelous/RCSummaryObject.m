@@ -41,7 +41,7 @@
 
 - (id)initWithDictionary:(NSDictionary *)dictionary
 {
-	if (!dictionary) {
+	if (![self isValidObject:dictionary]) {
 		return nil;
 	}
 
@@ -52,7 +52,7 @@
 		self.type = dictionary[RCResponseKeyType];
 		self.role = dictionary[RCResponseKeyRole];
 
-		if (dictionary[RCResponseKeyResourceURI]) {
+		if ([self isValidObject:dictionary[RCResponseKeyResourceURI]]) {
 			self.resourceURI = [NSURL URLWithString:dictionary[RCResponseKeyResourceURI]];
 		}
 	}

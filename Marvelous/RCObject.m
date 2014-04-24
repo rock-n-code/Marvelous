@@ -36,7 +36,7 @@
 
 - (id)initWithDictionary:(NSDictionary *)dictionary
 {
-	if (!dictionary) {
+	if (![self isValidObject:dictionary]) {
 		return nil;
 	}
 	
@@ -66,7 +66,7 @@
 
 - (NSArray *)urlsFromArray:(NSArray *)array
 {
-	if (!array) {
+	if (![self isValidObject:array]) {
 		return nil;
 	}
 	

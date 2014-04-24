@@ -35,7 +35,7 @@
  @version 0.7.0
  */
 
-#import <Foundation/Foundation.h>
+#import "RCObject.h"
 
 @class RCDataWrapperObject;
 
@@ -44,7 +44,7 @@
 
  This class is a object representation of an API endpoint response metadata.
  */
-@interface RCQueryInfoObject : NSObject
+@interface RCQueryInfoObject : RCObject
 
 /*!
  @property

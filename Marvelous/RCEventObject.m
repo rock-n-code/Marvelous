@@ -53,7 +53,7 @@
 
 - (id)initWithDictionary:(NSDictionary *)dictionary
 {
-	if (!dictionary) {
+	if (![self isValidObject:dictionary]) {
 		return nil;
 	}
 
@@ -64,7 +64,7 @@
 		self.title = dictionary[RCResponseKeyTitle];
 		self.summary = dictionary[RCResponseKeyDescription];
 
-		if (dictionary) {
+		if ([self isValidObject:dictionary]) {
 			self.resourceURI = [NSURL URLWithString:dictionary[RCResponseKeyResourceURI]];
 		}
 

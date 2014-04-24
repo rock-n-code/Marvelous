@@ -46,7 +46,7 @@
 
 - (id)initWithDataWrapper:(RCDataWrapperObject *)dataWrapper
 {
-	if (!dataWrapper) {
+	if (![self isValidObject:dataWrapper]) {
 		return nil;
 	}
 

@@ -35,8 +35,7 @@
  @version 0.7.0
  */
 
-#import <Foundation/Foundation.h>
-
+#import "RCObject.h"
 #import "RCAPITypes.h"
 
 /*!
@@ -44,7 +43,7 @@
 
  This class is a object representation of a DataContainer resource.
  */
-@interface RCDataContainerObject : NSObject
+@interface RCDataContainerObject : RCObject
 
 /*!
  @property
