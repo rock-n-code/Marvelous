@@ -46,6 +46,10 @@
 
 - (id)initWithDataWrapper:(RCDataWrapperObject *)dataWrapper
 {
+	if (!dataWrapper) {
+		return nil;
+	}
+
 	self = [super init];
 
 	if (self) {

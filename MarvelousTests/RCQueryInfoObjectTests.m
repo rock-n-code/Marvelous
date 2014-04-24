@@ -26,6 +26,7 @@
 #import <XCTest/XCTest.h>
 
 #import "RCQueryInfoObject.h"
+#import "RCDataWrapperObject.h"
 #import "RCResponseKeys.h"
 
 @interface RCQueryInfoObjectTests : XCTestCase
@@ -83,6 +84,13 @@
 	XCTAssertNotNil(info.limit, @"\"%s\" is expecting the property 'limit' to be not NULL.", __PRETTY_FUNCTION__);
 	XCTAssertNotNil(info.total, @"\"%s\" is expecting the property 'total' to be not NULL.", __PRETTY_FUNCTION__);
 	XCTAssertNotNil(info.count, @"\"%s\" is expecting the property 'count' to be not NULL.", __PRETTY_FUNCTION__);
+}
+
+- (void)testInitWithNil
+{
+	RCQueryInfoObject *info = [[RCQueryInfoObject alloc] initWithDataWrapper:nil];
+
+	XCTAssertNil(info, @"\"%s\" is expecting the property 'info' to be NULL.", __PRETTY_FUNCTION__);
 }
 
 @end
