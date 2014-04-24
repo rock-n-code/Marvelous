@@ -41,13 +41,20 @@
 
 - (id)initWithDictionary:(NSDictionary *)dictionary
 {
+	if (!dictionary) {
+		return nil;
+	}
+
 	self = [super initWithDictionary:dictionary];
 
 	if (self) {
 		self.name = dictionary[RCResponseKeyName];
 		self.type = dictionary[RCResponseKeyType];
 		self.role = dictionary[RCResponseKeyRole];
-		self.resourceURI = [NSURL URLWithString:dictionary[RCResponseKeyResourceURI]];
+
+		if (dictionary[RCResponseKeyResourceURI]) {
+			self.resourceURI = [NSURL URLWithString:dictionary[RCResponseKeyResourceURI]];
+		}
 	}
 
 	return self;

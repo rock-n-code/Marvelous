@@ -72,15 +72,21 @@
 - (void)testInitWithPartialDictionary
 {
 	NSDictionary *dictionary = @{RCResponseKeyName: @"TestName",
-								 RCResponseKeyType: @"TestType",
-								 RCResponseKeyResourceURI: @"TestResourceURI"};
+								 RCResponseKeyType: @"TestType"};
 
 	RCSummaryObject *summary = [[RCSummaryObject alloc] initWithDictionary:dictionary];
 
 	XCTAssertNotNil(summary.name, @"\"%s\" is expecting the property 'name' to be not NULL.", __PRETTY_FUNCTION__);
 	XCTAssertNotNil(summary.type, @"\"%s\" is expecting the property 'type' to be not NULL.", __PRETTY_FUNCTION__);
 	XCTAssertNil(summary.role, @"\"%s\" is expecting the property 'role' to be NULL.", __PRETTY_FUNCTION__);
-	XCTAssertNotNil(summary.resourceURI, @"\"%s\" is expecting the property 'resourceURI' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(summary.resourceURI, @"\"%s\" is expecting the property 'resourceURI' to be NULL.", __PRETTY_FUNCTION__);
+}
+
+- (void)testInitWithNil
+{
+	RCSummaryObject *summary = [[RCSummaryObject alloc] initWithDictionary:nil];
+
+	XCTAssertNil(summary, @"\"%s\" is expecting the property 'name' to be NULL.", __PRETTY_FUNCTION__);
 }
 
 @end
