@@ -39,7 +39,6 @@
 
 #import "RCOrderByTypeCodes.h"
 #import "RCAPITypes.h"
-#import "RCRequestKeys.h"
 
 /*!
  @class

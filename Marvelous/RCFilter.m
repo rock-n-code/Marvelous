@@ -25,6 +25,7 @@
 
 #import "RCFilter.h"
 #import "RCOrderByTypes.h"
+#import "RCRequestKeys.h"
 
 @interface RCFilter ()
 

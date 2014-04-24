@@ -24,6 +24,7 @@
 //
 
 #import "RCCreatorFilter.h"
+#import "RCRequestKeys.h"
 
 @interface RCCreatorFilter ()
 

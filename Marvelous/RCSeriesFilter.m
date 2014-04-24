@@ -26,6 +26,7 @@
 #import "RCSeriesFilter.h"
 #import "RCIssueFormats.h"
 #import "RCFrequencyTypes.h"
+#import "RCRequestKeys.h"
 
 @interface RCSeriesFilter ()
 

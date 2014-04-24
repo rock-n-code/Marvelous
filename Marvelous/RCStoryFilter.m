@@ -24,6 +24,7 @@
 //
 
 #import "RCStoryFilter.h"
+#import "RCRequestKeys.h"
 
 @interface RCStoryFilter ()
 

@@ -28,6 +28,7 @@
 #import "RCIssueTypes.h"
 #import "RCBooleanValues.h"
 #import "RCDateDescriptors.h"
+#import "RCRequestKeys.h"
 
 @interface RCComicsFilter ()
 

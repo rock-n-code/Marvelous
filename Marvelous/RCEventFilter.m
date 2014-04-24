@@ -24,6 +24,7 @@
 //
 
 #import "RCEventFilter.h"
+#import "RCRequestKeys.h"
 
 @interface RCEventFilter ()
 

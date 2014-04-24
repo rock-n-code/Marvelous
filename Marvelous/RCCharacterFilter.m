@@ -24,6 +24,7 @@
 //
 
 #import "RCCharacterFilter.h"
+#import "RCRequestKeys.h"
 
 @interface RCCharacterFilter ()
 
