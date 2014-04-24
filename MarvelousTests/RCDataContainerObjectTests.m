@@ -55,7 +55,7 @@
 	XCTAssertNil(container.results, @"\"%s\" is expecting the property 'results' to be NULL.", __PRETTY_FUNCTION__);
 }
 
-- (void)testInitWithCharacterTypeAndDictionary
+- (void)testInitWithTypeAndDictionary
 {
 	NSDictionary *dictionary = @{RCResponseKeyOffset: @0,
 								 RCResponseKeyLimit: @0,
@@ -93,6 +93,63 @@
 	XCTAssertNotNil(container.total, @"\"%s\" is expecting the property 'copyright' to be not NULL.", __PRETTY_FUNCTION__);
 	XCTAssertNotNil(container.count, @"\"%s\" is expecting the property 'count' to be not NULL.", __PRETTY_FUNCTION__);
 	XCTAssertNotNil(container.results, @"\"%s\" is expecting the property 'results' to be not NULL.", __PRETTY_FUNCTION__);
+}
+
+- (void)testInitWithTypeAndPartialDictionary
+{
+	NSDictionary *dictionary = @{RCResponseKeyLimit: @0,
+								 RCResponseKeyCount: @0};
+
+	RCDataContainerObject *container = [[RCDataContainerObject alloc] initWithType:RCAPITypeCharacters andDictionary:dictionary];
+
+	XCTAssertNil(container.offset, @"\"%s\" is expecting the property 'offset' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(container.limit, @"\"%s\" is expecting the property 'limit' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(container.total, @"\"%s\" is expecting the property 'copyright' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(container.count, @"\"%s\" is expecting the property 'count' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(container.results, @"\"%s\" is expecting the property 'results' to be NULL.", __PRETTY_FUNCTION__);
+}
+
+- (void)testInitWithTypeAndNil
+{
+	RCDataContainerObject *container = [[RCDataContainerObject alloc] initWithType:RCAPITypeCharacters andDictionary:nil];
+
+	XCTAssertNil(container, @"\"%s\" is expecting the property 'container' to be NULL.", __PRETTY_FUNCTION__);
+}
+
+- (void)testInitWithUndefinedTypeAndDictionary
+{
+	NSDictionary *dictionary = @{RCResponseKeyOffset: @0,
+								 RCResponseKeyLimit: @0,
+								 RCResponseKeyTotal: @0,
+								 RCResponseKeyCount: @0,
+								 RCResponseKeyResults: @[@{RCResponseKeyIdentifier: @1234,
+														   RCResponseKeyName: @"TestName",
+														   RCResponseKeyDescription: @"TestDescription",
+														   RCResponseKeyModified: @"2013-11-20T17:40:18-0500",
+														   RCResponseKeyResourceURI: @"http://testcollectionuri.com",
+														   RCResponseKeyURLs: @[],
+														   RCResponseKeyThumbnail: @{RCResponseKeyPath: @"http://testurl",
+																					 RCResponseKeyExtension: @"com"},
+														   RCResponseKeyComics: @{RCResponseKeyAvailable: @0,
+																				  RCResponseKeyReturned: @0,
+																				  RCResponseKeyCollectionURI: @"http://testcollectionuri.com",
+																				  RCResponseKeyItems: @[]},
+														   RCResponseKeyStories: @{RCResponseKeyAvailable: @0,
+																				   RCResponseKeyReturned: @0,
+																				   RCResponseKeyCollectionURI: @"http://testcollectionuri.com",
+																				   RCResponseKeyItems: @[]},
+														   RCResponseKeyEvents: @{RCResponseKeyAvailable: @0,
+																				  RCResponseKeyReturned: @0,
+																				  RCResponseKeyCollectionURI: @"http://testcollectionuri.com",
+																				  RCResponseKeyItems: @[]},
+														   RCResponseKeySeries: @{RCResponseKeyAvailable: @0,
+																				  RCResponseKeyReturned: @0,
+																				  RCResponseKeyCollectionURI: @"http://testcollectionuri.com",
+																				  RCResponseKeyItems: @[]}}]};
+
+	RCDataContainerObject *container = [[RCDataContainerObject alloc] initWithType:RCAPITypeUndefined andDictionary:dictionary];
+
+	XCTAssertNil(container, @"\"%s\" is expecting the property 'container' to be NULL.", __PRETTY_FUNCTION__);
 }
 
 @end

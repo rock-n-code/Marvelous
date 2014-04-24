@@ -48,6 +48,10 @@
 
 - (id)initWithType:(RCAPITypes)type andDictionary:(NSDictionary *)dictionary
 {
+	if (type == RCAPITypeUndefined || !dictionary) {
+		return nil;
+	}
+
 	self = [super init];
 
 	if (self) {
@@ -77,6 +81,10 @@
  */
 - (NSArray *)resultsFromArray:(NSArray *)array andType:(RCAPITypes)type
 {
+	if (!array) {
+		return nil;
+	}
+	
 	NSMutableArray *results = [NSMutableArray array];
 
 	[array enumerateObjectsUsingBlock:^(NSDictionary *dictionary, NSUInteger index, BOOL *stop) {
