@@ -37,7 +37,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "RCDataWrapperObject.h"
+@class RCDataWrapperObject;
 
 /*!
  @class
