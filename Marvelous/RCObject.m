@@ -36,19 +36,21 @@
 
 - (id)initWithDictionary:(NSDictionary *)dictionary
 {
-	self = [super init];
-
-	if (self) {
-		// ...
+	if (!dictionary) {
+		return nil;
 	}
-
-	return self;
+	
+	return [super init];
 }
 
 #pragma mark - Public methods
 
 - (NSDate *)dateFromString:(NSString *)string
 {
+	if (!string) {
+		return nil;
+	}
+	
 	NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
 
 	formatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ssZ";
@@ -58,6 +60,10 @@
 
 - (NSArray *)urlsFromArray:(NSArray *)array
 {
+	if (!array) {
+		return nil;
+	}
+	
 	NSMutableArray *urls = [NSMutableArray array];
 
 	[array enumerateObjectsUsingBlock:^(NSDictionary *dictionary, NSUInteger index, BOOL *stop) {

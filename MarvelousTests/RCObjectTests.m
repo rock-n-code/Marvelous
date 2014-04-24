@@ -47,14 +47,21 @@
 {
 	RCObject *object = [[RCObject alloc] init];
 
-	XCTAssertNotNil(object, @"\"%s\" is expecting the 'object' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(object, @"\"%s\" is expecting the 'object' to be not NULL.", __PRETTY_FUNCTION__);
 }
 
 - (void)testInitWithDictionary
 {
 	RCObject *object = [[RCObject alloc] initWithDictionary:@{}];
 
-	XCTAssertNotNil(object, @"\"%s\" is expecting the 'object' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(object, @"\"%s\" is expecting the 'object' to be not NULL.", __PRETTY_FUNCTION__);
+}
+
+- (void)testInitWithNil
+{
+	RCObject *object = [[RCObject alloc] initWithDictionary:nil];
+
+	XCTAssertNil(object, @"\"%s\" is expecting the 'object' to be NULL.", __PRETTY_FUNCTION__);
 }
 
 @end
