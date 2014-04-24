@@ -66,4 +66,23 @@
 	XCTAssertNotNil(object.text, @"\"%s\" is expecting the property 'text' to be not NULL.", __PRETTY_FUNCTION__);
 }
 
+- (void)testInitWithPartialDictionary
+{
+	NSDictionary *dictionary = @{RCResponseKeyType: @"TestType",
+								 RCResponseKeyText: @"TestText"};
+
+	RCTextObject *object = [[RCTextObject alloc] initWithDictionary:dictionary];
+
+	XCTAssertNotNil(object.type, @"\"%s\" is expecting the property 'type' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(object.language, @"\"%s\" is expecting the property 'language' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(object.text, @"\"%s\" is expecting the property 'text' to be not NULL.", __PRETTY_FUNCTION__);
+}
+
+- (void)testInitWithNil
+{
+	RCTextObject *object = [[RCTextObject alloc] initWithDictionary:nil];
+
+	XCTAssertNil(object, @"\"%s\" is expecting the property 'type' to be NULL.", __PRETTY_FUNCTION__);
+}
+
 @end
