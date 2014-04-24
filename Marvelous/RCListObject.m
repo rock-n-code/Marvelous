@@ -42,13 +42,23 @@
 
 - (id)initWithDictionary:(NSDictionary *)dictionary
 {
+	if (!dictionary) {
+		return nil;
+	}
+
 	self = [super init];
 
 	if (self) {
 		self.available = dictionary[RCResponseKeyAvailable];
 		self.returned = dictionary[RCResponseKeyReturned];
-		self.collectionURI = [NSURL URLWithString:dictionary[RCResponseKeyCollectionURI]];
-		self.items = [self itemsFromArray:dictionary[RCResponseKeyItems]];
+
+		if (dictionary[RCResponseKeyCollectionURI]) {
+			self.collectionURI = [NSURL URLWithString:dictionary[RCResponseKeyCollectionURI]];
+		}
+
+		if (dictionary[RCResponseKeyItems]) {
+			self.items = [self itemsFromArray:dictionary[RCResponseKeyItems]];
+		}
 	}
 
 	return self;
@@ -68,7 +78,7 @@
  @internal
  */
 - (NSArray *)itemsFromArray:(NSArray *)array
-{
+{	
 	NSMutableArray *items = [NSMutableArray array];
 
 	[array enumerateObjectsUsingBlock:^(NSDictionary *dictionary, NSUInteger index, BOOL *stop) {

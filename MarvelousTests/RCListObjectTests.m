@@ -77,4 +77,24 @@
 	XCTAssertNotNil(list.items, @"\"%s\" is expecting the property 'items' to be not NULL.", __PRETTY_FUNCTION__);
 }
 
+- (void)testInitWithPartialDictionary
+{
+	NSDictionary *dictionary = @{RCResponseKeyAvailable: @0,
+								 RCResponseKeyReturned: @0};
+
+	RCListObject *list = [[RCListObject alloc] initWithDictionary:dictionary];
+
+	XCTAssertNotNil(list.available, @"\"%s\" is expecting the property 'available' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(list.returned, @"\"%s\" is expecting the property 'returned' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(list.collectionURI, @"\"%s\" is expecting the property 'collectionURI' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(list.items, @"\"%s\" is expecting the property 'items' to be NULL.", __PRETTY_FUNCTION__);
+}
+
+- (void)testInitWithNil
+{
+	RCListObject *list = [[RCListObject alloc] initWithDictionary:nil];
+
+	XCTAssertNil(list, @"\"%s\" is expecting the property 'list' to be NULL.", __PRETTY_FUNCTION__);
+}
+
 @end
