@@ -53,13 +53,21 @@
 
 - (id)initWithDictionary:(NSDictionary *)dictionary
 {
+	if (!dictionary) {
+		return nil;
+	}
+
 	self = [super init];
 
 	if (self) {
 		self.identifier = dictionary[RCResponseKeyIdentifier];
 		self.title = dictionary[RCResponseKeyTitle];
 		self.summary = dictionary[RCResponseKeyDescription];
-		self.resourceURI = [NSURL URLWithString:dictionary[RCResponseKeyResourceURI]];
+
+		if (dictionary) {
+			self.resourceURI = [NSURL URLWithString:dictionary[RCResponseKeyResourceURI]];
+		}
+
 		self.urls = [self urlsFromArray:dictionary[RCResponseKeyURLs]];
 		self.lastModified = [self dateFromString:dictionary[RCResponseKeyModified]];
 		self.start = [self dateFromString:dictionary[RCResponseKeyStart]];

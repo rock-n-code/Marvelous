@@ -126,4 +126,52 @@
 	XCTAssertNotNil(event.next, @"\"%s\" is expecting the property 'next' to be not NULL.", __PRETTY_FUNCTION__);
 }
 
+- (void)testInitWithPartialDictionary
+{
+	NSDictionary *dictionary = @{RCResponseKeyTitle: @"TestName",
+								 RCResponseKeyResourceURI: @"http://testcollectionuri.com",
+								 RCResponseKeyModified: @"2013-11-20T17:40:18-0500",
+								 RCResponseKeyEnd: @"2014-02-01T00:00:00-0500",
+								 RCResponseKeyComics: @{RCResponseKeyAvailable: @0,
+														RCResponseKeyReturned: @0,
+														RCResponseKeyCollectionURI: @"http://testcollectionuri.com",
+														RCResponseKeyItems: @[]},
+								 RCResponseKeySeries: @{RCResponseKeyAvailable: @0,
+														RCResponseKeyReturned: @0,
+														RCResponseKeyCollectionURI: @"http://testcollectionuri.com",
+														RCResponseKeyItems: @[]},
+								 RCResponseKeyCreators: @{RCResponseKeyAvailable: @0,
+														  RCResponseKeyReturned: @0,
+														  RCResponseKeyCollectionURI: @"http://testcollectionuri.com",
+														  RCResponseKeyItems: @[]},
+								 RCResponseKeyNext: @{RCResponseKeyType: @"TestAnotherType",
+													  RCResponseKeyURL: @"http://testanotherurl.com"}};
+
+	RCEventObject *event = [[RCEventObject alloc] initWithDictionary:dictionary];
+
+	XCTAssertNil(event.identifier, @"\"%s\" is expecting the property 'identifier' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(event.title, @"\"%s\" is expecting the property 'title' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(event.summary, @"\"%s\" is expecting the property 'summary' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(event.resourceURI, @"\"%s\" is expecting the property 'resourceURI' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(event.urls, @"\"%s\" is expecting the property 'urls' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(event.lastModified, @"\"%s\" is expecting the property 'lastModified' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(event.start, @"\"%s\" is expecting the property 'start' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(event.end, @"\"%s\" is expecting the property 'end' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(event.thumbnail, @"\"%s\" is expecting the property 'thumbnail' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(event.comics, @"\"%s\" is expecting the property 'comics' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(event.stories, @"\"%s\" is expecting the property 'stories' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(event.series, @"\"%s\" is expecting the property 'series' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(event.characters, @"\"%s\" is expecting the property 'characters' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(event.creators, @"\"%s\" is expecting the property 'creators' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(event.previous, @"\"%s\" is expecting the property 'previous' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(event.next, @"\"%s\" is expecting the property 'next' to be not NULL.", __PRETTY_FUNCTION__);
+}
+
+- (void)testInitWithNil
+{
+	RCEventObject *event = [[RCEventObject alloc] initWithDictionary:nil];
+
+	XCTAssertNil(event, @"\"%s\" is expecting the property 'event' to be NULL.", __PRETTY_FUNCTION__);
+}
+
 @end
