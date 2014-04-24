@@ -63,4 +63,21 @@
 	XCTAssertNotNil(comicPrice.price, @"\"%s\" is expecting the property 'price' to be not NULL.", __PRETTY_FUNCTION__);
 }
 
+- (void)testInitWithPartialDictionary
+{
+	NSDictionary *dictionary = @{RCResponseKeyPrice: @12.34};
+
+	RCComicPriceObject *comicPrice = [[RCComicPriceObject alloc] initWithDictionary:dictionary];
+
+	XCTAssertNil(comicPrice.type, @"\"%s\" is expecting the property 'type' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(comicPrice.price, @"\"%s\" is expecting the property 'price' to be not NULL.", __PRETTY_FUNCTION__);
+}
+
+- (void)testInitWithNil
+{
+	RCComicPriceObject *comicPrice = [[RCComicPriceObject alloc] initWithDictionary:nil];
+
+	XCTAssertNil(comicPrice, @"\"%s\" is expecting the property 'comicPrice' to be NULL.", __PRETTY_FUNCTION__);
+}
+
 @end
