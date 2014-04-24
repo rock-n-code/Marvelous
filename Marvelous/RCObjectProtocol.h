@@ -32,14 +32,14 @@
 
  @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
 
- @version 0.7.0
+ @version 0.7.1
  */
 
 #import <Foundation/Foundation.h>
 
 /*!
  @protocol
- 
+
  This protocol defines the methods any RCObject class should implement.
  */
 @protocol RCObjectProtocol <NSObject>
@@ -48,11 +48,11 @@
 
 /*!
  @method
- 
+
  This optional method initialise an RCObject object from a given dictionary
- 
+
  @param dictionary A JSON dictionary retrieved from an API endpoint
- 
+
  @return An initialised object
  */
 - (id)initWithDictionary:(NSDictionary *)dictionary;

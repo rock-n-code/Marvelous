@@ -32,7 +32,7 @@
 
  @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
 
- @version 0.7.0
+ @version 0.7.1
  */
 
 #import <Foundation/Foundation.h>
@@ -48,11 +48,11 @@
 
 /*!
  @method
- 
+
  This method convert a given string with "yyyy-MM-dd'T'HH:mm:ssZ" or "yyyy-MM-dd HH:mm:ss" formats to a date.
- 
+
  @param string A string that represent a date
- 
+
  @return A date that represent the given string
  */
 
@@ -71,11 +71,11 @@
 
 /*!
  @method
- 
+
  This method checks the validity of a given object.
- 
+
  @param object An object to validate
- 
+
  @return A boolean value that represent whether the object is indeed valid
  */
 - (BOOL)isValidObject:(id)object;

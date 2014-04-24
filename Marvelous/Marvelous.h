@@ -25,14 +25,14 @@
 
 /*!
  @header
- 
+
  The Marvelous library/framework provides a native interface to the Marvel Comics API.
 
  @author Javier Cicchelli (\@monsieur_rock)
 
  @copyright 2014, Rock & Code released under MIT License. See the LICENSE file for more information.
- 
- @version 0.7.0
+
+ @version 0.7.1
  */
 
 // API Interface
