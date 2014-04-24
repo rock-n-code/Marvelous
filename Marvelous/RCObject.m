@@ -75,4 +75,9 @@
 	return urls;
 }
 
+- (BOOL)isValidObject:(id)object
+{
+	return object && object != [NSNull null];
+}
+
 @end

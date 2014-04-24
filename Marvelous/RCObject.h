@@ -69,4 +69,15 @@
  */
 - (NSArray *)urlsFromArray:(NSArray *)array;
 
+/*!
+ @method
+ 
+ This method checks the validity of a given object.
+ 
+ @param object An object to validate
+ 
+ @return A boolean value that represent whether the object is indeed valid
+ */
+- (BOOL)isValidObject:(id)object;
+
 @end

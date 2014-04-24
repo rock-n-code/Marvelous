@@ -62,6 +62,60 @@
 	RCObject *object = [[RCObject alloc] initWithDictionary:nil];
 
 	XCTAssertNil(object, @"\"%s\" is expecting the 'object' to be NULL.", __PRETTY_FUNCTION__);
+- (void)testIsValidObjectWithDictionary
+{
+	RCObject *object = [[RCObject alloc] init];
+	BOOL result = [object isValidObject:@{}];
+
+	XCTAssertTrue(result, @"\"%s\" is expecting the 'result' value to be YES.", __PRETTY_FUNCTION__);
+}
+
+- (void)testIsValidObjectWithArray
+{
+	RCObject *object = [[RCObject alloc] init];
+	BOOL result = [object isValidObject:@[]];
+
+	XCTAssertTrue(result, @"\"%s\" is expecting the 'result' value to be YES.", __PRETTY_FUNCTION__);
+}
+
+- (void)testIsValidObjectWithString
+{
+	RCObject *object = [[RCObject alloc] init];
+	BOOL result = [object isValidObject:@""];
+
+	XCTAssertTrue(result, @"\"%s\" is expecting the 'result' value to be YES.", __PRETTY_FUNCTION__);
+}
+
+- (void)testIsValidObjectWithNumber
+{
+	RCObject *object = [[RCObject alloc] init];
+	BOOL result = [object isValidObject:@0];
+
+	XCTAssertTrue(result, @"\"%s\" is expecting the 'result' value to be YES.", __PRETTY_FUNCTION__);
+}
+
+- (void)testIsValidObjectWithObject
+{
+	RCObject *object = [[RCObject alloc] init];
+	BOOL result = [object isValidObject:object];
+
+	XCTAssertTrue(result, @"\"%s\" is expecting the 'result' value to be YES.", __PRETTY_FUNCTION__);
+}
+
+- (void)testIsValidObjectWithNil
+{
+	RCObject *object = [[RCObject alloc] init];
+	BOOL result = [object isValidObject:nil];
+
+	XCTAssertFalse(result, @"\"%s\" is expecting the 'result' value to be NO.", __PRETTY_FUNCTION__);
+}
+
+- (void)testIsValidObjectWithNULL
+{
+	RCObject *object = [[RCObject alloc] init];
+	BOOL result = [object isValidObject:[NSNull null]];
+
+	XCTAssertFalse(result, @"\"%s\" is expecting the 'result' value to be NO.", __PRETTY_FUNCTION__);
 }
 
 @end
