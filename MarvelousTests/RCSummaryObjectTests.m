@@ -86,7 +86,7 @@
 {
 	RCSummaryObject *summary = [[RCSummaryObject alloc] initWithDictionary:nil];
 
-	XCTAssertNil(summary, @"\"%s\" is expecting the property 'name' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(summary, @"\"%s\" is expecting the property 'summary' to be NULL.", __PRETTY_FUNCTION__);
 }
 
 @end

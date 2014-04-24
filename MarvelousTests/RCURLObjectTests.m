@@ -77,7 +77,7 @@
 {
 	RCURLObject *url = [[RCURLObject alloc] initWithDictionary:nil];
 
-	XCTAssertNil(url, @"\"%s\" is expecting the property 'type' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(url, @"\"%s\" is expecting the property 'url' to be NULL.", __PRETTY_FUNCTION__);
 }
 
 @end

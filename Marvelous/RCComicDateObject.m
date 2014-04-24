@@ -39,6 +39,10 @@
 
 - (id)initWithDictionary:(NSDictionary *)dictionary
 {
+	if (!dictionary) {
+		return nil;
+	}
+
 	self = [super init];
 
 	if (self) {

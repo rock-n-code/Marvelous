@@ -82,7 +82,7 @@
 {
 	RCTextObject *object = [[RCTextObject alloc] initWithDictionary:nil];
 
-	XCTAssertNil(object, @"\"%s\" is expecting the property 'type' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(object, @"\"%s\" is expecting the property 'object' to be NULL.", __PRETTY_FUNCTION__);
 }
 
 @end
