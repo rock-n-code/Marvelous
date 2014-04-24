@@ -1,3 +1,7 @@
+= 0.7.1 (2014-04-25)
+
+  * Fixed several issues on the RCObject classes [Javier Cicchelli]
+
 = 0.7.0 (2014-04-22)
 
   * Added support for CocoaPods and CocoaDocs [Javier Cicchelli]
