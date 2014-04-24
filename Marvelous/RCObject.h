@@ -49,7 +49,7 @@
 /*!
  @method
  
- This method convert a given string with a "yyyy-MM-dd'T'HH:mm:ssZ" format to a date.
+ This method convert a given string with "yyyy-MM-dd'T'HH:mm:ssZ" or "yyyy-MM-dd HH:mm:ss" formats to a date.
  
  @param string A string that represent a date
  

@@ -47,21 +47,71 @@
 {
 	RCObject *object = [[RCObject alloc] init];
 
-	XCTAssertNotNil(object, @"\"%s\" is expecting the 'object' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(object, @"\"%s\" is expecting the 'object' instance to be not NULL.", __PRETTY_FUNCTION__);
 }
 
 - (void)testInitWithDictionary
 {
 	RCObject *object = [[RCObject alloc] initWithDictionary:@{}];
 
-	XCTAssertNotNil(object, @"\"%s\" is expecting the 'object' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(object, @"\"%s\" is expecting the 'object' instance to be not NULL.", __PRETTY_FUNCTION__);
 }
 
 - (void)testInitWithNil
 {
 	RCObject *object = [[RCObject alloc] initWithDictionary:nil];
 
-	XCTAssertNil(object, @"\"%s\" is expecting the 'object' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(object, @"\"%s\" is expecting the 'object' instance to be NULL.", __PRETTY_FUNCTION__);
+}
+
+- (void)testDateFromStringWithSupportedFormat
+{
+	RCObject *object = [[RCObject alloc] init];
+	NSDate *date = [object dateFromString:@"2014-04-23T23:32:00+0100"];
+
+	XCTAssertNotNil(date, @"\"%s\" is expecting the 'date' instance to be not NULL.", __PRETTY_FUNCTION__);
+}
+
+- (void)testDateFromStringWithOtherSupportedFormat
+{
+	RCObject *object = [[RCObject alloc] init];
+	NSDate *date = [object dateFromString:@"2014-04-23 23:32:00"];
+
+	XCTAssertNotNil(date, @"\"%s\" is expecting the 'date' instance to be not NULL.", __PRETTY_FUNCTION__);
+}
+
+- (void)testDateFromStringWithNotSupportedFormat
+{
+	RCObject *object = [[RCObject alloc] init];
+	NSDate *date = [object dateFromString:@"04/23/2014"];
+
+	XCTAssertNil(date, @"\"%s\" is expecting the 'date' instance to be NULL.", __PRETTY_FUNCTION__);
+}
+
+- (void)testDateFromStringWithNil
+{
+	RCObject *object = [[RCObject alloc] init];
+	NSDate *date = [object dateFromString:nil];
+
+	XCTAssertNil(date, @"\"%s\" is expecting the 'date' instance to be NULL.", __PRETTY_FUNCTION__);
+}
+
+- (void)testUrlsFromArrayWithArray
+{
+	RCObject *object = [[RCObject alloc] init];
+	NSArray *array = [object urlsFromArray:@[]];
+
+	XCTAssertNotNil(array, @"\"%s\" is expecting the 'array' instance to be not NULL.", __PRETTY_FUNCTION__);
+}
+
+- (void)testUrlsFromArrayWithNil
+{
+	RCObject *object = [[RCObject alloc] init];
+	NSArray *array = [object urlsFromArray:nil];
+
+	XCTAssertNil(array, @"\"%s\" is expecting the 'array' instance to be NULL.", __PRETTY_FUNCTION__);
+}
+
 - (void)testIsValidObjectWithDictionary
 {
 	RCObject *object = [[RCObject alloc] init];

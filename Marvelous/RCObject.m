@@ -47,13 +47,19 @@
 
 - (NSDate *)dateFromString:(NSString *)string
 {
-	if (!string) {
+	if (![self isValidObject:string]) {
 		return nil;
 	}
 	
 	NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+	NSString *format = @"yyyy-MM-dd'T'HH:mm:ssZ";
+	NSRange rangeWhitespace = [string rangeOfString:@" "];
 
-	formatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ssZ";
+	if (rangeWhitespace.location != NSNotFound) {
+		format = @"yyyy-MM-dd HH:mm:ss";
+	}
+
+	formatter.dateFormat = format;
 
 	return [formatter dateFromString:string];
 }
