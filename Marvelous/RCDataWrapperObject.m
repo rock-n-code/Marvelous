@@ -44,6 +44,10 @@
 
 - (id)initWithType:(RCAPITypes)type andDictionary:(NSDictionary *)dictionary
 {
+	if (type == RCAPITypeUndefined || !dictionary) {
+		return nil;
+	}
+
 	self = [super init];
 
 	if (self) {
