@@ -39,11 +39,18 @@
 
 - (id)initWithDictionary:(NSDictionary *)dictionary
 {
+	if (!dictionary) {
+		return nil;
+	}
+
 	self = [super init];
 
 	if (self) {
 		self.type = dictionary[RCResponseKeyType];
-		self.url = [NSURL URLWithString:dictionary[RCResponseKeyURL]];
+
+		if (dictionary[RCResponseKeyURL]) {
+			self.url = [NSURL URLWithString:dictionary[RCResponseKeyURL]];
+		}
 	}
 
 	return self;

@@ -63,4 +63,21 @@
 	XCTAssertNotNil(url.url, @"\"%s\" is expecting the property 'url' to be not NULL.", __PRETTY_FUNCTION__);
 }
 
+- (void)testInitWithPartialDictionary
+{
+	NSDictionary *dictionary = @{RCResponseKeyType: @"TestType"};
+
+	RCURLObject *url = [[RCURLObject alloc] initWithDictionary:dictionary];
+
+	XCTAssertNotNil(url.type, @"\"%s\" is expecting the property 'type' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(url.url, @"\"%s\" is expecting the property 'url' to be NULL.", __PRETTY_FUNCTION__);
+}
+
+- (void)testInitWithNil
+{
+	RCURLObject *url = [[RCURLObject alloc] initWithDictionary:nil];
+
+	XCTAssertNil(url, @"\"%s\" is expecting the property 'type' to be NULL.", __PRETTY_FUNCTION__);
+}
+
 @end
