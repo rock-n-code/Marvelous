@@ -93,7 +93,7 @@
  
  @return A common RCMarvelAPI instance
  */
-+ (RCMarvelAPI *)api;
++ (instancetype)api;
 
 /*!
  @method
