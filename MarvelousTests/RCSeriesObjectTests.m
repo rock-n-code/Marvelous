@@ -129,4 +129,57 @@
 	XCTAssertNotNil(series.next, @"\"%s\" is expecting the property 'next' to be not NULL.", __PRETTY_FUNCTION__);
 }
 
+- (void)testInitWithPartialDictionary
+{
+	NSDictionary *dictionary = @{RCResponseKeyIdentifier: @1234,
+								 RCResponseKeyDescription: @"TestDescription",
+								 RCResponseKeyURLs: @[@{RCResponseKeyType: @"TestType",
+														RCResponseKeyURL: @"http://testurl.com"},
+													  @{RCResponseKeyType: @"TestAnotherType",
+														RCResponseKeyURL: @"http://testanotherurl.com"}],
+								 RCResponseKeyEndYear: @2014,
+								 RCResponseKeyModified: @"2013-11-20T17:40:18-0500",
+								 RCResponseKeyComics: @{RCResponseKeyAvailable: @0,
+														RCResponseKeyReturned: @0,
+														RCResponseKeyCollectionURI: @"http://testcollectionuri.com",
+														RCResponseKeyItems: @[]},
+								 RCResponseKeyEvents: @{RCResponseKeyAvailable: @0,
+														RCResponseKeyReturned: @0,
+														RCResponseKeyCollectionURI: @"http://testcollectionuri.com",
+														RCResponseKeyItems: @[]},
+								 RCResponseKeyCreators: @{RCResponseKeyAvailable: @0,
+														  RCResponseKeyReturned: @0,
+														  RCResponseKeyCollectionURI: @"http://testcollectionuri.com",
+														  RCResponseKeyItems: @[]},
+								 RCResponseKeyNext: @{RCResponseKeyType: @"TestAnotherType",
+													  RCResponseKeyURL: @"http://testanotherurl.com"}};
+
+	RCSeriesObject *series = [[RCSeriesObject alloc] initWithDictionary:dictionary];
+
+	XCTAssertNotNil(series.identifier, @"\"%s\" is expecting the property 'identifier' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(series.title, @"\"%s\" is expecting the property 'name' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(series.summary, @"\"%s\" is expecting the property 'bio' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(series.resourceURI, @"\"%s\" is expecting the property 'resourceURI' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(series.urls, @"\"%s\" is expecting the property 'urls' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(series.startYear, @"\"%s\" is expecting the property 'startYear' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(series.endYear, @"\"%s\" is expecting the property 'endYear' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(series.rating, @"\"%s\" is expecting the property 'rating' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(series.lastModified, @"\"%s\" is expecting the property 'lastModified' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(series.thumbnail, @"\"%s\" is expecting the property 'thumbnail' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(series.comics, @"\"%s\" is expecting the property 'comics' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(series.stories, @"\"%s\" is expecting the property 'stories' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(series.events, @"\"%s\" is expecting the property 'events' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(series.characters, @"\"%s\" is expecting the property 'characters' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(series.creators, @"\"%s\" is expecting the property 'creators' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(series.previous, @"\"%s\" is expecting the property 'previous' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(series.next, @"\"%s\" is expecting the property 'next' to be not NULL.", __PRETTY_FUNCTION__);
+}
+
+- (void)testInitWithNil
+{
+	RCSeriesObject *series = [[RCSeriesObject alloc] initWithDictionary:nil];
+
+	XCTAssertNil(series, @"\"%s\" is expecting the property 'series' to be NULL.", __PRETTY_FUNCTION__);
+}
+
 @end
