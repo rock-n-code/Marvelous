@@ -106,4 +106,42 @@
 	XCTAssertNotNil(character.series, @"\"%s\" is expecting the property 'series' to be not NULL.", __PRETTY_FUNCTION__);
 }
 
+- (void)testInitWithPartialDictionary
+{
+	NSDictionary *dictionary = @{RCResponseKeyIdentifier: @1234,
+								 RCResponseKeyDescription: @"TestDescription",
+								 RCResponseKeyResourceURI: @"http://testcollectionuri.com",
+								 RCResponseKeyThumbnail: @{RCResponseKeyPath: @"http://i.annihil.us/u/prod/marvel/i/mg/3/40/4bb4680432f73",
+														   RCResponseKeyExtension: @"jpg"},
+								 RCResponseKeyStories: @{RCResponseKeyAvailable: @0,
+														 RCResponseKeyReturned: @0,
+														 RCResponseKeyCollectionURI: @"http://testcollectionuri.com",
+														 RCResponseKeyItems: @[]},
+								 RCResponseKeySeries: @{RCResponseKeyAvailable: @0,
+														RCResponseKeyReturned: @0,
+														RCResponseKeyCollectionURI: @"http://testcollectionuri.com",
+														RCResponseKeyItems: @[]}};
+
+	RCCharacterObject *character = [[RCCharacterObject alloc] initWithDictionary:dictionary];
+
+	XCTAssertNotNil(character.identifier, @"\"%s\" is expecting the property 'identifier' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(character.name, @"\"%s\" is expecting the property 'name' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(character.bio, @"\"%s\" is expecting the property 'bio' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(character.lastModified, @"\"%s\" is expecting the property 'lastModified' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(character.resourceURI, @"\"%s\" is expecting the property 'resourceURI' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(character.urls, @"\"%s\" is expecting the property 'urls' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(character.thumbnail, @"\"%s\" is expecting the property 'thumbnail' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(character.comics, @"\"%s\" is expecting the property 'comics' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(character.stories, @"\"%s\" is expecting the property 'stories' to be not NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(character.events, @"\"%s\" is expecting the property 'events' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNotNil(character.series, @"\"%s\" is expecting the property 'series' to be not NULL.", __PRETTY_FUNCTION__);
+}
+
+- (void)testInitWithNil
+{
+	RCCharacterObject *character = [[RCCharacterObject alloc] initWithDictionary:nil];
+
+	XCTAssertNil(character, @"\"%s\" is expecting the property 'character' to be NULL.", __PRETTY_FUNCTION__);
+}
+
 @end

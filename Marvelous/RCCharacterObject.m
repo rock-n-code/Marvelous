@@ -49,6 +49,10 @@
 
 - (id)initWithDictionary:(NSDictionary *)dictionary
 {
+	if (!dictionary) {
+		return nil;
+	}
+
 	self = [super init];
 
 	if (self) {
@@ -56,7 +60,11 @@
 		self.name = dictionary[RCResponseKeyName];
 		self.bio = dictionary[RCResponseKeyDescription];
 		self.lastModified = [self dateFromString:dictionary[RCResponseKeyModified]];
-		self.resourceURI = [NSURL URLWithString:dictionary[RCResponseKeyResourceURI]];
+
+		if (dictionary[RCResponseKeyResourceURI]) {
+			self.resourceURI = [NSURL URLWithString:dictionary[RCResponseKeyResourceURI]];
+		}
+
 		self.urls = [self urlsFromArray:dictionary[RCResponseKeyURLs]];
 		self.thumbnail = [[RCImageObject alloc] initWithDictionary:dictionary[RCResponseKeyThumbnail]];
 		self.comics = [[RCListObject alloc] initWithDictionary:dictionary[RCResponseKeyComics]];
