@@ -48,7 +48,7 @@
  @param info A RCQueryInfoObject object that contain the metadata about the response
  @param error A NSError object that contain the error data provided by the response
  */
-typedef void (^resultCompletionBlock) (id result, RCQueryInfoObject *info, NSError *error);
+typedef void (^resultCallbackBlock) (id result, RCQueryInfoObject *info, NSError *error);
 
 /*!
  @typedef
@@ -59,4 +59,4 @@ typedef void (^resultCompletionBlock) (id result, RCQueryInfoObject *info, NSErr
  @param info A RCQueryInfoObject object that contain the metadata about the response
  @param error A NSError object that contain the error data provided by the response
  */
-typedef void (^resultsCompletionBlock) (NSArray *results, RCQueryInfoObject *info, NSError *error);
+typedef void (^resultsCallbackBlock) (NSArray *results, RCQueryInfoObject *info, NSError *error);

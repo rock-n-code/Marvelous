@@ -45,12 +45,12 @@
 /*!
  @typedef
 
- This block that is used as a callback and it is assigned to the "completionBlock" property on RCAPIOperation objects.
+ This block that is used as a callback and it is assigned to the "callbackBlock" property on RCAPIOperation objects.
 
  @param data A data wrapper object that contain the data provided by the API response
  @param error A NSError object that contain the error data provided by the API response
  */
-typedef void (^operationCompletionBlock) (RCDataWrapperObject *data, NSError *error);
+typedef void (^operationCallbackBlock) (RCDataWrapperObject *data, NSError *error);
 
 /*!
  @class
@@ -64,7 +64,7 @@ typedef void (^operationCompletionBlock) (RCDataWrapperObject *data, NSError *er
 
  This property sets and gets the callback block which is called when the operation finishes.
  */
-@property (nonatomic, copy) operationCompletionBlock completionBlock;
+@property (nonatomic, copy) operationCallbackBlock callbackBlock;
 
 /*!
  @property

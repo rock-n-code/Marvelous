@@ -66,7 +66,6 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 
 #pragma mark - NSObject
 
-
 - (id)init
 {
 	self = [super init];
@@ -128,517 +127,517 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 
 #pragma mark - Public methods
 
-- (void)characterByIdentifier:(NSNumber *)identifier andCompletionBlock:(resultCompletionBlock)completionBlock
+- (void)characterByIdentifier:(NSNumber *)identifier andCallbackBlock:(resultCallbackBlock)callbackBlock
 {
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeCharacters identifier:stringfiedIdentifier andAuthentication:self.authParameters];
 
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		[self sendResultToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
+	operation.callbackBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		[self sendResultToCallbackBlock:callbackBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
 }
 
-- (void)charactersByFilter:(RCCharacterFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)charactersByFilter:(RCCharacterFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock
 {
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithFilter:filter andAuthentication:self.authParameters];
 
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		[self sendResultsToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
+	operation.callbackBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		[self sendResultsToCallbackBlock:callbackBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
 }
 
-- (void)charactersByComicIdentifier:(NSNumber *)identifier filter:(RCCharacterFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)charactersByComicIdentifier:(NSNumber *)identifier filter:(RCCharacterFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock
 {
 	[self validateFilter:filter ofType:RCAPITypeCharacters];
 
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeComics identifier:stringfiedIdentifier filter:filter andAuthentication:self.authParameters];
 
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		[self sendResultsToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
+	operation.callbackBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		[self sendResultsToCallbackBlock:callbackBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
 }
 
-- (void)charactersByEventIdentifier:(NSNumber *)identifier filter:(RCCharacterFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)charactersByEventIdentifier:(NSNumber *)identifier filter:(RCCharacterFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock
 {
 	[self validateFilter:filter ofType:RCAPITypeCharacters];
 
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeEvents identifier:stringfiedIdentifier filter:filter andAuthentication:self.authParameters];
 
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		[self sendResultsToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
+	operation.callbackBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		[self sendResultsToCallbackBlock:callbackBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
 }
 
-- (void)charactersBySeriesIdentifier:(NSNumber *)identifier filter:(RCCharacterFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)charactersBySeriesIdentifier:(NSNumber *)identifier filter:(RCCharacterFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock
 {
 	[self validateFilter:filter ofType:RCAPITypeCharacters];
 
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeSeries identifier:stringfiedIdentifier filter:filter andAuthentication:self.authParameters];
 
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		[self sendResultsToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
+	operation.callbackBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		[self sendResultsToCallbackBlock:callbackBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
 }
 
-- (void)charactersByStoryIdentifier:(NSNumber *)identifier filter:(RCCharacterFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)charactersByStoryIdentifier:(NSNumber *)identifier filter:(RCCharacterFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock
 {
 	[self validateFilter:filter ofType:RCAPITypeCharacters];
 
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeStories identifier:stringfiedIdentifier filter:filter andAuthentication:self.authParameters];
 
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		[self sendResultsToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
+	operation.callbackBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		[self sendResultsToCallbackBlock:callbackBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
 }
 
-- (void)comicByIdentifier:(NSNumber *)identifier andCompletionBlock:(resultCompletionBlock)completionBlock
+- (void)comicByIdentifier:(NSNumber *)identifier andCallbackBlock:(resultCallbackBlock)callbackBlock
 {
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeComics identifier:stringfiedIdentifier andAuthentication:self.authParameters];
 
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		[self sendResultToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
+	operation.callbackBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		[self sendResultToCallbackBlock:callbackBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
 }
 
-- (void)comicsByFilter:(RCComicsFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)comicsByFilter:(RCComicsFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock
 {
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithFilter:filter andAuthentication:self.authParameters];
 
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		[self sendResultsToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
+	operation.callbackBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		[self sendResultsToCallbackBlock:callbackBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
 }
 
-- (void)comicsByCharacterIdentifier:(NSNumber *)identifier filter:(RCComicsFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)comicsByCharacterIdentifier:(NSNumber *)identifier filter:(RCComicsFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock
 {
 	[self validateFilter:filter ofType:RCAPITypeComics];
 
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeCharacters identifier:stringfiedIdentifier filter:filter andAuthentication:self.authParameters];
 
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		[self sendResultsToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
+	operation.callbackBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		[self sendResultsToCallbackBlock:callbackBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
 }
 
-- (void)comicsByCreatorIdentifier:(NSNumber *)identifier filter:(RCComicsFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)comicsByCreatorIdentifier:(NSNumber *)identifier filter:(RCComicsFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock
 {
 	[self validateFilter:filter ofType:RCAPITypeComics];
 
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeCreators identifier:stringfiedIdentifier filter:filter andAuthentication:self.authParameters];
 
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		[self sendResultsToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
+	operation.callbackBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		[self sendResultsToCallbackBlock:callbackBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
 }
 
-- (void)comicsByEventIdentifier:(NSNumber *)identifier filter:(RCComicsFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)comicsByEventIdentifier:(NSNumber *)identifier filter:(RCComicsFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock
 {
 	[self validateFilter:filter ofType:RCAPITypeComics];
 
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeEvents identifier:stringfiedIdentifier filter:filter andAuthentication:self.authParameters];
 
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		[self sendResultsToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
+	operation.callbackBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		[self sendResultsToCallbackBlock:callbackBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
 }
 
-- (void)comicsBySeriesIdentifier:(NSNumber *)identifier filter:(RCComicsFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)comicsBySeriesIdentifier:(NSNumber *)identifier filter:(RCComicsFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock
 {
 	[self validateFilter:filter ofType:RCAPITypeComics];
 
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeSeries identifier:stringfiedIdentifier filter:filter andAuthentication:self.authParameters];
 
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		[self sendResultsToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
+	operation.callbackBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		[self sendResultsToCallbackBlock:callbackBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
 }
 
-- (void)comicsByStoryIdentifier:(NSNumber *)identifier filter:(RCComicsFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)comicsByStoryIdentifier:(NSNumber *)identifier filter:(RCComicsFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock
 {
 	[self validateFilter:filter ofType:RCAPITypeComics];
 
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeStories identifier:stringfiedIdentifier filter:filter andAuthentication:self.authParameters];
 
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		[self sendResultsToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
+	operation.callbackBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		[self sendResultsToCallbackBlock:callbackBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
 }
 
-- (void)creatorByIdentifier:(NSNumber *)identifier andCompletionBlock:(resultCompletionBlock)completionBlock
+- (void)creatorByIdentifier:(NSNumber *)identifier andCallbackBlock:(resultCallbackBlock)callbackBlock
 {
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeCreators identifier:stringfiedIdentifier andAuthentication:self.authParameters];
 
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		[self sendResultToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
+	operation.callbackBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		[self sendResultToCallbackBlock:callbackBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
 }
 
-- (void)creatorsByFilter:(RCCreatorFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)creatorsByFilter:(RCCreatorFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock
 {
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithFilter:filter andAuthentication:self.authParameters];
 
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		[self sendResultsToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
+	operation.callbackBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		[self sendResultsToCallbackBlock:callbackBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
 }
 
-- (void)creatorsByComicIdentifier:(NSNumber *)identifier filter:(RCCreatorFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)creatorsByComicIdentifier:(NSNumber *)identifier filter:(RCCreatorFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock
 {
 	[self validateFilter:filter ofType:RCAPITypeCreators];
 
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeComics identifier:stringfiedIdentifier filter:filter andAuthentication:self.authParameters];
 
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		[self sendResultsToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
+	operation.callbackBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		[self sendResultsToCallbackBlock:callbackBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
 }
 
-- (void)creatorsByEventIdentifier:(NSNumber *)identifier filter:(RCCreatorFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)creatorsByEventIdentifier:(NSNumber *)identifier filter:(RCCreatorFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock
 {
 	[self validateFilter:filter ofType:RCAPITypeCreators];
 
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeEvents identifier:stringfiedIdentifier filter:filter andAuthentication:self.authParameters];
 
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		[self sendResultsToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
+	operation.callbackBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		[self sendResultsToCallbackBlock:callbackBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
 }
 
-- (void)creatorsBySeriesIdentifier:(NSNumber *)identifier filter:(RCCreatorFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)creatorsBySeriesIdentifier:(NSNumber *)identifier filter:(RCCreatorFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock
 {
 	[self validateFilter:filter ofType:RCAPITypeCreators];
 
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeSeries identifier:stringfiedIdentifier filter:filter andAuthentication:self.authParameters];
 
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		[self sendResultsToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
+	operation.callbackBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		[self sendResultsToCallbackBlock:callbackBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
 }
 
-- (void)creatorsByStoryIdentifier:(NSNumber *)identifier filter:(RCCreatorFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)creatorsByStoryIdentifier:(NSNumber *)identifier filter:(RCCreatorFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock
 {
 	[self validateFilter:filter ofType:RCAPITypeCreators];
 
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeStories identifier:stringfiedIdentifier filter:filter andAuthentication:self.authParameters];
 
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		[self sendResultsToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
+	operation.callbackBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		[self sendResultsToCallbackBlock:callbackBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
 }
 
-- (void)eventByIdentifier:(NSNumber *)identifier andCompletionBlock:(resultCompletionBlock)completionBlock
+- (void)eventByIdentifier:(NSNumber *)identifier andCallbackBlock:(resultCallbackBlock)callbackBlock
 {
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeEvents identifier:stringfiedIdentifier andAuthentication:self.authParameters];
 
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		[self sendResultToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
+	operation.callbackBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		[self sendResultToCallbackBlock:callbackBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
 }
 
-- (void)eventsByFilter:(RCEventFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)eventsByFilter:(RCEventFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock
 {
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithFilter:filter andAuthentication:self.authParameters];
 
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		[self sendResultsToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
+	operation.callbackBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		[self sendResultsToCallbackBlock:callbackBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
 }
 
-- (void)eventsByCharacterIdentifier:(NSNumber *)identifier filter:(RCEventFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)eventsByCharacterIdentifier:(NSNumber *)identifier filter:(RCEventFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock
 {
 	[self validateFilter:filter ofType:RCAPITypeEvents];
 
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeCharacters identifier:stringfiedIdentifier filter:filter andAuthentication:self.authParameters];
 
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		[self sendResultsToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
+	operation.callbackBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		[self sendResultsToCallbackBlock:callbackBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
 }
 
-- (void)eventsByComicIdentifier:(NSNumber *)identifier filter:(RCEventFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)eventsByComicIdentifier:(NSNumber *)identifier filter:(RCEventFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock
 {
 	[self validateFilter:filter ofType:RCAPITypeEvents];
 
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeComics identifier:stringfiedIdentifier filter:filter andAuthentication:self.authParameters];
 
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		[self sendResultsToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
+	operation.callbackBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		[self sendResultsToCallbackBlock:callbackBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
 }
 
-- (void)eventsByCreatorIdentifier:(NSNumber *)identifier filter:(RCEventFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)eventsByCreatorIdentifier:(NSNumber *)identifier filter:(RCEventFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock
 {
 	[self validateFilter:filter ofType:RCAPITypeEvents];
 
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeCreators identifier:stringfiedIdentifier filter:filter andAuthentication:self.authParameters];
 
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		[self sendResultsToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
+	operation.callbackBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		[self sendResultsToCallbackBlock:callbackBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
 }
 
-- (void)eventsBySeriesIdentifier:(NSNumber *)identifier filter:(RCEventFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)eventsBySeriesIdentifier:(NSNumber *)identifier filter:(RCEventFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock
 {
 	[self validateFilter:filter ofType:RCAPITypeEvents];
 
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeSeries identifier:stringfiedIdentifier filter:filter andAuthentication:self.authParameters];
 
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		[self sendResultsToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
+	operation.callbackBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		[self sendResultsToCallbackBlock:callbackBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
 }
 
-- (void)eventsByStoryIdentifier:(NSNumber *)identifier filter:(RCEventFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)eventsByStoryIdentifier:(NSNumber *)identifier filter:(RCEventFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock
 {
 	[self validateFilter:filter ofType:RCAPITypeEvents];
 
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeStories identifier:stringfiedIdentifier filter:filter andAuthentication:self.authParameters];
 
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		[self sendResultsToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
+	operation.callbackBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		[self sendResultsToCallbackBlock:callbackBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
 }
 
-- (void)seriesByIdentifier:(NSNumber *)identifier andCompletionBlock:(resultCompletionBlock)completionBlock
+- (void)seriesByIdentifier:(NSNumber *)identifier andCallbackBlock:(resultCallbackBlock)callbackBlock
 {
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeSeries identifier:stringfiedIdentifier andAuthentication:self.authParameters];
 
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		[self sendResultToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
+	operation.callbackBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		[self sendResultToCallbackBlock:callbackBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
 }
 
-- (void)seriesByFilter:(RCSeriesFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)seriesByFilter:(RCSeriesFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock
 {
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithFilter:filter andAuthentication:self.authParameters];
 
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		[self sendResultsToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
+	operation.callbackBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		[self sendResultsToCallbackBlock:callbackBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
 }
 
-- (void)seriesByCharacterIdentifier:(NSNumber *)identifier filter:(RCSeriesFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)seriesByCharacterIdentifier:(NSNumber *)identifier filter:(RCSeriesFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock
 {
 	[self validateFilter:filter ofType:RCAPITypeSeries];
 
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeCharacters identifier:stringfiedIdentifier filter:filter andAuthentication:self.authParameters];
 
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		[self sendResultsToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
+	operation.callbackBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		[self sendResultsToCallbackBlock:callbackBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
 }
 
-- (void)seriesByCreatorIdentifier:(NSNumber *)identifier filter:(RCSeriesFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)seriesByCreatorIdentifier:(NSNumber *)identifier filter:(RCSeriesFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock
 {
 	[self validateFilter:filter ofType:RCAPITypeSeries];
 
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeCreators identifier:stringfiedIdentifier filter:filter andAuthentication:self.authParameters];
 
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		[self sendResultsToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
+	operation.callbackBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		[self sendResultsToCallbackBlock:callbackBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
 }
 
-- (void)seriesByEventIdentifier:(NSNumber *)identifier filter:(RCSeriesFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)seriesByEventIdentifier:(NSNumber *)identifier filter:(RCSeriesFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock
 {
 	[self validateFilter:filter ofType:RCAPITypeSeries];
 
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeEvents identifier:stringfiedIdentifier filter:filter andAuthentication:self.authParameters];
 
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		[self sendResultsToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
+	operation.callbackBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		[self sendResultsToCallbackBlock:callbackBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
 }
 
-- (void)seriesByStoryIdentifier:(NSNumber *)identifier filter:(RCSeriesFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)seriesByStoryIdentifier:(NSNumber *)identifier filter:(RCSeriesFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock
 {
 	[self validateFilter:filter ofType:RCAPITypeSeries];
 
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeStories identifier:stringfiedIdentifier filter:filter andAuthentication:self.authParameters];
 
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		[self sendResultsToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
+	operation.callbackBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		[self sendResultsToCallbackBlock:callbackBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
 }
 
-- (void)storyByIdentifier:(NSNumber *)identifier andCompletionBlock:(resultCompletionBlock)completionBlock
+- (void)storyByIdentifier:(NSNumber *)identifier andCallbackBlock:(resultCallbackBlock)callbackBlock
 {
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeStories identifier:stringfiedIdentifier andAuthentication:self.authParameters];
 
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		[self sendResultToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
+	operation.callbackBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		[self sendResultToCallbackBlock:callbackBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
 }
 
-- (void)storiesByFilter:(RCStoryFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)storiesByFilter:(RCStoryFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock
 {
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithFilter:filter andAuthentication:self.authParameters];
 
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		[self sendResultsToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
+	operation.callbackBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		[self sendResultsToCallbackBlock:callbackBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
 }
 
-- (void)storiesByCharacterIdentifier:(NSNumber *)identifier filter:(RCStoryFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)storiesByCharacterIdentifier:(NSNumber *)identifier filter:(RCStoryFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock
 {
 	[self validateFilter:filter ofType:RCAPITypeStories];
 
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeCharacters identifier:stringfiedIdentifier filter:filter andAuthentication:self.authParameters];
 
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		[self sendResultsToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
+	operation.callbackBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		[self sendResultsToCallbackBlock:callbackBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
 }
 
-- (void)storiesByComicIdentifier:(NSNumber *)identifier filter:(RCStoryFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)storiesByComicIdentifier:(NSNumber *)identifier filter:(RCStoryFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock
 {
 	[self validateFilter:filter ofType:RCAPITypeStories];
 
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeComics identifier:stringfiedIdentifier filter:filter andAuthentication:self.authParameters];
 
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		[self sendResultsToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
+	operation.callbackBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		[self sendResultsToCallbackBlock:callbackBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
 }
 
-- (void)storiesByCreatorIdentifier:(NSNumber *)identifier filter:(RCStoryFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)storiesByCreatorIdentifier:(NSNumber *)identifier filter:(RCStoryFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock
 {
 	[self validateFilter:filter ofType:RCAPITypeStories];
 
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeCreators identifier:stringfiedIdentifier filter:filter andAuthentication:self.authParameters];
 
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		[self sendResultsToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
+	operation.callbackBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		[self sendResultsToCallbackBlock:callbackBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
 }
 
-- (void)storiesByEventIdentifier:(NSNumber *)identifier filter:(RCStoryFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)storiesByEventIdentifier:(NSNumber *)identifier filter:(RCStoryFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock
 {
 	[self validateFilter:filter ofType:RCAPITypeStories];
 
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeEvents identifier:stringfiedIdentifier filter:filter andAuthentication:self.authParameters];
 
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		[self sendResultsToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
+	operation.callbackBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		[self sendResultsToCallbackBlock:callbackBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
 }
 
-- (void)storiesBySeriesIdentifier:(NSNumber *)identifier filter:(RCStoryFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock
+- (void)storiesBySeriesIdentifier:(NSNumber *)identifier filter:(RCStoryFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock
 {
 	[self validateFilter:filter ofType:RCAPITypeStories];
 
 	NSString *stringfiedIdentifier = [self stringFromIdentifier:identifier];
 	RCAPIOperation *operation = [[RCAPIOperation alloc] initWithType:RCAPITypeSeries identifier:stringfiedIdentifier filter:filter andAuthentication:self.authParameters];
 
-	operation.completionBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
-		[self sendResultsToCompletionBlock:completionBlock fromDataWrapper:dataWrapper andError:error];
+	operation.callbackBlock = ^(RCDataWrapperObject *dataWrapper, NSError *error) {
+		[self sendResultsToCallbackBlock:callbackBlock fromDataWrapper:dataWrapper andError:error];
 	};
 
 	[self.queue addOperation:operation];
@@ -729,13 +728,13 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 
  This instance method prepare the objects to send back to a given callback block. It create a metadata object and get the first object of the "results" property from a given data wrapper object in case the API response doesn't return any error.
  
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  @param dataWrapper The data received from the API endpoint
  @param error An error retrieved from the API endpoint
  
  @internal
  */
-- (void)sendResultToCompletionBlock:(resultCompletionBlock)completionBlock fromDataWrapper:(RCDataWrapperObject *)dataWrapper andError:(NSError *)error
+- (void)sendResultToCallbackBlock:(resultCallbackBlock)callbackBlock fromDataWrapper:(RCDataWrapperObject *)dataWrapper andError:(NSError *)error
 {
 	id result = nil;
 	RCQueryInfoObject *info = nil;
@@ -748,7 +747,7 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 		}
 	}
 
-	completionBlock(result, info, error);
+	callbackBlock(result, info, error);
 }
 
 /*!
@@ -756,13 +755,13 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 
  This instance method prepare the objects to send back to a given callback block. It create a metadata object and get the objects of the "results" property from the given data wrapper object in case the API response doesn't return any error.
  
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  @param dataWrapper The data received from the API endpoint
  @param error An error retrieved from the API endpoint
 
  @internal
  */
-- (void)sendResultsToCompletionBlock:(resultsCompletionBlock)completionBlock fromDataWrapper:(RCDataWrapperObject *)dataWrapper andError:(NSError *)error
+- (void)sendResultsToCallbackBlock:(resultsCallbackBlock)callbackBlock fromDataWrapper:(RCDataWrapperObject *)dataWrapper andError:(NSError *)error
 {
 	NSArray *results = nil;
 	RCQueryInfoObject *info = nil;
@@ -772,7 +771,7 @@ static NSString * const RCMarvelAPIVersionName = @"Cable";
 		results = dataWrapper.data.results;
 	}
 
-	completionBlock(results, info, error);
+	callbackBlock(results, info, error);
 }
 
 @end

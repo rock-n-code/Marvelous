@@ -55,7 +55,7 @@
 /*!
  @class
 
- This class is a manager class (implemented as a singleton) that interfaces with the Marvel Comics API. Throught this class, it is possible to make calls to the API by passing an identifier and/or a filter and a completion block that returns a response from the API server.
+ This class is a manager class (implemented as a singleton) that interfaces with the Marvel Comics API. Throught this class, it is possible to make calls to the API by passing an identifier and/or a filter and a callback block that returns a response from the API server.
  */
 @interface RCMarvelAPI : NSObject
 
@@ -103,9 +103,9 @@
  For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param identifier A unique character identifier
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  */
-- (void)characterByIdentifier:(NSNumber *)identifier andCompletionBlock:(resultCompletionBlock)completionBlock;
+- (void)characterByIdentifier:(NSNumber *)identifier andCallbackBlock:(resultCallbackBlock)callbackBlock;
 
 /*!
  @method
@@ -115,9 +115,9 @@
  For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param filter An optional filter that contain the parameters to search
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  */
-- (void)charactersByFilter:(RCCharacterFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)charactersByFilter:(RCCharacterFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock;
 
 /*!
  @method 
@@ -128,9 +128,9 @@
 
  @param identifier A unique comic identifier
  @param filter An optional filter that contain the parameters to search
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  */
-- (void)charactersByComicIdentifier:(NSNumber *)identifier filter:(RCCharacterFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)charactersByComicIdentifier:(NSNumber *)identifier filter:(RCCharacterFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock;
 
 /*!
  @method
@@ -141,9 +141,9 @@
 
  @param identifier A unique event identifier
  @param filter An optional filter that contain the parameters to search
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  */
-- (void)charactersByEventIdentifier:(NSNumber *)identifier filter:(RCCharacterFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)charactersByEventIdentifier:(NSNumber *)identifier filter:(RCCharacterFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock;
 
 /*!
  @method 
@@ -154,9 +154,9 @@
 
  @param identifier A unique series identifier
  @param filter An optional filter that contain the parameters to search
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  */
-- (void)charactersBySeriesIdentifier:(NSNumber *)identifier filter:(RCCharacterFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)charactersBySeriesIdentifier:(NSNumber *)identifier filter:(RCCharacterFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock;
 
 /*!
  @method 
@@ -167,9 +167,9 @@
 
  @param identifier A unique series identifier
  @param filter An optional filter that contain the parameters to search
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  */
-- (void)charactersByStoryIdentifier:(NSNumber *)identifier filter:(RCCharacterFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)charactersByStoryIdentifier:(NSNumber *)identifier filter:(RCCharacterFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock;
 
 /*!
  @method
@@ -179,9 +179,9 @@
  For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param identifier A unique comic identifier
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  */
-- (void)comicByIdentifier:(NSNumber *)identifier andCompletionBlock:(resultCompletionBlock)completionBlock;
+- (void)comicByIdentifier:(NSNumber *)identifier andCallbackBlock:(resultCallbackBlock)callbackBlock;
 
 /*!
  @method
@@ -191,9 +191,9 @@
  For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param filter An optional filter that contain the parameters to search
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  */
-- (void)comicsByFilter:(RCComicsFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)comicsByFilter:(RCComicsFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock;
 
 /*!
  @method
@@ -204,9 +204,9 @@
 
  @param identifier A unique character identifier
  @param filter An optional filter that contain the parameters to search
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  */
-- (void)comicsByCharacterIdentifier:(NSNumber *)identifier filter:(RCComicsFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)comicsByCharacterIdentifier:(NSNumber *)identifier filter:(RCComicsFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock;
 
 /*!
  @method
@@ -217,9 +217,9 @@
 
  @param identifier A unique creator identifier
  @param filter An optional filter that contain the parameters to search
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  */
-- (void)comicsByCreatorIdentifier:(NSNumber *)identifier filter:(RCComicsFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)comicsByCreatorIdentifier:(NSNumber *)identifier filter:(RCComicsFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock;
 
 /*!
  @method
@@ -230,9 +230,9 @@
 
  @param identifier A unique event identifier
  @param filter An optional filter that contain the parameters to search
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  */
-- (void)comicsByEventIdentifier:(NSNumber *)identifier filter:(RCComicsFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)comicsByEventIdentifier:(NSNumber *)identifier filter:(RCComicsFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock;
 
 /*!
  @method
@@ -243,9 +243,9 @@
 
  @param identifier A unique series identifier
  @param filter An optional filter that contain the parameters to search
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  */
-- (void)comicsBySeriesIdentifier:(NSNumber *)identifier filter:(RCComicsFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)comicsBySeriesIdentifier:(NSNumber *)identifier filter:(RCComicsFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock;
 
 /*!
  @method
@@ -256,9 +256,9 @@
 
  @param identifier A unique story identifier
  @param filter An optional filter that contain the parameters to search
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  */
-- (void)comicsByStoryIdentifier:(NSNumber *)identifier filter:(RCComicsFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)comicsByStoryIdentifier:(NSNumber *)identifier filter:(RCComicsFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock;
 
 /*!
  @method
@@ -268,9 +268,9 @@
  For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param identifier A unique creator identifier
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  */
-- (void)creatorByIdentifier:(NSNumber *)identifier andCompletionBlock:(resultCompletionBlock)completionBlock;
+- (void)creatorByIdentifier:(NSNumber *)identifier andCallbackBlock:(resultCallbackBlock)callbackBlock;
 
 /*!
  This instance method interact with the /v1/public/creators API endpoint and fetches a list of RCCreatorObject objects with optional filters.
@@ -278,9 +278,9 @@
  For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param filter An optional filter that contain the parameters to search
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  */
-- (void)creatorsByFilter:(RCCreatorFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)creatorsByFilter:(RCCreatorFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock;
 
 /*!
  This instance method interact with the /v1/public/comics/{comicId}/creators API endpoint and fetches a list of RCCreatorObject objects whose works appears in a specific comic, with optional filters.
@@ -289,9 +289,9 @@
 
  @param identifier A unique comic identifier
  @param filter An optional filter that contain the parameters to search
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  */
-- (void)creatorsByComicIdentifier:(NSNumber *)identifier filter:(RCCreatorFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)creatorsByComicIdentifier:(NSNumber *)identifier filter:(RCCreatorFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock;
 
 /*!
  This instance method interact with the /v1/public/events/{eventId}/creators API endpoint and fetches a list of RCCreatorObject objects whose works appears in a specific event, with optional filters.
@@ -300,9 +300,9 @@
 
  @param identifier A unique event identifier
  @param filter An optional filter that contain the parameters to search
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  */
-- (void)creatorsByEventIdentifier:(NSNumber *)identifier filter:(RCCreatorFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)creatorsByEventIdentifier:(NSNumber *)identifier filter:(RCCreatorFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock;
 
 /*!
  This instance method interact with the /v1/public/series/{seriesId}/creators API endpoint and fetches a list of RCCreatorObject objects whose works appears in a specific series, with optional filters.
@@ -311,9 +311,9 @@
 
  @param identifier A unique series identifier
  @param filter An optional filter that contain the parameters to search
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  */
-- (void)creatorsBySeriesIdentifier:(NSNumber *)identifier filter:(RCCreatorFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)creatorsBySeriesIdentifier:(NSNumber *)identifier filter:(RCCreatorFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock;
 
 /*!
  This instance method interact with the /v1/public/stories/{storyId}/creators API endpoint and fetches a list of RCCreatorObject objects whose works appears in a specific story, with optional filters.
@@ -322,9 +322,9 @@
 
  @param identifier A unique story identifier
  @param filter An optional filter that contain the parameters to search
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  */
-- (void)creatorsByStoryIdentifier:(NSNumber *)identifier filter:(RCCreatorFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)creatorsByStoryIdentifier:(NSNumber *)identifier filter:(RCCreatorFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock;
 
 /*!
  @method
@@ -334,9 +334,9 @@
  For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param identifier A unique event identifier
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  */
-- (void)eventByIdentifier:(NSNumber *)identifier andCompletionBlock:(resultCompletionBlock)completionBlock;
+- (void)eventByIdentifier:(NSNumber *)identifier andCallbackBlock:(resultCallbackBlock)callbackBlock;
 
 /*!
  @method
@@ -346,9 +346,9 @@
  For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param filter An optional filter that contain the parameters to search
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  */
-- (void)eventsByFilter:(RCEventFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)eventsByFilter:(RCEventFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock;
 
 /*!
  @method
@@ -359,9 +359,9 @@
 
  @param identifier A unique character identifier
  @param filter An optional filter that contain the parameters to search
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  */
-- (void)eventsByCharacterIdentifier:(NSNumber *)identifier filter:(RCEventFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)eventsByCharacterIdentifier:(NSNumber *)identifier filter:(RCEventFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock;
 
 /*!
  @method
@@ -372,9 +372,9 @@
 
  @param identifier A unique comic identifier
  @param filter An optional filter that contain the parameters to search
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  */
-- (void)eventsByComicIdentifier:(NSNumber *)identifier filter:(RCEventFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)eventsByComicIdentifier:(NSNumber *)identifier filter:(RCEventFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock;
 
 /*!
  @method
@@ -385,9 +385,9 @@
 
  @param identifier A unique creator identifier
  @param filter An optional filter that contain the parameters to search
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  */
-- (void)eventsByCreatorIdentifier:(NSNumber *)identifier filter:(RCEventFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)eventsByCreatorIdentifier:(NSNumber *)identifier filter:(RCEventFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock;
 
 /*!
  @method
@@ -398,9 +398,9 @@
 
  @param identifier A unique series identifier
  @param filter An optional filter that contain the parameters to search
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  */
-- (void)eventsBySeriesIdentifier:(NSNumber *)identifier filter:(RCEventFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)eventsBySeriesIdentifier:(NSNumber *)identifier filter:(RCEventFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock;
 
 /*!
  @method
@@ -411,9 +411,9 @@
 
  @param identifier A unique story identifier
  @param filter An optional filter that contain the parameters to search
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  */
-- (void)eventsByStoryIdentifier:(NSNumber *)identifier filter:(RCEventFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)eventsByStoryIdentifier:(NSNumber *)identifier filter:(RCEventFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock;
 
 /*!
  @method
@@ -423,9 +423,9 @@
  For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param identifier A unique series identifier
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  */
-- (void)seriesByIdentifier:(NSNumber *)identifier andCompletionBlock:(resultCompletionBlock)completionBlock;
+- (void)seriesByIdentifier:(NSNumber *)identifier andCallbackBlock:(resultCallbackBlock)callbackBlock;
 
 /*!
  @method
@@ -435,9 +435,9 @@
  For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param filter An optional filter that contain the parameters to search
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  */
-- (void)seriesByFilter:(RCSeriesFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)seriesByFilter:(RCSeriesFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock;
 
 /*!
  @method
@@ -448,9 +448,9 @@
 
  @param identifier A unique character identifier
  @param filter An optional filter that contain the parameters to search
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  */
-- (void)seriesByCharacterIdentifier:(NSNumber *)identifier filter:(RCSeriesFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)seriesByCharacterIdentifier:(NSNumber *)identifier filter:(RCSeriesFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock;
 
 /*!
  @method
@@ -461,9 +461,9 @@
 
  @param identifier A unique creator identifier
  @param filter An optional filter that contain the parameters to search
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  */
-- (void)seriesByCreatorIdentifier:(NSNumber *)identifier filter:(RCSeriesFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)seriesByCreatorIdentifier:(NSNumber *)identifier filter:(RCSeriesFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock;
 
 /*!
  @method
@@ -474,9 +474,9 @@
 
  @param identifier A unique event identifier
  @param filter An optional filter that contain the parameters to search
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  */
-- (void)seriesByEventIdentifier:(NSNumber *)identifier filter:(RCSeriesFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)seriesByEventIdentifier:(NSNumber *)identifier filter:(RCSeriesFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock;
 
 /*!
  @method
@@ -487,9 +487,9 @@
 
  @param identifier A unique story identifier
  @param filter An optional filter that contain the parameters to search
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  */
-- (void)seriesByStoryIdentifier:(NSNumber *)identifier filter:(RCSeriesFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)seriesByStoryIdentifier:(NSNumber *)identifier filter:(RCSeriesFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock;
 
 /*!
  @method
@@ -499,9 +499,9 @@
  For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param identifier A unique story identifier
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  */
-- (void)storyByIdentifier:(NSNumber *)identifier andCompletionBlock:(resultCompletionBlock)completionBlock;
+- (void)storyByIdentifier:(NSNumber *)identifier andCallbackBlock:(resultCallbackBlock)callbackBlock;
 
 /*!
  @method
@@ -511,9 +511,9 @@
  For more information about this API endpoint, please refer to http://developer.marvel.com/docs
 
  @param filter An optional filter that contain the parameters to search
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  */
-- (void)storiesByFilter:(RCStoryFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)storiesByFilter:(RCStoryFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock;
 
 /*!
  @method
@@ -524,9 +524,9 @@
 
  @param identifier A unique character identifier
  @param filter An optional filter that contain the parameters to search
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  */
-- (void)storiesByCharacterIdentifier:(NSNumber *)identifier filter:(RCStoryFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)storiesByCharacterIdentifier:(NSNumber *)identifier filter:(RCStoryFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock;
 
 /*!
  @method
@@ -537,9 +537,9 @@
 
  @param identifier A unique comic identifier
  @param filter An optional filter that contain the parameters to search
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  */
-- (void)storiesByComicIdentifier:(NSNumber *)identifier filter:(RCStoryFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)storiesByComicIdentifier:(NSNumber *)identifier filter:(RCStoryFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock;
 
 /*!
  @method
@@ -550,9 +550,9 @@
 
  @param identifier A unique creator identifier
  @param filter An optional filter that contain the parameters to search
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  */
-- (void)storiesByCreatorIdentifier:(NSNumber *)identifier filter:(RCStoryFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)storiesByCreatorIdentifier:(NSNumber *)identifier filter:(RCStoryFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock;
 
 /*!
  @method
@@ -563,9 +563,9 @@
 
  @param identifier A unique event identifier
  @param filter An optional filter that contain the parameters to search
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  */
-- (void)storiesByEventIdentifier:(NSNumber *)identifier filter:(RCStoryFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)storiesByEventIdentifier:(NSNumber *)identifier filter:(RCStoryFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock;
 
 /*!
  @method
@@ -576,8 +576,8 @@
 
  @param identifier A unique series identifier
  @param filter An optional filter that contain the parameters to search
- @param completionBlock A callback block
+ @param callbackBlock A callback block
  */
-- (void)storiesBySeriesIdentifier:(NSNumber *)identifier filter:(RCStoryFilter *)filter andCompletionBlock:(resultsCompletionBlock)completionBlock;
+- (void)storiesBySeriesIdentifier:(NSNumber *)identifier filter:(RCStoryFilter *)filter andCallbackBlock:(resultsCallbackBlock)callbackBlock;
 
 @end

@@ -137,8 +137,8 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 	[super start];
 
 	if (self.error) {
-		if (self.completionBlock) {
-			self.completionBlock(self.data, self.error);
+		if (self.callbackBlock) {
+			self.callbackBlock(self.data, self.error);
 		}
 
 		[super finish];
@@ -183,8 +183,8 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 			}
 		}
 
-		if (self.completionBlock) {
-			self.completionBlock(self.data, self.error);
+		if (self.callbackBlock) {
+			self.callbackBlock(self.data, self.error);
 		}
 
 		[self finish];
@@ -204,8 +204,8 @@ static NSString * const RCAPIOperationAcceptValue = @"*/*";
 
 	[self errorWithCode:RCOperationErrorCodeOperationCancelled andUserInfo:userInfo];
 
-	if (self.completionBlock) {
-		self.completionBlock(self.data, self.error);
+	if (self.callbackBlock) {
+		self.callbackBlock(self.data, self.error);
 	}
 
 	[super cancel];

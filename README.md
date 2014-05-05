@@ -113,7 +113,7 @@ Both the filters and the objects provide enumerations to avoid any ambiguity and
 // Then, you can use the API interface to search for a single resource by its identifier
 NSNumber *identifier = @1234;
 
-[[RCMarvelAPI api] characterByIdentifier:identifier andCompletionBlock:^(id result, RCQueryInfoObject *info, NSError *error) {
+[[RCMarvelAPI api] characterByIdentifier:identifier andCallbackBlock:^(id result, RCQueryInfoObject *info, NSError *error) {
   NSLog(@"ERROR: %@", error);
   NSLog(@"QUERY INFO: %@", info);
   NSLog(@"RESULT: %@", result);
@@ -126,7 +126,7 @@ filter.nameStartsWith = @"Wol";
 filter.limit = @2;
 filter.orderBy = @[@(RCOrderByTypeCodeNameAscending)];
 
-[[RCMarvelAPI api] charactersByFilter:filter andCompletionBlock:^(NSArray *results, RCQueryInfoObject *info, NSError *error) {
+[[RCMarvelAPI api] charactersByFilter:filter andCallbackBlock:^(NSArray *results, RCQueryInfoObject *info, NSError *error) {
   NSLog(@"ERROR: %@", error);
   NSLog(@"QUERY INFO: %@", info);
   NSLog(@"RESULTS: %@", results);
@@ -139,7 +139,7 @@ RCCharacterFilter * filter = [[RCCharacterFilter alloc] init];
 filter.name = @"Captain America";
 filter.orderBy = @[@(RCOrderByTypeCodeDateModifieDescending)];
 
-[[RCMarvelAPI api] charactersByComicIdentifier:identifier filter:filter andCompletionBlock:^(NSArray *results, RCQueryInfoObject *info, NSError *error) {
+[[RCMarvelAPI api] charactersByComicIdentifier:identifier filter:filter andCallbackBlock:^(NSArray *results, RCQueryInfoObject *info, NSError *error) {
   NSLog(@"ERROR: %@", error);
   NSLog(@"QUERY INFO: %@", info);
   NSLog(@"RESULTS: %@", results);
@@ -152,7 +152,7 @@ filter.orderBy = @[@(RCOrderByTypeCodeDateModifieDescending)];
 
 ## Documentation
 
-**Marvelous** includes documentation written in [HeaderDoc](https://developer.apple.com/library/mac/documentation/DeveloperTools/Conceptual/HeaderDoc/intro/intro.html), which is included with XCode. It also support the new feature introduced by XCode 5.0 to display source code comments as documentation in the *Quick Help Inspector*, in a *Help Popup* and for *Code Completion*.
+**Marvelous** includes documentation written in [HeaderDoc](https://developer.apple.com/library/mac/documentation/DeveloperTools/Conceptual/HeaderDoc/intro/intro.html), which is included with XCode. It also support the new feature introduced by XCode 5.0 to display source code comments as documentation in the *Quick Help Inspector*, in the *Help Popup* and *Code Completion*.
 
 ## Online Documentation
 
@@ -185,7 +185,7 @@ Stay tune for more updates regarding this nice library, among other awesome stuf
 
 **Marvelous** was crafted with Objective-C, some Software engineering and lots of geekness, fandom and love. And you're all welcome to contribute to it in any way possible: from reporting issues or fixing bugs  to share its existence on Twitter/Facebook/etc.. or just use it on your apps. Just don't forget to mention it and spread the love around, will ya?
 
-If any of you guys who are working on *Marvel* read these parragraph, I've just want you to use this library on your apps! That would be like a dream come true and some part of me will be tremendously happy for giving you guys something back for sticking up with me since I remember. In a way, this is my little *thank you* to you, **Marvel**. ;)
+If any of you guys who are working on *Marvel* read these parragraphs, I've just want you to use this library on your apps! That would be like a dream come true and I'll be tremendously happy for giving you guys something back for sticking up with me since I remember. In a way, this is my little *thank you* to you, **Marvel**. ;)
 
 ## License
 

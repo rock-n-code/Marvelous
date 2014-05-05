@@ -79,842 +79,842 @@
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCharacterByIdentifierAndCompletionBlock
+- (void)testCharacterByIdentifierAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCharacterByInvalidIdentifierAndCompletionBlock
+- (void)testCharacterByInvalidIdentifierAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCharacterByNilIdentifierAndCompletionBlock
+- (void)testCharacterByNilIdentifierAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCharactersByFilterAndCompletionBlock
+- (void)testCharactersByFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCharactersByBadFilterAndCompletionBlock
+- (void)testCharactersByBadFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCharactersByNilFilterAndCompletionBlock
+- (void)testCharactersByNilFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCharactersByComicIdentifierFilterAndCompletionBlock
+- (void)testCharactersByComicIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCharactersByInvalidComicIdentifierFilterAndCompletionBlock
+- (void)testCharactersByInvalidComicIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCharactersByNilComicIdentifierFilterAndCompletionBlock
+- (void)testCharactersByNilComicIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCharactersByComicIdentifierBadFilterAndCompletionBlock
+- (void)testCharactersByComicIdentifierBadFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCharactersByComicIdentifierNilFilterAndCompletionBlock
+- (void)testCharactersByComicIdentifierNilFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCharactersByEventIdentifierFilterAndCompletionBlock
+- (void)testCharactersByEventIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCharactersByInvalidEventIdentifierFilterAndCompletionBlock
+- (void)testCharactersByInvalidEventIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCharactersByNilEventIdentifierFilterAndCompletionBlock
+- (void)testCharactersByNilEventIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCharactersByEventIdentifierBadFilterAndCompletionBlock
+- (void)testCharactersByEventIdentifierBadFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCharactersByEventIdentifierNilFilterAndCompletionBlock
+- (void)testCharactersByEventIdentifierNilFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCharactersBySeriesIdentifierFilterAndCompletionBlock
+- (void)testCharactersBySeriesIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCharactersByInvalidSeriesIdentifierFilterAndCompletionBlock
+- (void)testCharactersByInvalidSeriesIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCharactersByNilSeriesIdentifierFilterAndCompletionBlock
+- (void)testCharactersByNilSeriesIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCharactersBySeriesIdentifierBadFilterAndCompletionBlock
+- (void)testCharactersBySeriesIdentifierBadFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCharactersBySeriesIdentifierNilFilterAndCompletionBlock
+- (void)testCharactersBySeriesIdentifierNilFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCharactersByStoryIdentifierFilterAndCompletionBlock
+- (void)testCharactersByStoryIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCharactersByInvalidStoryIdentifierFilterAndCompletionBlock
+- (void)testCharactersByInvalidStoryIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCharactersByNilStoryIdentifierFilterAndCompletionBlock
+- (void)testCharactersByNilStoryIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCharactersByStoryIdentifierBadFilterAndCompletionBlock
+- (void)testCharactersByStoryIdentifierBadFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCharactersByStoryIdentifierNilFilterAndCompletionBlock
+- (void)testCharactersByStoryIdentifierNilFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testComicByIdentifierAndCompletionBlock
+- (void)testComicByIdentifierAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testComicByInvalidIdentifierAndCompletionBlock
+- (void)testComicByInvalidIdentifierAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testComicByNilIdentifierAndCompletionBlock
+- (void)testComicByNilIdentifierAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testComicsByFilterAndCompletionBlock
+- (void)testComicsByFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testComicsByBadFilterAndCompletionBlock
+- (void)testComicsByBadFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testComicsByNilFilterAndCompletionBlock
+- (void)testComicsByNilFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testComicsByCharacterIdentifierFilterAndCompletionBlock
+- (void)testComicsByCharacterIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testComicsByInvalidCharacterIdentifierFilterAndCompletionBlock
+- (void)testComicsByInvalidCharacterIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testComicsByNilCharacterIdentifierFilterAndCompletionBlock
+- (void)testComicsByNilCharacterIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testComicsByCharacterIdentifierBadFilterAndCompletionBlock
+- (void)testComicsByCharacterIdentifierBadFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testComicsByCharacterIdentifierNilFilterAndCompletionBlock
+- (void)testComicsByCharacterIdentifierNilFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testComicsByCreatorIdentifierFilterAndCompletionBlock
+- (void)testComicsByCreatorIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testComicsByInvalidCreatorIdentifierFilterAndCompletionBlock
+- (void)testComicsByInvalidCreatorIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testComicsByNilCreatorIdentifierFilterAndCompletionBlock
+- (void)testComicsByNilCreatorIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testComicsByCreatorIdentifierBadFilterAndCompletionBlock
+- (void)testComicsByCreatorIdentifierBadFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testComicsByCreatorIdentifierNilFilterAndCompletionBlock
+- (void)testComicsByCreatorIdentifierNilFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testComicsByEventIdentifierFilterAndCompletionBlock
+- (void)testComicsByEventIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testComicsByInvalidEventIdentifierFilterAndCompletionBlock
+- (void)testComicsByInvalidEventIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testComicsByNilEventIdentifierFilterAndCompletionBlock
+- (void)testComicsByNilEventIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testComicsByEventIdentifierBadFilterAndCompletionBlock
+- (void)testComicsByEventIdentifierBadFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testComicsByEventIdentifierNilFilterAndCompletionBlock
+- (void)testComicsByEventIdentifierNilFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testComicsBySeriesIdentifierFilterAndCompletionBlock
+- (void)testComicsBySeriesIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testComicsByInvalidSeriesIdentifierFilterAndCompletionBlock
+- (void)testComicsByInvalidSeriesIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testComicsByNilSeriesIdentifierFilterAndCompletionBlock
+- (void)testComicsByNilSeriesIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testComicsBySeriesIdentifierBadFilterAndCompletionBlock
+- (void)testComicsBySeriesIdentifierBadFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testComicsBySeriesIdentifierNilFilterAndCompletionBlock
+- (void)testComicsBySeriesIdentifierNilFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testComicsByStoryIdentifierFilterAndCompletionBlock
+- (void)testComicsByStoryIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testComicsByInvalidStoryIdentifierFilterAndCompletionBlock
+- (void)testComicsByInvalidStoryIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testComicsByNilStoryIdentifierFilterAndCompletionBlock
+- (void)testComicsByNilStoryIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testComicsByStoryIdentifierBadFilterAndCompletionBlock
+- (void)testComicsByStoryIdentifierBadFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testComicsByStoryIdentifierNilFilterAndCompletionBlock
+- (void)testComicsByStoryIdentifierNilFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCreatorByIdentifierAndCompletionBlock
+- (void)testCreatorByIdentifierAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCreatorByInvalidIdentifierAndCompletionBlock
+- (void)testCreatorByInvalidIdentifierAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCreatorByNilIdentifierAndCompletionBlock
+- (void)testCreatorByNilIdentifierAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCreatorsByFilterAndCompletionBlock
+- (void)testCreatorsByFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCreatorsByBadFilterAndCompletionBlock
+- (void)testCreatorsByBadFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCreatorsByNilFilterAndCompletionBlock
+- (void)testCreatorsByNilFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCreatorsByComicIdentifierFilterAndCompletionBlock
+- (void)testCreatorsByComicIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCreatorsByInvalidComicIdentifierFilterAndCompletionBlock
+- (void)testCreatorsByInvalidComicIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCreatorsByNilComicIdentifierFilterAndCompletionBlock
+- (void)testCreatorsByNilComicIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCreatorsByComicIdentifierBadFilterAndCompletionBlock
+- (void)testCreatorsByComicIdentifierBadFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCreatorsByComicIdentifierNilFilterAndCompletionBlock
+- (void)testCreatorsByComicIdentifierNilFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCreatorsByEventIdentifierFilterAndCompletionBlock
+- (void)testCreatorsByEventIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCreatorsByInvalidEventIdentifierFilterAndCompletionBlock
+- (void)testCreatorsByInvalidEventIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCreatorsByNilEventIdentifierFilterAndCompletionBlock
+- (void)testCreatorsByNilEventIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCreatorsByEventIdentifierBadFilterAndCompletionBlock
+- (void)testCreatorsByEventIdentifierBadFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCreatorsByEventIdentifierNilFilterAndCompletionBlock
+- (void)testCreatorsByEventIdentifierNilFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCreatorsBySeriesIdentifierFilterAndCompletionBlock
+- (void)testCreatorsBySeriesIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCreatorsByInvalidSeriesIdentifierFilterAndCompletionBlock
+- (void)testCreatorsByInvalidSeriesIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCreatorsByNilSeriesIdentifierFilterAndCompletionBlock
+- (void)testCreatorsByNilSeriesIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCreatorsBySeriesIdentifierBadFilterAndCompletionBlock
+- (void)testCreatorsBySeriesIdentifierBadFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCreatorsBySeriesIdentifierNilFilterAndCompletionBlock
+- (void)testCreatorsBySeriesIdentifierNilFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCreatorsByStoryIdentifierFilterAndCompletionBlock
+- (void)testCreatorsByStoryIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCreatorsByInvalidStoryIdentifierFilterAndCompletionBlock
+- (void)testCreatorsByInvalidStoryIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCreatorsByNilStoryIdentifierFilterAndCompletionBlock
+- (void)testCreatorsByNilStoryIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCreatorsByStoryIdentifierBadFilterAndCompletionBlock
+- (void)testCreatorsByStoryIdentifierBadFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testCreatorsByStoryIdentifierNilFilterAndCompletionBlock
+- (void)testCreatorsByStoryIdentifierNilFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testEventsByIdentifierAndCompletionBlock
+- (void)testEventsByIdentifierAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testEventsByInvalidIdentifierAndCompletionBlock
+- (void)testEventsByInvalidIdentifierAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testEventsByFilterAndCompletionBlock
+- (void)testEventsByFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testEventsByBadFilterAndCompletionBlock
+- (void)testEventsByBadFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testEventsByNilFilterAndCompletionBlock
+- (void)testEventsByNilFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testEventsByCharacterIdentifierFilterAndCompletionBlock
+- (void)testEventsByCharacterIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testEventsByInvalidCharacterIdentifierFilterAndCompletionBlock
+- (void)testEventsByInvalidCharacterIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testEventsByNilCharacterIdentifierFilterAndCompletionBlock
+- (void)testEventsByNilCharacterIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testEventsByCharacterIdentifierBadFilterAndCompletionBlock
+- (void)testEventsByCharacterIdentifierBadFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testEventsByCharacterIdentifierNilFilterAndCompletionBlock
+- (void)testEventsByCharacterIdentifierNilFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testEventsByComicIdentifierFilterAndCompletionBlock
+- (void)testEventsByComicIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testEventsByInvalidComicIdentifierFilterAndCompletionBlock
+- (void)testEventsByInvalidComicIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testEventsByNilComicIdentifierFilterAndCompletionBlock
+- (void)testEventsByNilComicIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testEventsByComicIdentifierBadFilterAndCompletionBlock
+- (void)testEventsByComicIdentifierBadFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testEventsByComicIdentifierNilFilterAndCompletionBlock
+- (void)testEventsByComicIdentifierNilFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testEventsByCreatorIdentifierFilterAndCompletionBlock
+- (void)testEventsByCreatorIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testEventsByInvalidCreatorIdentifierFilterAndCompletionBlock
+- (void)testEventsByInvalidCreatorIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testEventsByNilCreatorIdentifierFilterAndCompletionBlock
+- (void)testEventsByNilCreatorIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testEventsByCreatorIdentifierBadFilterAndCompletionBlock
+- (void)testEventsByCreatorIdentifierBadFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testEventsByCreatorIdentifierNilFilterAndCompletionBlock
+- (void)testEventsByCreatorIdentifierNilFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testEventsBySeriesIdentifierFilterAndCompletionBlock
+- (void)testEventsBySeriesIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testEventsByInvalidSeriesIdentifierFilterAndCompletionBlock
+- (void)testEventsByInvalidSeriesIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testEventsByNilSeriesIdentifierFilterAndCompletionBlock
+- (void)testEventsByNilSeriesIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testEventsBySeriesIdentifierBadFilterAndCompletionBlock
+- (void)testEventsBySeriesIdentifierBadFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testEventsBySeriesIdentifierNilFilterAndCompletionBlock
+- (void)testEventsBySeriesIdentifierNilFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testEventsByStoryIdentifierFilterAndCompletionBlock
+- (void)testEventsByStoryIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testEventsByInvalidStoryIdentifierFilterAndCompletionBlock
+- (void)testEventsByInvalidStoryIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testEventsByNilStoryIdentifierFilterAndCompletionBlock
+- (void)testEventsByNilStoryIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testEventsByStoryIdentifierBadFilterAndCompletionBlock
+- (void)testEventsByStoryIdentifierBadFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testEventsByStoryIdentifierNilFilterAndCompletionBlock
+- (void)testEventsByStoryIdentifierNilFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testSeriesByIdentifierAndCompletionBlock
+- (void)testSeriesByIdentifierAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testSeriesByInvalidIdentifierAndCompletionBlock
+- (void)testSeriesByInvalidIdentifierAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testSeriesByFilterAndCompletionBlock
+- (void)testSeriesByFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testSeriesByBadFilterAndCompletionBlock
+- (void)testSeriesByBadFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testSeriesByNilFilterAndCompletionBlock
+- (void)testSeriesByNilFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testSeriesByCharacterIdentifierFilterAndCompletionBlock
+- (void)testSeriesByCharacterIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testSeriesByInvalidCharacterIdentifierFilterAndCompletionBlock
+- (void)testSeriesByInvalidCharacterIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testSeriesByNilCharacterIdentifierFilterAndCompletionBlock
+- (void)testSeriesByNilCharacterIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testSeriesByCharacterIdentifierBadFilterAndCompletionBlock
+- (void)testSeriesByCharacterIdentifierBadFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testSeriesByCharacterIdentifierNilFilterAndCompletionBlock
+- (void)testSeriesByCharacterIdentifierNilFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testSeriesByCreatorIdentifierFilterAndCompletionBlock
+- (void)testSeriesByCreatorIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testSeriesByInvalidCreatorIdentifierFilterAndCompletionBlock
+- (void)testSeriesByInvalidCreatorIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testSeriesByNilCreatorIdentifierFilterAndCompletionBlock
+- (void)testSeriesByNilCreatorIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testSeriesByCreatorIdentifierBadFilterAndCompletionBlock
+- (void)testSeriesByCreatorIdentifierBadFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testSeriesByCreatorIdentifierNilFilterAndCompletionBlock
+- (void)testSeriesByCreatorIdentifierNilFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testSeriesByEventIdentifierFilterAndCompletionBlock
+- (void)testSeriesByEventIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testSeriesByInvalidEventIdentifierFilterAndCompletionBlock
+- (void)testSeriesByInvalidEventIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testSeriesByNilEventIdentifierFilterAndCompletionBlock
+- (void)testSeriesByNilEventIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testSeriesByEventIdentifierBadFilterAndCompletionBlock
+- (void)testSeriesByEventIdentifierBadFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testSeriesByEventIdentifierNilFilterAndCompletionBlock
+- (void)testSeriesByEventIdentifierNilFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testSeriesByStoryIdentifierFilterAndCompletionBlock
+- (void)testSeriesByStoryIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testSeriesByInvalidStoryIdentifierFilterAndCompletionBlock
+- (void)testSeriesByInvalidStoryIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testSeriesByNilStoryIdentifierFilterAndCompletionBlock
+- (void)testSeriesByNilStoryIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testSeriesByStoryIdentifierBadFilterAndCompletionBlock
+- (void)testSeriesByStoryIdentifierBadFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testSeriesByStoryIdentifierNilFilterAndCompletionBlock
+- (void)testSeriesByStoryIdentifierNilFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testStoriesByIdentifierAndCompletionBlock
+- (void)testStoriesByIdentifierAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testStoriesByInvalidIdentifierAndCompletionBlock
+- (void)testStoriesByInvalidIdentifierAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testStoriesByFilterAndCompletionBlock
+- (void)testStoriesByFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testStoriesByBadFilterAndCompletionBlock
+- (void)testStoriesByBadFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testStoriesByNilFilterAndCompletionBlock
+- (void)testStoriesByNilFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testStoriesByCharacterIdentifierFilterAndCompletionBlock
+- (void)testStoriesByCharacterIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testStoriesByInvalidCharacterIdentifierFilterAndCompletionBlock
+- (void)testStoriesByInvalidCharacterIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testStoriesByNilCharacterIdentifierFilterAndCompletionBlock
+- (void)testStoriesByNilCharacterIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testStoriesByCharacterIdentifierBadFilterAndCompletionBlock
+- (void)testStoriesByCharacterIdentifierBadFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testStoriesByCharacterIdentifierNilFilterAndCompletionBlock
+- (void)testStoriesByCharacterIdentifierNilFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testStoriesByComicIdentifierFilterAndCompletionBlock
+- (void)testStoriesByComicIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testStoriesByInvalidComicIdentifierFilterAndCompletionBlock
+- (void)testStoriesByInvalidComicIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testStoriesByNilComicIdentifierFilterAndCompletionBlock
+- (void)testStoriesByNilComicIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testStoriesByComicIdentifierBadFilterAndCompletionBlock
+- (void)testStoriesByComicIdentifierBadFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testStoriesByComicIdentifierNilFilterAndCompletionBlock
+- (void)testStoriesByComicIdentifierNilFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testStoriesByCreatorIdentifierFilterAndCompletionBlock
+- (void)testStoriesByCreatorIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testStoriesByInvalidCreatorIdentifierFilterAndCompletionBlock
+- (void)testStoriesByInvalidCreatorIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testStoriesByNilCreatorIdentifierFilterAndCompletionBlock
+- (void)testStoriesByNilCreatorIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testStoriesByCreatorIdentifierBadFilterAndCompletionBlock
+- (void)testStoriesByCreatorIdentifierBadFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testStoriesByCreatorIdentifierNilFilterAndCompletionBlock
+- (void)testStoriesByCreatorIdentifierNilFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testStoriesByEventIdentifierFilterAndCompletionBlock
+- (void)testStoriesByEventIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testStoriesByInvalidEventIdentifierFilterAndCompletionBlock
+- (void)testStoriesByInvalidEventIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testStoriesByNilEventIdentifierFilterAndCompletionBlock
+- (void)testStoriesByNilEventIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testStoriesByEventIdentifierBadFilterAndCompletionBlock
+- (void)testStoriesByEventIdentifierBadFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testStoriesByEventIdentifierNilFilterAndCompletionBlock
+- (void)testStoriesByEventIdentifierNilFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testStoriesBySeriesIdentifierFilterAndCompletionBlock
+- (void)testStoriesBySeriesIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testStoriesByInvalidSeriesIdentifierFilterAndCompletionBlock
+- (void)testStoriesByInvalidSeriesIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testStoriesByNilSeriesIdentifierFilterAndCompletionBlock
+- (void)testStoriesByNilSeriesIdentifierFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testStoriesBySeriesIdentifierBadFilterAndCompletionBlock
+- (void)testStoriesBySeriesIdentifierBadFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
 
-- (void)testStoriesBySeriesIdentifierNilFilterAndCompletionBlock
+- (void)testStoriesBySeriesIdentifierNilFilterAndCallbackBlock
 {
 	XCTFail(@"Will write the test when I found a way to test asynchronous code with XCTest framework.");
 }
