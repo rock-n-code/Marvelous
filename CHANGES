@@ -1,3 +1,7 @@
+= 0.7.2 (2014-05-05)
+
+  * Renamed the "completionBlock" property on RCAPIOperation as "callbackBlock" to avoid overriding the "completionBlock" property of NSOperation [Javier Cicchelli]
+
 = 0.7.1 (2014-04-25)
 
   * Fixed several issues on the RCObject classes [Javier Cicchelli]
