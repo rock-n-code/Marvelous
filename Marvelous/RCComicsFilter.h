@@ -81,6 +81,34 @@
 /*!
  @property
 
+ This property sets and gets the comics title the filter use to search for Comics resources which match this specified title.
+ */
+@property (nonatomic, strong) NSString *title;
+
+/*!
+ @property
+
+ This property sets and gets the comics title the filter use to search for Comics resources that begin with this specified string.
+ */
+@property (nonatomic, strong) NSString *titleStartsWith;
+
+/*!
+ @property
+
+ This property sets and gets the number os issue the filter use to search for Comics resources within match the specified issue number.
+ */
+@property (nonatomic, strong) NSNumber *issueNumber;
+
+/*!
+ @property
+
+ This property sets and gets the comics year the filter use to search for Comics resources which match this specified start year.
+ */
+@property (nonatomic, strong) NSNumber *startYear;
+
+/*!
+ @property
+
  This property sets and gets the list of 2 (two) dates (represented as NSDate objects) the filter use to search for Comics resources within the predefined date range.
  */
 @property (nonatomic, strong) NSArray *dateRange;

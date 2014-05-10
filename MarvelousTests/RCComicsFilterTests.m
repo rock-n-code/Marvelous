@@ -52,6 +52,10 @@
 	XCTAssertEqual(filter.noVariants, RCBooleanValueCodeUndefined, @"\"%s\" is expecting the property 'noVariants' to be the integer value %ld.", __PRETTY_FUNCTION__, (long)RCBooleanValueCodeUndefined);
 	XCTAssertEqual(filter.dateDescriptor, RCDateDescriptorCodeUndefined, @"\"%s\" is expecting the property 'dateDescriptor' to be the integer value %ld.", __PRETTY_FUNCTION__, (long)RCDateDescriptorCodeUndefined);
 	XCTAssertNil(filter.dateRange, @"\"%s\" is expecting the property 'dateRange' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(filter.title, @"\"%s\" is expecting the property 'title' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(filter.titleStartsWith, @"\"%s\" is expecting the property 'titleStartsWith' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(filter.issueNumber, @"\"%s\" is expecting the property 'issueNumber' to be NULL.", __PRETTY_FUNCTION__);
+	XCTAssertNil(filter.startYear, @"\"%s\" is expecting the property 'startYear' to be NULL.", __PRETTY_FUNCTION__);
 	XCTAssertNil(filter.diamondCode, @"\"%s\" is expecting the property 'diamondCode' to be NULL.", __PRETTY_FUNCTION__);
 	XCTAssertNil(filter.digitalIdentifier, @"\"%s\" is expecting the property 'digitalIdentifier' to be NULL.", __PRETTY_FUNCTION__);
 	XCTAssertNil(filter.upc, @"\"%s\" is expecting the property 'upc' to be NULL.", __PRETTY_FUNCTION__);
@@ -82,6 +86,10 @@
 	filter.noVariants = RCBooleanValueCodeTrue;
 	filter.dateDescriptor = RCDateDescriptorCodeThisWeek;
 	filter.dateRange = @[today, today];
+	filter.title = @"TestTitle";
+	filter.titleStartsWith = @"TestTitleStartsWith";
+	filter.issueNumber = @1;
+	filter.startYear = @1234;
 	filter.diamondCode = @"TestDiamondCode";
 	filter.digitalIdentifier = @1234;
 	filter.upc = @"TestUPC";
@@ -101,7 +109,7 @@
 	filter.orderBy = @[@(RCOrderByTypeCodeFinalOrderCutoffDateDescending), @(RCOrderByTypeCodeIssueNumberAscending)];
 
 	NSDictionary *parameters = filter.parameters;
-	NSInteger countToTest = 22;
+	NSInteger countToTest = 26;
 
 	XCTAssertNotNil(parameters, @"\"%s\" is expecting the variable 'parameters' to be not NULL.", __PRETTY_FUNCTION__);
 	XCTAssertEqual(parameters.allKeys.count, countToTest, @"\"%s\" is expecting the property 'count' of the variable 'parameters' to be the integer value %ld.", __PRETTY_FUNCTION__, (long)countToTest);
@@ -113,6 +121,8 @@
 
 	filter.format = RCIssueFormatCodeComic;
 	filter.digitalIdentifier = @1234;
+	filter.title = @"TestTitle";
+	filter.issueNumber = @1;
 	filter.upc = @"TestUPC";
 	filter.issn = @"TestISSN";
 	filter.series = @[@"0", @"1", @"2"];
@@ -122,7 +132,7 @@
 	filter.orderBy = @[@(RCOrderByTypeCodeIssueNumberDescending)];
 
 	NSDictionary *parameters = filter.parameters;
-	NSInteger countToTest = 9;
+	NSInteger countToTest = 11;
 
 	XCTAssertNotNil(parameters, @"\"%s\" is expecting the variable 'parameters' to be not NULL.", __PRETTY_FUNCTION__);
 	XCTAssertEqual(parameters.allKeys.count, countToTest, @"\"%s\" is expecting the property 'count' of the variable 'parameters' to be the integer value %ld.", __PRETTY_FUNCTION__, (long)countToTest);

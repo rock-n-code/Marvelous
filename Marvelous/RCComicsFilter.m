@@ -100,6 +100,22 @@
 		params[RCRequestKeyDateRange] = self.stringfiedDateRange;
 	}
 
+	if (self.title) {
+		params[RCRequestKeyTitle] = self.title;
+	}
+
+	if (self.titleStartsWith) {
+		params[RCRequestKeyTitleStartsWith] = self.titleStartsWith;
+	}
+
+	if (self.issueNumber) {
+		params[RCRequestKeyIssueNumber] = self.issueNumber;
+	}
+
+	if (self.startYear) {
+		params[RCRequestKeyStartYear] = self.startYear;
+	}
+
 	if (self.diamondCode) {
 		params[RCRequestKeyDiamondCode] = self.diamondCode;
 	}
