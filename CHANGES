@@ -1,3 +1,7 @@
+= 0.7.3 (2014-05-10)
+
+  * Added the "title", "titleStartsWith", "issueNumber" and "startYear" properties to RCComicsFilter to comply with the small update the API received on May 8, 2014. For more information, please see http://developer.marvel.com/news_and_updates [Javier Cicchelli]
+
 = 0.7.2 (2014-05-05)
 
   * Renamed the "completionBlock" property on RCAPIOperation as "callbackBlock" to avoid conflict with the "completionBlock" property on NSOperation [Javier Cicchelli]
