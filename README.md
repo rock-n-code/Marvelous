@@ -15,7 +15,7 @@
 
 ### Installing by getting your hands dirty
 
-1. Download the [static library for iOS](http://dropbox.rock-n-co.de/marvelous/libMarvelous-0.7.2.zip) or the [framework for OSX](http://dropbox.rock-n-co.de/marvelous/Marvelous-0.7.2.zip).
+1. Download the [static library for iOS](http://dropbox.rock-n-co.de/marvelous/libMarvelous-0.7.3.zip) or the [framework for OSX](http://dropbox.rock-n-co.de/marvelous/Marvelous-0.7.3.zip).
 2. Install the [static library](https://developer.apple.com/library/ios/technotes/iOSStaticLibraries/Articles/configuration.html) or [framework](https://developer.apple.com/library/mac/documentation/macosx/conceptual/BPFrameworks/Tasks/InstallingFrameworks.html#//apple_ref/doc/uid/20002261-BBCCFBJA) into your prject.
 3. Create your [Marvel developer account](https://developer.marvel.com/account) to obtain the public and private keys required to sign any request to the API. Of course, you can skip this step in case you already have a developer account.
 4. [Play with it](https://www.youtube.com/watch?v=sGjmXhES2wQ) 'til you drop!
@@ -37,7 +37,7 @@ YourProject$ pod init
 platform :ios, '7.0'
 # platform :osx, '10.8'
 xcodeproj 'YourProject'
-pod 'Marvelous' #, '~> 0.7.2'
+pod 'Marvelous' #, '~> 0.7.3'
 # ... more settings ...
 ```
 4. Install the dependencies.
