@@ -145,6 +145,13 @@ extern NSString * const RCRequestKeyTitleStartsWith;
 /*!
  @constant
 
+ "Start Year" field to be used as a parameter key on an API request.
+ */
+extern NSString * const RCRequestKeyIssueNumber;
+
+/*!
+ @constant
+
  "Format" field to be used as a parameter key on an API request.
  */
 extern NSString * const RCRequestKeyFormat;

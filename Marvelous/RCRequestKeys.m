@@ -40,6 +40,7 @@ NSString * const RCRequestKeyMiddleNameStartsWith = @"middleNameStartsWith";
 NSString * const RCRequestKeyLastNameStartsWith = @"lastNameStartsWith";
 NSString * const RCRequestKeyTitle = @"title";
 NSString * const RCRequestKeyTitleStartsWith = @"titleStartsWith";
+NSString * const RCRequestKeyIssueNumber = @"issueNumber";
 NSString * const RCRequestKeyFormat = @"format";
 NSString * const RCRequestKeyFormatType = @"formatType";
 NSString * const RCRequestKeyNoVariants = @"noVariants";
