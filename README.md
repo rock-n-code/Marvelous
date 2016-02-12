@@ -11,7 +11,7 @@
 
 ## How To Get Started
 
-**Marvelous** can be included into your projects by downloading a compiled library or framework that you will setup by hand with lots of wisdom and patience or you can just use [Cocoapods](http://cocoapods.org) the library as a pod.
+**Marvelous** can be included into your projects by downloading a compiled library or framework that you will setup by hand with lots of wisdom and patience or you can just use [CocoaPods](http://cocoapods.org) the library as a pod.
 
 ### Installing by getting your hands dirty
 
@@ -24,7 +24,7 @@
 
 ### Installing using CocoaPods
 
-1. [Install Cocoapods](http://guides.cocoapods.org/using/getting-started.html) on your system. If you already have it installed, proceed to the next step.
+1. [Install CocoaPods](http://guides.cocoapods.org/using/getting-started.html) on your system. If you already have it installed, proceed to the next step.
 ```bash
 $ sudo gem install cocoapods
 ```
@@ -44,7 +44,7 @@ pod 'Marvelous' #, '~> 0.7.3'
 ```bash
 YourProject$ pod install
 ```
-5. Open the `YourProject.xcworkspace` and build in case you've created a new XCode project with Cocoapods. Otherwise, you should integrate your workspace into the Podfile.
+5. Open the `YourProject.xcworkspace` and build in case you've created a new XCode project with CocoaPods. Otherwise, you should integrate your workspace into the Podfile.
 ```ruby
 workspace 'YourProject'
 ```
