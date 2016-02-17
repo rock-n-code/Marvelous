@@ -5,7 +5,7 @@
 ## Requirements
 
 **Marvelous** requires:
-- *XCode 5.0* or higher
+- *Xcode 5.0* or higher
 - *iOS 7.0* (and higher) or *OSX 10.8* Mountain Lion (and higher)
 - *ARC*
 
@@ -44,7 +44,7 @@ pod 'Marvelous' #, '~> 0.7.3'
 ```bash
 YourProject$ pod install
 ```
-5. Open the `YourProject.xcworkspace` and build in case you've created a new XCode project with Cocoapods. Otherwise, you should integrate your workspace into the Podfile.
+5. Open the `YourProject.xcworkspace` and build in case you've created a new Xcode project with Cocoapods. Otherwise, you should integrate your workspace into the Podfile.
 ```ruby
 workspace 'YourProject'
 ```
@@ -148,15 +148,15 @@ filter.orderBy = @[@(RCOrderByTypeCodeDateModifieDescending)];
 
 ## Unit Tests
 
-**Marvelous** includes a suite of unit tests within the *MarvelousTests* folder. You can execute the test suite inside XCode by selecting either the *Marvelous*  or the *MarvelousOSX* scheme and then pressing the &#8984;+U key shortcut.
+**Marvelous** includes a suite of unit tests within the *MarvelousTests* folder. You can execute the test suite inside Xcode by selecting either the *Marvelous*  or the *MarvelousOSX* scheme and then pressing the &#8984;+U key shortcut.
 
 ## Documentation
 
-**Marvelous** includes documentation written in [HeaderDoc](https://developer.apple.com/library/mac/documentation/DeveloperTools/Conceptual/HeaderDoc/intro/intro.html), which is included with XCode. It also support the new feature introduced by XCode 5.0 to display source code comments as documentation in the *Quick Help Inspector*, in the *Help Popup* and *Code Completion*.
+**Marvelous** includes documentation written in [HeaderDoc](https://developer.apple.com/library/mac/documentation/DeveloperTools/Conceptual/HeaderDoc/intro/intro.html), which is included with Xcode. It also support the new feature introduced by Xcode 5.0 to display source code comments as documentation in the *Quick Help Inspector*, in the *Help Popup* and *Code Completion*.
 
 ## Online Documentation
 
-**Marvelous** online documentation is available on [CocoaDocs](http://cocoadocs.org/docsets/Marvelous). You're also able to import these docs as docsets to [XCode](https://developer.apple.com/xcode/) and/or to [Dash](http://kapeli.com/dash).
+**Marvelous** online documentation is available on [CocoaDocs](http://cocoadocs.org/docsets/Marvelous). You're also able to import these docs as docsets to [Xcode](https://developer.apple.com/xcode/) and/or to [Dash](http://kapeli.com/dash).
 
 ## TODOs
 
